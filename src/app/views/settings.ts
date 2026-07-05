@@ -37,7 +37,7 @@ export function renderSettings(root: HTMLElement, _ctx: RouteCtx): void {
       ...SKINS.map(([key, label]) => {
         const swatch = el('button', {
           className: `skin-swatch ${key === current ? 'active' : ''}`,
-          'data-skin-preview': key,
+          'data-skin': key,
         },
           el('span', { className: 'sw-preview' },
             el('span', { style: 'background: var(--sw-a, #ccc)' }),

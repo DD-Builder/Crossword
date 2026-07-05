@@ -6,6 +6,7 @@ import './themes/skins.css';
 
 import { startRouter, registerView, navigate, currentRoute } from './app/router';
 import { applyTheme, watchSystemTheme } from './storage/settings';
+import { primeAdaptive } from './stats/adaptive';
 import { el } from './ui/dom';
 
 import { renderHome } from './app/views/home';
@@ -65,6 +66,7 @@ function buildShell(): HTMLElement {
 function main(): void {
   applyTheme();
   watchSystemTheme();
+  void primeAdaptive().catch(() => {}); // adaptive weights warm up in the background
 
   registerView('home', renderHome);
   registerView('puzzle', renderPuzzle);

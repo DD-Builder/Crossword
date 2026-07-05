@@ -21,6 +21,13 @@ export interface FillOptions {
   beamWidth?: number;
 }
 
+/** Relative English letter frequency (A…Z), normalized to max 1. */
+const LETTER_FREQ = [
+  0.65, 0.12, 0.22, 0.34, 1.0, 0.18, 0.16, 0.49, 0.56, 0.01, 0.06, 0.32,
+  0.19, 0.54, 0.6, 0.15, 0.01, 0.48, 0.51, 0.73, 0.22, 0.08, 0.19, 0.01,
+  0.16, 0.01,
+];
+
 export interface FillResult {
   ok: boolean;
   /** Complete letter grid rows on success. */
@@ -173,15 +180,29 @@ export function fill(
     const idx = idxFor(s.slot.cells.length)!;
     const pattern = s.pattern();
 
-    // Collect + order candidates: score * weights * jitter, beam-limited.
+    // Crossing-friendliness: positions of this slot that sit on unfilled
+    // crossing slots. Candidates get a bonus for common letters there —
+    // on sparse banks this is the difference between filling and dying.
+    const openCross: number[] = [];
+    for (const { other, myPos } of s.crossings) {
+      if (!states[other]!.filled) openCross.push(myPos);
+    }
+
+    // Collect + order candidates: crossing bonus dominates, then score,
+    // adaptive weights, and seeded jitter.
     const opts_: { entry: BankEntry; sort: number }[] = [];
     for (const entry of candidates(idx, pattern)) {
       if (entry.score < scoreFloor) continue;
       if (used.has(entry.answer)) continue;
       let w = 1;
       for (const cat of entry.categories) w *= weights[cat] ?? 1;
-      opts_.push({ entry, sort: entry.score * w * (1 - jitter * rng.next()) });
-      if (opts_.length >= beamWidth * 3) break;
+      let crossBonus = 0;
+      for (const p of openCross) crossBonus += LETTER_FREQ[entry.answer.charCodeAt(p) - 65] ?? 0;
+      if (openCross.length > 0) crossBonus /= openCross.length;
+      opts_.push({
+        entry,
+        sort: (crossBonus * 100 + entry.score) * w * (1 - jitter * rng.next()),
+      });
     }
     opts_.sort((a, b) => b.sort - a.sort);
     const beam = opts_.slice(0, beamWidth);

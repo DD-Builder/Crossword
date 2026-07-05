@@ -1,0 +1,510 @@
+[
+  { "answer": "ACE", "score": 92, "categories": ["sports-leisure"], "tags": ["sports"],
+    "clues": [
+      { "text": "Top-notch pilot", "difficulty": 1, "stars": 1 },
+      { "text": "Serve that never comes back", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ACT", "score": 88, "categories": ["entertainment"], "tags": ["movies"],
+    "clues": [
+      { "text": "Play division", "difficulty": 1, "stars": 1 },
+      { "text": "Behave, or a bit of theater", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ADO", "score": 72, "categories": ["arts-literature", "wordplay"], "tags": ["books"],
+    "clues": [
+      { "text": "Fuss", "difficulty": 1, "stars": 1 },
+      { "text": "Much ___ About Nothing", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "AGE", "score": 90, "categories": ["history"], "tags": ["time", "history"],
+    "clues": [
+      { "text": "Candles-on-the-cake count", "difficulty": 1, "stars": 2 },
+      { "text": "Improve, as cheddar or wine", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "AGO", "score": 84, "categories": ["history", "wordplay"], "tags": ["time"],
+    "clues": [
+      { "text": "In the past", "difficulty": 1, "stars": 1 },
+      { "text": "\"Long, long ___...\"", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "AHA", "score": 86, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Cry of discovery", "difficulty": 1, "stars": 1 },
+      { "text": "\"So THAT'S how it works!\"", "difficulty": 2, "stars": 3 } ] },
+  { "answer": "AID", "score": 80, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Help", "difficulty": 1, "stars": 1 },
+      { "text": "First ___ kit", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "AIM", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["sports"],
+    "clues": [
+      { "text": "Point toward a target", "difficulty": 1, "stars": 1 },
+      { "text": "Darts player's asset", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "AIR", "score": 90, "categories": ["science-nature", "entertainment"], "tags": ["nature"],
+    "clues": [
+      { "text": "What we all breathe", "difficulty": 1, "stars": 1 },
+      { "text": "Broadcast, as a show", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "ALE", "score": 82, "categories": ["sports-leisure"], "tags": ["food"],
+    "clues": [
+      { "text": "Pub pint", "difficulty": 1, "stars": 1 },
+      { "text": "Ginger ___", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "AMP", "score": 76, "categories": ["entertainment", "science-nature"], "tags": ["music", "tech"],
+    "clues": [
+      { "text": "Rock guitarist's speaker, for short", "difficulty": 1, "stars": 1 },
+      { "text": "It turns a strum into a stadium sound, briefly", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ANT", "score": 85, "categories": ["science-nature"], "tags": ["animals", "summer"],
+    "clues": [
+      { "text": "Picnic crasher", "difficulty": 1, "stars": 2 },
+      { "text": "Hill builder", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "APE", "score": 80, "categories": ["science-nature", "wordplay"], "tags": ["animals"],
+    "clues": [
+      { "text": "Gorilla or chimp", "difficulty": 1, "stars": 1 },
+      { "text": "Mimic", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "APT", "score": 74, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Fitting", "difficulty": 1, "stars": 1 },
+      { "text": "Well-chosen, as a nickname", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ARC", "score": 82, "categories": ["science-nature", "entertainment"], "tags": ["science"],
+    "clues": [
+      { "text": "Rainbow's shape", "difficulty": 1, "stars": 2 },
+      { "text": "A season-long story line, in TV lingo", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "ARE", "score": 78, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "\"You ___ here\"", "difficulty": 1, "stars": 1 },
+      { "text": "Exist, for two or more", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ARK", "score": 78, "categories": ["history", "arts-literature"], "tags": ["books", "animals"],
+    "clues": [
+      { "text": "Noah's boat", "difficulty": 1, "stars": 1 },
+      { "text": "Vessel boarded two by two", "difficulty": 2, "stars": 3 } ] },
+  { "answer": "ARM", "score": 88, "categories": ["science-nature", "wordplay"], "tags": [],
+    "clues": [
+      { "text": "Elbow's location", "difficulty": 1, "stars": 1 },
+      { "text": "It can be twisted without turning", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "ART", "score": 90, "categories": ["arts-literature"], "tags": ["art", "school"],
+    "clues": [
+      { "text": "Gallery display", "difficulty": 1, "stars": 1 },
+      { "text": "It may be fine or martial", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ASH", "score": 76, "categories": ["science-nature", "sports-leisure"], "tags": ["nature", "sports"],
+    "clues": [
+      { "text": "Fireplace leftover", "difficulty": 1, "stars": 1 },
+      { "text": "Classic baseball-bat wood", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ATE", "score": 80, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Had lunch", "difficulty": 1, "stars": 1 },
+      { "text": "Polished off a plate", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "AWE", "score": 82, "categories": ["wordplay", "geography"], "tags": ["travel"],
+    "clues": [
+      { "text": "Open-mouthed wonder", "difficulty": 1, "stars": 1 },
+      { "text": "Standard reaction at the Grand Canyon", "difficulty": 2, "stars": 3 } ] },
+  { "answer": "AXE", "score": 74, "categories": ["wordplay", "history"], "tags": [],
+    "clues": [
+      { "text": "Lumberjack's tool", "difficulty": 1, "stars": 1 },
+      { "text": "Cancel, informally", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "BAT", "score": 84, "categories": ["science-nature", "sports-leisure"], "tags": ["animals", "sports", "halloween"],
+    "clues": [
+      { "text": "Cave hanger", "difficulty": 1, "stars": 2 },
+      { "text": "Slugger's lumber", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "BEE", "score": 84, "categories": ["science-nature", "entertainment"], "tags": ["animals", "school"],
+    "clues": [
+      { "text": "Hive worker", "difficulty": 1, "stars": 1 },
+      { "text": "Contest for careful spellers", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "CAB", "score": 80, "categories": ["geography", "entertainment"], "tags": ["travel"],
+    "clues": [
+      { "text": "Taxi", "difficulty": 1, "stars": 1 },
+      { "text": "Ride you hail", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "CAP", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["sports"],
+    "clues": [
+      { "text": "Baseball headwear", "difficulty": 1, "stars": 1 },
+      { "text": "Put a ceiling on", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "CAR", "score": 90, "categories": ["sports-leisure", "geography"], "tags": ["travel"],
+    "clues": [
+      { "text": "Garage occupant", "difficulty": 1, "stars": 1 },
+      { "text": "Dining or sleeper follower, on a train", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "CAT", "score": 90, "categories": ["science-nature"], "tags": ["animals", "halloween"],
+    "clues": [
+      { "text": "Purring pet", "difficulty": 1, "stars": 1 },
+      { "text": "Curiosity's famous victim", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "CUE", "score": 78, "categories": ["entertainment", "sports-leisure"], "tags": ["movies"],
+    "clues": [
+      { "text": "Pool player's stick", "difficulty": 1, "stars": 1 },
+      { "text": "Actor's signal to speak", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "DEN", "score": 80, "categories": ["science-nature", "entertainment"], "tags": ["animals"],
+    "clues": [
+      { "text": "Lion's lair", "difficulty": 1, "stars": 1 },
+      { "text": "Room for movie night", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "DNA", "score": 86, "categories": ["science-nature"], "tags": ["science"],
+    "clues": [
+      { "text": "Double-helix molecule", "difficulty": 1, "stars": 1 },
+      { "text": "Crime-lab evidence, for short", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "DOT", "score": 80, "categories": ["wordplay", "science-nature"], "tags": ["tech"],
+    "clues": [
+      { "text": "Lowercase i topper", "difficulty": 1, "stars": 2 },
+      { "text": "Morse code bit", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "DUO", "score": 78, "categories": ["entertainment"], "tags": ["music", "movies"],
+    "clues": [
+      { "text": "Twosome", "difficulty": 1, "stars": 1 },
+      { "text": "Batman and Robin, e.g.", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "EAR", "score": 88, "categories": ["science-nature", "wordplay"], "tags": ["food", "music"],
+    "clues": [
+      { "text": "Hearing organ", "difficulty": 1, "stars": 1 },
+      { "text": "Corn unit", "difficulty": 2, "stars": 2 },
+      { "text": "What a natural musician plays by", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "EAT", "score": 86, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Have a meal", "difficulty": 1, "stars": 1 },
+      { "text": "Absorb, as unexpected costs", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "EEL", "score": 72, "categories": ["science-nature"], "tags": ["animals", "food"],
+    "clues": [
+      { "text": "Slippery swimmer", "difficulty": 1, "stars": 1 },
+      { "text": "Unagi, at a sushi bar", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "EGO", "score": 82, "categories": ["wordplay", "science-nature"], "tags": ["science"],
+    "clues": [
+      { "text": "Sense of self", "difficulty": 1, "stars": 1 },
+      { "text": "It may be bruised or inflated", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "EMT", "score": 74, "categories": ["science-nature"], "tags": ["science"],
+    "clues": [
+      { "text": "Ambulance pro: Abbr.", "difficulty": 1, "stars": 1 },
+      { "text": "Siren-riding lifesaver, briefly", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "EMU", "score": 70, "categories": ["science-nature", "geography"], "tags": ["animals"],
+    "clues": [
+      { "text": "Flightless Aussie bird", "difficulty": 1, "stars": 1 },
+      { "text": "Ostrich's Outback cousin", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "EON", "score": 72, "categories": ["science-nature", "history"], "tags": ["time", "science"],
+    "clues": [
+      { "text": "Immensely long time", "difficulty": 1, "stars": 1 },
+      { "text": "What a wait at the DMV feels like", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ERA", "score": 92, "categories": ["history"], "tags": ["time", "history"],
+    "clues": [
+      { "text": "Notable stretch of time", "difficulty": 1, "stars": 1 },
+      { "text": "Jazz Age or Space Age, e.g.", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ERN", "score": 22, "categories": ["science-nature"], "tags": ["animals"],
+    "clues": [
+      { "text": "Sea eagle, to poets", "difficulty": 3, "stars": 1 } ] },
+  { "answer": "ERR", "score": 74, "categories": ["wordplay", "arts-literature"], "tags": [],
+    "clues": [
+      { "text": "Slip up", "difficulty": 1, "stars": 1 },
+      { "text": "\"To ___ is human\"", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ESS", "score": 30, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "\"S,\" spelled out", "difficulty": 2, "stars": 1 },
+      { "text": "Curve in a mountain road", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "ETA", "score": 68, "categories": ["geography", "wordplay"], "tags": ["travel"],
+    "clues": [
+      { "text": "Airport arrivals-board info: Abbr.", "difficulty": 1, "stars": 1 },
+      { "text": "Pilot's projection, for short", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "EVE", "score": 82, "categories": ["history", "arts-literature"], "tags": ["christmas", "newyear", "books"],
+    "clues": [
+      { "text": "Night before a big day", "difficulty": 1, "stars": 1 },
+      { "text": "First lady of Eden", "difficulty": 2, "stars": 3 } ] },
+  { "answer": "ANA", "score": 26, "categories": ["geography"], "tags": ["travel"],
+    "clues": [
+      { "text": "Santa ___ winds", "difficulty": 2, "stars": 1 },
+      { "text": "Anagram of a Disney princess?", "difficulty": 4, "stars": 2 } ] },
+  { "answer": "FAN", "score": 86, "categories": ["sports-leisure", "entertainment"], "tags": ["sports", "summer"],
+    "clues": [
+      { "text": "Bleacher cheerer", "difficulty": 1, "stars": 1 },
+      { "text": "It blows on a hot day", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "FEE", "score": 76, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Service charge", "difficulty": 1, "stars": 1 },
+      { "text": "Checked-bag surprise", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "GAS", "score": 84, "categories": ["science-nature"], "tags": ["science", "travel"],
+    "clues": [
+      { "text": "Pump product", "difficulty": 1, "stars": 1 },
+      { "text": "Neon or helium, for one", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "GEM", "score": 80, "categories": ["science-nature", "wordplay"], "tags": ["nature"],
+    "clues": [
+      { "text": "Jeweler's stone", "difficulty": 1, "stars": 1 },
+      { "text": "Hidden treasure of a restaurant, say", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "GPS", "score": 82, "categories": ["science-nature", "geography"], "tags": ["tech", "travel"],
+    "clues": [
+      { "text": "Turn-by-turn tech: Abbr.", "difficulty": 1, "stars": 1 },
+      { "text": "\"Recalculating...\" device, for short", "difficulty": 2, "stars": 3 } ] },
+  { "answer": "GYM", "score": 80, "categories": ["sports-leisure"], "tags": ["sports", "school"],
+    "clues": [
+      { "text": "Workout spot", "difficulty": 1, "stars": 1 },
+      { "text": "Class with dodgeball", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "HAT", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["winter"],
+    "clues": [
+      { "text": "Head topper", "difficulty": 1, "stars": 1 },
+      { "text": "Magician's rabbit hideout", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "HEN", "score": 76, "categories": ["science-nature"], "tags": ["animals", "food"],
+    "clues": [
+      { "text": "Egg layer", "difficulty": 1, "stars": 1 },
+      { "text": "Rooster's mate", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "ICE", "score": 90, "categories": ["science-nature", "sports-leisure"], "tags": ["winter", "sports"],
+    "clues": [
+      { "text": "Rink surface", "difficulty": 1, "stars": 1 },
+      { "text": "Cooler cubes", "difficulty": 2, "stars": 2 },
+      { "text": "Seal the win, in sports slang", "difficulty": 4, "stars": 3 } ] },
+  { "answer": "IMP", "score": 68, "categories": ["wordplay", "arts-literature"], "tags": ["halloween"],
+    "clues": [
+      { "text": "Little mischief-maker", "difficulty": 1, "stars": 1 },
+      { "text": "Pint-size troublemaker of folklore", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "INK", "score": 82, "categories": ["arts-literature", "wordplay"], "tags": ["art", "school"],
+    "clues": [
+      { "text": "Pen filler", "difficulty": 1, "stars": 1 },
+      { "text": "Sign, as a contract", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "ION", "score": 76, "categories": ["science-nature"], "tags": ["science"],
+    "clues": [
+      { "text": "Charged particle", "difficulty": 1, "stars": 1 },
+      { "text": "Atom that lost or found an electron", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "IRS", "score": 72, "categories": ["history"], "tags": [],
+    "clues": [
+      { "text": "Taxing org.", "difficulty": 1, "stars": 2 },
+      { "text": "Apr. 15 deadline setter", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "IVY", "score": 78, "categories": ["science-nature", "history"], "tags": ["nature", "school"],
+    "clues": [
+      { "text": "Wall-climbing plant", "difficulty": 1, "stars": 1 },
+      { "text": "League with Yale and Brown", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "JAM", "score": 84, "categories": ["wordplay", "entertainment"], "tags": ["food", "music"],
+    "clues": [
+      { "text": "Toast topper", "difficulty": 1, "stars": 1 },
+      { "text": "Rush-hour tangle", "difficulty": 2, "stars": 2 },
+      { "text": "Improvise with the band", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "JET", "score": 82, "categories": ["geography", "science-nature"], "tags": ["travel", "tech"],
+    "clues": [
+      { "text": "Fast plane", "difficulty": 1, "stars": 1 },
+      { "text": "Deep, glossy black", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "KEY", "score": 86, "categories": ["geography", "entertainment"], "tags": ["music", "travel"],
+    "clues": [
+      { "text": "Lock opener", "difficulty": 1, "stars": 1 },
+      { "text": "Florida island", "difficulty": 3, "stars": 2 },
+      { "text": "C major or E minor", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "LAB", "score": 82, "categories": ["science-nature"], "tags": ["science", "animals", "school"],
+    "clues": [
+      { "text": "Beaker's home", "difficulty": 1, "stars": 2 },
+      { "text": "Popular retriever, familiarly", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "LAP", "score": 82, "categories": ["sports-leisure"], "tags": ["sports", "animals"],
+    "clues": [
+      { "text": "Once around the track", "difficulty": 1, "stars": 1 },
+      { "text": "Cat's favorite seat", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "LAW", "score": 84, "categories": ["history", "science-nature"], "tags": ["science", "history"],
+    "clues": [
+      { "text": "Rule of the land", "difficulty": 1, "stars": 1 },
+      { "text": "Newton stated three of motion", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "LEG", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["sports", "travel"],
+    "clues": [
+      { "text": "Table support", "difficulty": 1, "stars": 1 },
+      { "text": "One stretch of a relay", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "LIE", "score": 84, "categories": ["wordplay", "sports-leisure"], "tags": ["sports"],
+    "clues": [
+      { "text": "Fib", "difficulty": 1, "stars": 1 },
+      { "text": "Golf ball's resting position", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "LIP", "score": 80, "categories": ["wordplay", "science-nature"], "tags": [],
+    "clues": [
+      { "text": "Mouth's edge", "difficulty": 1, "stars": 1 },
+      { "text": "Back talk", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "LOG", "score": 82, "categories": ["science-nature", "entertainment"], "tags": ["nature"],
+    "clues": [
+      { "text": "Fireplace fuel", "difficulty": 1, "stars": 1 },
+      { "text": "Starship captain's record", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "MAP", "score": 86, "categories": ["geography"], "tags": ["travel", "school"],
+    "clues": [
+      { "text": "Atlas page", "difficulty": 1, "stars": 1 },
+      { "text": "Treasure hunter's guide", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "NAP", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": [],
+    "clues": [
+      { "text": "Afternoon snooze", "difficulty": 1, "stars": 1 },
+      { "text": "Carpet fuzz", "difficulty": 4, "stars": 2 } ] },
+  { "answer": "NBA", "score": 80, "categories": ["sports-leisure"], "tags": ["sports"],
+    "clues": [
+      { "text": "Hoops org.", "difficulty": 1, "stars": 1 },
+      { "text": "Celtics and Lakers' league: Abbr.", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "NET", "score": 88, "categories": ["sports-leisure", "wordplay"], "tags": ["sports", "tech"],
+    "clues": [
+      { "text": "Tennis court divider", "difficulty": 1, "stars": 1 },
+      { "text": "Profit after everything's paid", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "NOD", "score": 80, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Silent yes", "difficulty": 1, "stars": 2 },
+      { "text": "Land of ___ (sleep's realm)", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "OAK", "score": 82, "categories": ["science-nature"], "tags": ["nature", "food"],
+    "clues": [
+      { "text": "Acorn's source", "difficulty": 1, "stars": 1 },
+      { "text": "Barrel wood for aging wine", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "OAR", "score": 80, "categories": ["sports-leisure"], "tags": ["sports", "olympics"],
+    "clues": [
+      { "text": "Rowboat propeller", "difficulty": 1, "stars": 1 },
+      { "text": "Crew member's blade", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "OAT", "score": 76, "categories": ["science-nature"], "tags": ["food"],
+    "clues": [
+      { "text": "Granola grain", "difficulty": 1, "stars": 1 },
+      { "text": "Bit of horse feed", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "ODE", "score": 78, "categories": ["arts-literature"], "tags": ["books", "music"],
+    "clues": [
+      { "text": "Poem of praise", "difficulty": 1, "stars": 1 },
+      { "text": "\"___ to Joy\"", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "OHO", "score": 62, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "\"Well, well, well!\"", "difficulty": 2, "stars": 2 },
+      { "text": "Cry upon catching someone red-handed", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "OIL", "score": 86, "categories": ["science-nature", "arts-literature"], "tags": ["food", "art"],
+    "clues": [
+      { "text": "Salad dressing base", "difficulty": 1, "stars": 1 },
+      { "text": "Squeaky hinge's need", "difficulty": 2, "stars": 2 },
+      { "text": "Medium for many museum masterpieces", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "ONE", "score": 88, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Loneliest number, in song", "difficulty": 1, "stars": 2 },
+      { "text": "Bill in a tip jar", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "OPT", "score": 76, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Make a choice", "difficulty": 1, "stars": 1 },
+      { "text": "Go (for)", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "ORE", "score": 78, "categories": ["science-nature"], "tags": ["nature", "science"],
+    "clues": [
+      { "text": "Miner's haul", "difficulty": 1, "stars": 1 },
+      { "text": "Rock with metal hiding inside", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "OWL", "score": 82, "categories": ["science-nature"], "tags": ["animals", "halloween"],
+    "clues": [
+      { "text": "Hooting hunter", "difficulty": 1, "stars": 1 },
+      { "text": "Bird with a reputation for wisdom", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "PAN", "score": 84, "categories": ["wordplay", "entertainment"], "tags": ["food", "movies"],
+    "clues": [
+      { "text": "Skillet", "difficulty": 1, "stars": 1 },
+      { "text": "Review brutally", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "PEA", "score": 78, "categories": ["science-nature", "arts-literature"], "tags": ["food", "books"],
+    "clues": [
+      { "text": "Little green veggie", "difficulty": 1, "stars": 1 },
+      { "text": "Princess-detecting mattress lump", "difficulty": 3, "stars": 4 } ] },
+  { "answer": "PEN", "score": 84, "categories": ["arts-literature", "science-nature"], "tags": ["school", "animals"],
+    "clues": [
+      { "text": "Signer's tool", "difficulty": 1, "stars": 1 },
+      { "text": "Pig's quarters", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "PIE", "score": 88, "categories": ["sports-leisure", "wordplay"], "tags": ["food", "thanksgiving"],
+    "clues": [
+      { "text": "Dessert served à la mode", "difficulty": 1, "stars": 1 },
+      { "text": "Chart with slices", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "POD", "score": 78, "categories": ["science-nature"], "tags": ["nature", "animals"],
+    "clues": [
+      { "text": "Pea's home", "difficulty": 1, "stars": 1 },
+      { "text": "Group of whales", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "PRO", "score": 86, "categories": ["sports-leisure", "wordplay"], "tags": ["sports"],
+    "clues": [
+      { "text": "Seasoned expert", "difficulty": 1, "stars": 1 },
+      { "text": "Con's counterpart", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "RAT", "score": 82, "categories": ["science-nature", "wordplay"], "tags": ["animals"],
+    "clues": [
+      { "text": "Maze runner in a lab", "difficulty": 1, "stars": 1 },
+      { "text": "Tattle (on)", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "RIB", "score": 80, "categories": ["wordplay", "sports-leisure"], "tags": ["food"],
+    "clues": [
+      { "text": "Barbecue bone", "difficulty": 1, "stars": 1 },
+      { "text": "Tease good-naturedly", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "RIP", "score": 80, "categories": ["wordplay", "arts-literature"], "tags": ["books"],
+    "clues": [
+      { "text": "Tear", "difficulty": 1, "stars": 1 },
+      { "text": "___ Van Winkle", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "ROW", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["sports"],
+    "clues": [
+      { "text": "Paddle a boat", "difficulty": 1, "stars": 1 },
+      { "text": "Spreadsheet line", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "RYE", "score": 76, "categories": ["science-nature", "arts-literature"], "tags": ["food", "books"],
+    "clues": [
+      { "text": "Deli bread choice", "difficulty": 1, "stars": 1 },
+      { "text": "Salinger's catcher was in it", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SEA", "score": 90, "categories": ["geography"], "tags": ["nature", "travel", "summer"],
+    "clues": [
+      { "text": "Sailor's expanse", "difficulty": 1, "stars": 1 },
+      { "text": "The Mediterranean, for one", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "SET", "score": 88, "categories": ["entertainment", "sports-leisure"], "tags": ["movies", "sports"],
+    "clues": [
+      { "text": "Tennis match division", "difficulty": 1, "stars": 1 },
+      { "text": "Where a film crew works", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "SIP", "score": 82, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Small swallow", "difficulty": 1, "stars": 1 },
+      { "text": "Careful taste of hot cocoa", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "SKI", "score": 84, "categories": ["sports-leisure"], "tags": ["winter", "sports", "olympics"],
+    "clues": [
+      { "text": "Hit the slopes", "difficulty": 1, "stars": 1 },
+      { "text": "One of a snowy pair", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "SPA", "score": 82, "categories": ["sports-leisure", "geography"], "tags": ["travel"],
+    "clues": [
+      { "text": "Pampering place", "difficulty": 1, "stars": 1 },
+      { "text": "Resort with robes and cucumber water", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "SPY", "score": 84, "categories": ["entertainment", "history"], "tags": ["movies", "history"],
+    "clues": [
+      { "text": "Secret agent", "difficulty": 1, "stars": 1 },
+      { "text": "Bond, for one", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "SUN", "score": 88, "categories": ["science-nature"], "tags": ["nature", "science", "summer"],
+    "clues": [
+      { "text": "It rises in the east", "difficulty": 1, "stars": 1 },
+      { "text": "Center of our solar system", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "TAB", "score": 82, "categories": ["wordplay", "science-nature"], "tags": ["tech"],
+    "clues": [
+      { "text": "Bar bill", "difficulty": 1, "stars": 1 },
+      { "text": "Browser window's neighbor", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "TAN", "score": 82, "categories": ["sports-leisure", "wordplay"], "tags": ["summer"],
+    "clues": [
+      { "text": "Beach souvenir", "difficulty": 1, "stars": 2 },
+      { "text": "Khaki's kin", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "TAP", "score": 84, "categories": ["wordplay", "entertainment"], "tags": ["music"],
+    "clues": [
+      { "text": "Faucet", "difficulty": 1, "stars": 1 },
+      { "text": "Dance style with noisy shoes", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "TAR", "score": 78, "categories": ["wordplay", "history"], "tags": ["history"],
+    "clues": [
+      { "text": "Road crew's black goo", "difficulty": 1, "stars": 1 },
+      { "text": "Old salt of the high seas", "difficulty": 4, "stars": 3 } ] },
+  { "answer": "TEA", "score": 90, "categories": ["sports-leisure", "wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Earl Grey, for one", "difficulty": 1, "stars": 1 },
+      { "text": "Hot gossip, in slang", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "TEN", "score": 84, "categories": ["sports-leisure"], "tags": ["sports", "olympics"],
+    "clues": [
+      { "text": "Perfect gymnastics score", "difficulty": 1, "stars": 1 },
+      { "text": "Full count of bowling pins", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "TIE", "score": 88, "categories": ["sports-leisure", "wordplay"], "tags": ["sports"],
+    "clues": [
+      { "text": "Father's Day gift cliché", "difficulty": 1, "stars": 2 },
+      { "text": "Reason for overtime", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "TIN", "score": 78, "categories": ["science-nature", "entertainment"], "tags": ["movies", "science"],
+    "clues": [
+      { "text": "Sardine container metal", "difficulty": 1, "stars": 1 },
+      { "text": "Oz woodman's material", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "TIP", "score": 86, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Server's bonus", "difficulty": 1, "stars": 1 },
+      { "text": "Iceberg's visible bit", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "TOE", "score": 84, "categories": ["science-nature", "sports-leisure"], "tags": ["sports"],
+    "clues": [
+      { "text": "Sock filler", "difficulty": 1, "stars": 2 },
+      { "text": "Ballerina's balance point", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "TOP", "score": 86, "categories": ["sports-leisure", "wordplay"], "tags": [],
+    "clues": [
+      { "text": "Spinning toy", "difficulty": 1, "stars": 1 },
+      { "text": "Where every mountain path ends", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "TSA", "score": 68, "categories": ["geography"], "tags": ["travel"],
+    "clues": [
+      { "text": "Airport screening org.", "difficulty": 1, "stars": 1 },
+      { "text": "Agcy. behind the shoes-off shuffle", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "URN", "score": 66, "categories": ["arts-literature", "history"], "tags": ["food", "art"],
+    "clues": [
+      { "text": "Big brunch coffee dispenser", "difficulty": 1, "stars": 1 },
+      { "text": "Grecian subject for Keats", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "USE", "score": 82, "categories": ["wordplay"], "tags": [],
+    "clues": [
+      { "text": "Put to work", "difficulty": 1, "stars": 1 },
+      { "text": "Employ", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "VAN", "score": 82, "categories": ["geography", "arts-literature"], "tags": ["travel", "art"],
+    "clues": [
+      { "text": "Mover's vehicle", "difficulty": 1, "stars": 1 },
+      { "text": "___ Gogh", "difficulty": 1, "stars": 1 } ] },
+  { "answer": "VET", "score": 82, "categories": ["science-nature", "wordplay"], "tags": ["animals"],
+    "clues": [
+      { "text": "Pet's doctor", "difficulty": 1, "stars": 1 },
+      { "text": "Screen, as job candidates", "difficulty": 3, "stars": 2 } ] },
+  { "answer": "VOW", "score": 78, "categories": ["wordplay"], "tags": ["valentines"],
+    "clues": [
+      { "text": "Solemn promise", "difficulty": 1, "stars": 1 },
+      { "text": "Wedding-altar exchange", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "WEB", "score": 84, "categories": ["science-nature"], "tags": ["animals", "tech", "halloween"],
+    "clues": [
+      { "text": "Spider's handiwork", "difficulty": 1, "stars": 1 },
+      { "text": "Where all the browsing happens, with \"the\"", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "WIN", "score": 86, "categories": ["sports-leisure"], "tags": ["sports", "olympics"],
+    "clues": [
+      { "text": "Take first place", "difficulty": 1, "stars": 1 },
+      { "text": "Bring home the trophy", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "YAM", "score": 74, "categories": ["science-nature", "sports-leisure"], "tags": ["food", "thanksgiving"],
+    "clues": [
+      { "text": "Thanksgiving tuber", "difficulty": 1, "stars": 1 },
+      { "text": "Sweet potato's stand-in", "difficulty": 2, "stars": 1 } ] },
+  { "answer": "ZOO", "score": 82, "categories": ["science-nature", "wordplay"], "tags": ["animals", "travel"],
+    "clues": [
+      { "text": "Lion's city address", "difficulty": 1, "stars": 2 },
+      { "text": "Total chaos, figuratively", "difficulty": 3, "stars": 2 } ] }
+]

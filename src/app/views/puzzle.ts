@@ -18,6 +18,7 @@ import { resolvePuzzle } from '../puzzles.ts';
 import { openHintLadder } from '../../solve/hintUi.ts';
 import { onSolveComplete, restoreProgress, persistProgress, clearProgress } from '../../solve/progress.ts';
 import { getSpeedPb, makeGhost, maybeSaveSpeedPb, parMsFor } from '../../solve/speed.ts';
+import { shareSolve } from '../../ui/share.ts';
 import type { Puzzle } from '../../core/types.ts';
 
 export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | void {
@@ -220,6 +221,7 @@ function celebrate(session: SolveSession, milestones: string[]): void {
       el('p', { className: 'celebrate-time' }, formatMs(ms)),
       el('ul', { className: 'milestones' }, ...milestones.map((m) => el('li', {}, m))),
       el('div', { className: 'modal-actions' },
+        el('button', { className: 'btn', onclick: () => void shareSolve(session) }, 'Share'),
         el('button', { className: 'btn', onclick: () => { close(); navigate('stats'); } }, 'See stats'),
         el('button', { className: 'btn primary', onclick: () => { close(); navigate(''); } }, 'Done'),
       ),

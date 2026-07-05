@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fnv1a, mulberry32, rngFrom } from './rng';
+import { fnv1a, mulberry32, rngFrom } from './rng.ts';
 
 describe('fnv1a', () => {
   it('is stable across calls', () => {

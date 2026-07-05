@@ -9,7 +9,7 @@
  * Across: SPA, SHONE, TONER, ARENA, EST
  * Down:   STA, SHORE, PONES, ANENT, ERA
  */
-import type { Puzzle } from './types';
+import type { Puzzle } from './types.ts';
 
 export const MINI_FIXTURE: Puzzle = {
   id: 'test-mini-1',

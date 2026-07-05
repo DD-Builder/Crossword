@@ -9,8 +9,8 @@ import {
   isFullyChecked,
   isSymmetric,
   slotAnswer,
-} from '../grid';
-import { CATEGORIES, type Clue, type Puzzle } from '../types';
+} from '../grid.ts';
+import { CATEGORIES, type Clue, type Puzzle } from '../types.ts';
 
 export interface Problem {
   level: 'error' | 'warn';

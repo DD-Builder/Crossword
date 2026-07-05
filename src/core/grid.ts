@@ -2,7 +2,7 @@
  * The grid (array of row strings) is the single source of truth —
  * clue numbers and slots are always recomputed from it. */
 
-import { BLOCK, isLetter, type Cell, type Direction, type Slot } from './types';
+import { BLOCK, isLetter, type Cell, type Direction, type Slot } from './types.ts';
 
 export interface GridInfo {
   rows: number;

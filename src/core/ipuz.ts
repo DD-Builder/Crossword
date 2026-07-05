@@ -3,8 +3,8 @@
  * categories, tags) rides in the ipuz-sanctioned `org.riddle:*` extension
  * namespace and round-trips through our importer. */
 
-import { deriveSlots, slotAnswer } from './grid';
-import { BLOCK, type Category, type Clue, type Puzzle } from './types';
+import { deriveSlots, slotAnswer } from './grid.ts';
+import { BLOCK, type Category, type Clue, type Puzzle } from './types.ts';
 
 interface IpuzClueEntry {
   number: number;

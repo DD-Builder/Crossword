@@ -7,7 +7,7 @@ import {
   minSlotLength,
   slotAnswer,
   templateToGrid,
-} from './grid';
+} from './grid.ts';
 import { MINI_FIXTURE } from './fixtures.test-data';
 
 const GRID = MINI_FIXTURE.grid;

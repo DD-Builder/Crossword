@@ -67,6 +67,8 @@ export interface Puzzle {
   date?: string;
   /** 1 (Mon) … 7 (Sun) on the traditional scale; kids puzzles use 1. */
   difficulty: number;
+  /** Library rotation slot: 1 (Mon) … 7 (Sun). Present on library dailies/minis. */
+  weekday?: number;
   size: { rows: number; cols: number };
   theme?: PuzzleTheme;
   /**

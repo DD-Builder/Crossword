@@ -1,0 +1,242 @@
+/** Backtracking grid filler with MRV slot selection and forward checking.
+ * Deterministic for a given (bank, template, seed) triple. */
+
+import { deriveSlots, isBlockAt, type GridInfo } from '../grid.ts';
+import type { BankEntry, Slot } from '../types.ts';
+import type { Rng } from '../rng.ts';
+import { countCandidates, candidates, type BankIndex } from './index.ts';
+
+export interface FillOptions {
+  /** Entries below this score are excluded (easy days keep fill friendly). */
+  scoreFloor?: number;
+  /** Backtracking step budget before giving up. */
+  maxSteps?: number;
+  /** Answers that must be placed first (theme entries), longest first. */
+  seedEntries?: string[];
+  /** Multiplier per category (adaptive nudges), clamped by caller. */
+  categoryWeights?: Record<string, number>;
+  /** Random jitter strength 0..1 applied to candidate ordering. */
+  jitter?: number;
+  /** Cap on how many candidates to try per slot per visit (beam width). */
+  beamWidth?: number;
+}
+
+export interface FillResult {
+  ok: boolean;
+  /** Complete letter grid rows on success. */
+  grid?: string[];
+  /** Answer → bank entry for every placed slot on success. */
+  placed?: Map<string, BankEntry>;
+  steps: number;
+  reason?: 'no-candidates' | 'budget' | 'seed-unplaceable';
+}
+
+interface SlotState {
+  slot: Slot;
+  pattern: () => string;
+  filled: boolean;
+  crossings: { other: number; myPos: number; otherPos: number }[];
+}
+
+export function fill(
+  template: string[],
+  bank: BankIndex,
+  rng: Rng,
+  opts: FillOptions = {},
+): FillResult {
+  const scoreFloor = opts.scoreFloor ?? 0;
+  const maxSteps = opts.maxSteps ?? 60_000;
+  const jitter = opts.jitter ?? 0.25;
+  const beamWidth = opts.beamWidth ?? 24;
+  const weights = opts.categoryWeights ?? {};
+
+  const rows = template.length;
+  const cols = template[0]?.length ?? 0;
+  const cells: string[] = [];
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) cells.push(template[r]![c]!);
+  }
+  const at = (r: number, c: number): string => cells[r * cols + c]!;
+  const setAt = (r: number, c: number, ch: string): void => {
+    cells[r * cols + c] = ch;
+  };
+
+  const info: GridInfo = deriveSlots(template, 3);
+  const slotIndexById = new Map<string, number>();
+  info.slots.forEach((s, i) => slotIndexById.set(s.id, i));
+
+  const states: SlotState[] = info.slots.map((slot) => ({
+    slot,
+    filled: false,
+    pattern: () => slot.cells.map(({ row, col }) => {
+      const ch = at(row, col);
+      return ch === '.' ? '?' : ch;
+    }).join(''),
+    crossings: [],
+  }));
+
+  // Precompute crossings between across and down slots.
+  for (let i = 0; i < states.length; i++) {
+    const s = states[i]!;
+    s.slot.cells.forEach((cell, myPos) => {
+      const [aId, dId] = info.cellSlots[cell.row]![cell.col]!;
+      const otherId = s.slot.dir === 'across' ? dId : aId;
+      if (!otherId) return;
+      const other = slotIndexById.get(otherId)!;
+      const otherSlot = info.slots[other]!;
+      const otherPos = otherSlot.cells.findIndex(
+        (c2) => c2.row === cell.row && c2.col === cell.col,
+      );
+      s.crossings.push({ other, myPos, otherPos });
+    });
+  }
+
+  const used = new Set<string>();
+  const placed = new Map<string, BankEntry>();
+  let steps = 0;
+
+  const idxFor = (len: number) => bank.byLen.get(len);
+
+  const candidateCount = (i: number): number => {
+    const s = states[i]!;
+    const idx = idxFor(s.slot.cells.length);
+    if (!idx) return 0;
+    return countCandidates(idx, s.pattern());
+  };
+
+  // --- Seed theme entries ---------------------------------------------------
+  // Placement is part of the search: if a seed arrangement leaves the grid
+  // unfillable, alternative slots for each seed are tried before failing.
+  const seeds = [...(opts.seedEntries ?? [])].sort((a, b) => b.length - a.length);
+  let anySeedPlaceable = seeds.length === 0;
+
+  const placeSeed = (answer: string, slotIdx: number): (() => void) => {
+    const s = states[slotIdx]!;
+    const prev = s.slot.cells.map(({ row, col }) => at(row, col));
+    s.slot.cells.forEach((cell, p) => setAt(cell.row, cell.col, answer[p]!));
+    s.filled = true;
+    used.add(answer);
+    placed.set(s.slot.id, bank.byAnswer.get(answer) ?? {
+      answer, score: 60, categories: ['wordplay'], tags: ['theme'], clues: [],
+    });
+    return () => {
+      s.slot.cells.forEach((cell, p) => setAt(cell.row, cell.col, prev[p]!));
+      s.filled = false;
+      used.delete(answer);
+      placed.delete(s.slot.id);
+    };
+  };
+
+  const solveWithSeeds = (k: number): boolean => {
+    if (k >= seeds.length) {
+      anySeedPlaceable = true;
+      return solve();
+    }
+    const answer = seeds[k]!;
+    const options: number[] = [];
+    states.forEach((s, i) => {
+      if (s.filled || s.slot.cells.length !== answer.length) return;
+      const pattern = s.pattern();
+      for (let p = 0; p < answer.length; p++) {
+        if (pattern[p] !== '?' && pattern[p] !== answer[p]) return;
+      }
+      options.push(i);
+    });
+    rng.shuffle(options);
+    for (const i of options) {
+      const undo = placeSeed(answer, i);
+      if (solveWithSeeds(k + 1)) return true;
+      undo();
+      if (steps > maxSteps) return false;
+    }
+    return false;
+  };
+
+  // --- Backtracking fill ----------------------------------------------------
+  const solve = (): boolean => {
+    // MRV: unfilled slot with fewest candidates.
+    let best = -1;
+    let bestCount = Infinity;
+    for (let i = 0; i < states.length; i++) {
+      if (states[i]!.filled) continue;
+      const count = candidateCount(i);
+      if (count < bestCount) {
+        bestCount = count;
+        best = i;
+        if (count === 0) break;
+      }
+    }
+    if (best === -1) return true; // all filled
+    if (bestCount === 0) return false;
+
+    const s = states[best]!;
+    const idx = idxFor(s.slot.cells.length)!;
+    const pattern = s.pattern();
+
+    // Collect + order candidates: score * weights * jitter, beam-limited.
+    const opts_: { entry: BankEntry; sort: number }[] = [];
+    for (const entry of candidates(idx, pattern)) {
+      if (entry.score < scoreFloor) continue;
+      if (used.has(entry.answer)) continue;
+      let w = 1;
+      for (const cat of entry.categories) w *= weights[cat] ?? 1;
+      opts_.push({ entry, sort: entry.score * w * (1 - jitter * rng.next()) });
+      if (opts_.length >= beamWidth * 3) break;
+    }
+    opts_.sort((a, b) => b.sort - a.sort);
+    const beam = opts_.slice(0, beamWidth);
+
+    for (const { entry } of beam) {
+      if (++steps > maxSteps) return false;
+
+      // Place.
+      const prev: string[] = [];
+      s.slot.cells.forEach((cell, p) => {
+        prev.push(at(cell.row, cell.col));
+        setAt(cell.row, cell.col, entry.answer[p]!);
+      });
+      s.filled = true;
+      used.add(entry.answer);
+      placed.set(s.slot.id, entry);
+
+      // Forward check: every crossing slot must retain ≥1 candidate.
+      let viable = true;
+      for (const { other } of s.crossings) {
+        const o = states[other]!;
+        if (o.filled) continue;
+        if (candidateCount(other) === 0) {
+          viable = false;
+          break;
+        }
+      }
+
+      if (viable && solve()) return true;
+
+      // Undo.
+      s.slot.cells.forEach((cell, p) => setAt(cell.row, cell.col, prev[p]!));
+      s.filled = false;
+      used.delete(entry.answer);
+      placed.delete(s.slot.id);
+      if (steps > maxSteps) return false;
+    }
+    return false;
+  };
+
+  const ok = solveWithSeeds(0);
+  if (!ok) {
+    const reason = steps > maxSteps
+      ? 'budget'
+      : anySeedPlaceable ? 'no-candidates' : 'seed-unplaceable';
+    return { ok: false, steps, reason };
+  }
+
+  const grid: string[] = [];
+  for (let r = 0; r < rows; r++) {
+    let row = '';
+    for (let c = 0; c < cols; c++) {
+      row += isBlockAt(template, r, c) ? '#' : at(r, c);
+    }
+    grid.push(row);
+  }
+  return { ok: true, grid, placed, steps };
+}

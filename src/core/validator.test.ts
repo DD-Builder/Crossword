@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { validatePuzzle, assertValid } from './validate/validator';
 import { MINI_FIXTURE } from './fixtures.test-data';
-import type { Puzzle } from './types';
+import type { Puzzle } from './types.ts';
 
 const clone = (): Puzzle => structuredClone(MINI_FIXTURE);
 

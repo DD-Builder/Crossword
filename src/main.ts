@@ -1,0 +1,85 @@
+import './themes/tokens.css';
+import './themes/base.css';
+import './themes/layout.css';
+import './themes/solver.css';
+import './themes/skins.css';
+
+import { startRouter, registerView, navigate, currentRoute } from './app/router';
+import { applyTheme, watchSystemTheme } from './storage/settings';
+import { el } from './ui/dom';
+
+import { renderHome } from './app/views/home';
+import { renderPuzzle } from './app/views/puzzle';
+import { renderArchive } from './app/views/archive';
+import { renderFreePlay } from './app/views/freeplay';
+import { renderThemed } from './app/views/themed';
+import { renderKids } from './app/views/kids';
+import { renderStats } from './app/views/stats';
+import { renderSettings } from './app/views/settings';
+
+function buildShell(): HTMLElement {
+  const app = document.getElementById('app')!;
+
+  const navItems: [string, string, string][] = [
+    ['home', 'Today', ''],
+    ['archive', 'Archive', 'archive'],
+    ['stats', 'Stats', 'stats'],
+    ['settings', 'Settings', 'settings'],
+  ];
+
+  const nav = el('nav', {},
+    ...navItems.map(([name, label, path]) =>
+      el('button', {
+        className: 'btn quiet',
+        'data-nav': name,
+        onclick: () => navigate(path),
+      }, label),
+    ),
+  );
+
+  const header = el('header', { className: 'app-header' },
+    el('button', {
+      className: 'brand',
+      onclick: () => navigate(''),
+      'aria-label': 'Riddle Crossword — home',
+    }, el('span', { className: 'brand-mark', 'aria-hidden': 'true' }), 'Riddle Crossword'),
+    el('div', { className: 'spacer' }),
+    nav,
+  );
+
+  const viewRoot = el('main', { className: 'view', id: 'view-root' });
+  app.replaceChildren(header, viewRoot);
+
+  document.addEventListener('route-changed', () => {
+    const name = currentRoute();
+    nav.querySelectorAll<HTMLButtonElement>('[data-nav]').forEach((b) => {
+      b.classList.toggle('active', b.dataset.nav === name);
+    });
+    // The solver owns the whole viewport; hide the app chrome there.
+    header.style.display = name === 'puzzle' ? 'none' : '';
+  });
+
+  return viewRoot;
+}
+
+function main(): void {
+  applyTheme();
+  watchSystemTheme();
+
+  registerView('home', renderHome);
+  registerView('puzzle', renderPuzzle);
+  registerView('archive', renderArchive);
+  registerView('free', renderFreePlay);
+  registerView('themed', renderThemed);
+  registerView('kids', renderKids);
+  registerView('stats', renderStats);
+  registerView('settings', renderSettings);
+
+  startRouter(buildShell());
+
+  if ('serviceWorker' in navigator && import.meta.env.PROD) {
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
+  }
+}
+
+main();

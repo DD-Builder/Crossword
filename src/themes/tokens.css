@@ -1,0 +1,86 @@
+/* ---------------------------------------------------------------------------
+ * Semantic token contract. Every skin overrides ONLY these variables under
+ * [data-skin="…"] (+ [data-mode="dark"]). Structure/layout CSS never uses
+ * raw colors — tokens only.
+ * ------------------------------------------------------------------------- */
+
+:root {
+  /* Surfaces */
+  --bg: #faf7f0;                /* page background */
+  --surface: #ffffff;           /* cards, panels */
+  --surface-2: #f3efe6;         /* subtle inset surfaces */
+  --border: #e2dccc;
+  --shadow-card: 0 1px 3px rgba(40, 35, 20, 0.08), 0 8px 24px rgba(40, 35, 20, 0.06);
+
+  /* Ink */
+  --ink: #21201c;
+  --ink-muted: #6f6a5d;
+  --ink-faint: #a39d8d;
+
+  /* Accent */
+  --accent: #3b6ea5;
+  --accent-ink: #ffffff;
+  --accent-soft: #dbe7f3;       /* soft accent wash (active clue bg, chips) */
+
+  /* Grid cells */
+  --cell-bg: #ffffff;
+  --cell-ink: #1c1b18;
+  --cell-border: #b9b3a2;
+  --cell-block: #2a2925;
+  --cell-selected: #ffd76e;     /* the focused cell */
+  --cell-word: #cfe3f6;         /* rest of the active word */
+  --cell-pencil: #8b867a;
+  --cell-wrong: #d0453e;        /* checked-wrong slash / ink */
+  --cell-revealed: #b03f8f;     /* revealed marker */
+  --cell-correct-flash: #7fc98f;
+
+  /* Status */
+  --good: #3e8e5a;
+  --warn: #c8871d;
+  --bad: #d0453e;
+
+  /* Type */
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-grid: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Shape */
+  --radius: 12px;
+  --radius-cell: 0px;
+
+  /* Decorative (skins may use for gradients/patterns; defaults are quiet) */
+  --page-texture: none;         /* background-image on body */
+  --panel-texture: none;        /* background-image on clue panels */
+  --header-flair: var(--accent);
+}
+
+:root[data-mode="dark"] {
+  --bg: #191813;
+  --surface: #23221c;
+  --surface-2: #2c2a23;
+  --border: #3a3830;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+
+  --ink: #ece8dc;
+  --ink-muted: #a49e8e;
+  --ink-faint: #6d685c;
+
+  --accent: #7ba7d4;
+  --accent-ink: #10131a;
+  --accent-soft: #2b3a4c;
+
+  --cell-bg: #2d2b24;
+  --cell-ink: #f0ecdf;
+  --cell-border: #4a4739;
+  --cell-block: #0e0d0b;
+  --cell-selected: #a8842c;
+  --cell-word: #3a4a5c;
+  --cell-pencil: #97917f;
+  --cell-wrong: #e06258;
+  --cell-revealed: #cf6cb0;
+  --cell-correct-flash: #4d8a61;
+
+  --good: #64ad7f;
+  --warn: #d9a04a;
+  --bad: #e06258;
+}

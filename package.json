@@ -1,0 +1,31 @@
+{
+  "name": "crossword",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A beautiful, local-first crossword puzzle game — clever clues, daily puzzles, kids mode, and a learning puzzle engine.",
+  "author": "DD-Builder",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate && vite build",
+    "preview": "vite preview",
+    "test": "vitest run && npm run validate",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run build:only && npm run test:e2e",
+    "build:only": "vite build",
+    "validate": "node scripts/validate-templates.mjs && node scripts/validate-wordbank.mjs && node scripts/validate-puzzles.mjs && node scripts/check-boundaries.mjs",
+    "fill": "node scripts/generate-fill.mjs",
+    "ios:init": "npm install @capacitor/core @capacitor/cli @capacitor/ios && npx cap add ios",
+    "ios:sync": "npm run build && npx cap sync ios",
+    "ios:open": "npx cap open ios"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^26.1.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.9"
+  }
+}

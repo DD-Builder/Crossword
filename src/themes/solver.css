@@ -385,3 +385,37 @@
   .xw-grid { --grid-edge: min(56vw, calc(100dvh - 190px), 720px); }
   .soft-kbd { display: none; }
 }
+
+/* --- Speed HUD ---------------------------------------------------------- */
+
+.speed-hud {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: var(--grid-edge, 70vh);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.speed-par.over { color: var(--bad); }
+.speed-pb { color: var(--ink-muted); }
+.speed-track {
+  flex: 1;
+  position: relative;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.speed-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  transition: width 0.25s linear;
+}
+.speed-fill.you { background: var(--accent); }
+.speed-fill.ghost { background: var(--ink-faint); opacity: 0.55; height: 45%; top: auto; }

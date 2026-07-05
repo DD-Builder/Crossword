@@ -17,6 +17,7 @@ import { getSettings } from '../../storage/settings.ts';
 import { resolvePuzzle } from '../puzzles.ts';
 import { openHintLadder } from '../../solve/hintUi.ts';
 import { onSolveComplete, restoreProgress, persistProgress, clearProgress } from '../../solve/progress.ts';
+import { getSpeedPb, makeGhost, maybeSaveSpeedPb, parMsFor } from '../../solve/speed.ts';
 import type { Puzzle } from '../../core/types.ts';
 
 export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | void {
@@ -27,11 +28,13 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   let cleanup: (() => void) | null = null;
   let cancelled = false;
 
+  const speedMode = ctx.query.get('speed') === '1';
+
   resolvePuzzle(ctx)
     .then((puzzle) => {
       if (cancelled) return;
       container.replaceChildren();
-      cleanup = mountSolver(container, puzzle);
+      cleanup = mountSolver(container, puzzle, speedMode);
     })
     .catch((err: unknown) => {
       if (cancelled) return;
@@ -50,10 +53,10 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   };
 }
 
-function mountSolver(container: HTMLElement, puzzle: Puzzle): () => void {
+function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false): () => void {
   const settings = getSettings();
   const session = new SolveSession(puzzle, { autocheck: settings.autocheck });
-  restoreProgress(session);
+  if (!speedMode) restoreProgress(session); // speed runs always start clean
 
   // Kids puzzles auto-apply the Lisa Frank skin for the duration.
   const isKids = puzzle.kind === 'kids';
@@ -90,7 +93,23 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle): () => void {
   const clueLists = createClueLists(session);
   const softKbd = createSoftKeyboard(session);
 
-  const gridWrap = el('div', { className: 'grid-pane' }, clueBar.root, grid.root);
+  // Speed HUD: par countdown + PB ghost progress.
+  const parMs = speedMode ? parMsFor(puzzle) : 0;
+  const pb = speedMode ? getSpeedPb(puzzle) : null;
+  const ghost = pb ? makeGhost(pb) : null;
+  const speedHud = speedMode
+    ? el('div', { className: 'speed-hud' },
+        el('span', { className: 'speed-par' }, `Par ${formatMs(parMs)}`),
+        el('span', { className: 'speed-track' },
+          el('span', { className: 'speed-fill you', style: 'width:0%' }),
+          ghost ? el('span', { className: 'speed-fill ghost', style: 'width:0%' }) : '',
+        ),
+        el('span', { className: 'speed-pb' }, ghost ? `PB ${formatMs(ghost.pbMs)}` : 'First run!'),
+      )
+    : null;
+
+  const gridWrap = el('div', { className: 'grid-pane' },
+    ...(speedHud ? [speedHud] : []), clueBar.root, grid.root);
   const main = el('div', { className: 'solver-main' }, gridWrap, clueLists.root);
   container.append(toolbar.root, main, softKbd.root);
 
@@ -99,11 +118,36 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle): () => void {
     onHardwareKey: () => softKbd.hide(),
   });
 
+  // Test hook (also handy in devtools): the active puzzle's shape.
+  (window as unknown as { __xw?: object }).__xw = {
+    solution: puzzle.grid,
+    rows: puzzle.size.rows,
+    cols: puzzle.size.cols,
+  };
+
   // Timer tick — refresh the toolbar clock once a second while active.
+  const totalCells = puzzle.grid.join('').replace(/#/g, '').length;
   const timerInterval = window.setInterval(() => {
     const state = session.store.get();
-    if (!state.paused && !state.completed) toolbar.refresh();
-  }, 1000);
+    if (state.paused || state.completed) return;
+    toolbar.refresh();
+    if (speedHud) {
+      const t = session.activeMs();
+      const you = speedHud.querySelector<HTMLElement>('.speed-fill.you');
+      const filled = new Set(session.fillOrder.map((f) => f.index)).size;
+      if (you) you.style.width = `${Math.min(100, (filled / totalCells) * 100)}%`;
+      if (ghost) {
+        const g = speedHud.querySelector<HTMLElement>('.speed-fill.ghost');
+        if (g) g.style.width = `${Math.min(100, (ghost.filledAt(t) / Math.max(1, ghost.total)) * 100)}%`;
+      }
+      const par = speedHud.querySelector<HTMLElement>('.speed-par');
+      if (par) {
+        const left = parMs - t;
+        par.textContent = left >= 0 ? `Par −${formatMs(left)}` : `Par +${formatMs(-left)}`;
+        par.classList.toggle('over', left < 0);
+      }
+    }
+  }, speedMode ? 250 : 1000);
 
   let congratulated = false;
   let persistTimer: number | null = null;
@@ -125,7 +169,20 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle): () => void {
     if (state.completed && !congratulated) {
       congratulated = true;
       clearProgress(session.puzzle.id);
-      void onSolveComplete(session).then((milestones) => celebrate(session, milestones));
+      void onSolveComplete(session, speedMode ? { speedMode, parMs } : undefined).then((milestones) => {
+        if (speedMode) {
+          const ms = session.activeMs();
+          const { improved, prev } = maybeSaveSpeedPb(session);
+          if (ms <= parMs) milestones.unshift(`⚡ Beat par by ${formatMs(parMs - ms)}`);
+          else milestones.unshift(`Par slipped by ${formatMs(ms - parMs)} — next time.`);
+          if (improved) {
+            milestones.unshift(prev
+              ? `👻 New speed PB! Ghost beaten by ${formatMs(prev.ms - ms)}`
+              : '👻 First speed record set — your ghost awaits.');
+          }
+        }
+        celebrate(session, milestones);
+      });
     }
   });
 

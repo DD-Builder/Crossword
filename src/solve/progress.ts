@@ -82,7 +82,10 @@ function bumpStreak(dateIso: string): StreakState {
 
 /** Completion hook: stats write + streak/PB milestones. Returns
  * human-readable milestone lines for the celebration modal. */
-export async function onSolveComplete(session: SolveSession): Promise<string[]> {
+export async function onSolveComplete(
+  session: SolveSession,
+  speedExtras?: { speedMode: boolean; parMs: number },
+): Promise<string[]> {
   const milestones: string[] = [];
   const puzzle = session.puzzle;
   const ms = session.activeMs();
@@ -112,7 +115,7 @@ export async function onSolveComplete(session: SolveSession): Promise<string[]> 
   if (session.store.get().flawless) milestones.push('No checks, no reveals, no hints — a clean sheet.');
 
   try {
-    await recordSolve(session);
+    await recordSolve(session, speedExtras ?? {});
   } catch {
     // Stats are best-effort; never block the celebration.
   }

@@ -40,12 +40,13 @@ export function validatePuzzles(dir) {
       if (seenIds.has(puzzle.id)) fail(where, 'duplicate puzzle id');
       seenIds.add(puzzle.id);
 
-      // Kids minis may have unchecked cells (friendlier shapes); everything
-      // else follows standard construction rules.
+      // Kids minis may have unchecked cells (friendlier shapes); lattice
+      // (British-style) grids legitimately leave alternate letters
+      // unchecked. Everything else follows standard construction rules.
       const relaxed = puzzle.kind === 'kids';
       const problems = validatePuzzle(puzzle, {
         symmetry: !relaxed,
-        fullyChecked: !relaxed,
+        fullyChecked: !relaxed && !puzzle.lattice,
         minLen: 3,
       });
       for (const p of problems) {

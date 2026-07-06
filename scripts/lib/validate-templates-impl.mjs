@@ -42,7 +42,22 @@ export function validateTemplates(dir) {
       }
       if (!isSymmetric(grid)) fail('not 180° symmetric');
       if (!isConnected(grid)) fail('not connected');
-      if (!isFullyChecked(grid, 3)) fail('not fully checked (or has a slot shorter than 3)');
+      // Lattice (British-style) templates legitimately leave alternate
+      // letters unchecked; every cell must still belong to ≥1 slot.
+      if (t.lattice) {
+        const { slots } = deriveSlots(grid, 3);
+        const covered = new Set();
+        for (const s of slots) for (const c of s.cells) covered.add(c.row * t.size + c.col);
+        for (let r = 0; r < t.size; r++) {
+          for (let c = 0; c < t.size; c++) {
+            if (grid[r][c] !== '#' && !covered.has(r * t.size + c)) {
+              fail(`cell ${r},${c} belongs to no slot`);
+            }
+          }
+        }
+      } else if (!isFullyChecked(grid, 3)) {
+        fail('not fully checked (or has a slot shorter than 3)');
+      }
 
       const { slots } = deriveSlots(grid, 3);
       const lengths = slots.map((s) => s.cells.length);

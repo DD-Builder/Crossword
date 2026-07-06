@@ -21,6 +21,13 @@ export interface FillOptions {
   beamWidth?: number;
   /** Debug: log MRV choices and dead ends (node-side tooling only). */
   trace?: (msg: string) => void;
+  /**
+   * Slot selection strategy. 'mrv' = fewest raw candidates (fills short
+   * slots early); 'ratio' = fewest relative to bucket size, longest first
+   * (constructor-style). Rugged banks benefit from alternating across
+   * restarts — neither dominates on every template.
+   */
+  selection?: 'mrv' | 'ratio';
 }
 
 /** Relative English letter frequency (A…Z), normalized to max 1. */
@@ -163,16 +170,31 @@ export function fill(
 
   // --- Backtracking fill ----------------------------------------------------
   const solve = (): boolean => {
-    // MRV: unfilled slot with fewest candidates.
+    // Slot selection: most-constrained-first, where "constrained" is the
+    // candidate count RELATIVE to the slot's whole length bucket. Raw MRV
+    // would fill short slots first (small buckets), strangling the long
+    // slots — constructors place long entries first for a reason. Ties
+    // break toward longer slots.
     let best = -1;
     let bestCount = Infinity;
+    let bestRatio = Infinity;
+    let bestLen = 0;
     for (let i = 0; i < states.length; i++) {
       if (states[i]!.filled) continue;
       const count = candidateCount(i);
-      if (count < bestCount) {
-        bestCount = count;
+      if (count === 0) {
         best = i;
-        if (count === 0) break;
+        bestCount = 0;
+        break;
+      }
+      const len = states[i]!.slot.cells.length;
+      const bucket = opts.selection === 'mrv' ? 1 : idxFor(len)?.entries.length ?? 1;
+      const ratio = count / bucket;
+      if (ratio < bestRatio || (ratio === bestRatio && len > bestLen)) {
+        bestRatio = ratio;
+        bestCount = count;
+        bestLen = len;
+        best = i;
       }
     }
     if (best === -1) return true; // all filled

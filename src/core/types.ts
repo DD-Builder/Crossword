@@ -69,6 +69,8 @@ export interface Puzzle {
   difficulty: number;
   /** Library rotation slot: 1 (Mon) … 7 (Sun). Present on library dailies/minis. */
   weekday?: number;
+  /** British-style lattice grid: alternate letters legitimately unchecked. */
+  lattice?: boolean;
   size: { rows: number; cols: number };
   theme?: PuzzleTheme;
   /**

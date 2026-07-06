@@ -66,21 +66,31 @@ export async function resolvePuzzle(ctx: RouteCtx): Promise<Puzzle> {
   if (dailyMatch) {
     const puzzle = dailyFor(dailyMatch[2]!, dailyMatch[1] as 'daily' | 'mini');
     if (puzzle) return puzzle;
-    // Library gap → deterministic generated fallback so the daily never 404s.
+    // Library gap → deterministic generated fallback so the daily never
+    // 404s; walks down through sizes until a grid lands.
     const dateIso = dailyMatch[2]!;
     const weekday = weekdayOf(dateIso);
     const knobs = knobsFor(weekday);
-    const size = dailyMatch[1] === 'daily' ? 15 : knobs.miniSize;
-    return generateAsync({
-      id,
-      kind: dailyMatch[1] === 'daily' ? 'daily' : 'mini',
-      title: dailyMatch[1] === 'daily' ? 'The Daily' : 'The Mini',
-      date: dateIso,
-      difficulty: weekday,
-      templates: pickTemplates(size, weekday),
-      seedKey: `${dailyMatch[1]}|${dateIso}`,
-      categoryWeights: {}, // dailies are the same for everyone — no adaptive nudge
-    });
+    const sizes = dailyMatch[1] === 'daily' ? [15, 13, 11, 9, 7] : [knobs.miniSize];
+    let lastError: unknown = null;
+    for (const size of sizes) {
+      try {
+        return await generateAsync({
+          id,
+          kind: dailyMatch[1] === 'daily' ? 'daily' : 'mini',
+          title: dailyMatch[1] === 'daily' ? 'The Daily' : 'The Mini',
+          date: dateIso,
+          difficulty: weekday,
+          templates: pickTemplates(size, weekday),
+          seedKey: `${dailyMatch[1]}|${dateIso}|s${size}`,
+          restarts: 8,
+          categoryWeights: {}, // dailies are the same for everyone — no adaptive nudge
+        });
+      } catch (err) {
+        lastError = err;
+      }
+    }
+    throw lastError instanceof Error ? lastError : new Error('Daily generation failed');
   }
 
   const fromLibrary = libraryPuzzles().find((p) => p.id === id);

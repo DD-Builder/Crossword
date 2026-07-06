@@ -19,6 +19,8 @@ export interface FillOptions {
   jitter?: number;
   /** Cap on how many candidates to try per slot per visit (beam width). */
   beamWidth?: number;
+  /** Debug: log MRV choices and dead ends (node-side tooling only). */
+  trace?: (msg: string) => void;
 }
 
 /** Relative English letter frequency (A…Z), normalized to max 1. */
@@ -174,7 +176,11 @@ export function fill(
       }
     }
     if (best === -1) return true; // all filled
-    if (bestCount === 0) return false;
+    if (bestCount === 0) {
+      opts.trace?.(`dead: ${states.find((x, i) => !x.filled && candidateCount(i) === 0)?.slot.id ?? states[best]!.slot.id} pattern=${states[best]!.pattern()} 0 candidates`);
+      return false;
+    }
+    opts.trace?.(`pick ${states[best]!.slot.id} pattern=${states[best]!.pattern()} candidates=${bestCount}`);
 
     const s = states[best]!;
     const idx = idxFor(s.slot.cells.length)!;

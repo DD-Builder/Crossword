@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
 
 // GitHub Pages serves this repo at https://<user>.github.io/Crossword/ —
@@ -12,5 +13,9 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+  },
+  test: {
+    // Playwright owns e2e/**; vitest runs the co-located src tests only.
+    include: ['src/**/*.test.ts'],
   },
 });

@@ -13,3 +13,4 @@ rising beam/jitter) and `tagWeights: { fill: 0.6 }`.
 | checkpoint | bank (3/4/5/6/7/8) | total | am11 | am13 | am15 | notes |
 |---|---|---|---|---|---|---|
 | baseline (pre-wave, 8 seeds) | 297/612/660/743/444/457 | 3,347 | 0% | 0% | 0% | family split exposes American truth; old mixed smoke passed via lattice |
+| wave 1 (+300 len7/8) | 297/612/660/743/594/607 | 3,647 | 0% | 0% | 0% | len7/8 alone doesn't lift American — the binding constraint is len4/5/6 crossing density, confirming the sizing rationale. Waves 2–6 (len4/5/6) are what move the curve. |

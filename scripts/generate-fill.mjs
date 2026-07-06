@@ -52,11 +52,22 @@ if (args.smoke) {
     let totalMs = 0;
     let maxMs = 0;
     for (let i = 0; i < seedCount; i++) {
-      const template = sized[i % sized.length];
-      const { result, ms } = runOne(template, `smoke|${size}|${i}`);
+      // Mirror production: restart ladder with rising jitter/beam across
+      // the size's templates until one lands.
+      let ms = 0;
+      let landed = false;
+      for (let attempt = 0; attempt < 5 && !landed; attempt++) {
+        const template = sized[(i + attempt) % sized.length];
+        const out = runOne(template, `smoke|${size}|${i}|r${attempt}`, {
+          beamWidth: 24 + attempt * 20,
+          jitter: 0.25 + attempt * 0.12,
+        });
+        ms += out.ms;
+        landed = out.result.ok;
+      }
       totalMs += ms;
       maxMs = Math.max(maxMs, ms);
-      if (result.ok) ok++;
+      if (landed) ok++;
     }
     const rate = ok / seedCount;
     const target = targets[size] ?? 0.5;

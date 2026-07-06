@@ -19,6 +19,7 @@ import { openHintLadder } from '../../solve/hintUi.ts';
 import { onSolveComplete, restoreProgress, persistProgress, clearProgress } from '../../solve/progress.ts';
 import { getSpeedPb, makeGhost, maybeSaveSpeedPb, parMsFor } from '../../solve/speed.ts';
 import { shareSolve } from '../../ui/share.ts';
+import { playVictory } from '../../ui/celebrations/index.ts';
 import type { Puzzle } from '../../core/types.ts';
 
 export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | void {
@@ -151,6 +152,7 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false):
   }, speedMode ? 250 : 1000);
 
   let congratulated = false;
+  let victory: { stop(): void } | null = null;
   let persistTimer: number | null = null;
   const unsubscribe = session.store.subscribe((state) => {
     grid.refresh();
@@ -182,7 +184,7 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false):
               : '👻 First speed record set — your ghost awaits.');
           }
         }
-        celebrate(session, milestones);
+        victory = celebrate(session, milestones, grid.root);
       });
     }
   });
@@ -205,26 +207,42 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false):
     if (persistTimer !== null) window.clearTimeout(persistTimer);
     if (!session.store.get().completed) persistProgress(session);
     pauseOverlay?.close();
+    victory?.stop();
     if (isKids && prevSkin) document.documentElement.dataset.skin = prevSkin;
   };
 }
 
-function celebrate(session: SolveSession, milestones: string[]): void {
+function celebrate(
+  session: SolveSession,
+  milestones: string[],
+  gridEl: HTMLElement | null,
+): { stop(): void } {
   const ms = session.activeMs();
-  openModal((body, close) => {
-    body.classList.add('celebrate');
-    body.append(
-      el('div', { className: 'confetti', 'aria-hidden': 'true' },
-        ...Array.from({ length: 24 }, (_, i) => el('i', { style: `--i:${i}` })),
-      ),
-      el('h3', {}, session.store.get().flawless ? 'Flawless! 🏆' : 'Solved! 🎉'),
-      el('p', { className: 'celebrate-time' }, formatMs(ms)),
-      el('ul', { className: 'milestones' }, ...milestones.map((m) => el('li', {}, m))),
-      el('div', { className: 'modal-actions' },
-        el('button', { className: 'btn', onclick: () => void shareSolve(session) }, 'Share'),
-        el('button', { className: 'btn', onclick: () => { close(); navigate('stats'); } }, 'See stats'),
-        el('button', { className: 'btn primary', onclick: () => { close(); navigate(''); } }, 'Done'),
-      ),
-    );
+  const puzzle = session.puzzle;
+  return playVictory({
+    seedKey: `${puzzle.id}|${puzzle.date ?? ''}`,
+    gridEl,
+    title: puzzle.title,
+    timeText: formatMs(ms),
+    onModalCue: (animated) => {
+      openModal((body, close) => {
+        body.classList.add('celebrate');
+        body.append(
+          // The canvas scene owns the spectacle; the CSS confetti only plays
+          // when the scene was skipped (setting off / reduced motion).
+          animated ? '' : el('div', { className: 'confetti', 'aria-hidden': 'true' },
+            ...Array.from({ length: 24 }, (_, i) => el('i', { style: `--i:${i}` })),
+          ),
+          el('h3', {}, session.store.get().flawless ? 'Flawless! 🏆' : 'Solved! 🎉'),
+          el('p', { className: 'celebrate-time' }, formatMs(ms)),
+          el('ul', { className: 'milestones' }, ...milestones.map((m) => el('li', {}, m))),
+          el('div', { className: 'modal-actions' },
+            el('button', { className: 'btn', onclick: () => void shareSolve(session) }, 'Share'),
+            el('button', { className: 'btn', onclick: () => { close(); navigate('stats'); } }, 'See stats'),
+            el('button', { className: 'btn primary', onclick: () => { close(); navigate(''); } }, 'Done'),
+          ),
+        );
+      });
+    },
   });
 }

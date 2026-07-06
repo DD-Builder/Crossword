@@ -16,6 +16,7 @@ export interface Settings {
   smartSkip: boolean;       // cursor skips filled cells while typing
   adaptive: boolean;        // stats nudge generated puzzles
   sound: boolean;
+  victoryAnimations: boolean; // per-skin canvas spectacle on solve
   playerName: string;
   kidsGrade: string;        // '', 'K', '1'..'8'
   llm: LlmConfig | null;
@@ -28,6 +29,7 @@ const DEFAULTS: Settings = {
   smartSkip: true,
   adaptive: true,
   sound: true,
+  victoryAnimations: true,
   playerName: '',
   kidsGrade: '',
   llm: null,

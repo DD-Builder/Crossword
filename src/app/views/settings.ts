@@ -76,7 +76,7 @@ export function renderSettings(root: HTMLElement, _ctx: RouteCtx): void {
   renderModes();
 
   // --- Solving toggles ------------------------------------------------------
-  const toggle = (key: 'autocheck' | 'smartSkip' | 'adaptive' | 'sound', title: string, sub: string): HTMLElement => {
+  const toggle = (key: 'autocheck' | 'smartSkip' | 'adaptive' | 'sound' | 'victoryAnimations', title: string, sub: string): HTMLElement => {
     const input = el('input', { type: 'checkbox' }) as HTMLInputElement;
     input.checked = getSettings()[key];
     input.addEventListener('change', () => saveSettings({ [key]: input.checked }));
@@ -196,6 +196,7 @@ export function renderSettings(root: HTMLElement, _ctx: RouteCtx): void {
         toggle('smartSkip', 'Smart cursor', 'Typing skips over letters you’ve already placed.'),
         toggle('adaptive', 'Adapt puzzles to me', 'Generated puzzles lean gently toward the categories you enjoy. Dailies are never changed.'),
         toggle('sound', 'Sounds', 'Little dings for milestones.'),
+        toggle('victoryAnimations', 'Victory animations', 'A little spectacle when you solve — each skin celebrates in its own style.'),
       ),
 
       el('div', { className: 'settings-group' },

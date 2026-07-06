@@ -346,6 +346,24 @@
 .milestones { list-style: none; padding: 0; margin: 10px 0 0; color: var(--ink-muted); font-size: 0.92rem; }
 .milestones li { padding: 3px 0; }
 
+/* Victory canvas: full-viewport scene layer under the modal (z 100). */
+.celebration-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+}
+
+/* Win wave: diagonal flash rippling across the solved grid, cell by cell. */
+.win-wave .xw-cell:not(.block) {
+  animation: win-wave-flash 0.9s ease-out var(--wd, 0ms) 1;
+}
+@keyframes win-wave-flash {
+  0% { background: var(--cell-bg); }
+  35% { background: var(--cell-correct-flash); transform: scale(0.94); }
+  100% { background: var(--cell-bg); transform: scale(1); }
+}
+
 .confetti { position: absolute; inset: 0; pointer-events: none; }
 .confetti i {
   position: absolute;

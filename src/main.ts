@@ -76,6 +76,14 @@ function main(): void {
   registerView('kids', renderKids);
   registerView('stats', renderStats);
   registerView('settings', renderSettings);
+  if (import.meta.env.DEV) {
+    // Scene-review gallery — stripped from production builds.
+    void import('./app/views/devCelebrations').then(({ renderDevCelebrations }) => {
+      registerView('dev', renderDevCelebrations);
+      // The initial render may have raced this import; re-route onto it.
+      if (location.hash.startsWith('#/dev')) navigate(location.hash.replace(/^#\//, ''));
+    });
+  }
 
   startRouter(buildShell());
 

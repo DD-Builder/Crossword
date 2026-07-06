@@ -5,9 +5,13 @@
 import { rngFrom } from '../../core/rng.ts';
 import type { Scene } from './types.ts';
 import { classicScenes } from './scenes/classic.ts';
+import { midnightScenes } from './scenes/midnight.ts';
+import { oceanScenes } from './scenes/ocean.ts';
 
 const REGISTRY: Record<string, Scene[]> = {
   classic: classicScenes,
+  midnight: midnightScenes,
+  ocean: oceanScenes,
 };
 
 export const SCENE_SKINS = Object.keys(REGISTRY);

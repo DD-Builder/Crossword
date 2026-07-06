@@ -1,0 +1,221 @@
+/* Skins: each overrides ONLY the semantic tokens from tokens.css, under
+ * [data-skin="…"] with a dark-mode variant. `classic` = the tokens.css
+ * defaults (newsprint warmth), listed here only for its swatch vars.
+ *
+ * Every skin also defines --sw-a/b/c, the three stripes shown in the
+ * Settings skin gallery. */
+
+[data-skin="classic"] { --sw-a: #faf7f0; --sw-b: #3b6ea5; --sw-c: #21201c; }
+
+/* --- Midnight: ink, indigo, moonlit paper -------------------------------- */
+[data-skin="midnight"] {
+  --bg: #eef0f6; --surface: #ffffff; --surface-2: #e2e6f0; --border: #cdd4e4;
+  --ink: #171a26; --ink-muted: #5a6178; --ink-faint: #9aa2b8;
+  --accent: #4750c8; --accent-ink: #ffffff; --accent-soft: #dde0f8;
+  --cell-bg: #ffffff; --cell-ink: #171a26; --cell-border: #aab2c8; --cell-block: #1b1e2e;
+  --cell-selected: #ffd76e; --cell-word: #d6daf7;
+  --font-display: "Avenir Next", "Futura", "Trebuchet MS", sans-serif;
+  --header-flair: #4750c8;
+  --sw-a: #eef0f6; --sw-b: #4750c8; --sw-c: #1b1e2e;
+}
+[data-skin="midnight"][data-mode="dark"] {
+  --bg: #10121d; --surface: #191c2b; --surface-2: #222639; --border: #303650;
+  --ink: #e6e8f4; --ink-muted: #9aa2c0; --ink-faint: #626a8a;
+  --accent: #8891ff; --accent-ink: #10121d; --accent-soft: #2b3054;
+  --cell-bg: #20243a; --cell-ink: #eef0ff; --cell-border: #3a4060; --cell-block: #05060c;
+  --cell-selected: #a8842c; --cell-word: #333a63;
+}
+
+/* --- Botanical: sage, cream, pressed leaves -------------------------------- */
+[data-skin="botanical"] {
+  --bg: #f2f4ea; --surface: #fbfcf5; --surface-2: #e6ebd8; --border: #d2dabc;
+  --ink: #29301f; --ink-muted: #6a7355; --ink-faint: #a3ac8c;
+  --accent: #5c7c3f; --accent-ink: #ffffff; --accent-soft: #dfe8cd;
+  --cell-bg: #fdfef8; --cell-ink: #29301f; --cell-border: #b5bf9d; --cell-block: #33402a;
+  --cell-selected: #f5d06c; --cell-word: #d9e5c2; --cell-revealed: #a25b8a;
+  --good: #4d7a34; --header-flair: #5c7c3f;
+  --font-display: "Iowan Old Style", Georgia, serif;
+  --sw-a: #f2f4ea; --sw-b: #5c7c3f; --sw-c: #33402a;
+}
+[data-skin="botanical"][data-mode="dark"] {
+  --bg: #171a12; --surface: #20241a; --surface-2: #2a3021; --border: #3b432e;
+  --ink: #e6e9da; --ink-muted: #a7b090; --ink-faint: #6d765a;
+  --accent: #93b56f; --accent-ink: #171a12; --accent-soft: #313c24;
+  --cell-bg: #272d1e; --cell-ink: #eef1e2; --cell-border: #454f36; --cell-block: #0b0d07;
+  --cell-selected: #a8842c; --cell-word: #3a4a2c;
+}
+
+/* --- Art Deco: gold on black geometry ---------------------------------------- */
+[data-skin="art-deco"] {
+  --bg: #f5efdf; --surface: #fbf7ec; --surface-2: #ece3cc; --border: #d8caa8;
+  --ink: #221d12; --ink-muted: #6e6349; --ink-faint: #a99c7d;
+  --accent: #a8842c; --accent-ink: #ffffff; --accent-soft: #ecdfba;
+  --cell-bg: #fdfaf2; --cell-ink: #221d12; --cell-border: #c3b48d; --cell-block: #191510;
+  --cell-selected: #e9c860; --cell-word: #e6d9b3;
+  --radius: 4px; --radius-cell: 0px;
+  --font-display: "Optima", "Copperplate", "Trajan Pro", serif;
+  --header-flair: #a8842c;
+  --sw-a: #f5efdf; --sw-b: #a8842c; --sw-c: #191510;
+}
+[data-skin="art-deco"][data-mode="dark"] {
+  --bg: #14110b; --surface: #1d1912; --surface-2: #272117; --border: #3d3421;
+  --ink: #ecdfc0; --ink-muted: #b3a077; --ink-faint: #6e6349;
+  --accent: #d4af53; --accent-ink: #14110b; --accent-soft: #38301c;
+  --cell-bg: #241f14; --cell-ink: #f2e7c8; --cell-border: #4a3f27; --cell-block: #000000;
+  --cell-selected: #8a6d1f; --cell-word: #3b3320;
+}
+
+/* --- Ocean: sea glass and deep water ------------------------------------------- */
+[data-skin="ocean"] {
+  --bg: #e9f3f4; --surface: #f8fcfc; --surface-2: #d9eaec; --border: #bcd8dc;
+  --ink: #12303a; --ink-muted: #4d707c; --ink-faint: #8fafb8;
+  --accent: #0f7c8c; --accent-ink: #ffffff; --accent-soft: #cfe8ec;
+  --cell-bg: #fcffff; --cell-ink: #12303a; --cell-border: #9cc3ca; --cell-block: #12303a;
+  --cell-selected: #ffd76e; --cell-word: #c4e4e9;
+  --header-flair: #0f7c8c;
+  --sw-a: #e9f3f4; --sw-b: #0f7c8c; --sw-c: #12303a;
+}
+[data-skin="ocean"][data-mode="dark"] {
+  --bg: #0a1a20; --surface: #10252d; --surface-2: #17323c; --border: #234653;
+  --ink: #d9edf1; --ink-muted: #8fb4bd; --ink-faint: #567680;
+  --accent: #3cb8cc; --accent-ink: #0a1a20; --accent-soft: #16404b;
+  --cell-bg: #142d36; --cell-ink: #e4f4f7; --cell-border: #2b515e; --cell-block: #030b0e;
+  --cell-selected: #a8842c; --cell-word: #1f4a57;
+}
+
+/* --- Terracotta: sun-baked clay and adobe --------------------------------------- */
+[data-skin="terracotta"] {
+  --bg: #f7ede4; --surface: #fdf6ef; --surface-2: #f0ddcc; --border: #ddc2a9;
+  --ink: #38251a; --ink-muted: #7d6250; --ink-faint: #b39a86;
+  --accent: #b8542c; --accent-ink: #ffffff; --accent-soft: #f2d8c8;
+  --cell-bg: #fefaf5; --cell-ink: #38251a; --cell-border: #c8a98c; --cell-block: #3c2417;
+  --cell-selected: #f2c464; --cell-word: #f0d9c0; --warn: #b8542c;
+  --header-flair: #b8542c;
+  --sw-a: #f7ede4; --sw-b: #b8542c; --sw-c: #3c2417;
+}
+[data-skin="terracotta"][data-mode="dark"] {
+  --bg: #1c120c; --surface: #261a12; --surface-2: #322218; --border: #4a3324;
+  --ink: #f0e2d5; --ink-muted: #bd9f88; --ink-faint: #7d6250;
+  --accent: #e0784b; --accent-ink: #1c120c; --accent-soft: #45261a;
+  --cell-bg: #2d1e14; --cell-ink: #f5e9dc; --cell-border: #543a28; --cell-block: #0b0603;
+  --cell-selected: #a8842c; --cell-word: #4c3020;
+}
+
+/* --- Mono: brutalist black & white --------------------------------------------- */
+[data-skin="mono"] {
+  --bg: #ffffff; --surface: #ffffff; --surface-2: #f0f0f0; --border: #111111;
+  --ink: #000000; --ink-muted: #444444; --ink-faint: #999999;
+  --accent: #000000; --accent-ink: #ffffff; --accent-soft: #e8e8e8;
+  --cell-bg: #ffffff; --cell-ink: #000000; --cell-border: #000000; --cell-block: #000000;
+  --cell-selected: #ffe14d; --cell-word: #dddddd; --cell-revealed: #666666;
+  --radius: 0px; --shadow-card: 4px 4px 0 rgba(0,0,0,0.9);
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-ui: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --header-flair: #000000;
+  --sw-a: #ffffff; --sw-b: #ffe14d; --sw-c: #000000;
+}
+[data-skin="mono"][data-mode="dark"] {
+  --bg: #000000; --surface: #000000; --surface-2: #181818; --border: #f5f5f5;
+  --ink: #ffffff; --ink-muted: #bbbbbb; --ink-faint: #666666;
+  --accent: #ffffff; --accent-ink: #000000; --accent-soft: #222222;
+  --cell-bg: #000000; --cell-ink: #ffffff; --cell-border: #ffffff; --cell-block: #ffffff;
+  --cell-selected: #8a6d1f; --cell-word: #333333;
+  --shadow-card: 4px 4px 0 rgba(255,255,255,0.9);
+}
+
+/* --- Beach Day (seasonal: summer) ------------------------------------------------ */
+[data-skin="beach"] {
+  --bg: #fdf6e3; --surface: #fffdf4; --surface-2: #faeecd; --border: #ecd9a8;
+  --ink: #23404d; --ink-muted: #5f7c88; --ink-faint: #9db2ba;
+  --accent: #ff8552; --accent-ink: #ffffff; --accent-soft: #ffe3d4;
+  --cell-bg: #fffef8; --cell-ink: #23404d; --cell-border: #d9c491; --cell-block: #23404d;
+  --cell-selected: #ffd76e; --cell-word: #c9e8ee;
+  --page-texture: linear-gradient(180deg, rgba(137, 207, 218, 0.18), rgba(253, 246, 227, 0) 240px);
+  --header-flair: #ff8552;
+  --sw-a: #89cfda; --sw-b: #fdf6e3; --sw-c: #ff8552;
+}
+[data-skin="beach"][data-mode="dark"] {
+  --bg: #10222b; --surface: #182f3a; --surface-2: #204050; --border: #2f5666;
+  --ink: #e8f2ef; --ink-muted: #9fbcc4; --ink-faint: #5f7c88;
+  --accent: #ff9a6e; --accent-ink: #10222b; --accent-soft: #45332b;
+  --cell-bg: #1d3947; --cell-ink: #f0f8f5; --cell-border: #35586a; --cell-block: #06121a;
+  --cell-selected: #a8842c; --cell-word: #2a5163;
+  --page-texture: linear-gradient(180deg, rgba(20, 60, 80, 0.5), rgba(16, 34, 43, 0) 240px);
+}
+
+/* --- Harvest (seasonal: autumn/halloween) ------------------------------------------ */
+[data-skin="harvest"] {
+  --bg: #f8efe2; --surface: #fdf8ee; --surface-2: #f2e2c8; --border: #dfc9a2;
+  --ink: #33231c; --ink-muted: #75604f; --ink-faint: #ac9880;
+  --accent: #c96f1e; --accent-ink: #ffffff; --accent-soft: #f6e0c2;
+  --cell-bg: #fefaf1; --cell-ink: #33231c; --cell-border: #c9ad82; --cell-block: #2e1e0f;
+  --cell-selected: #f2b04e; --cell-word: #f0dcb4; --warn: #c96f1e; --bad: #ab3c2c;
+  --header-flair: #c96f1e;
+  --sw-a: #f8efe2; --sw-b: #c96f1e; --sw-c: #5a3b1e;
+}
+[data-skin="harvest"][data-mode="dark"] {
+  --bg: #191009; --surface: #241811; --surface-2: #302016; --border: #4a3524;
+  --ink: #f2e6d4; --ink-muted: #c0a488; --ink-faint: #75604f;
+  --accent: #e89544; --accent-ink: #191009; --accent-soft: #43301c;
+  --cell-bg: #2b1d12; --cell-ink: #f7ecd9; --cell-border: #513a26; --cell-block: #0a0502;
+  --cell-selected: #8a6d1f; --cell-word: #48331e;
+}
+
+/* --- Hearth (seasonal: winter/christmas) --------------------------------------------- */
+[data-skin="hearth"] {
+  --bg: #f4f2ee; --surface: #fdfcfa; --surface-2: #e9e4dc; --border: #d4cabc;
+  --ink: #2c1e1e; --ink-muted: #6f5c58; --ink-faint: #a5948e;
+  --accent: #9e2b25; --accent-ink: #ffffff; --accent-soft: #f0d9d4;
+  --cell-bg: #fffefc; --cell-ink: #2c1e1e; --cell-border: #bfae9e; --cell-block: #263324;
+  --cell-selected: #e9c860; --cell-word: #d9e4d4; --good: #3d6b3a;
+  --page-texture: radial-gradient(circle at 85% -60px, rgba(158, 43, 37, 0.10), transparent 320px);
+  --header-flair: #9e2b25;
+  --sw-a: #f4f2ee; --sw-b: #9e2b25; --sw-c: #263324;
+}
+[data-skin="hearth"][data-mode="dark"] {
+  --bg: #171010; --surface: #211717; --surface-2: #2d1f1e; --border: #453230;
+  --ink: #efe4e0; --ink-muted: #bda49e; --ink-faint: #6f5c58;
+  --accent: #d05a52; --accent-ink: #171010; --accent-soft: #3f2422;
+  --cell-bg: #291c1b; --cell-ink: #f4e9e5; --cell-border: #4d3835; --cell-block: #0a1208;
+  --cell-selected: #8a6d1f; --cell-word: #33422f;
+  --page-texture: radial-gradient(circle at 85% -60px, rgba(208, 90, 82, 0.12), transparent 320px);
+}
+
+/* --- Lisa Frank (kids only — auto-applied in Kids mode) --------------------------------
+ * Neon rainbows, chrome dolphins, 90s school-folder maximalism. */
+[data-skin="lisa-frank"] {
+  --bg: #fdf2ff;
+  --surface: #ffffff; --surface-2: #ffe6fb; --border: #f2a7e8;
+  --ink: #3d1360; --ink-muted: #8b4bb8; --ink-faint: #c39ade;
+  --accent: #ff3ec8; --accent-ink: #ffffff; --accent-soft: #ffd6f4;
+  --cell-bg: #ffffff; --cell-ink: #3d1360; --cell-border: #d98fe0; --cell-block: #5b1c9e;
+  --cell-selected: #fff35c; --cell-word: #c8f3ff;
+  --cell-wrong: #ff3d5a; --cell-revealed: #00b3a4; --good: #00b36b; --warn: #ff9d00;
+  --radius: 18px; --radius-cell: 3px;
+  --shadow-card: 0 4px 0 rgba(255, 62, 200, 0.35), 0 10px 28px rgba(91, 28, 158, 0.18);
+  --font-display: "Marker Felt", "Comic Sans MS", "Chalkboard SE", cursive;
+  --page-texture:
+    radial-gradient(circle at 12% 18%, rgba(255, 62, 200, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 8%, rgba(0, 179, 255, 0.18), transparent 32%),
+    radial-gradient(circle at 70% 88%, rgba(255, 243, 92, 0.22), transparent 34%),
+    radial-gradient(circle at 25% 80%, rgba(0, 230, 160, 0.16), transparent 30%);
+  --panel-texture: linear-gradient(135deg, rgba(255, 214, 244, 0.5), rgba(200, 243, 255, 0.5));
+  --header-flair: #ff3ec8;
+  --sw-a: #ff3ec8; --sw-b: #fff35c; --sw-c: #00b3ff;
+}
+[data-skin="lisa-frank"][data-mode="dark"] {
+  --bg: #23103d; --surface: #2f1852; --surface-2: #3c2166; --border: #6a3aa8;
+  --ink: #ffe9fb; --ink-muted: #d9aef2; --ink-faint: #9a6cc8;
+  --accent: #ff5cd3; --accent-ink: #23103d; --accent-soft: #55246e;
+  --cell-bg: #331b58; --cell-ink: #ffffff; --cell-border: #6a3aa8; --cell-block: #120726;
+  --cell-selected: #b8a220; --cell-word: #2a4a72;
+  --page-texture:
+    radial-gradient(circle at 12% 18%, rgba(255, 92, 211, 0.20), transparent 30%),
+    radial-gradient(circle at 85% 8%, rgba(0, 179, 255, 0.18), transparent 32%),
+    radial-gradient(circle at 70% 88%, rgba(255, 243, 92, 0.12), transparent 34%);
+}
+
+/* Kids view flourishes ride on any skin but shine under lisa-frank. */
+.kids-card .kids-emoji { font-size: 2rem; }
+[data-skin="lisa-frank"] .mode-card h3 { letter-spacing: 0.02em; }
+[data-skin="lisa-frank"] .xw-grid { border-width: 4px; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(0, 179, 255, 0.35); }

@@ -1,0 +1,9 @@
+{
+  "appId": "us.riddle.crossword",
+  "appName": "Riddle Crossword",
+  "webDir": "dist",
+  "ios": {
+    "contentInset": "automatic",
+    "backgroundColor": "#faf7f0"
+  }
+}

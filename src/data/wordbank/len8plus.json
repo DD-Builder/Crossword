@@ -1,0 +1,225 @@
+[
+  { "answer": "SEASHELL", "score": 82, "categories": ["science-nature"], "tags": ["nature", "summer", "animals"],
+    "clues": [
+      { "text": "Beachcomber's find", "difficulty": 1, "stars": 1 },
+      { "text": "Spiral souvenir you hold to your ear", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "TORTILLA", "score": 83, "categories": ["geography"], "tags": ["food", "travel"],
+    "clues": [
+      { "text": "Taco's wrapper", "difficulty": 1, "stars": 1 },
+      { "text": "The soft part of a soft taco", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "CALENDAR", "score": 85, "categories": ["wordplay"], "tags": ["school", "newyear", "household"],
+    "clues": [
+      { "text": "Wall hanging with twelve pages", "difficulty": 1, "stars": 1 },
+      { "text": "It's full of dates but never gets dinner", "difficulty": 4, "stars": 5 } ] },
+  { "answer": "ELEPHANT", "score": 90, "categories": ["science-nature"], "tags": ["animals", "nature"],
+    "clues": [
+      { "text": "Largest land animal", "difficulty": 1, "stars": 1 },
+      { "text": "It carries its trunk up front", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "DINOSAUR", "score": 88, "categories": ["science-nature"], "tags": ["science", "animals", "history"],
+    "clues": [
+      { "text": "T. rex or triceratops", "difficulty": 1, "stars": 1 },
+      { "text": "Something hopelessly out of date — or 65 million years out of date", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SCISSORS", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["household", "school"],
+    "clues": [
+      { "text": "Paper-cutting tool", "difficulty": 1, "stars": 1 },
+      { "text": "They beat paper but lose to rock", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "MACARONI", "score": 80, "categories": ["history"], "tags": ["food", "july4", "music"],
+    "clues": [
+      { "text": "Elbow-shaped pasta", "difficulty": 1, "stars": 1 },
+      { "text": "What Yankee Doodle called his feather", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ELEVATOR", "score": 83, "categories": ["wordplay"], "tags": ["tech"],
+    "clues": [
+      { "text": "It stops on many floors", "difficulty": 1, "stars": 1 },
+      { "text": "Car that only travels up and down", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "NOTEBOOK", "score": 81, "categories": ["arts-literature"], "tags": ["school", "books", "tech"],
+    "clues": [
+      { "text": "Spiral-bound writing pad", "difficulty": 1, "stars": 1 },
+      { "text": "Laptop, or what it replaced in class", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SUITCASE", "score": 82, "categories": ["sports-leisure"], "tags": ["travel"],
+    "clues": [
+      { "text": "Traveler's packed bag", "difficulty": 1, "stars": 1 },
+      { "text": "It gets a workout only on vacation", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "CILANTRO", "score": 74, "categories": ["science-nature"], "tags": ["food", "nature"],
+    "clues": [
+      { "text": "Herb in salsa and pho", "difficulty": 1, "stars": 1 },
+      { "text": "Garnish that tastes like soap to some tongues", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "TORTOISE", "score": 83, "categories": ["science-nature", "arts-literature"], "tags": ["animals", "books"],
+    "clues": [
+      { "text": "Slow-moving land reptile", "difficulty": 1, "stars": 1 },
+      { "text": "Racer who famously beat the hare", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ANTELOPE", "score": 78, "categories": ["science-nature"], "tags": ["animals", "nature", "music"],
+    "clues": [
+      { "text": "Swift African grazer", "difficulty": 1, "stars": 1 },
+      { "text": "Playmate of the deer, in an old song", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SQUIRREL", "score": 82, "categories": ["science-nature"], "tags": ["animals", "nature"],
+    "clues": [
+      { "text": "Acorn hoarder", "difficulty": 1, "stars": 1 },
+      { "text": "Backyard saver with a nutty retirement plan", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "ATLANTIC", "score": 84, "categories": ["geography", "history"], "tags": ["travel", "nature", "history"],
+    "clues": [
+      { "text": "Ocean between New York and Lisbon", "difficulty": 1, "stars": 1 },
+      { "text": "What Lindbergh crossed solo in 1927", "difficulty": 2, "stars": 2 } ] },
+  { "answer": "SCOTLAND", "score": 83, "categories": ["geography", "sports-leisure"], "tags": ["travel", "sports"],
+    "clues": [
+      { "text": "Land of kilts and lochs", "difficulty": 1, "stars": 1 },
+      { "text": "Where golf teed off", "difficulty": 3, "stars": 4 } ] },
+  { "answer": "MONTREAL", "score": 80, "categories": ["geography"], "tags": ["travel"],
+    "clues": [
+      { "text": "French-speaking Canadian metropolis", "difficulty": 1, "stars": 1 },
+      { "text": "City named for a royal mountain", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "CAROUSEL", "score": 82, "categories": ["entertainment"], "tags": ["travel", "music"],
+    "clues": [
+      { "text": "Merry-go-round", "difficulty": 1, "stars": 1 },
+      { "text": "Baggage claim's slow spinner", "difficulty": 3, "stars": 3 },
+      { "text": "Horses that run in circles all day", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "LEMONADE", "score": 84, "categories": ["sports-leisure", "wordplay"], "tags": ["food", "summer"],
+    "clues": [
+      { "text": "Summer stand's offering", "difficulty": 1, "stars": 1 },
+      { "text": "What optimists make from a sour situation", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "ESPRESSO", "score": 85, "categories": ["geography"], "tags": ["food", "travel"],
+    "clues": [
+      { "text": "Strong Italian coffee shot", "difficulty": 1, "stars": 1 },
+      { "text": "Little cup with a big kick", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SPRINTER", "score": 78, "categories": ["sports-leisure"], "tags": ["sports", "olympics"],
+    "clues": [
+      { "text": "100-meter specialist", "difficulty": 1, "stars": 1 },
+      { "text": "Runner whose workday lasts ten seconds", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "CLARINET", "score": 79, "categories": ["entertainment"], "tags": ["music", "school"],
+    "clues": [
+      { "text": "Woodwind with a single reed", "difficulty": 1, "stars": 1 },
+      { "text": "Licorice stick, to jazz players", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SERENADE", "score": 79, "categories": ["entertainment"], "tags": ["music", "valentines"],
+    "clues": [
+      { "text": "Song sung beneath a window", "difficulty": 1, "stars": 1 },
+      { "text": "Love song with a balcony audience", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "LOLLIPOP", "score": 80, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Candy on a stick", "difficulty": 1, "stars": 1 },
+      { "text": "It takes a licking", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "UMBRELLA", "score": 82, "categories": ["science-nature"], "tags": ["weather", "spring", "household"],
+    "clues": [
+      { "text": "Rainy-day canopy", "difficulty": 1, "stars": 1 },
+      { "text": "Portable roof for a downpour", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "FLAMINGO", "score": 81, "categories": ["science-nature"], "tags": ["animals", "nature"],
+    "clues": [
+      { "text": "Pink wading bird", "difficulty": 1, "stars": 1 },
+      { "text": "Bird that's pink from its shrimp diet", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "TREASURE", "score": 83, "categories": ["arts-literature"], "tags": ["books", "travel"],
+    "clues": [
+      { "text": "Pirate chest's contents", "difficulty": 1, "stars": 1 },
+      { "text": "It's marked with an X, on certain maps", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SAILBOAT", "score": 80, "categories": ["sports-leisure"], "tags": ["travel", "summer", "sports"],
+    "clues": [
+      { "text": "Wind-powered vessel", "difficulty": 1, "stars": 1 },
+      { "text": "Regatta entrant", "difficulty": 2, "stars": 2 },
+      { "text": "Craft that tacks a zigzag path against the wind", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "ORCHESTRA", "score": 85, "categories": ["entertainment"], "tags": ["music", "art"],
+    "clues": [
+      { "text": "Symphony ensemble", "difficulty": 1, "stars": 1 },
+      { "text": "Pit crew at the opera?", "difficulty": 4, "stars": 5 } ] },
+  { "answer": "ESCALATOR", "score": 84, "categories": ["wordplay"], "tags": ["tech", "travel"],
+    "clues": [
+      { "text": "Moving staircase", "difficulty": 1, "stars": 1 },
+      { "text": "Stairs that do the climbing for you", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "ALLIGATOR", "score": 85, "categories": ["science-nature"], "tags": ["animals", "nature"],
+    "clues": [
+      { "text": "Snappy swamp reptile", "difficulty": 1, "stars": 1 },
+      { "text": "Reptile you'll see later, per the rhyme", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "CROCODILE", "score": 84, "categories": ["science-nature"], "tags": ["animals", "nature"],
+    "clues": [
+      { "text": "Nile River predator", "difficulty": 1, "stars": 1 },
+      { "text": "Shedder of insincere tears", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "TELESCOPE", "score": 86, "categories": ["science-nature"], "tags": ["science", "tech", "space"],
+    "clues": [
+      { "text": "Stargazer's instrument", "difficulty": 1, "stars": 1 },
+      { "text": "It brings the heavens down to eye level", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "CHOCOLATE", "score": 90, "categories": ["science-nature", "wordplay"], "tags": ["food", "valentines"],
+    "clues": [
+      { "text": "Cocoa-based sweet", "difficulty": 1, "stars": 1 },
+      { "text": "Valentine box filler", "difficulty": 2, "stars": 2 },
+      { "text": "Chip found in a cookie, not a computer", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "AUSTRALIA", "score": 87, "categories": ["geography"], "tags": ["travel", "nature"],
+    "clues": [
+      { "text": "Continent Down Under", "difficulty": 1, "stars": 1 },
+      { "text": "Only nation that doubles as a continent", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "BARCELONA", "score": 82, "categories": ["geography"], "tags": ["travel", "art", "sports"],
+    "clues": [
+      { "text": "Catalonia's capital", "difficulty": 1, "stars": 1 },
+      { "text": "City still finishing a church it started in 1882", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "CARNATION", "score": 76, "categories": ["science-nature", "wordplay"], "tags": ["nature", "valentines"],
+    "clues": [
+      { "text": "Boutonniere bloom", "difficulty": 1, "stars": 1 },
+      { "text": "Flower with a nation tucked inside", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "NECTARINE", "score": 75, "categories": ["science-nature"], "tags": ["food", "summer", "nature"],
+    "clues": [
+      { "text": "Smooth-skinned peach relative", "difficulty": 1, "stars": 1 },
+      { "text": "Peach after a clean shave?", "difficulty": 4, "stars": 5 } ] },
+  { "answer": "ASTRONAUT", "score": 88, "categories": ["science-nature"], "tags": ["science", "tech", "space"],
+    "clues": [
+      { "text": "Space traveler", "difficulty": 1, "stars": 1 },
+      { "text": "Worker whose commute leaves the planet", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "WATERFALL", "score": 85, "categories": ["science-nature"], "tags": ["nature", "travel"],
+    "clues": [
+      { "text": "Cascade over a cliff", "difficulty": 1, "stars": 1 },
+      { "text": "River that skips the stairs", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "WATERMELON", "score": 86, "categories": ["science-nature"], "tags": ["food", "summer", "july4"],
+    "clues": [
+      { "text": "Big striped picnic fruit", "difficulty": 1, "stars": 1 },
+      { "text": "Fruit that's over 90 percent thirst quencher", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "LIGHTHOUSE", "score": 85, "categories": ["geography"], "tags": ["travel", "nature"],
+    "clues": [
+      { "text": "Coastal warning tower", "difficulty": 1, "stars": 1 },
+      { "text": "Keeper's tower that winks at ships", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "TELEVISION", "score": 84, "categories": ["entertainment"], "tags": ["movies", "tech"],
+    "clues": [
+      { "text": "The small screen", "difficulty": 1, "stars": 1 },
+      { "text": "Where channels are surfed far from any beach", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "RESTAURANT", "score": 83, "categories": ["sports-leisure"], "tags": ["food", "travel"],
+    "clues": [
+      { "text": "Place with menus and waiters", "difficulty": 1, "stars": 1 },
+      { "text": "Business where you pay someone else to do the dishes", "difficulty": 3, "stars": 4 } ] },
+  { "answer": "TRAMPOLINE", "score": 84, "categories": ["sports-leisure"], "tags": ["sports", "summer"],
+    "clues": [
+      { "text": "Backyard bouncer", "difficulty": 1, "stars": 1 },
+      { "text": "Bed nobody sleeps on", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "COUCHPOTATO", "score": 85, "categories": ["entertainment", "wordplay"], "tags": ["movies", "food"],
+    "clues": [
+      { "text": "Habitual TV lounger", "difficulty": 1, "stars": 1 },
+      { "text": "Remote-control marathoner", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "SEIZETHEDAY", "score": 84, "categories": ["arts-literature"], "tags": ["books", "school"],
+    "clues": [
+      { "text": "\"Carpe diem,\" in English", "difficulty": 1, "stars": 1 },
+      { "text": "Live like there's no tomorrow, essentially", "difficulty": 3, "stars": 3 } ] },
+  { "answer": "SMARTCOOKIE", "score": 82, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Clever person, in a sweet idiom", "difficulty": 1, "stars": 1 },
+      { "text": "One sharp treat?", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "SILVERLINING", "score": 86, "categories": ["wordplay"], "tags": ["nature", "weather"],
+    "clues": [
+      { "text": "Bright side of a bad situation", "difficulty": 1, "stars": 1 },
+      { "text": "The upside every cloud is said to keep", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "COLDSHOULDER", "score": 83, "categories": ["wordplay"], "tags": ["winter"],
+    "clues": [
+      { "text": "Deliberate snub", "difficulty": 1, "stars": 1 },
+      { "text": "Icy treatment that involves no ice", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "SPILLTHEBEANS", "score": 86, "categories": ["wordplay"], "tags": ["food"],
+    "clues": [
+      { "text": "Divulge a secret", "difficulty": 1, "stars": 1 },
+      { "text": "Tip over the whole pot of gossip?", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "ROLLERCOASTER", "score": 88, "categories": ["entertainment"], "tags": ["travel", "summer"],
+    "clues": [
+      { "text": "Looping amusement park ride", "difficulty": 1, "stars": 1 },
+      { "text": "Emotional up-and-down — or the ride that inspired the metaphor", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "WILDGOOSECHASE", "score": 84, "categories": ["wordplay"], "tags": ["animals"],
+    "clues": [
+      { "text": "Hopeless pursuit", "difficulty": 1, "stars": 1 },
+      { "text": "Hunt for a bird that was never there?", "difficulty": 4, "stars": 4 } ] },
+  { "answer": "ONCEINABLUEMOON", "score": 88, "categories": ["wordplay", "science-nature"], "tags": ["nature", "space"],
+    "clues": [
+      { "text": "Very rarely", "difficulty": 1, "stars": 1 },
+      { "text": "How often a month earns an encore in the sky?", "difficulty": 4, "stars": 5 } ] },
+  { "answer": "UNDERTHEWEATHER", "score": 86, "categories": ["wordplay"], "tags": ["winter"],
+    "clues": [
+      { "text": "Feeling a bit sick", "difficulty": 1, "stars": 1 },
+      { "text": "Not quite yourself, forecast-wise?", "difficulty": 4, "stars": 4 } ] }
+]

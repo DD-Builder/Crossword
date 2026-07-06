@@ -1,0 +1,439 @@
+/* Solver layout. The balancing act: grid sized to share the viewport with
+ * readable clues on iPad landscape; grid-first with a clue bar + soft
+ * keyboard on portrait/phone. All colors via tokens. */
+
+.solver {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  background-image: var(--page-texture);
+  z-index: 20;
+}
+
+.solver-loading {
+  margin: auto;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* --- Toolbar ------------------------------------------------------------ */
+
+.solver-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  padding-top: calc(8px + env(safe-area-inset-top));
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  background-image: var(--panel-texture);
+  flex: 0 0 auto;
+}
+.solver-toolbar .spacer { flex: 1; }
+.solver-toolbar .tb-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40vw;
+}
+.tb-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  border: 1px solid transparent;
+}
+.tb-btn:hover { background: var(--surface-2); }
+.tb-btn.active { background: var(--accent-soft); color: var(--ink); border-color: var(--border); }
+.tb-timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0 12px;
+  height: 38px;
+  border-radius: 10px;
+  color: var(--ink);
+}
+.tb-timer:hover { background: var(--surface-2); }
+
+/* --- Main area ------------------------------------------------------------ */
+
+.solver-main {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+  padding: 12px;
+  gap: 16px;
+  justify-content: center;
+}
+
+.grid-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* --- Clue bar --------------------------------------------------------------- */
+
+.clue-bar {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  width: 100%;
+  max-width: var(--grid-edge, 70vh);
+}
+.bar-step {
+  flex: 0 0 44px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.bar-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  background: var(--accent-soft);
+  border-radius: 10px;
+  padding: 8px 12px;
+  min-height: 52px;
+  min-width: 0;
+}
+.bar-num {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+.bar-text {
+  font-size: 0.98rem;
+  line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* --- Grid ------------------------------------------------------------------- */
+
+.xw-grid {
+  --grid-edge: min(100%, calc(100dvh - 210px));
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  width: var(--grid-edge);
+  aspect-ratio: 1;
+  border: 2.5px solid var(--cell-block);
+  border-radius: 4px;
+  background: var(--cell-border);
+  gap: 1px;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.xw-cell {
+  position: relative;
+  background: var(--cell-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  container-type: size;
+}
+.xw-cell.block { background: var(--cell-block); cursor: default; }
+.xw-cell.in-word { background: var(--cell-word); }
+.xw-cell.selected { background: var(--cell-selected); }
+
+.xw-num {
+  position: absolute;
+  top: 4%;
+  left: 6%;
+  font-size: 28cqh;
+  font-weight: 600;
+  color: var(--ink-muted);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.xw-letter {
+  font-family: var(--font-grid);
+  font-size: 62cqh;
+  font-weight: 600;
+  color: var(--cell-ink);
+  line-height: 1;
+  transform: translateY(8%);
+  pointer-events: none;
+}
+.xw-cell.pencil .xw-letter { color: var(--cell-pencil); font-weight: 400; }
+.xw-cell.revealed .xw-letter { color: var(--cell-revealed); }
+
+/* Checked-wrong: a corner-to-corner slash. */
+.xw-cell.wrong::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 1.5px),
+    var(--cell-wrong) calc(50% - 1.5px),
+    var(--cell-wrong) calc(50% + 1.5px),
+    transparent calc(50% + 1.5px)
+  );
+  pointer-events: none;
+}
+.xw-cell.confirmed::before {
+  content: "";
+  position: absolute;
+  right: 6%;
+  bottom: 6%;
+  width: 14cqh;
+  height: 14cqh;
+  border-radius: 50%;
+  background: var(--good);
+  pointer-events: none;
+}
+
+/* Hide letters while paused (no peeking). */
+.is-paused .xw-letter { visibility: hidden; }
+
+/* --- Clue columns ------------------------------------------------------------- */
+
+.clue-columns {
+  display: flex;
+  gap: 18px;
+  min-width: 0;
+  flex: 0 1 560px;
+  max-height: 100%;
+}
+.clue-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.clue-col-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  padding: 4px 8px 8px;
+}
+.clue-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 20px 0;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+.clue-item {
+  display: flex;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  border-left: 3px solid transparent;
+}
+.clue-item:hover { background: var(--surface-2); }
+.clue-item.active { background: var(--clue-active-bg, var(--accent-soft)); border-left-color: var(--accent); }
+.clue-item.crossing { border-left-color: var(--border); }
+.clue-item.filled .clue-text { color: var(--ink-faint); }
+.clue-num {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  flex: 0 0 1.6em;
+  text-align: right;
+  padding-top: 1px;
+}
+
+/* --- Soft keyboard -------------------------------------------------------------- */
+
+.soft-kbd {
+  flex: 0 0 auto;
+  padding: 6px 4px calc(8px + env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.soft-kbd.hidden { display: none !important; }
+.soft-kbd-row { display: flex; gap: 5px; justify-content: center; }
+.soft-key {
+  flex: 1;
+  max-width: 44px;
+  height: 46px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.soft-key:active { background: var(--accent-soft); transform: scale(0.96); }
+.soft-key.wide { max-width: 64px; flex: 1.4; font-size: 1.2rem; }
+
+/* --- Hint / menu modals -------------------------------------------------------- */
+
+.menu-list { display: flex; flex-direction: column; gap: 2px; margin-top: 12px; }
+.menu-list hr { border: none; border-top: 1px solid var(--border); margin: 8px 0; }
+.menu-item {
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.menu-item:hover { background: var(--surface-2); }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+
+.prof-head { display: flex; gap: 12px; align-items: center; }
+.prof-avatar { font-size: 2rem; }
+.prof-clue { font-size: 0.88rem; margin: 2px 0 0; }
+.prof-speech {
+  margin: 14px 0 4px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border-radius: 12px;
+  min-height: 58px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.prof-line strong { color: var(--accent); letter-spacing: 0.06em; }
+.hint-heat { font-size: 0.72rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+.heat-spoiler .hint-label { color: var(--bad); }
+
+/* --- Celebration ------------------------------------------------------------------ */
+
+.celebrate { text-align: center; position: relative; overflow: hidden; }
+.celebrate-time {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 6px 0;
+  font-variant-numeric: tabular-nums;
+}
+.milestones { list-style: none; padding: 0; margin: 10px 0 0; color: var(--ink-muted); font-size: 0.92rem; }
+.milestones li { padding: 3px 0; }
+
+/* Victory canvas: full-viewport scene layer under the modal (z 100). */
+.celebration-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+}
+
+/* Win wave: diagonal flash rippling across the solved grid, cell by cell. */
+.win-wave .xw-cell:not(.block) {
+  animation: win-wave-flash 0.9s ease-out var(--wd, 0ms) 1;
+}
+@keyframes win-wave-flash {
+  0% { background: var(--cell-bg); }
+  35% { background: var(--cell-correct-flash); transform: scale(0.94); }
+  100% { background: var(--cell-bg); transform: scale(1); }
+}
+
+.confetti { position: absolute; inset: 0; pointer-events: none; }
+.confetti i {
+  position: absolute;
+  top: -10px;
+  left: calc((var(--i) * 4.3%) + 2%);
+  width: 8px;
+  height: 12px;
+  background: hsl(calc(var(--i) * 47deg) 80% 60%);
+  border-radius: 2px;
+  opacity: 0;
+  animation: confetti-fall 2.4s ease-in calc(var(--i) * 0.07s) forwards;
+}
+@keyframes confetti-fall {
+  0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+  100% { opacity: 0.9; transform: translateY(460px) rotate(calc(var(--i) * 61deg)); }
+}
+
+/* --- Responsive: portrait / phone -------------------------------------------------- */
+
+@media (max-width: 899px), (orientation: portrait) {
+  .solver-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .clue-columns { display: none; }
+  .soft-kbd { display: flex; }
+  .xw-grid { --grid-edge: min(100%, calc(100dvh - 330px)); }
+  .clue-bar { order: 2; max-width: 100%; }
+  .grid-pane { width: 100%; flex: 1; min-height: 0; justify-content: center; }
+}
+
+/* Wide screens: cap grid so clues get their share. */
+@media (min-width: 900px) and (orientation: landscape) {
+  .xw-grid { --grid-edge: min(56vw, calc(100dvh - 190px), 720px); }
+  .soft-kbd { display: none; }
+}
+
+/* --- Speed HUD ---------------------------------------------------------- */
+
+.speed-hud {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: var(--grid-edge, 70vh);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.speed-par.over { color: var(--bad); }
+.speed-pb { color: var(--ink-muted); }
+.speed-track {
+  flex: 1;
+  position: relative;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.speed-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  transition: width 0.25s linear;
+}
+.speed-fill.you { background: var(--accent); }
+.speed-fill.ghost { background: var(--ink-faint); opacity: 0.55; height: 45%; top: auto; }

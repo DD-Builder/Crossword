@@ -8,6 +8,11 @@ const bankModules = import.meta.glob<BankEntry[]>('./wordbank/*.json', {
   eager: true,
   import: 'default',
 });
+// The fill tier (score-capped completion vocabulary for big grids) is large
+// and only needed when generating 11×11+, so it loads lazily in its own chunk.
+const fillModules = import.meta.glob<BankEntry[]>('./wordbank/fill/*.json', {
+  import: 'default',
+});
 const kidsModules = import.meta.glob<BankEntry[]>('./kids/*.json', {
   eager: true,
   import: 'default',
@@ -20,6 +25,7 @@ const puzzleModules = import.meta.glob<Puzzle[]>('./puzzles/**/*.json', {
 import templatesJson from './templates/templates.json';
 
 let mainIndex: BankIndex | null = null;
+let fullIndex: BankIndex | null = null;
 let kidsIndex: BankIndex | null = null;
 
 export function bankEntries(): BankEntry[] {
@@ -33,6 +39,15 @@ export function kidsEntries(): BankEntry[] {
 export function mainBank(): BankIndex {
   if (!mainIndex) mainIndex = buildIndex(bankEntries());
   return mainIndex;
+}
+
+/** Curated bank + the lazily-loaded fill tier — for generating large grids. */
+export async function fullBank(): Promise<BankIndex> {
+  if (!fullIndex) {
+    const chunks = await Promise.all(Object.values(fillModules).map((load) => load()));
+    fullIndex = buildIndex([...bankEntries(), ...chunks.flat()]);
+  }
+  return fullIndex;
 }
 
 export function kidsBank(): BankIndex {

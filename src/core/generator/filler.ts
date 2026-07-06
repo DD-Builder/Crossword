@@ -15,6 +15,12 @@ export interface FillOptions {
   seedEntries?: string[];
   /** Multiplier per category (adaptive nudges), clamped by caller. */
   categoryWeights?: Record<string, number>;
+  /**
+   * Multiplier per entry tag on the candidate sort key. `{ fill: 0.6 }`
+   * makes curated entries win ties against the fill tier while leaving
+   * the tier available where nothing curated fits.
+   */
+  tagWeights?: Record<string, number>;
   /** Random jitter strength 0..1 applied to candidate ordering. */
   jitter?: number;
   /** Cap on how many candidates to try per slot per visit (beam width). */
@@ -65,6 +71,8 @@ export function fill(
   const jitter = opts.jitter ?? 0.25;
   const beamWidth = opts.beamWidth ?? 24;
   const weights = opts.categoryWeights ?? {};
+  const tagWeights = opts.tagWeights ?? {};
+  const hasTagWeights = Object.keys(tagWeights).length > 0;
 
   const rows = template.length;
   const cols = template[0]?.length ?? 0;
@@ -224,6 +232,9 @@ export function fill(
       if (used.has(entry.answer)) continue;
       let w = 1;
       for (const cat of entry.categories) w *= weights[cat] ?? 1;
+      if (hasTagWeights && entry.tags) {
+        for (const tag of entry.tags) w *= tagWeights[tag] ?? 1;
+      }
       let crossBonus = 0;
       for (const p of openCross) crossBonus += LETTER_FREQ[entry.answer.charCodeAt(p) - 65] ?? 0;
       if (openCross.length > 0) crossBonus /= openCross.length;

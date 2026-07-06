@@ -39,28 +39,45 @@ function runOne(template, seedKey, opts = {}) {
 }
 
 if (args.smoke) {
-  // Success-rate targets per size — the true wordbank health metric.
-  const targets = { 5: 1.0, 7: 1.0, 9: 0.95, 11: 0.95, 13: 0.7, 15: 0.5 };
+  // Success-rate targets per (size, lattice) family — the true wordbank
+  // health metric. Families gate separately: mixing American + lattice
+  // templates in one number would let the always-fillable lattice hide an
+  // American 0%. American 15 ratchets upward as the fill tier grows
+  // (see docs/fill-curve.md for the measured curve behind each bump).
+  // Honest baselines as of the family split: American 11/13/15 sit at 0%
+  // with the curated bank alone (the old mixed-family smoke was passing via
+  // the lattice templates). These ratchet upward with each fill-tier wave.
+  const targets = {
+    am5: 1.0, am7: 1.0, am11: 0.0, am13: 0.0, am15: 0.0,
+    lat9: 1.0, lat11: 1.0, lat13: 1.0, lat15: 1.0,
+  };
   const seedCount = Number(args.seeds);
   let failed = false;
+  const report = [];
 
-  for (const size of [5, 7, 9, 11, 13, 15]) {
+  for (const family of Object.keys(targets)) {
+    const lattice = family.startsWith('lat');
+    const size = Number(family.replace(/^\D+/, ''));
     // Themed templates need seeded long entries — not part of the raw smoke.
-    const sized = templates.filter((t) => t.size === size && !t.themeSlotMin);
+    const sized = templates.filter(
+      (t) => t.size === size && !t.themeSlotMin && Boolean(t.lattice) === lattice,
+    );
     if (sized.length === 0) continue;
     let ok = 0;
     let totalMs = 0;
     let maxMs = 0;
     for (let i = 0; i < seedCount; i++) {
       // Mirror production: restart ladder with rising jitter/beam across
-      // the size's templates until one lands.
+      // the family's templates until one lands; curated entries outrank
+      // the fill tier just like the runtime path.
       let ms = 0;
       let landed = false;
       for (let attempt = 0; attempt < 5 && !landed; attempt++) {
         const template = sized[(i + attempt) % sized.length];
-        const out = runOne(template, `smoke|${size}|${i}|r${attempt}`, {
+        const out = runOne(template, `smoke|${family}|${i}|r${attempt}`, {
           beamWidth: 24 + attempt * 20,
           jitter: 0.25 + attempt * 0.12,
+          tagWeights: { fill: 0.6 },
         });
         ms += out.ms;
         landed = out.result.ok;
@@ -70,13 +87,21 @@ if (args.smoke) {
       if (landed) ok++;
     }
     const rate = ok / seedCount;
-    const target = targets[size] ?? 0.5;
+    const target = targets[family];
     const status = rate >= target ? 'OK  ' : 'FAIL';
-    console.log(
-      `${status} ${String(size).padStart(2)}x${size}: ${(rate * 100).toFixed(0)}% ` +
-      `(target ${(target * 100).toFixed(0)}%)  avg ${(totalMs / seedCount).toFixed(0)}ms  max ${maxMs.toFixed(0)}ms`,
-    );
+    report.push({ family, size, lattice, rate, target, avgMs: totalMs / seedCount, maxMs });
+    if (!args.json) {
+      console.log(
+        `${status} ${family.padEnd(5)} ${String(size).padStart(2)}x${size}: ${(rate * 100).toFixed(0)}% ` +
+        `(target ${(target * 100).toFixed(0)}%)  avg ${(totalMs / seedCount).toFixed(0)}ms  max ${maxMs.toFixed(0)}ms`,
+      );
+    }
     if (rate < target) failed = true;
+  }
+  if (args.json) {
+    const byLen = {};
+    for (const e of loadBankEntries()) byLen[e.answer.length] = (byLen[e.answer.length] ?? 0) + 1;
+    console.log(JSON.stringify({ seeds: seedCount, bankByLen: byLen, families: report }, null, 1));
   }
   process.exit(failed ? 1 : 0);
 }

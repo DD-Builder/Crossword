@@ -1,6 +1,8 @@
 // Wordbank checks: entry shape, clue quality rules, cross-file duplicate
 // answers, per-length distribution minimums, and letter-frequency sanity.
-import { readdirSync, readFileSync } from 'node:fs';
+// The fill/ subdirectory holds the score-capped completion tier for large
+// grids and carries stricter rules (see FILL_TIER below).
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const CATEGORIES = new Set([
@@ -37,8 +39,21 @@ function clueLeaksAnswer(answer, clueText) {
   });
 }
 
+// Fill-tier contract: capped score keeps curated entries winning the
+// candidate sort (55 = the Monday scoreFloor, so easy days stay curated),
+// and 1–2 easy clues keep single-clue entries honest gimmes, not stumpers.
+const FILL_TIER = { minScore: 40, maxScore: 55, maxClues: 2, maxDifficulty: 3 };
+
 export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED === '1' } = {}) {
-  const files = readdirSync(dir).filter((f) => f.endsWith('.json'));
+  const files = readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => ({ name: f, fillTier: false }));
+  const fillDir = join(dir, 'fill');
+  if (existsSync(fillDir)) {
+    for (const f of readdirSync(fillDir).filter((f) => f.endsWith('.json'))) {
+      files.push({ name: join('fill', f), fillTier: true });
+    }
+  }
   let errors = 0;
   let clueCount = 0;
   const byLen = new Map();
@@ -49,7 +64,7 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
     errors++;
   };
 
-  for (const file of files) {
+  for (const { name: file, fillTier } of files) {
     let entries;
     try {
       entries = JSON.parse(readFileSync(join(dir, file), 'utf8'));
@@ -61,6 +76,20 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
 
     for (const e of entries) {
       const where = `${file}:${e.answer ?? '?'}`;
+      if (fillTier) {
+        if (!e.tags?.includes('fill')) fail(where, 'fill-tier entries must carry the "fill" tag');
+        if (Number.isInteger(e.score) && (e.score < FILL_TIER.minScore || e.score > FILL_TIER.maxScore)) {
+          fail(where, `fill-tier score must be ${FILL_TIER.minScore}–${FILL_TIER.maxScore}, got ${e.score}`);
+        }
+        if (Array.isArray(e.clues)) {
+          if (e.clues.length > FILL_TIER.maxClues) fail(where, `fill-tier entries carry ≤${FILL_TIER.maxClues} clues`);
+          for (const c of e.clues) {
+            if (Number.isInteger(c.difficulty) && c.difficulty > FILL_TIER.maxDifficulty) {
+              fail(where, `fill-tier clue difficulty must be ≤${FILL_TIER.maxDifficulty}`);
+            }
+          }
+        }
+      }
       if (typeof e.answer !== 'string' || !/^[A-Z]{2,15}$/.test(e.answer)) {
         fail(where, `answer must be 2–15 chars A–Z, got "${e.answer}"`);
         continue;

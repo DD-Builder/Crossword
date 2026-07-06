@@ -8,6 +8,11 @@ speed challenges, and a stats engine that learns what you love.
 Built web-first with **zero runtime dependencies** (Vite + TypeScript,
 no framework), and Capacitor-ready for an iOS App Store release.
 
+**▶ Play it: https://dd-builder.github.io/Crossword/** — deployed from
+`main` by `.github/workflows/deploy.yml` (one-time setup: repo Settings →
+Pages → Source: "GitHub Actions"). Installable as a PWA: on iPad/iPhone,
+Share → *Add to Home Screen* for the full-screen, offline app.
+
 ## Play
 
 - **The Daily & The Mini** — date-seeded daily puzzles; Monday is gentle,

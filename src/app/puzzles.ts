@@ -9,7 +9,7 @@ import { knobsFor, weekdayOf } from '../core/generator/difficulty.ts';
 import { matchTheme } from '../core/generator/themer.ts';
 import { fnv1a } from '../core/rng.ts';
 import {
-  bankEntries, kidsBank, kidsEntries, libraryPuzzles, mainBank, templatesBySize,
+  bankEntries, fullBank, kidsBank, kidsEntries, libraryPuzzles, mainBank, templatesBySize,
 } from '../data/loader.ts';
 import { adaptiveWeights } from '../stats/adaptive.ts';
 import { generateThemedViaLlm } from '../llm/themegen.ts';
@@ -48,7 +48,13 @@ async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], useKids
   // heavier generation; today's grids don't need it.)
   const size = spec.templates[0]?.size ?? 5;
   if (size > 7) await new Promise((r) => setTimeout(r, 30));
-  const puzzle = generatePuzzle(spec, useKidsBank ? kidsBank() : mainBank());
+  // Big grids need the fill tier's density; it loads lazily on first use.
+  // Curated entries still win the candidate sort via tagWeights.
+  const bank = useKidsBank ? kidsBank() : size >= 11 ? await fullBank() : mainBank();
+  const spec_ = size >= 11 && !useKidsBank
+    ? { ...spec, fillOptions: { tagWeights: { fill: 0.6 }, ...spec.fillOptions } }
+    : spec;
+  const puzzle = generatePuzzle(spec_, bank);
   if (!puzzle) throw new Error('The engine could not fill this grid — try another size or theme.');
   return puzzle;
 }

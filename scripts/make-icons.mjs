@@ -14,8 +14,11 @@ const browser = await chromium.launch({
 
 for (const size of [180, 192, 512]) {
   const page = await browser.newPage({ viewport: { width: size, height: size } });
+  // Home-screen PNGs are full-bleed: iOS and maskable Android apply their
+  // own corner masks; baked-in rounding would leave dead corners.
+  const fullBleed = svg.replaceAll('rx="96"', 'rx="0"');
   await page.setContent(
-    `<body style="margin:0">${svg.replace('<svg ', `<svg width="${size}" height="${size}" `)}</body>`,
+    `<body style="margin:0">${fullBleed.replace('<svg ', `<svg width="${size}" height="${size}" `)}</body>`,
   );
   await page.screenshot({ path: `${ROOT}public/icons/icon-${size}.png` });
   await page.close();

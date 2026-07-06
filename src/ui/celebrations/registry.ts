@@ -7,11 +7,21 @@ import type { Scene } from './types.ts';
 import { classicScenes } from './scenes/classic.ts';
 import { midnightScenes } from './scenes/midnight.ts';
 import { oceanScenes } from './scenes/ocean.ts';
+import { botanicalScenes } from './scenes/botanical.ts';
+import { artDecoScenes } from './scenes/art-deco.ts';
+import { terracottaScenes } from './scenes/terracotta.ts';
+import { monoScenes } from './scenes/mono.ts';
+import { hearthScenes } from './scenes/hearth.ts';
 
 const REGISTRY: Record<string, Scene[]> = {
   classic: classicScenes,
   midnight: midnightScenes,
   ocean: oceanScenes,
+  botanical: botanicalScenes,
+  'art-deco': artDecoScenes,
+  terracotta: terracottaScenes,
+  mono: monoScenes,
+  hearth: hearthScenes,
 };
 
 export const SCENE_SKINS = Object.keys(REGISTRY);

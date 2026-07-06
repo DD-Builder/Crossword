@@ -1,6 +1,7 @@
 # Build and publish the game to GitHub Pages on every push to main.
-# One-time setup: repo Settings → Pages → Source: "GitHub Actions".
-# Live at https://dd-builder.github.io/Crossword/ once enabled.
+# configure-pages (enablement: true) provisions the Pages site with the
+# GitHub Actions source automatically — no manual Settings step needed.
+# Live at https://dd-builder.github.io/Crossword/.
 name: Deploy to GitHub Pages
 
 on:
@@ -26,6 +27,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - uses: actions/configure-pages@v4
+        with:
+          enablement: true
       - run: npm ci
       - run: npm test
       - run: npm run build

@@ -93,8 +93,10 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
         if (!Number.isInteger(c.stars) || c.stars < 1 || c.stars > 5) fail(where, 'clue stars must be 1–5');
       }
       // Entries 4+ letters need at least two difficulty tiers so the weekday
-      // knobs have something to select between.
-      if (e.answer.length >= 4 && difficulties.size < 2) {
+      // knobs have something to select between. Exception: pure fill-coverage
+      // entries (tagged "fill") may carry a single clue — they exist to give
+      // the grid filler pattern density and gain more clues in later passes.
+      if (e.answer.length >= 4 && difficulties.size < 2 && !e.tags?.includes('fill')) {
         fail(where, `needs clues at ≥2 difficulty tiers (has ${[...difficulties].join(',') || 'none'})`);
       }
     }

@@ -45,7 +45,8 @@ if (args.smoke) {
   let failed = false;
 
   for (const size of [5, 7, 9, 11, 13, 15]) {
-    const sized = templates.filter((t) => t.size === size);
+    // Themed templates need seeded long entries — not part of the raw smoke.
+    const sized = templates.filter((t) => t.size === size && !t.themeSlotMin);
     if (sized.length === 0) continue;
     let ok = 0;
     let totalMs = 0;

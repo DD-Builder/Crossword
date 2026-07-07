@@ -521,8 +521,8 @@
     {
      "num": 1,
      "answer": "NURSE",
-     "clue": "Hospital hero",
-     "stars": 1,
+     "clue": "Bedside pro in scrubs",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "science"
@@ -531,8 +531,8 @@
     {
      "num": 4,
      "answer": "EGO",
-     "clue": "Sense of self",
-     "stars": 1,
+     "clue": "It can be inflated or bruised",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "science"
@@ -541,8 +541,8 @@
     {
      "num": 6,
      "answer": "HINGE",
-     "clue": "Door's swing point",
-     "stars": 1,
+     "clue": "Swinging joint?",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "household"
@@ -551,7 +551,7 @@
     {
      "num": 9,
      "answer": "AGE",
-     "clue": "Candles-on-the-cake count",
+     "clue": "Birthday-candle count",
      "stars": 2,
      "category": "history",
      "tags": [
@@ -562,8 +562,8 @@
     {
      "num": 10,
      "answer": "TRAILER",
-     "clue": "Movie preview",
-     "stars": 1,
+     "clue": "Sneak peek at the multiplex",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "movies"
@@ -572,7 +572,7 @@
     {
      "num": 11,
      "answer": "TIE",
-     "clue": "Father's Day gift cliché",
+     "clue": "Necktie, as a Father’s Day cliché",
      "stars": 2,
      "category": "sports-leisure",
      "tags": [
@@ -582,8 +582,8 @@
     {
      "num": 12,
      "answer": "ACORN",
-     "clue": "Oak's seed",
-     "stars": 1,
+     "clue": "Future oak, in a nutshell",
+     "stars": 3,
      "category": "science-nature",
      "tags": [
       "nature",
@@ -603,8 +603,8 @@
     {
      "num": 16,
      "answer": "EVENT",
-     "clue": "Calendar item",
-     "stars": 1,
+     "clue": "Red-letter-day happening",
+     "stars": 2,
      "category": "sports-leisure",
      "tags": [
       "olympics"
@@ -613,8 +613,8 @@
     {
      "num": 18,
      "answer": "ACT",
-     "clue": "Play division",
-     "stars": 1,
+     "clue": "Juggler’s turn, say",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "movies"
@@ -624,7 +624,7 @@
      "num": 19,
      "answer": "AIRPORT",
      "clue": "Terminal setting",
-     "stars": 1,
+     "stars": 3,
      "category": "geography",
      "tags": [
       "travel"
@@ -633,8 +633,8 @@
     {
      "num": 20,
      "answer": "LID",
-     "clue": "Jar topper",
-     "stars": 1,
+     "clue": "Topper for a jar or an eye",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "household"
@@ -655,8 +655,8 @@
     {
      "num": 22,
      "answer": "BURRITO",
-     "clue": "Wrapped Mexican meal",
-     "stars": 1,
+     "clue": "Foil-wrapped taqueria order",
+     "stars": 2,
      "category": "geography",
      "tags": [
       "food",
@@ -677,8 +677,8 @@
     {
      "num": 26,
      "answer": "USHER",
-     "clue": "Aisle guide",
-     "stars": 1,
+     "clue": "Theater seat-finder",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "music",
@@ -688,8 +688,8 @@
     {
      "num": 27,
      "answer": "MUG",
-     "clue": "Cocoa holder",
-     "stars": 1,
+     "clue": "It might say “World’s Best Dad”",
+     "stars": 3,
      "category": "sports-leisure",
      "tags": [
       "food",
@@ -720,8 +720,8 @@
     {
      "num": 31,
      "answer": "AVOCADO",
-     "clue": "Guacamole's main ingredient",
-     "stars": 1,
+     "clue": "Guac’s main squeeze?",
+     "stars": 3,
      "category": "science-nature",
      "tags": [
       "food",
@@ -741,8 +741,8 @@
     {
      "num": 35,
      "answer": "TRAIN",
-     "clue": "Amtrak unit",
-     "stars": 1,
+     "clue": "Grand Central arrival",
+     "stars": 2,
      "category": "geography",
      "tags": [
       "travel"
@@ -763,8 +763,8 @@
     {
      "num": 37,
      "answer": "TREND",
-     "clue": "What's hot right now",
-     "stars": 1,
+     "clue": "What’s catching on",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "tech"
@@ -775,8 +775,8 @@
     {
      "num": 1,
      "answer": "NIAGARA",
-     "clue": "Falls between New York and Ontario",
-     "stars": 1,
+     "clue": "Honeymoon-famous falls",
+     "stars": 2,
      "category": "geography",
      "tags": [
       "travel",
@@ -797,8 +797,8 @@
     {
      "num": 3,
      "answer": "ESTONIA",
-     "clue": "Baltic republic north of Latvia",
-     "stars": 1,
+     "clue": "Tallinn’s nation",
+     "stars": 2,
      "category": "geography",
      "tags": [
       "travel",
@@ -808,8 +808,8 @@
     {
      "num": 4,
      "answer": "ERA",
-     "clue": "Notable stretch of time",
-     "stars": 1,
+     "clue": "The Jurassic, for one",
+     "stars": 2,
      "category": "history",
      "tags": [
       "time",
@@ -819,8 +819,8 @@
     {
      "num": 5,
      "answer": "OWL",
-     "clue": "Hooting hunter",
-     "stars": 1,
+     "clue": "Wide-eyed night hunter",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "animals",
@@ -830,8 +830,8 @@
     {
      "num": 6,
      "answer": "HARVEST",
-     "clue": "Autumn gathering",
-     "stars": 1,
+     "clue": "Reason for a fall festival",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "thanksgiving",
@@ -853,7 +853,7 @@
     {
      "num": 8,
      "answer": "ELECTED",
-     "clue": "Voted in",
+     "clue": "Voted into office",
      "stars": 1,
      "category": "history",
      "tags": [
@@ -864,8 +864,8 @@
     {
      "num": 13,
      "answer": "OSTRICH",
-     "clue": "Largest living bird",
-     "stars": 1,
+     "clue": "Flightless bird that can outrun you",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "animals",
@@ -886,8 +886,8 @@
     {
      "num": 15,
      "answer": "COOKING",
-     "clue": "What's happening when something smells good",
-     "stars": 1,
+     "clue": "What’s going on when the kitchen smells great",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "fill",
@@ -897,8 +897,8 @@
     {
      "num": 17,
      "answer": "ECLIPSE",
-     "clue": "Sun-blocking event",
-     "stars": 1,
+     "clue": "When the moon steals the show?",
+     "stars": 3,
      "category": "science-nature",
      "tags": [
       "science",
@@ -920,8 +920,8 @@
     {
      "num": 22,
      "answer": "BARGAIN",
-     "clue": "Thrift-store find",
-     "stars": 1,
+     "clue": "Steal that’s totally legal",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "fill"
@@ -930,7 +930,7 @@
     {
      "num": 23,
      "answer": "OUTPOST",
-     "clue": "Frontier station",
+     "clue": "Lonely frontier station",
      "stars": 2,
      "category": "history",
      "tags": [
@@ -961,7 +961,7 @@
     {
      "num": 32,
      "answer": "ORE",
-     "clue": "Miner's haul",
+     "clue": "Miner’s raw find",
      "stars": 1,
      "category": "science-nature",
      "tags": [
@@ -982,7 +982,7 @@
     {
      "num": 34,
      "answer": "EYE",
-     "clue": "Needle feature",
+     "clue": "Storm’s calm center",
      "stars": 2,
      "category": "science-nature",
      "tags": [

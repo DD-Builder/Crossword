@@ -43,6 +43,44 @@ over show-offy.
     itself — SHORE clued via tides is geography; clued via "Jersey ___"
     is entertainment.
 
+## Liveliness — even on Monday
+
+Easy ≠ dull. A Monday clue must be *gettable*, but it should still have a
+pulse. The enemy is the flat dictionary definition. Before you write a clue,
+ask: "Is this the phrasing a solver has seen a hundred times?" If so, find a
+fresher angle — same difficulty, more life.
+
+Techniques that add life without adding difficulty:
+
+- **Be specific and vivid.** Trade the generic label for a concrete image.
+  - EGO — dull: "Sense of self." lively: "It can be inflated or bruised."
+  - TRAILER — dull: "Movie preview." lively: "Sneak peek at the multiplex."
+  - MUG — dull: "Cocoa holder." lively: "It might say 'World's Best Dad'."
+- **Clue by example** with "e.g.", "for one", or "say". This is friendly and
+  fresh at any level. TEA → "Earl Grey, for one." ERA → "The Jurassic, for one."
+- **Colloquial / spoken** clues in quotes signal a phrase. AYE → "'___, Captain!'"
+- **A light "?" pun**, used *sparingly* on easy days (one or two a grid), is a
+  gift. AVOCADO → "Guac's main squeeze?" ECLIPSE → "When the moon steals the
+  show?" HINGE → "Swinging joint?"
+- **Cross-reference the world**, not the dictionary. ESTONIA — dull: "Baltic
+  republic north of Latvia." lively: "Tallinn's nation."
+- **Mind the surface.** The clue should read as a natural phrase, not a lookup.
+
+## Difficulty is re-cluing, not re-answering
+
+The *same answer* carries a different clue by weekday — the grid and fill stay
+solvable; only the wording's slyness changes. Keep this ladder in mind:
+
+| answer | Mon (straight, lively) | Wed (a wink) | Sat (devious, fair) |
+|--------|------------------------|--------------|---------------------|
+| SHORE | "Where the waves break" | "Jersey ___" | "Line you might draw in the sand?" |
+| ICE | "Rink surface" | "It breaks at parties" | "Cold shoulder?" |
+| NET | "Tennis divider" | "Bottom line, after costs" | "Catch-all?" |
+
+Monday earns its smile through freshness and specificity; Saturday earns it
+through misdirection the surface hides. Never reach for obscurity to make a
+clue "hard" — reach for a cleverer angle on a thing people already know.
+
 ## Entry shape
 
 ```jsonc

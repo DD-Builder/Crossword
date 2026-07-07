@@ -188,6 +188,16 @@
 .xw-cell.pencil .xw-letter { color: var(--cell-pencil); font-weight: 400; }
 .xw-cell.revealed .xw-letter { color: var(--cell-revealed); }
 
+/* Circled cell: a thin ring marking a theme letter (cosmetic overlay). */
+.xw-circle {
+  position: absolute;
+  inset: 11%;
+  border: 2px solid var(--ink-muted);
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 /* Checked-wrong: a corner-to-corner slash. */
 .xw-cell.wrong::after {
   content: "";

@@ -21,6 +21,9 @@ export function createGridView(session: SolveSession): GridView {
   root.style.setProperty('--grid-cols', String(cols));
   root.style.setProperty('--grid-rows', String(rows));
 
+  // Circled cells (cosmetic theme overlay): row-major indices from the puzzle.
+  const circled = new Set(session.puzzle.circles ?? []);
+
   interface CellRef {
     wrap: HTMLElement;
     letter: HTMLElement;
@@ -44,6 +47,7 @@ export function createGridView(session: SolveSession): GridView {
         'data-rc': `${r},${c}`,
       },
         num > 0 ? el('span', { className: 'xw-num' }, String(num)) : null,
+        circled.has(r * cols + c) ? el('span', { className: 'xw-circle', 'aria-hidden': 'true' }) : null,
         letter,
       );
       // pointerdown (not click) so iPad taps feel instant.

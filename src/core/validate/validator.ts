@@ -144,6 +144,18 @@ export function validatePuzzle(puzzle: Puzzle, opts: ValidateOptions = {}): Prob
     }
   }
 
+  // -- Circles (cosmetic theme overlay) ----------------------------------------
+  if (puzzle.circles) {
+    const cellCount = size.rows * size.cols;
+    for (const idx of puzzle.circles) {
+      if (!Number.isInteger(idx) || idx < 0 || idx >= cellCount) {
+        problems.push(err('circles', `Circle index ${idx} out of range`));
+      } else if (grid[Math.floor(idx / size.cols)]![idx % size.cols] === '#') {
+        problems.push(err('circles', `Circle ${idx} sits on a block`));
+      }
+    }
+  }
+
   // -- Daily metadata ----------------------------------------------------------
   if (puzzle.date !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(puzzle.date)) {
     problems.push(err('meta', `date must be YYYY-MM-DD, got "${puzzle.date}"`));

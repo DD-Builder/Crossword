@@ -82,6 +82,12 @@ export interface Puzzle {
   size: { rows: number; cols: number };
   theme?: PuzzleTheme;
   /**
+   * Row-major indices (`r * cols + c`) of cells that carry a drawn circle.
+   * Circled letters typically spell a hidden theme answer — a purely cosmetic
+   * overlay that never affects solving or numbering.
+   */
+  circles?: number[];
+  /**
    * Solution rows: one string per row, `#` for blocks, A–Z for letters.
    * The single source of truth — numbering and slots derive from this.
    */

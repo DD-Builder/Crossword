@@ -49,6 +49,24 @@ describe('validatePuzzle', () => {
     expect(errorsOf(p).some((e) => e.message.includes('leaks'))).toBe(true);
   });
 
+  it('accepts circles on white cells', () => {
+    const p = clone();
+    p.circles = [6, 12, 18]; // interior white cells of the 5×5 fixture
+    expect(errorsOf(p)).toEqual([]);
+  });
+
+  it('flags a circle index out of range', () => {
+    const p = clone();
+    p.circles = [999];
+    expect(errorsOf(p).some((e) => e.message.includes('out of range'))).toBe(true);
+  });
+
+  it('flags a circle sitting on a block', () => {
+    const p = clone();
+    p.circles = [0]; // top-left is a block in the fixture
+    expect(errorsOf(p).some((e) => e.message.includes('on a block'))).toBe(true);
+  });
+
   it('flags duplicate answers', () => {
     const p = clone();
     // Turn 8-Across EST into SPA's duplicate? Simplest: corrupt the grid so

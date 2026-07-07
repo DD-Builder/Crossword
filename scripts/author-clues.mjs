@@ -106,10 +106,14 @@ function rate(text, corpusDiff) {
   if (/\?\s*$/.test(text)) craft += 25;             // pun / misdirection
   if (/["“”]/.test(text)) craft += 12;              // spoken / colloquial
   if (/\b(e\.g\.|for one|say|perhaps|maybe|in a way|of sorts)\b/i.test(text)) craft += 10;
+  if (/_{2,}|_\b|\b_/.test(text)) craft += 9;        // fill-in-the-blank — friendly + lively
+  if (/^(It|They|What|Where|When|Kind of|Sort of|One who|Place)\b/.test(text)) craft += 7; // riddle-ish opener
   if (words.length >= 3) craft += 8;
   if (words.length >= 5) craft += 6;
   if (/\b[A-Z][a-z]{2,}/.test(text.replace(/^\W*/, ''))) craft += 5; // a proper-noun anchor
   if (words.length === 1) craft -= 10;              // flat synonym
+  if (words.length === 2 && !/[?"“”_]/.test(text) && !/\b[A-Z][a-z]/.test(text.slice(1)))
+    craft -= 6;                                     // two-word dictionary synonym ("Hive product")
   if (CROSSWORDESE_META.test(text)) craft -= 16;    // OREO "Comb. form" etc.
   if (text.length > 90) craft -= 8;
   const stars = Math.max(1, Math.min(5, Math.round(craft / 20)));

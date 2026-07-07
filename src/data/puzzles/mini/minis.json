@@ -52,7 +52,7 @@
     {
      "num": 7,
      "answer": "NEEDY",
-     "clue": "Clinging, say",
+     "clue": "Those in want",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -106,7 +106,7 @@
     {
      "num": 4,
      "answer": "EINE",
-     "clue": "Mozart's \"___ kleine Nachtmusik\"",
+     "clue": "German \"a\"",
      "stars": 3,
      "category": "wordplay",
      "register": "modern",
@@ -229,7 +229,7 @@
      "answer": "EGRET",
      "clue": "\"Snowy\" bird",
      "stars": 3,
-     "category": "science-nature",
+     "category": "wordplay",
      "register": "modern",
      "tags": [
       "sourced"
@@ -238,7 +238,7 @@
     {
      "num": 4,
      "answer": "SUB",
-     "clue": "Bench warmer",
+     "clue": "___ rosa",
      "stars": 2,
      "category": "wordplay",
      "tags": [
@@ -346,9 +346,9 @@
     {
      "num": 2,
      "answer": "ETTA",
-     "clue": "Blues singer James",
+     "clue": "___ Kett",
      "stars": 3,
-     "category": "entertainment",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
@@ -441,7 +441,7 @@
     {
      "num": 8,
      "answer": "STEAD",
-     "clue": "Ending with bed or farm",
+     "clue": "Stand in good ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -805,7 +805,7 @@
      "num": 6,
      "answer": "RONAN",
      "clue": "\"Brooklyn\" actress Saoirse ___",
-     "stars": 3,
+     "stars": 4,
      "category": "history",
      "register": "modern",
      "tags": [
@@ -815,7 +815,7 @@
     {
      "num": 7,
      "answer": "IDEST",
-     "clue": "That is, in Latin",
+     "clue": "What i.e. stands for",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -825,8 +825,8 @@
     {
      "num": 8,
      "answer": "BET",
-     "clue": "\"Wanna ___?\"",
-     "stars": 3,
+     "clue": "\"You ___!\" (surely)",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -868,7 +868,7 @@
     {
      "num": 4,
      "answer": "CRIB",
-     "clue": "Where a mudder may get fodder",
+     "clue": "Corn ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -932,7 +932,7 @@
     {
      "num": 6,
      "answer": "YANNI",
-     "clue": "\"Live at the Acropolis\" musician",
+     "clue": "\"___ Voices\" (best-selling New Age album)",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -975,8 +975,8 @@
     {
      "num": 2,
      "answer": "EINE",
-     "clue": "Mozart's \"___ kleine Nachtmusik\"",
-     "stars": 3,
+     "clue": "\"___ kleine Nachtmusik\": Mozart",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -987,7 +987,7 @@
      "num": 3,
      "answer": "ERIN",
      "clue": "\"Come Back to ___\"",
-     "stars": 3,
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -997,9 +997,10 @@
     {
      "num": 4,
      "answer": "TYPE",
-     "clue": "Enter, in a way",
-     "stars": 3,
+     "clue": "\"Not my _____\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1007,8 +1008,8 @@
     {
      "num": 5,
      "answer": "HARM",
-     "clue": "\"No ___, no foul\"",
-     "stars": 3,
+     "clue": "\"Wouldn't ___ a flea\"",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1073,7 +1074,7 @@
     {
      "num": 8,
      "answer": "DALAI",
-     "clue": "Part of a monk's title",
+     "clue": "___ Lama",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1184,7 +1185,7 @@
     {
      "num": 4,
      "answer": "DEBRA",
-     "clue": "Messing of \"Will &amp; Grace\"",
+     "clue": "Raymond's wife on \"Everybody Loves Raymond\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1309,7 +1310,7 @@
     {
      "num": 4,
      "answer": "ELENA",
-     "clue": "Verdugo of \"Marcus Welby, M.D.\"",
+     "clue": "\"Maria ___,\" 1933 song",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1320,7 +1321,7 @@
     {
      "num": 7,
      "answer": "AVAIL",
-     "clue": "To no ___ (in vain)",
+     "clue": "To no ___ (useless)",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1340,8 +1341,8 @@
     {
      "num": 9,
      "answer": "TAO",
-     "clue": "Chinese \"way\"",
-     "stars": 3,
+     "clue": "\"___ Te Ching\"",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1437,7 +1438,7 @@
     {
      "num": 4,
      "answer": "ASYET",
-     "clue": "To this point",
+     "clue": "Up until now",
      "stars": 2,
      "category": "wordplay",
      "tags": [
@@ -1490,7 +1491,7 @@
     {
      "num": 2,
      "answer": "LYING",
-     "clue": "Possible cause of a spanking",
+     "clue": "Reason for a spanking, maybe",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1500,7 +1501,7 @@
     {
      "num": 3,
      "answer": "SEETO",
-     "clue": "Handle the arrangements for",
+     "clue": "Take care of",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1554,7 +1555,7 @@
     {
      "num": 1,
      "answer": "RAE",
-     "clue": "Charlotte of \"The Facts of Life\"",
+     "clue": "\"Norma ___,\" 1979 film",
      "stars": 4,
      "category": "entertainment",
      "register": "modern",
@@ -1565,7 +1566,7 @@
     {
      "num": 4,
      "answer": "ELENA",
-     "clue": "Verdugo of \"Marcus Welby, M.D.\"",
+     "clue": "\"Maria ___,\" 1933 song",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1691,9 +1692,9 @@
     {
      "num": 4,
      "answer": "LIETO",
-     "clue": "Give the ___ (prove to be false)",
+     "clue": "Stop the engines at sea",
      "stars": 3,
-     "category": "wordplay",
+     "category": "geography",
      "tags": [
       "sourced"
      ]
@@ -1756,9 +1757,10 @@
     {
      "num": 3,
      "answer": "EERIE",
-     "clue": "Like a haunted house",
+     "clue": "Like \"The X-Files\"",
      "stars": 3,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1820,7 +1822,7 @@
     {
      "num": 4,
      "answer": "THERE",
-     "clue": "\"Over ___\" (W.W. I song)",
+     "clue": "\"___ is a tide . . . \"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1831,9 +1833,9 @@
     {
      "num": 7,
      "answer": "TANIA",
-     "clue": "Patty Hearst's alias",
+     "clue": "___ Australis, star in Ursa Major",
      "stars": 3,
-     "category": "entertainment",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
@@ -1865,7 +1867,7 @@
      "answer": "ETTA",
      "clue": "\"At Last\" singer James",
      "stars": 3,
-     "category": "entertainment",
+     "category": "wordplay",
      "register": "modern",
      "tags": [
       "sourced"
@@ -1894,9 +1896,10 @@
     {
      "num": 5,
      "answer": "RITE",
-     "clue": "Practice that can't be wrong?",
+     "clue": "\"The ___ of Spring\"",
      "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1989,7 +1992,7 @@
     {
      "num": 11,
      "answer": "SIN",
-     "clue": "One of a deadly seven",
+     "clue": "Envy or pride, e.g.",
      "stars": 2,
      "category": "arts-literature",
      "tags": [
@@ -2217,7 +2220,7 @@
     {
      "num": 7,
      "answer": "HES",
-     "clue": "\"For ___ a jolly good fellow\"",
+     "clue": "\"For ___ a jolly . . . \"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2250,7 +2253,7 @@
     {
      "num": 11,
      "answer": "ATL",
-     "clue": "Expanse east of N.A.",
+     "clue": "Part of NATO",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2292,9 +2295,9 @@
     {
      "num": 18,
      "answer": "NES",
-     "clue": "Initials on some video games",
+     "clue": "Super ___ (video game name)",
      "stars": 3,
-     "category": "wordplay",
+     "category": "sports-leisure",
      "tags": [
       "sourced"
      ]
@@ -2352,8 +2355,8 @@
     {
      "num": 5,
      "answer": "OWN",
-     "clue": "Confess, with \"up\"",
-     "stars": 3,
+     "clue": "\"To thine ___ self . . . \"",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -2463,7 +2466,7 @@
      "answer": "MUM",
      "clue": "Mother's flower?",
      "stars": 4,
-     "category": "wordplay",
+     "category": "history",
      "tags": [
       "sourced"
      ]
@@ -2489,7 +2492,7 @@
     {
      "num": 9,
      "answer": "ETERNAL",
-     "clue": "\" . . . vengeance of ___ fire\": Jude",
+     "clue": "Irving Stone's \"Love Is ___\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2500,7 +2503,7 @@
     {
      "num": 11,
      "answer": "AOK",
-     "clue": "Astronaut's \"All systems go\"",
+     "clue": "\"All systems go\"",
      "stars": 3,
      "category": "wordplay",
      "register": "modern",
@@ -2511,7 +2514,7 @@
     {
      "num": 12,
      "answer": "HOTTEST",
-     "clue": "Most popular",
+     "clue": "Most peppery",
      "stars": 2,
      "category": "wordplay",
      "tags": [
@@ -2617,7 +2620,7 @@
     {
      "num": 6,
      "answer": "MEL",
-     "clue": "Country singer McDaniel",
+     "clue": "Blanc or Brooks",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2671,7 +2674,7 @@
     {
      "num": 15,
      "answer": "TLC",
-     "clue": "Requisite for a good R.N.",
+     "clue": "What an R.N. gives",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2789,9 +2792,10 @@
     {
      "num": 17,
      "answer": "TAO",
-     "clue": "The way, in Chinese philosophy",
-     "stars": 3,
+     "clue": "\"___ Te Ching\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -2894,7 +2898,7 @@
     {
      "num": 12,
      "answer": "ASA",
-     "clue": "Third king of Judah",
+     "clue": "Sly ___ fox",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2924,8 +2928,8 @@
     {
      "num": 15,
      "answer": "DOC",
-     "clue": "Ade's \"___ Horne\"",
-     "stars": 3,
+     "clue": "\"What's up, ___?\"",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -2978,7 +2982,7 @@
     {
      "num": 7,
      "answer": "THE",
-     "clue": "Last word of \"Finnegans Wake\"",
+     "clue": "\"___ Sun Also Rises\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2989,7 +2993,7 @@
     {
      "num": 8,
      "answer": "NYE",
-     "clue": "\"The Steve Allen Show\" regular",
+     "clue": "\"Bill ___ and Boomerang\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -3074,7 +3078,7 @@
     {
      "num": 1,
      "answer": "OTC",
-     "clue": "Like some Wall St. stocks",
+     "clue": "Where lts. at made",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3091,7 +3095,7 @@
     {
      "num": 3,
      "answer": "RESTORE",
-     "clue": "What a spa might do",
+     "clue": "Modernize, in a way",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3101,7 +3105,7 @@
     {
      "num": 4,
      "answer": "ENLARGE",
-     "clue": "Double or triple, say",
+     "clue": "Turn into something big",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3153,9 +3157,9 @@
     {
      "num": 13,
      "answer": "GAY",
-     "clue": "\"Glitter and Be _____\" (\"Candide\" song)",
+     "clue": "\"The ___ Divorcee\"",
      "stars": 4,
-     "category": "arts-literature",
+     "category": "wordplay",
      "register": "modern",
      "tags": [
       "sourced"
@@ -3164,7 +3168,7 @@
     {
      "num": 14,
      "answer": "IRA",
-     "clue": "Cash's \"Ballad of ___ Hayes\"",
+     "clue": "Org. in \"Odd Man Out\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -3175,7 +3179,7 @@
     {
      "num": 15,
      "answer": "POT",
-     "clue": "Word with hole or luck",
+     "clue": "Cambodian leader Pol ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3391,9 +3395,10 @@
     {
      "num": 10,
      "answer": "EEK",
-     "clue": "Cry caused by Mickey?",
+     "clue": "\"___ and Meek,\" comic strip",
      "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]

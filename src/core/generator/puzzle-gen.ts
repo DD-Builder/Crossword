@@ -20,6 +20,8 @@ export interface GenerateSpec {
   /** Candidate templates (same size); the seed picks among them. */
   templates: GridTemplate[];
   seedKey: string;
+  /** Preferred cluing register (player knob); threaded to clue selection. */
+  register?: import('../types.ts').Register;
   theme?: { name: string; entries: string[] };
   categoryWeights?: Record<string, number>;
   restarts?: number;
@@ -52,6 +54,7 @@ export function generatePuzzle(spec: GenerateSpec, bank: BankIndex): Puzzle | nu
       ...(spec.date ? { date: spec.date } : {}),
       difficulty: spec.difficulty,
       clueTier: knobs.clueTier,
+      ...(spec.register ? { register: spec.register } : {}),
       ...(spec.theme ? { theme: spec.theme } : {}),
     };
     return assemble(result.grid!, result.placed!, meta, rngFrom(`${spec.seedKey}|clues`));

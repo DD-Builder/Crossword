@@ -48,4 +48,25 @@ describe('pickClue — craft first', () => {
     const flat = entry([['Dull', 1, 1], ['Sparkles', 1, 4]]);
     expect(pickClue(flat, 1, rngFrom('a')).text).toBe('Sparkles');
   });
+
+  it('nudges toward the preferred register without forcing it', () => {
+    const e2: BankEntry = {
+      answer: 'ICE', score: 70, categories: ['science-nature'], tags: [],
+      clues: [
+        { text: 'Rink surface', difficulty: 1, stars: 3, register: 'classic' },
+        { text: 'What breaks at parties', difficulty: 1, stars: 3, register: 'modern' },
+      ],
+    };
+    expect(pickClue(e2, 1, rngFrom('r'), { register: 'modern' }).text).toBe('What breaks at parties');
+    expect(pickClue(e2, 1, rngFrom('r'), { register: 'classic' }).text).toBe('Rink surface');
+  });
+
+  it('rotates among comparable gems, reusing one only if it must', () => {
+    const twoGems = entry([['Gem A', 1, 4], ['Gem B', 1, 4]]);
+    // With one gem marked recent, the fresh one of equal craft wins.
+    expect(pickClue(twoGems, 1, rngFrom('a'), { recent: new Set(['Gem A']) }).text).toBe('Gem B');
+    // A standout gem still shows over a dull fresh clue (craft > rotation).
+    const mixed = entry([['Dull', 1, 1], ['Sparkles', 1, 4]]);
+    expect(pickClue(mixed, 1, rngFrom('a'), { recent: new Set(['Sparkles']) }).text).toBe('Sparkles');
+  });
 });

@@ -120,6 +120,9 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
           fail(where, 'clue difficulty must be 1–5');
         } else difficulties.add(c.difficulty);
         if (!Number.isInteger(c.stars) || c.stars < 1 || c.stars > 5) fail(where, 'clue stars must be 1–5');
+        if (c.register !== undefined && c.register !== 'classic' && c.register !== 'modern') {
+          fail(where, `clue register must be 'classic' or 'modern', got "${c.register}"`);
+        }
       }
       // Entries 4+ letters need at least two difficulty tiers so the weekday
       // knobs have something to select between. Exception: pure fill-coverage

@@ -94,6 +94,10 @@ export interface GridTemplate {
   openness: number;
   /** Slot lengths ≥ this are reserved for theme entries when theming. */
   themeSlotMin?: number;
+  /** British-style lattice grid: alternate letters legitimately unchecked. */
+  lattice?: boolean;
+  /** Count of >8-letter slots designated for theme entries (size ≥ 11). */
+  themeLongSlots?: number;
 }
 
 /** Wordbank entry: one answer, several clues at different difficulty tiers. */

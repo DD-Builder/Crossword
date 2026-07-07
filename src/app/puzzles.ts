@@ -4,6 +4,7 @@
 
 import type { RouteCtx } from './router.ts';
 import type { GridTemplate, Puzzle } from '../core/types.ts';
+import { deriveSlots, templateToGrid } from '../core/grid.ts';
 import { generatePuzzle } from '../core/generator/puzzle-gen.ts';
 import { knobsFor, weekdayOf } from '../core/generator/difficulty.ts';
 import { matchTheme } from '../core/generator/themer.ts';
@@ -37,8 +38,51 @@ export function dailyFor(dateIso: string, kind: 'daily' | 'mini'): Puzzle | null
 
 function pickTemplates(size: number, difficulty: number): GridTemplate[] {
   const knobs = knobsFor(difficulty);
-  const pool = templatesBySize(size, knobs.maxOpenness);
-  return pool.length > 0 ? pool.filter((t) => !t.themeSlotMin) : pool;
+  const pool = templatesBySize(size, knobs.maxOpenness).filter((t) => !t.themeSlotMin);
+  // Fully-checked American templates at 9×9+ can't yet be filled by the
+  // curated bank (see docs/fill-curve.md), so live generation would fail on
+  // them. Prefer the British-lattice templates, which fill reliably at every
+  // size. Small grids (5, 7) have no lattice variant and fill fine as
+  // American. Once the bank supports American large grids, drop this filter.
+  const lattice = pool.filter((t) => t.lattice);
+  return lattice.length > 0 ? lattice : pool;
+}
+
+/** Slot lengths that actually exist in a template pool. A theme entry can
+ * only be seeded if some template has a slot of its exact length — seeding a
+ * 6-letter word into a grid whose slots are 3/5/7 (or into a 5×5) is
+ * impossible and dooms the fill. */
+function placeableLengths(pool: GridTemplate[]): Set<number> {
+  const lens = new Set<number>();
+  for (const t of pool) {
+    for (const s of deriveSlots(templateToGrid(t.size, t.blocks), 3).slots) {
+      lens.add(s.cells.length);
+    }
+  }
+  return lens;
+}
+
+/** Generate a themed puzzle: seed the theme words that can actually fit, and
+ * if that fill can't be completed, fall back to a puzzle whose *fill* is still
+ * biased toward the theme's categories (via categoryWeights) but carries no
+ * hard-seeded entries. Guarantees a themed-flavored puzzle every time. */
+async function generateThemed(
+  base: Parameters<typeof generatePuzzle>[0],
+  themeName: string,
+  candidateSeeds: string[],
+  useKidsBank = false,
+): Promise<Puzzle> {
+  const size = base.templates[0]?.size ?? 5;
+  const lens = placeableLengths(base.templates);
+  const seeds = candidateSeeds.filter((s) => lens.has(s.length)).slice(0, size >= 11 ? 4 : 2);
+  if (seeds.length > 0) {
+    try {
+      return await generateAsync({ ...base, theme: { name: themeName, entries: seeds } }, useKidsBank);
+    } catch {
+      // exact seeding couldn't fill — degrade to category-biased fill below
+    }
+  }
+  return generateAsync(base, useKidsBank);
 }
 
 async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], useKidsBank = false): Promise<Puzzle> {
@@ -127,17 +171,16 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
     const grade = query.get('grade') ?? 'K';
     const theme = query.get('theme') ?? 'animals';
     const match = matchTheme(theme, kidsEntries(), { maxSeeds: 4, minLen: 3 });
-    return generateAsync({
+    return generateThemed({
       id: `gen-kids-${seed}`,
       kind: 'kids',
       title: `${theme[0]?.toUpperCase()}${theme.slice(1)} (Grade ${grade})`,
       difficulty: 1,
       templates: templatesBySize(5, 5),
       seedKey: `kids|${grade}|${theme}|${seed}`,
-      theme: { name: theme, entries: match.seeds.slice(0, 2) },
       categoryWeights: match.weights,
       fillOptions: { scoreFloor: 45 },
-    }, true);
+    }, theme, match.seeds, true);
   }
 
   if (mode === 'themed') {
@@ -159,16 +202,15 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
         `Add an AI key in Settings for made-to-order themes, or try a broader topic.`,
       );
     }
-    return generateAsync({
+    return generateThemed({
       id: `gen-themed-${seed}`,
       kind: 'themed',
       title: themeTitle(themeText),
       difficulty,
-      templates: templatesBySize(size, 5),
+      templates: pickTemplates(size, difficulty),
       seedKey: `themed|${themeText}|${seed}`,
-      theme: { name: themeText, entries: match.seeds.slice(0, size >= 11 ? 4 : 2) },
       categoryWeights: match.weights,
-    });
+    }, themeText, match.seeds);
   }
 
   throw new Error(`Unknown generation mode "${mode}"`);

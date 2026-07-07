@@ -42,8 +42,13 @@ export function playScene(scene: Scene, opts: PlaySceneOptions): PlayHandle {
   const resize = (): void => {
     w = window.innerWidth;
     h = window.innerHeight;
+    // Buffer is in device pixels; CSS size MUST be pinned to the viewport in
+    // CSS pixels, or the element renders at its 2×-DPR intrinsic size and the
+    // scene spills off-screen (only the top-left quadrant shows).
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
+    canvas.style.width = `${w}px`;
+    canvas.style.height = `${h}px`;
     raw.setTransform(dpr, 0, 0, dpr, 0, 0);
   };
   resize();

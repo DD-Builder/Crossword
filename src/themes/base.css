@@ -2,6 +2,15 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Fluid base type: every rem-based control (clues, toolbar, buttons) scales
+   with the viewport so the UI doesn't read tiny on tablets and desktops.
+   The grid sizes off vw/dvh separately. */
+:root { font-size: 16px; }
+@media (min-width: 820px)  { :root { font-size: 17px; } }
+@media (min-width: 1100px) { :root { font-size: 18.5px; } }
+@media (min-width: 1500px) { :root { font-size: 20px; } }
+@media (min-width: 2000px) { :root { font-size: 22px; } }
+
 html, body {
   margin: 0;
   padding: 0;

@@ -1,263 +1,4681 @@
 [
-{"answer":"CLEANING","score":48,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Chore done with a mop and bucket","difficulty":1,"stars":1}]},
-{"answer":"LEARNING","score":50,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Picking up new skills","difficulty":1,"stars":1}]},
-{"answer":"SHOPPING","score":50,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Filling a cart at the mall","difficulty":1,"stars":1}]},
-{"answer":"TEACHING","score":48,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Leading a classroom","difficulty":1,"stars":1}]},
-{"answer":"SPEAKING","score":47,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Giving a toast, say","difficulty":1,"stars":1}]},
-{"answer":"STANDING","score":47,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"On one's feet","difficulty":1,"stars":1}]},
-{"answer":"SLEEPING","score":49,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Out like a light","difficulty":2,"stars":2}]},
-{"answer":"DREAMING","score":49,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Off in la-la land","difficulty":2,"stars":2}]},
-{"answer":"SHOUTING","score":44,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Using an outdoor voice indoors","difficulty":1,"stars":2}]},
-{"answer":"CLIMBING","score":48,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Scaling the gym's rock wall","difficulty":1,"stars":1}]},
-{"answer":"CRAWLING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Getting around like a baby","difficulty":1,"stars":1}]},
-{"answer":"FLOATING","score":47,"categories":["sports-leisure"],"tags":["fill","summer"],"clues":[{"text":"Resting on the water's surface","difficulty":1,"stars":1}]},
-{"answer":"TRAINING","score":50,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Getting in shape for race day","difficulty":1,"stars":1}]},
-{"answer":"PLANNING","score":48,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Mapping out the week ahead","difficulty":1,"stars":1}]},
-{"answer":"PLANTING","score":47,"categories":["science-nature"],"tags":["fill","nature","spring"],"clues":[{"text":"Putting seeds in the ground","difficulty":1,"stars":1}]},
-{"answer":"GREETING","score":48,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Warm hello","difficulty":1,"stars":1}]},
-{"answer":"GUESSING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Taking a stab at it","difficulty":2,"stars":2}]},
-{"answer":"DRESSING","score":49,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Ranch or vinaigrette","difficulty":1,"stars":1}]},
-{"answer":"PRESSING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Urgent, like a deadline","difficulty":1,"stars":1}]},
-{"answer":"CHEERING","score":48,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Stadium roar after a goal","difficulty":1,"stars":1}]},
-{"answer":"CHANGING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"What the weather keeps doing","difficulty":2,"stars":2}]},
-{"answer":"CHARGING","score":47,"categories":["wordplay"],"tags":["fill","tech"],"clues":[{"text":"Topping up a phone battery","difficulty":1,"stars":1}]},
-{"answer":"BOUNCING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Moving like a rubber ball","difficulty":1,"stars":1}]},
-{"answer":"BRUSHING","score":46,"categories":["science-nature"],"tags":["fill"],"clues":[{"text":"Twice-a-day dental routine","difficulty":1,"stars":1}]},
-{"answer":"CATCHING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Contagious, like a yawn","difficulty":2,"stars":2}]},
-{"answer":"COACHING","score":47,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Guiding a team from the sideline","difficulty":1,"stars":1}]},
-{"answer":"COUNTING","score":48,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Going one, two, three...","difficulty":1,"stars":1}]},
-{"answer":"CRACKING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Solving, as a tough code","difficulty":2,"stars":2}]},
-{"answer":"CRASHING","score":44,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Staying over on short notice, casually","difficulty":2,"stars":2}]},
-{"answer":"CROSSING","score":47,"categories":["wordplay"],"tags":["fill","travel"],"clues":[{"text":"Pedestrian's painted path","difficulty":1,"stars":1}]},
-{"answer":"DOUBLING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Multiplying by two","difficulty":1,"stars":1}]},
-{"answer":"DOODLING","score":47,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Sketching in the margins","difficulty":1,"stars":1}]},
-{"answer":"DRIFTING","score":46,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Going wherever the current goes","difficulty":1,"stars":1}]},
-{"answer":"DRUMMING","score":46,"categories":["entertainment"],"tags":["fill","music"],"clues":[{"text":"Keeping the beat in the garage band","difficulty":1,"stars":1}]},
-{"answer":"FLIPPING","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Turning pancakes in the pan","difficulty":1,"stars":1}]},
-{"answer":"GRILLING","score":47,"categories":["entertainment"],"tags":["fill","food","summer"],"clues":[{"text":"Backyard-barbecue cooking","difficulty":1,"stars":1}]},
-{"answer":"GRINNING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Smiling ear to ear","difficulty":1,"stars":1}]},
-{"answer":"JUGGLING","score":46,"categories":["entertainment"],"tags":["fill"],"clues":[{"text":"Keeping three balls aloft","difficulty":1,"stars":1}]},
-{"answer":"KNITTING","score":46,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Two-needle craft","difficulty":1,"stars":1}]},
-{"answer":"LAUGHING","score":48,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Cracking up","difficulty":2,"stars":2}]},
-{"answer":"MARCHING","score":46,"categories":["entertainment"],"tags":["fill","music"],"clues":[{"text":"Moving in step with the band","difficulty":1,"stars":1}]},
-{"answer":"MATCHING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Like a coordinated sock pair","difficulty":1,"stars":1}]},
-{"answer":"MUNCHING","score":44,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Crunching away on a snack","difficulty":1,"stars":1}]},
-{"answer":"PADDLING","score":46,"categories":["sports-leisure"],"tags":["fill","sports","summer"],"clues":[{"text":"Powering a canoe","difficulty":1,"stars":1}]},
-{"answer":"PEDALING","score":46,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Powering a bicycle","difficulty":1,"stars":1}]},
-{"answer":"PITCHING","score":47,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Working from the mound","difficulty":2,"stars":2}]},
-{"answer":"PRINTING","score":47,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Gutenberg's game-changer","difficulty":2,"stars":2}]},
-{"answer":"PUZZLING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Hard to figure out","difficulty":1,"stars":1}]},
-{"answer":"ROASTING","score":46,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Browning marshmallows over the flames","difficulty":1,"stars":1}]},
-{"answer":"RUSTLING","score":45,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Sound of leaves in a breeze","difficulty":1,"stars":1}]},
-{"answer":"SCOOPING","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Serving ice cream","difficulty":1,"stars":1}]},
-{"answer":"SKIPPING","score":46,"categories":["sports-leisure"],"tags":["fill"],"clues":[{"text":"Moving with a hop in each step","difficulty":1,"stars":1}]},
-{"answer":"SNACKING","score":46,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Nibbling between meals","difficulty":1,"stars":1}]},
-{"answer":"SNEEZING","score":44,"categories":["science-nature"],"tags":["fill"],"clues":[{"text":"Reacting to pepper, maybe","difficulty":1,"stars":1}]},
-{"answer":"SNOOZING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Catching forty winks","difficulty":2,"stars":2}]},
-{"answer":"SPELLING","score":49,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Bee contestant's strong suit","difficulty":2,"stars":2}]},
-{"answer":"SPINNING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"What tops do best","difficulty":2,"stars":2}]},
-{"answer":"SPRAYING","score":44,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Misting the houseplants","difficulty":1,"stars":1}]},
-{"answer":"STACKING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Piling blocks into a tower","difficulty":1,"stars":1}]},
-{"answer":"STAMPING","score":45,"categories":["wordplay"],"tags":["fill","travel"],"clues":[{"text":"Marking a passport","difficulty":1,"stars":1}]},
-{"answer":"STARRING","score":46,"categories":["entertainment"],"tags":["fill","movies"],"clues":[{"text":"Playing the lead","difficulty":1,"stars":1}]},
-{"answer":"STEAMING","score":46,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Cooking dumplings the gentle way","difficulty":1,"stars":1}]},
-{"answer":"STEERING","score":46,"categories":["wordplay"],"tags":["fill","travel"],"clues":[{"text":"Keeping the car on course","difficulty":1,"stars":1}]},
-{"answer":"STIRRING","score":46,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Working a spoon through the pot","difficulty":1,"stars":1}]},
-{"answer":"STOMPING","score":44,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Walking hard enough to rattle dishes","difficulty":1,"stars":1}]},
-{"answer":"STUDYING","score":48,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Hitting the books","difficulty":2,"stars":2}]},
-{"answer":"SWAPPING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Trading, as lunch treats","difficulty":1,"stars":1}]},
-{"answer":"SWEEPING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Pushing a broom","difficulty":1,"stars":1}]},
-{"answer":"THINKING","score":49,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Using the old noggin","difficulty":1,"stars":1}]},
-{"answer":"TRACKING","score":45,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Following footprints","difficulty":1,"stars":1}]},
-{"answer":"TWIRLING","score":45,"categories":["entertainment"],"tags":["fill"],"clues":[{"text":"Giving a baton a whirl","difficulty":1,"stars":1}]},
-{"answer":"WHISKING","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Beating eggs briskly","difficulty":1,"stars":1}]},
-{"answer":"WRAPPING","score":47,"categories":["wordplay"],"tags":["fill","christmas"],"clues":[{"text":"Getting gifts ready, with paper and tape","difficulty":1,"stars":1}]},
-{"answer":"CANOEING","score":46,"categories":["sports-leisure"],"tags":["fill","sports","summer"],"clues":[{"text":"Gliding downriver with a single-blade paddle","difficulty":1,"stars":1}]},
-{"answer":"KAYAKING","score":44,"categories":["sports-leisure"],"tags":["fill","sports","summer"],"clues":[{"text":"Whitewater paddling, solo-style","difficulty":1,"stars":1}]},
-{"answer":"SLEDDING","score":45,"categories":["sports-leisure"],"tags":["fill","winter"],"clues":[{"text":"Snow-day hill activity","difficulty":1,"stars":1}]},
-{"answer":"ORBITING","score":46,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Circling a planet","difficulty":1,"stars":1}]},
-{"answer":"CHARMING","score":47,"categories":["entertainment"],"tags":["fill"],"clues":[{"text":"Like a fairy-tale prince","difficulty":1,"stars":1}]},
-{"answer":"GROWLING","score":44,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Rumbling like an empty stomach","difficulty":1,"stars":1}]},
-{"answer":"FOCUSING","score":45,"categories":["wordplay"],"tags":["fill","tech"],"clues":[{"text":"Sharpening a camera image","difficulty":1,"stars":1}]},
-{"answer":"GIGGLING","score":44,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Laughing in little bursts","difficulty":1,"stars":1}]},
-{"answer":"BLENDING","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Whirring fruit into a drink","difficulty":1,"stars":1}]},
-{"answer":"TROTTING","score":44,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Moving at an easy horse pace","difficulty":1,"stars":1}]},
-{"answer":"WADDLING","score":44,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Walking like a penguin","difficulty":1,"stars":1}]},
-{"answer":"PRANCING","score":44,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Strutting like a show pony","difficulty":1,"stars":1}]},
-{"answer":"BLOOMING","score":46,"categories":["science-nature"],"tags":["fill","nature","spring"],"clues":[{"text":"Bursting into flower","difficulty":1,"stars":1}]},
-{"answer":"RIPENING","score":45,"categories":["science-nature"],"tags":["fill","nature","food"],"clues":[{"text":"Turning from green to red, as a tomato","difficulty":1,"stars":1}]},
-{"answer":"WATERING","score":45,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Giving the garden a drink","difficulty":1,"stars":1}]},
-{"answer":"BRAIDING","score":44,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Weaving hair into plaits","difficulty":1,"stars":1}]},
-{"answer":"CHATTING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Making small talk","difficulty":1,"stars":1}]},
-{"answer":"BROWSING","score":46,"categories":["arts-literature"],"tags":["fill","books"],"clues":[{"text":"Wandering a bookstore's shelves","difficulty":1,"stars":1}]},
-{"answer":"CLICKING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Hitting it off right away","difficulty":2,"stars":2}]},
-{"answer":"COLORING","score":46,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Crayon work inside the lines","difficulty":1,"stars":1}]},
-{"answer":"QUILTING","score":44,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Patchwork craft","difficulty":1,"stars":1}]},
-{"answer":"CRAFTING","score":45,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Making things at the hobby table","difficulty":1,"stars":1}]},
-{"answer":"KNEADING","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Working bread dough by hand","difficulty":1,"stars":1}]},
-{"answer":"BROILING","score":44,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Cooking under direct high heat","difficulty":1,"stars":1}]},
-{"answer":"POACHING","score":44,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Cooking eggs in barely bubbling water","difficulty":1,"stars":1}]},
-{"answer":"TOASTING","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Raising a glass","difficulty":2,"stars":2}]},
-{"answer":"CHOPPING","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Prepping onions, tearfully","difficulty":1,"stars":2}]},
-{"answer":"WHIPPING","score":44,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Turning cream into a fluffy topping","difficulty":1,"stars":1}]},
-{"answer":"FREEZING","score":47,"categories":["science-nature"],"tags":["fill","winter"],"clues":[{"text":"Bitter cold","difficulty":1,"stars":1}]},
-{"answer":"CHILLING","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Relaxing, in slang","difficulty":1,"stars":1}]},
-{"answer":"TEACHERS","score":50,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Homework assigners","difficulty":1,"stars":1}]},
-{"answer":"STATIONS","score":50,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Train stops","difficulty":1,"stars":1}]},
-{"answer":"PICTURES","score":50,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Gallery hangings","difficulty":1,"stars":1}]},
-{"answer":"KITCHENS","score":48,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Rooms where recipes come to life","difficulty":1,"stars":1}]},
-{"answer":"BLANKETS","score":48,"categories":["wordplay"],"tags":["fill","winter"],"clues":[{"text":"Cozy bed layers","difficulty":1,"stars":1}]},
-{"answer":"LANTERNS","score":47,"categories":["wordplay"],"tags":["fill","travel"],"clues":[{"text":"Campsite glow providers","difficulty":1,"stars":1}]},
-{"answer":"PRETZELS","score":47,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Twisted salty snacks","difficulty":1,"stars":1}]},
-{"answer":"PANCAKES","score":50,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Griddle stacks served with syrup","difficulty":1,"stars":1}]},
-{"answer":"CRACKERS","score":47,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Soup's crunchy sidekicks","difficulty":1,"stars":1}]},
-{"answer":"DOLPHINS","score":49,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Playful pods of the open sea","difficulty":1,"stars":1}]},
-{"answer":"PENGUINS","score":49,"categories":["science-nature"],"tags":["fill","animals","winter"],"clues":[{"text":"Tuxedoed birds of the ice","difficulty":1,"stars":2}]},
-{"answer":"RACCOONS","score":47,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Masked trash-can raiders","difficulty":1,"stars":2}]},
-{"answer":"LEOPARDS","score":47,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Spotted big cats","difficulty":1,"stars":1}]},
-{"answer":"CHEETAHS","score":46,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Fastest cats on land","difficulty":1,"stars":1}]},
-{"answer":"GIRAFFES","score":46,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Long-necked leaf nibblers","difficulty":1,"stars":1}]},
-{"answer":"GORILLAS","score":46,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Largest of the great apes","difficulty":1,"stars":1}]},
-{"answer":"HAMSTERS","score":46,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Wheel-running pocket pets","difficulty":1,"stars":1}]},
-{"answer":"PANTHERS","score":45,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Sleek dark jungle cats","difficulty":1,"stars":1}]},
-{"answer":"MEERKATS","score":44,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Desert lookouts that pose upright","difficulty":1,"stars":2}]},
-{"answer":"SPARROWS","score":46,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Common little chirpers","difficulty":1,"stars":1}]},
-{"answer":"SWALLOWS","score":45,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Swift birds famed for returning each spring","difficulty":2,"stars":2}]},
-{"answer":"PELICANS","score":45,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Big-billed coastal birds","difficulty":1,"stars":1}]},
-{"answer":"PEACOCKS","score":46,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Birds with showy tail fans","difficulty":1,"stars":1}]},
-{"answer":"SEAGULLS","score":46,"categories":["science-nature"],"tags":["fill","animals","summer"],"clues":[{"text":"Boardwalk fry thieves","difficulty":1,"stars":2}]},
-{"answer":"LADYBUGS","score":45,"categories":["science-nature"],"tags":["fill","animals","nature"],"clues":[{"text":"Spotted garden beetles","difficulty":1,"stars":1}]},
-{"answer":"CRICKETS","score":46,"categories":["science-nature"],"tags":["fill","animals","summer"],"clues":[{"text":"Night chirpers, or the sound of no response","difficulty":2,"stars":2}]},
-{"answer":"TADPOLES","score":45,"categories":["science-nature"],"tags":["fill","animals","nature"],"clues":[{"text":"Frogs-to-be","difficulty":1,"stars":2}]},
-{"answer":"SARDINES","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Tightly packed tinned fish","difficulty":1,"stars":1}]},
-{"answer":"HERRINGS","score":44,"categories":["arts-literature"],"tags":["fill","books"],"clues":[{"text":"Fish that are famously red in mysteries","difficulty":2,"stars":2}]},
-{"answer":"KNUCKLES","score":45,"categories":["science-nature"],"tags":["fill"],"clues":[{"text":"Fist joints","difficulty":1,"stars":1}]},
-{"answer":"HALLWAYS","score":46,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Locker-lined school passages","difficulty":1,"stars":1}]},
-{"answer":"SHUTTERS","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Window covers that swing shut","difficulty":1,"stars":1}]},
-{"answer":"CHIMNEYS","score":46,"categories":["entertainment"],"tags":["fill","christmas"],"clues":[{"text":"Santa's entry points","difficulty":1,"stars":2}]},
-{"answer":"CURTAINS","score":47,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Window drapes","difficulty":1,"stars":1}]},
-{"answer":"CUSHIONS","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Sofa softeners","difficulty":1,"stars":1}]},
-{"answer":"DOORWAYS","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Frames you walk through","difficulty":1,"stars":1}]},
-{"answer":"RADISHES","score":44,"categories":["science-nature"],"tags":["fill","food"],"clues":[{"text":"Peppery red salad roots","difficulty":1,"stars":1}]},
-{"answer":"PARSNIPS","score":43,"categories":["science-nature"],"tags":["fill","food"],"clues":[{"text":"Pale cousins of carrots","difficulty":1,"stars":1}]},
-{"answer":"AVOCADOS","score":47,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Guacamole essentials","difficulty":1,"stars":1}]},
-{"answer":"CHERRIES","score":48,"categories":["entertainment"],"tags":["fill","food","summer"],"clues":[{"text":"Sundae toppers with stems","difficulty":1,"stars":1}]},
-{"answer":"APRICOTS","score":46,"categories":["science-nature"],"tags":["fill","food","summer"],"clues":[{"text":"Small orange stone fruits","difficulty":1,"stars":1}]},
-{"answer":"COCONUTS","score":46,"categories":["science-nature"],"tags":["fill","food"],"clues":[{"text":"Hairy palm-tree drops","difficulty":1,"stars":1}]},
-{"answer":"CURRANTS","score":43,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Tiny berries baked into scones","difficulty":1,"stars":1}]},
-{"answer":"BROWNIES","score":47,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Fudgy pan-baked squares","difficulty":1,"stars":1}]},
-{"answer":"CUPCAKES","score":47,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Single-serve frosted treats","difficulty":1,"stars":1}]},
-{"answer":"CARAMELS","score":45,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Chewy golden candies","difficulty":1,"stars":1}]},
-{"answer":"BISCUITS","score":46,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Flaky sides served with gravy","difficulty":1,"stars":1}]},
-{"answer":"CROUTONS","score":45,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Crunchy salad cubes","difficulty":1,"stars":1}]},
-{"answer":"WEEKENDS","score":50,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Saturdays and Sundays","difficulty":1,"stars":1}]},
-{"answer":"HOLIDAYS","score":49,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Days the office closes","difficulty":1,"stars":1}]},
-{"answer":"STUDENTS","score":49,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Backpack-toting learners","difficulty":1,"stars":1}]},
-{"answer":"DIPLOMAS","score":46,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Rolled-up graduation prizes","difficulty":1,"stars":1}]},
-{"answer":"LECTURES","score":46,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Hour-long college talks","difficulty":1,"stars":1}]},
-{"answer":"PRONOUNS","score":46,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"He, she, and they","difficulty":1,"stars":1}]},
-{"answer":"SYNONYMS","score":46,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Words that mean the same thing","difficulty":1,"stars":1}]},
-{"answer":"ANTONYMS","score":45,"categories":["wordplay"],"tags":["fill","school"],"clues":[{"text":"Hot and cold, to each other","difficulty":2,"stars":2}]},
-{"answer":"ANAGRAMS","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"LISTEN and SILENT, for example","difficulty":2,"stars":2}]},
-{"answer":"TROPHIES","score":47,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Case fillers for champs","difficulty":1,"stars":1}]},
-{"answer":"PENNANTS","score":44,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Triangular stadium flags","difficulty":1,"stars":1}]},
-{"answer":"TIMEOUTS","score":45,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Pauses called from the bench","difficulty":1,"stars":1}]},
-{"answer":"CATCHERS","score":46,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Masked players behind home plate","difficulty":1,"stars":1}]},
-{"answer":"PITCHERS","score":47,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Mound dwellers, or lemonade holders","difficulty":2,"stars":2}]},
-{"answer":"FORWARDS","score":46,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Attacking players near the goal","difficulty":1,"stars":1}]},
-{"answer":"STRIKERS","score":44,"categories":["sports-leisure"],"tags":["fill","sports","worldcup"],"clues":[{"text":"Soccer's goal hunters","difficulty":1,"stars":1}]},
-{"answer":"CHECKERS","score":47,"categories":["sports-leisure"],"tags":["fill"],"clues":[{"text":"Board game of jumps and kings","difficulty":1,"stars":1}]},
-{"answer":"DOMINOES","score":46,"categories":["sports-leisure"],"tags":["fill"],"clues":[{"text":"Dotted tiles that topple in chains","difficulty":1,"stars":2}]},
-{"answer":"CHARADES","score":46,"categories":["entertainment"],"tags":["fill"],"clues":[{"text":"Party game played without a word","difficulty":1,"stars":2}]},
-{"answer":"GONDOLAS","score":45,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Venetian canal boats","difficulty":1,"stars":1}]},
-{"answer":"ROWBOATS","score":45,"categories":["sports-leisure"],"tags":["fill","summer"],"clues":[{"text":"Oar-powered pond craft","difficulty":1,"stars":1}]},
-{"answer":"TUGBOATS","score":44,"categories":["wordplay"],"tags":["fill","travel"],"clues":[{"text":"Little harbor haulers","difficulty":1,"stars":1}]},
-{"answer":"TRUMPETS","score":46,"categories":["entertainment"],"tags":["fill","music"],"clues":[{"text":"Brass horns in the jazz band","difficulty":1,"stars":1}]},
-{"answer":"CHORUSES","score":45,"categories":["entertainment"],"tags":["fill","music"],"clues":[{"text":"Song parts everyone joins in on","difficulty":1,"stars":1}]},
-{"answer":"MELODIES","score":48,"categories":["entertainment"],"tags":["fill","music"],"clues":[{"text":"Hummable tunes","difficulty":1,"stars":1}]},
-{"answer":"MUSICALS","score":47,"categories":["entertainment"],"tags":["fill","music"],"clues":[{"text":"Broadway shows with big numbers","difficulty":1,"stars":1}]},
-{"answer":"THEATERS","score":47,"categories":["entertainment"],"tags":["fill","movies"],"clues":[{"text":"Popcorn-scented venues","difficulty":1,"stars":1}]},
-{"answer":"MATINEES","score":45,"categories":["entertainment"],"tags":["fill","movies"],"clues":[{"text":"Afternoon showings","difficulty":1,"stars":1}]},
-{"answer":"TRAILERS","score":46,"categories":["entertainment"],"tags":["fill","movies"],"clues":[{"text":"Previews before the feature","difficulty":1,"stars":1}]},
-{"answer":"CARTOONS","score":48,"categories":["entertainment"],"tags":["fill","movies"],"clues":[{"text":"Animated shorts of the small screen","difficulty":1,"stars":1}]},
-{"answer":"COSTUMES","score":48,"categories":["entertainment"],"tags":["fill","halloween"],"clues":[{"text":"Trick-or-treaters' getups","difficulty":1,"stars":1}]},
-{"answer":"EPISODES","score":47,"categories":["entertainment"],"tags":["fill","movies"],"clues":[{"text":"Series installments","difficulty":1,"stars":1}]},
-{"answer":"PODCASTS","score":46,"categories":["entertainment"],"tags":["fill","tech"],"clues":[{"text":"Shows made for earbuds","difficulty":1,"stars":1}]},
-{"answer":"CHANNELS","score":46,"categories":["entertainment"],"tags":["fill","tech"],"clues":[{"text":"What couch surfers flip through","difficulty":1,"stars":2}]},
-{"answer":"SPEAKERS","score":46,"categories":["entertainment"],"tags":["fill","tech","music"],"clues":[{"text":"Stereo sound boxes","difficulty":1,"stars":1}]},
-{"answer":"CAPITALS","score":48,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Paris and Ottawa, for two","difficulty":1,"stars":1}]},
-{"answer":"VILLAGES","score":46,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Tiny towns","difficulty":1,"stars":1}]},
-{"answer":"HIGHWAYS","score":47,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Interstate routes","difficulty":1,"stars":1}]},
-{"answer":"FREEWAYS","score":45,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Multilane routes without tolls","difficulty":1,"stars":1}]},
-{"answer":"RAILWAYS","score":45,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Track networks","difficulty":1,"stars":1}]},
-{"answer":"AIRPORTS","score":47,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Where gates lead to the skies","difficulty":1,"stars":1}]},
-{"answer":"SEAPORTS","score":44,"categories":["geography"],"tags":["fill","travel"],"clues":[{"text":"Harbors for cargo ships","difficulty":1,"stars":1}]},
-{"answer":"PLATEAUS","score":45,"categories":["geography"],"tags":["fill","nature"],"clues":[{"text":"High flatlands","difficulty":1,"stars":1}]},
-{"answer":"LOWLANDS","score":44,"categories":["geography"],"tags":["fill","nature"],"clues":[{"text":"Flat country below the hills","difficulty":1,"stars":1}]},
-{"answer":"WETLANDS","score":45,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Marshy habitats","difficulty":1,"stars":1}]},
-{"answer":"PRAIRIES","score":46,"categories":["geography"],"tags":["fill","nature"],"clues":[{"text":"Grassy inland seas","difficulty":1,"stars":2}]},
-{"answer":"SAVANNAS","score":44,"categories":["geography"],"tags":["fill","nature","animals"],"clues":[{"text":"Grasslands where lions roam","difficulty":1,"stars":1}]},
-{"answer":"COUNTIES","score":45,"categories":["geography"],"tags":["fill"],"clues":[{"text":"State subdivisions","difficulty":1,"stars":1}]},
-{"answer":"CHARIOTS","score":45,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Ancient racing rides","difficulty":1,"stars":1}]},
-{"answer":"PHARAOHS","score":45,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Pyramid-era rulers","difficulty":1,"stars":1}]},
-{"answer":"EMPERORS","score":45,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Rome's top rulers","difficulty":1,"stars":1}]},
-{"answer":"MONARCHS","score":46,"categories":["history"],"tags":["fill","history","animals"],"clues":[{"text":"Crowned rulers, or orange butterflies","difficulty":2,"stars":2}]},
-{"answer":"KINGDOMS","score":46,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Realms ruled from thrones","difficulty":1,"stars":1}]},
-{"answer":"CARAVANS","score":44,"categories":["history"],"tags":["fill","history","travel"],"clues":[{"text":"Desert trade convoys","difficulty":1,"stars":1}]},
-{"answer":"PIONEERS","score":46,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Wagon-train trailblazers","difficulty":1,"stars":1}]},
-{"answer":"SETTLERS","score":45,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Homesteading arrivals","difficulty":1,"stars":1}]},
-{"answer":"COLONIES","score":45,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Ant communities","difficulty":1,"stars":1}]},
-{"answer":"ANTIQUES","score":46,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Old finds at estate sales","difficulty":1,"stars":1}]},
-{"answer":"ARCHIVES","score":45,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Where old records live","difficulty":1,"stars":1}]},
-{"answer":"NEUTRONS","score":44,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Uncharged atomic bits","difficulty":1,"stars":1}]},
-{"answer":"ELEMENTS","score":48,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Periodic table entries","difficulty":1,"stars":1}]},
-{"answer":"MINERALS","score":46,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Quartz and mica, for two","difficulty":1,"stars":1}]},
-{"answer":"CRYSTALS","score":46,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Six-sided structures in snowflakes","difficulty":1,"stars":1}]},
-{"answer":"GALAXIES","score":46,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Star cities like the Milky Way","difficulty":1,"stars":2}]},
-{"answer":"ECLIPSES","score":46,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Sky shows starring shadows","difficulty":1,"stars":2}]},
-{"answer":"SUNSPOTS","score":44,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Dark patches on our star","difficulty":1,"stars":1}]},
-{"answer":"HORIZONS","score":46,"categories":["geography"],"tags":["fill","nature"],"clues":[{"text":"Lines where skies meet seas","difficulty":1,"stars":1}]},
-{"answer":"DEWDROPS","score":44,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Morning beads on the grass","difficulty":1,"stars":1}]},
-{"answer":"RAINBOWS","score":48,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Arcs after showers","difficulty":1,"stars":1}]},
-{"answer":"ICEBERGS","score":45,"categories":["science-nature"],"tags":["fill","nature","winter"],"clues":[{"text":"Mostly hidden floating giants","difficulty":1,"stars":2}]},
-{"answer":"GLACIERS","score":45,"categories":["science-nature"],"tags":["fill","nature","winter"],"clues":[{"text":"Slow rivers of ice","difficulty":1,"stars":2}]},
-{"answer":"MONSOONS","score":43,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Drenching seasonal winds","difficulty":1,"stars":1}]},
-{"answer":"DOGWOODS","score":43,"categories":["science-nature"],"tags":["fill","nature","spring"],"clues":[{"text":"Trees with showy spring blossoms","difficulty":1,"stars":1}]},
-{"answer":"REDWOODS","score":45,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Towering California giants","difficulty":1,"stars":1}]},
-{"answer":"SEQUOIAS","score":44,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Trees wide enough for a tunnel","difficulty":1,"stars":2}]},
-{"answer":"JUNIPERS","score":43,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Evergreen shrubs with blue berries","difficulty":1,"stars":1}]},
-{"answer":"TREETOPS","score":45,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Canopy level","difficulty":1,"stars":1}]},
-{"answer":"BRANCHES","score":47,"categories":["wordplay"],"tags":["fill","nature"],"clues":[{"text":"Limbs of oaks, or of banks","difficulty":2,"stars":2}]},
-{"answer":"THICKETS","score":43,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"Dense tangles of brush","difficulty":1,"stars":1}]},
-{"answer":"PASTURES","score":45,"categories":["science-nature"],"tags":["fill","nature","animals"],"clues":[{"text":"Fields where herds graze","difficulty":1,"stars":1}]},
-{"answer":"ORCHARDS","score":46,"categories":["science-nature"],"tags":["fill","nature","food"],"clues":[{"text":"Apple-picking destinations","difficulty":1,"stars":1}]},
-{"answer":"SANDBARS","score":44,"categories":["geography"],"tags":["fill","nature","summer"],"clues":[{"text":"Shallow ridges just off the beach","difficulty":1,"stars":1}]},
-{"answer":"CHEMISTS","score":45,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Lab-coat professionals","difficulty":1,"stars":1}]},
-{"answer":"PAINTERS","score":46,"categories":["arts-literature"],"tags":["fill","art"],"clues":[{"text":"Easel users","difficulty":1,"stars":1}]},
-{"answer":"PLUMBERS","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Pipe pros","difficulty":1,"stars":1}]},
-{"answer":"DENTISTS","score":45,"categories":["science-nature"],"tags":["fill"],"clues":[{"text":"Cavity fighters","difficulty":1,"stars":1}]},
-{"answer":"SURGEONS","score":45,"categories":["science-nature"],"tags":["fill","science"],"clues":[{"text":"Operating-room leads","difficulty":1,"stars":1}]},
-{"answer":"FLORISTS","score":44,"categories":["wordplay"],"tags":["fill","nature","valentines"],"clues":[{"text":"Bouquet builders","difficulty":1,"stars":1}]},
-{"answer":"BAKERIES","score":46,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Fresh-bread sources","difficulty":1,"stars":1}]},
-{"answer":"ACROBATS","score":45,"categories":["entertainment"],"tags":["fill","sports"],"clues":[{"text":"Circus tumblers","difficulty":1,"stars":1}]},
-{"answer":"JUGGLERS","score":44,"categories":["entertainment"],"tags":["fill"],"clues":[{"text":"Circus acts keeping pins aloft","difficulty":1,"stars":1}]},
-{"answer":"REFEREES","score":45,"categories":["sports-leisure"],"tags":["fill","sports"],"clues":[{"text":"Whistle blowers on the field","difficulty":1,"stars":2}]},
-{"answer":"SWIMMERS","score":46,"categories":["sports-leisure"],"tags":["fill","sports","olympics"],"clues":[{"text":"Lap-pool regulars","difficulty":1,"stars":1}]},
-{"answer":"OBELISKS","score":43,"categories":["history"],"tags":["fill","history"],"clues":[{"text":"Tall stone needles","difficulty":1,"stars":1}]},
-{"answer":"OPOSSUMS","score":43,"categories":["science-nature"],"tags":["fill","animals"],"clues":[{"text":"Marsupials that play dead","difficulty":1,"stars":2}]},
-{"answer":"SHOULDER","score":49,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Where a parrot might perch","difficulty":2,"stars":2}]},
-{"answer":"FOREHEAD","score":46,"categories":["science-nature"],"tags":["fill"],"clues":[{"text":"Spot above the eyebrows","difficulty":1,"stars":1}]},
-{"answer":"SKELETON","score":47,"categories":["science-nature"],"tags":["fill","halloween","science"],"clues":[{"text":"Bony framework","difficulty":1,"stars":1}]},
-{"answer":"DOORBELL","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Ding-dong maker","difficulty":1,"stars":1}]},
-{"answer":"DOORKNOB","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Round handle you twist to enter","difficulty":1,"stars":1}]},
-{"answer":"DOORSTEP","score":45,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Where packages land","difficulty":1,"stars":1}]},
-{"answer":"CUPBOARD","score":46,"categories":["wordplay"],"tags":["fill","food"],"clues":[{"text":"Kitchen dish keeper","difficulty":1,"stars":1}]},
-{"answer":"WARDROBE","score":47,"categories":["arts-literature"],"tags":["fill","books"],"clues":[{"text":"Closet contents, collectively","difficulty":1,"stars":1}]},
-{"answer":"MATTRESS","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Bed's cushy core","difficulty":1,"stars":1}]},
-{"answer":"BATHROOM","score":47,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Where the tub lives","difficulty":1,"stars":1}]},
-{"answer":"CORRIDOR","score":46,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Long indoor passage","difficulty":1,"stars":1}]},
-{"answer":"ENTRANCE","score":48,"categories":["wordplay"],"tags":["fill"],"clues":[{"text":"Way in","difficulty":1,"stars":1}]},
-{"answer":"GARDENER","score":46,"categories":["science-nature"],"tags":["fill","nature"],"clues":[{"text":"One with a green thumb","difficulty":1,"stars":2}]},
-{"answer":"SEEDLING","score":45,"categories":["science-nature"],"tags":["fill","nature","spring"],"clues":[{"text":"Sprout just getting started","difficulty":1,"stars":1}]},
-{"answer":"DUMPLING","score":46,"categories":["entertainment"],"tags":["fill","food"],"clues":[{"text":"Doughy pocket in the soup","difficulty":1,"stars":1}]}
+ {
+  "answer": "CLEANING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Chore done with a mop and bucket",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "LEARNING",
+  "score": 50,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Picking up new skills",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SHOPPING",
+  "score": 50,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Filling a cart at the mall",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TEACHING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Leading a classroom",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SPEAKING",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Giving a toast, say",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STANDING",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "On one's feet",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SLEEPING",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Out like a light",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "DREAMING",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Off in la-la land",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SHOUTING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Using an outdoor voice indoors",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CLIMBING",
+  "score": 48,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Scaling the gym's rock wall",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CRAWLING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Getting around like a baby",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "FLOATING",
+  "score": 47,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Resting on the water's surface",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TRAINING",
+  "score": 50,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Getting in shape for race day",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PLANNING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Mapping out the week ahead",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PLANTING",
+  "score": 47,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "spring"
+  ],
+  "clues": [
+   {
+    "text": "Putting seeds in the ground",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GREETING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Warm hello",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GUESSING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Taking a stab at it",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "DRESSING",
+  "score": 49,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Ranch or vinaigrette",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PRESSING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Urgent, like a deadline",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHEERING",
+  "score": 48,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Stadium roar after a goal",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHANGING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "What the weather keeps doing",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CHARGING",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "Topping up a phone battery",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BOUNCING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Moving like a rubber ball",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BRUSHING",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Twice-a-day dental routine",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CATCHING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Contagious, like a yawn",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "COACHING",
+  "score": 47,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Guiding a team from the sideline",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "COUNTING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Going one, two, three...",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CRACKING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Solving, as a tough code",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CRASHING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Staying over on short notice, casually",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CROSSING",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Pedestrian's painted path",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOUBLING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Multiplying by two",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOODLING",
+  "score": 47,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Sketching in the margins",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DRIFTING",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Going wherever the current goes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DRUMMING",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Keeping the beat in the garage band",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "FLIPPING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Turning pancakes in the pan",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GRILLING",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Backyard-barbecue cooking",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GRINNING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Smiling ear to ear",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "JUGGLING",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Keeping three balls aloft",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "KNITTING",
+  "score": 46,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Two-needle craft",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "LAUGHING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Cracking up",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "MARCHING",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Moving in step with the band",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MATCHING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Like a coordinated sock pair",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MUNCHING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Crunching away on a snack",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PADDLING",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Powering a canoe",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PEDALING",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Powering a bicycle",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PITCHING",
+  "score": 47,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Working from the mound",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "PRINTING",
+  "score": 47,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Gutenberg's game-changer",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "PUZZLING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Hard to figure out",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ROASTING",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Browning marshmallows over the flames",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "RUSTLING",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Sound of leaves in a breeze",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SCOOPING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Serving ice cream",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SKIPPING",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Moving with a hop in each step",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SNACKING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Nibbling between meals",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SNEEZING",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Reacting to pepper, maybe",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SNOOZING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Catching forty winks",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SPELLING",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Bee contestant's strong suit",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SPINNING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "What tops do best",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SPRAYING",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Misting the houseplants",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STACKING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Piling blocks into a tower",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STAMPING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Marking a passport",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STARRING",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Playing the lead",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STEAMING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Cooking dumplings the gentle way",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STEERING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Keeping the car on course",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STIRRING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Working a spoon through the pot",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STOMPING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Walking hard enough to rattle dishes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STUDYING",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Hitting the books",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SWAPPING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Trading, as lunch treats",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SWEEPING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Pushing a broom",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "THINKING",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Using the old noggin",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TRACKING",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Following footprints",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TWIRLING",
+  "score": 45,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Giving a baton a whirl",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WHISKING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Beating eggs briskly",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WRAPPING",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "christmas"
+  ],
+  "clues": [
+   {
+    "text": "Getting gifts ready, with paper and tape",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CANOEING",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Gliding downriver with a single-blade paddle",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "KAYAKING",
+  "score": 44,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Whitewater paddling, solo-style",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SLEDDING",
+  "score": 45,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Snow-day hill activity",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ORBITING",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Circling a planet",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHARMING",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Like a fairy-tale prince",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GROWLING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Rumbling like an empty stomach",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "FOCUSING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "Sharpening a camera image",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GIGGLING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Laughing in little bursts",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BLENDING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Whirring fruit into a drink",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TROTTING",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Moving at an easy horse pace",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WADDLING",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Walking like a penguin",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PRANCING",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Strutting like a show pony",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BLOOMING",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "spring"
+  ],
+  "clues": [
+   {
+    "text": "Bursting into flower",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "RIPENING",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Turning from green to red, as a tomato",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WATERING",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Giving the garden a drink",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BRAIDING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Weaving hair into plaits",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHATTING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Making small talk",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BROWSING",
+  "score": 46,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "books"
+  ],
+  "clues": [
+   {
+    "text": "Wandering a bookstore's shelves",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CLICKING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Hitting it off right away",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "COLORING",
+  "score": 46,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Crayon work inside the lines",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "QUILTING",
+  "score": 44,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Patchwork craft",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CRAFTING",
+  "score": 45,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Making things at the hobby table",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "KNEADING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Working bread dough by hand",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BROILING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Cooking under direct high heat",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "POACHING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Cooking eggs in barely bubbling water",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TOASTING",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Raising a glass",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CHOPPING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Prepping onions, tearfully",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "WHIPPING",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Turning cream into a fluffy topping",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "FREEZING",
+  "score": 47,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Bitter cold",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHILLING",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Relaxing, in slang",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TEACHERS",
+  "score": 50,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Homework assigners",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STATIONS",
+  "score": 50,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Train stops",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PICTURES",
+  "score": 50,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Gallery hangings",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "KITCHENS",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Rooms where recipes come to life",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BLANKETS",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Cozy bed layers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "LANTERNS",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Campsite glow providers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PRETZELS",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Twisted salty snacks",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PANCAKES",
+  "score": 50,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Griddle stacks served with syrup",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CRACKERS",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Soup's crunchy sidekicks",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOLPHINS",
+  "score": 49,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Playful pods of the open sea",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PENGUINS",
+  "score": 49,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Tuxedoed birds of the ice",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "RACCOONS",
+  "score": 47,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Masked trash-can raiders",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "LEOPARDS",
+  "score": 47,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Spotted big cats",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHEETAHS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Fastest cats on land",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GIRAFFES",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Long-necked leaf nibblers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GORILLAS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Largest of the great apes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "HAMSTERS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Wheel-running pocket pets",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PANTHERS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Sleek dark jungle cats",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MEERKATS",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Desert lookouts that pose upright",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SPARROWS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Common little chirpers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SWALLOWS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Swift birds famed for returning each spring",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "PELICANS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Big-billed coastal birds",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PEACOCKS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Birds with showy tail fans",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SEAGULLS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Boardwalk fry thieves",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "LADYBUGS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Spotted garden beetles",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CRICKETS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Night chirpers, or the sound of no response",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "TADPOLES",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Frogs-to-be",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SARDINES",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Tightly packed tinned fish",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "HERRINGS",
+  "score": 44,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "books"
+  ],
+  "clues": [
+   {
+    "text": "Fish that are famously red in mysteries",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "KNUCKLES",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Fist joints",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "HALLWAYS",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Locker-lined school passages",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SHUTTERS",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Window covers that swing shut",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHIMNEYS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "christmas"
+  ],
+  "clues": [
+   {
+    "text": "Santa's entry points",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CURTAINS",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Window drapes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CUSHIONS",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Sofa softeners",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOORWAYS",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Frames you walk through",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "RADISHES",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Peppery red salad roots",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PARSNIPS",
+  "score": 43,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Pale cousins of carrots",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "AVOCADOS",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Guacamole essentials",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHERRIES",
+  "score": 48,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Sundae toppers with stems",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "APRICOTS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "food",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Small orange stone fruits",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "COCONUTS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Hairy palm-tree drops",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CURRANTS",
+  "score": 43,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Tiny berries baked into scones",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BROWNIES",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Fudgy pan-baked squares",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CUPCAKES",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Single-serve frosted treats",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CARAMELS",
+  "score": 45,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Chewy golden candies",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BISCUITS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Flaky sides served with gravy",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CROUTONS",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Crunchy salad cubes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WEEKENDS",
+  "score": 50,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Saturdays and Sundays",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "HOLIDAYS",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Days the office closes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STUDENTS",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Backpack-toting learners",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DIPLOMAS",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Rolled-up graduation prizes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "LECTURES",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Hour-long college talks",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PRONOUNS",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "He, she, and they",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SYNONYMS",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Words that mean the same thing",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ANTONYMS",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Hot and cold, to each other",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "ANAGRAMS",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "LISTEN and SILENT, for example",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "TROPHIES",
+  "score": 47,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Case fillers for champs",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PENNANTS",
+  "score": 44,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Triangular stadium flags",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TIMEOUTS",
+  "score": 45,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Pauses called from the bench",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CATCHERS",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Masked players behind home plate",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PITCHERS",
+  "score": 47,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Mound dwellers, or lemonade holders",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "FORWARDS",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Attacking players near the goal",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "STRIKERS",
+  "score": 44,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports",
+   "worldcup"
+  ],
+  "clues": [
+   {
+    "text": "Soccer's goal hunters",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHECKERS",
+  "score": 47,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Board game of jumps and kings",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOMINOES",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Dotted tiles that topple in chains",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "CHARADES",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Party game played without a word",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "GONDOLAS",
+  "score": 45,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Venetian canal boats",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ROWBOATS",
+  "score": 45,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Oar-powered pond craft",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TUGBOATS",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Little harbor haulers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TRUMPETS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Brass horns in the jazz band",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHORUSES",
+  "score": 45,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Song parts everyone joins in on",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MELODIES",
+  "score": 48,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Hummable tunes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MUSICALS",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Broadway shows with big numbers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "THEATERS",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Popcorn-scented venues",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Popcorn-scented movie houses",
+    "difficulty": 1,
+    "stars": 2,
+    "category": "entertainment"
+   },
+   {
+    "text": "Broadway performance spaces",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "entertainment"
+   },
+   {
+    "text": "War zones, or where films play?",
+    "difficulty": 3,
+    "stars": 4,
+    "category": "history"
+   }
+  ]
+ },
+ {
+  "answer": "MATINEES",
+  "score": 45,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Afternoon showings",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TRAILERS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Previews before the feature",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CARTOONS",
+  "score": 48,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Animated shorts of the small screen",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "COSTUMES",
+  "score": 48,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "halloween"
+  ],
+  "clues": [
+   {
+    "text": "Trick-or-treaters' getups",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "EPISODES",
+  "score": 47,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Series installments",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PODCASTS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "Shows made for earbuds",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHANNELS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "What couch surfers flip through",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SPEAKERS",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "tech",
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Stereo sound boxes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CAPITALS",
+  "score": 48,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Paris and Ottawa, for two",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "VILLAGES",
+  "score": 46,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Tiny towns",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "HIGHWAYS",
+  "score": 47,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Interstate routes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "FREEWAYS",
+  "score": 45,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Multilane routes without tolls",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "RAILWAYS",
+  "score": 45,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Track networks",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "AIRPORTS",
+  "score": 47,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Where gates lead to the skies",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SEAPORTS",
+  "score": 44,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Harbors for cargo ships",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PLATEAUS",
+  "score": 45,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "High flatlands",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "LOWLANDS",
+  "score": 44,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Flat country below the hills",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WETLANDS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Marshy habitats",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PRAIRIES",
+  "score": 46,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Grassy inland seas",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SAVANNAS",
+  "score": 44,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Grasslands where lions roam",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "COUNTIES",
+  "score": 45,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "State subdivisions",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHARIOTS",
+  "score": 45,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Ancient racing rides",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PHARAOHS",
+  "score": 45,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Pyramid-era rulers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "EMPERORS",
+  "score": 45,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Rome's top rulers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MONARCHS",
+  "score": 46,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Crowned rulers, or orange butterflies",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "KINGDOMS",
+  "score": 46,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Realms ruled from thrones",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CARAVANS",
+  "score": 44,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Desert trade convoys",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PIONEERS",
+  "score": 46,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Wagon-train trailblazers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SETTLERS",
+  "score": 45,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Homesteading arrivals",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "COLONIES",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Ant communities",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ANTIQUES",
+  "score": 46,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Old finds at estate sales",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ARCHIVES",
+  "score": 45,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Where old records live",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "NEUTRONS",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Uncharged atomic bits",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ELEMENTS",
+  "score": 48,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Periodic table entries",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MINERALS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Quartz and mica, for two",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CRYSTALS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Six-sided structures in snowflakes",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GALAXIES",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Star cities like the Milky Way",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "ECLIPSES",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Sky shows starring shadows",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SUNSPOTS",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Dark patches on our star",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "HORIZONS",
+  "score": 46,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Lines where skies meet seas",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DEWDROPS",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Morning beads on the grass",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "RAINBOWS",
+  "score": 48,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Arcs after showers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ICEBERGS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Mostly hidden floating giants",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "GLACIERS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Slow rivers of ice",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "MONSOONS",
+  "score": 43,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Drenching seasonal winds",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOGWOODS",
+  "score": 43,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "spring"
+  ],
+  "clues": [
+   {
+    "text": "Trees with showy spring blossoms",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "REDWOODS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Towering California giants",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SEQUOIAS",
+  "score": 44,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Trees wide enough for a tunnel",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "JUNIPERS",
+  "score": 43,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Evergreen shrubs with blue berries",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "TREETOPS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Canopy level",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BRANCHES",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Limbs of oaks, or of banks",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "THICKETS",
+  "score": 43,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Dense tangles of brush",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PASTURES",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Fields where herds graze",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ORCHARDS",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Apple-picking destinations",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SANDBARS",
+  "score": 44,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Shallow ridges just off the beach",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CHEMISTS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Lab-coat professionals",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PAINTERS",
+  "score": 46,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Easel users",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "PLUMBERS",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Pipe pros",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DENTISTS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Cavity fighters",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SURGEONS",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Operating-room leads",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "FLORISTS",
+  "score": 44,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "valentines"
+  ],
+  "clues": [
+   {
+    "text": "Bouquet builders",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BAKERIES",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Fresh-bread sources",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ACROBATS",
+  "score": 45,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Circus tumblers",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "JUGGLERS",
+  "score": 44,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Circus acts keeping pins aloft",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "REFEREES",
+  "score": 45,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Whistle blowers on the field",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SWIMMERS",
+  "score": 46,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "fill",
+   "sports",
+   "olympics"
+  ],
+  "clues": [
+   {
+    "text": "Lap-pool regulars",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "OBELISKS",
+  "score": 43,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "fill",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Tall stone needles",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "OPOSSUMS",
+  "score": 43,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Marsupials that play dead",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SHOULDER",
+  "score": 49,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Where a parrot might perch",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "FOREHEAD",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Spot above the eyebrows",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "SKELETON",
+  "score": 47,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "halloween",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Bony framework",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOORBELL",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Ding-dong maker",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOORKNOB",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Round handle you twist to enter",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DOORSTEP",
+  "score": 45,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Where packages land",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CUPBOARD",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Kitchen dish keeper",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "WARDROBE",
+  "score": 47,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "fill",
+   "books"
+  ],
+  "clues": [
+   {
+    "text": "Closet contents, collectively",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "MATTRESS",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Bed's cushy core",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "BATHROOM",
+  "score": 47,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Where the tub lives",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "CORRIDOR",
+  "score": 46,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Long indoor passage",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "ENTRANCE",
+  "score": 48,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "fill"
+  ],
+  "clues": [
+   {
+    "text": "Way in",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "GARDENER",
+  "score": 46,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "One with a green thumb",
+    "difficulty": 1,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "SEEDLING",
+  "score": 45,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "fill",
+   "nature",
+   "spring"
+  ],
+  "clues": [
+   {
+    "text": "Sprout just getting started",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ },
+ {
+  "answer": "DUMPLING",
+  "score": 46,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fill",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Doughy pocket in the soup",
+    "difficulty": 1,
+    "stars": 1
+   }
+  ]
+ }
 ]

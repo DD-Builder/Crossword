@@ -1,269 +1,1592 @@
 [
-  { "answer": "VOLCANO", "score": 92, "categories": ["science-nature"], "tags": ["nature", "science", "travel"],
-    "clues": [
-      { "text": "Mountain that erupts", "difficulty": 1, "stars": 1 },
-      { "text": "It might blow its top", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "RAINBOW", "score": 90, "categories": ["science-nature"], "tags": ["nature", "spring"],
-    "clues": [
-      { "text": "Arc of colors in the sky", "difficulty": 1, "stars": 1 },
-      { "text": "Sky's reward for weathering a storm", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "LIBRARY", "score": 88, "categories": ["arts-literature"], "tags": ["books", "school"],
-    "clues": [
-      { "text": "Book borrower's destination", "difficulty": 1, "stars": 1 },
-      { "text": "Where the volumes stay high and the volume stays low", "difficulty": 4, "stars": 5 } ] },
-  { "answer": "DOLPHIN", "score": 90, "categories": ["science-nature"], "tags": ["animals", "nature"],
-    "clues": [
-      { "text": "Playful marine mammal", "difficulty": 1, "stars": 1 },
-      { "text": "Sea acrobat with a permanent smile", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "PICASSO", "score": 85, "categories": ["arts-literature"], "tags": ["art", "history"],
-    "clues": [
-      { "text": "\"Guernica\" painter", "difficulty": 1, "stars": 1 },
-      { "text": "Painter who gave portraits extra angles", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "ATLANTA", "score": 84, "categories": ["geography"], "tags": ["travel", "olympics"],
-    "clues": [
-      { "text": "Georgia's capital", "difficulty": 1, "stars": 1 },
-      { "text": "Host of the 1996 Summer Games", "difficulty": 3, "stars": 2 } ] },
-  { "answer": "JUPITER", "score": 88, "categories": ["science-nature"], "tags": ["science", "space"],
-    "clues": [
-      { "text": "Largest planet in the solar system", "difficulty": 1, "stars": 1 },
-      { "text": "Giant with a stormy red eye", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "LANTERN", "score": 82, "categories": ["sports-leisure"], "tags": ["camping", "halloween"],
-    "clues": [
-      { "text": "Camping trip light source", "difficulty": 1, "stars": 1 },
-      { "text": "Its job is to make light of the dark", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "TORNADO", "score": 87, "categories": ["science-nature", "entertainment"], "tags": ["nature", "weather", "movies"],
-    "clues": [
-      { "text": "Funnel-shaped storm", "difficulty": 1, "stars": 1 },
-      { "text": "It swept Dorothy off her feet", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "OCTOPUS", "score": 86, "categories": ["science-nature"], "tags": ["animals", "nature"],
-    "clues": [
-      { "text": "Eight-armed sea creature", "difficulty": 1, "stars": 1 },
-      { "text": "Escape artist with three hearts and no bones", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "GLACIER", "score": 85, "categories": ["science-nature"], "tags": ["nature", "winter", "travel"],
-    "clues": [
-      { "text": "Slow-moving river of ice", "difficulty": 1, "stars": 1 },
-      { "text": "It carves valleys without ever hurrying", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "AVOCADO", "score": 85, "categories": ["science-nature"], "tags": ["food", "nature"],
-    "clues": [
-      { "text": "Guacamole's main ingredient", "difficulty": 1, "stars": 1 },
-      { "text": "Fruit that ripens the moment you stop watching", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "CABINET", "score": 78, "categories": ["history", "wordplay"], "tags": ["household", "history"],
-    "clues": [
-      { "text": "Kitchen storage unit", "difficulty": 1, "stars": 1 },
-      { "text": "Group that advises the president", "difficulty": 2, "stars": 1 },
-      { "text": "Holder of dishes or secretaries?", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "LOBSTER", "score": 84, "categories": ["science-nature"], "tags": ["animals", "food"],
-    "clues": [
-      { "text": "Clawed shellfish served with butter", "difficulty": 1, "stars": 1 },
-      { "text": "Crustacean that goes red under pressure", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "TEACHER", "score": 80, "categories": ["wordplay"], "tags": ["school"],
-    "clues": [
-      { "text": "Homework assigner", "difficulty": 1, "stars": 1 },
-      { "text": "Class act?", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "RECITAL", "score": 76, "categories": ["entertainment"], "tags": ["music", "school"],
-    "clues": [
-      { "text": "Piano student's big night", "difficulty": 1, "stars": 1 },
-      { "text": "Performance where parents applaud every wrong note", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "COMPASS", "score": 83, "categories": ["geography"], "tags": ["travel", "camping"],
-    "clues": [
-      { "text": "Direction-finding tool", "difficulty": 1, "stars": 1 },
-      { "text": "It has a needle but never sews", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "ECLIPSE", "score": 87, "categories": ["science-nature"], "tags": ["science", "nature", "space"],
-    "clues": [
-      { "text": "Sun-blocking event", "difficulty": 1, "stars": 1 },
-      { "text": "Moment the Moon steals the spotlight", "difficulty": 4, "stars": 5 } ] },
-  { "answer": "MONSOON", "score": 80, "categories": ["science-nature"], "tags": ["weather", "nature", "summer"],
-    "clues": [
-      { "text": "Seasonal drenching rain", "difficulty": 1, "stars": 1 },
-      { "text": "Season when umbrellas earn their keep", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "PRETZEL", "score": 82, "categories": ["sports-leisure"], "tags": ["food"],
-    "clues": [
-      { "text": "Twisted, salted snack", "difficulty": 1, "stars": 1 },
-      { "text": "Snack shaped like a yoga pose", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "TOASTER", "score": 81, "categories": ["wordplay"], "tags": ["food", "household", "tech"],
-    "clues": [
-      { "text": "Bread-browning appliance", "difficulty": 1, "stars": 1 },
-      { "text": "It pops up at breakfast", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "CANTEEN", "score": 74, "categories": ["sports-leisure"], "tags": ["camping", "travel"],
-    "clues": [
-      { "text": "Hiker's water container", "difficulty": 1, "stars": 1 },
-      { "text": "Camp's watering hole — or what you carry from it", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "LETTUCE", "score": 79, "categories": ["science-nature"], "tags": ["food", "nature"],
-    "clues": [
-      { "text": "Salad base", "difficulty": 1, "stars": 1 },
-      { "text": "Head you can shred", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "ORIGAMI", "score": 84, "categories": ["arts-literature"], "tags": ["art"],
-    "clues": [
-      { "text": "Japanese paper folding", "difficulty": 1, "stars": 1 },
-      { "text": "Art of turning a square into a crane", "difficulty": 4, "stars": 5 } ] },
-  { "answer": "SEAGULL", "score": 78, "categories": ["science-nature"], "tags": ["animals", "summer", "nature"],
-    "clues": [
-      { "text": "Beach-scavenging bird", "difficulty": 1, "stars": 1 },
-      { "text": "Boardwalk fry thief", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "RAVIOLI", "score": 83, "categories": ["geography"], "tags": ["food", "travel"],
-    "clues": [
-      { "text": "Stuffed Italian pasta squares", "difficulty": 1, "stars": 1 },
-      { "text": "Pillows you're encouraged to eat", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "TSUNAMI", "score": 82, "categories": ["science-nature"], "tags": ["nature", "science"],
-    "clues": [
-      { "text": "Giant sea wave caused by a quake", "difficulty": 1, "stars": 1 },
-      { "text": "Harbor wave, literally", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "BALLOON", "score": 85, "categories": ["entertainment"], "tags": ["party", "birthday"],
-    "clues": [
-      { "text": "Party inflatable", "difficulty": 1, "stars": 1 },
-      { "text": "It rises to the occasion, then pops", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "PELICAN", "score": 80, "categories": ["science-nature"], "tags": ["animals", "nature"],
-    "clues": [
-      { "text": "Big-billed coastal bird", "difficulty": 1, "stars": 1 },
-      { "text": "Bird with a built-in fishing net", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "RACCOON", "score": 84, "categories": ["science-nature"], "tags": ["animals", "nature"],
-    "clues": [
-      { "text": "Ring-tailed nocturnal mammal", "difficulty": 1, "stars": 1 },
-      { "text": "Masked bandit of the backyard", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "OSTRICH", "score": 82, "categories": ["science-nature"], "tags": ["animals", "nature"],
-    "clues": [
-      { "text": "Largest living bird", "difficulty": 1, "stars": 1 },
-      { "text": "Sprinter that will never get off the ground", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "GORILLA", "score": 85, "categories": ["science-nature"], "tags": ["animals", "nature"],
-    "clues": [
-      { "text": "Largest of the great apes", "difficulty": 1, "stars": 1 },
-      { "text": "Chest-beating jungle heavyweight", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "ANTENNA", "score": 79, "categories": ["science-nature"], "tags": ["tech", "science", "animals"],
-    "clues": [
-      { "text": "Rooftop signal catcher", "difficulty": 1, "stars": 1 },
-      { "text": "Feeler on a bug — or on an old TV", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "TRAILER", "score": 77, "categories": ["entertainment"], "tags": ["movies"],
-    "clues": [
-      { "text": "Movie preview", "difficulty": 1, "stars": 1 },
-      { "text": "Preview that sometimes spoils the ending", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "COASTER", "score": 78, "categories": ["wordplay", "sports-leisure"], "tags": ["household"],
-    "clues": [
-      { "text": "Mat under a mug", "difficulty": 1, "stars": 1 },
-      { "text": "It keeps rings off the table", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "CABOOSE", "score": 72, "categories": ["history"], "tags": ["travel", "history"],
-    "clues": [
-      { "text": "Train's last car", "difficulty": 1, "stars": 1 },
-      { "text": "It brings up the rear on the rails", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "THEATER", "score": 84, "categories": ["entertainment"], "tags": ["movies", "art"],
-    "clues": [
-      { "text": "Place to catch a play", "difficulty": 1, "stars": 1 },
-      { "text": "House that prefers a full house", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "NIAGARA", "score": 83, "categories": ["geography"], "tags": ["travel", "nature"],
-    "clues": [
-      { "text": "Falls between New York and Ontario", "difficulty": 1, "stars": 1 },
-      { "text": "Honeymoon destination with a serious roar", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "ARIZONA", "score": 82, "categories": ["geography"], "tags": ["travel"],
-    "clues": [
-      { "text": "Grand Canyon State", "difficulty": 1, "stars": 1 },
-      { "text": "State that mostly skips daylight saving time", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "CHICAGO", "score": 85, "categories": ["geography"], "tags": ["travel", "food"],
-    "clues": [
-      { "text": "The Windy City", "difficulty": 1, "stars": 1 },
-      { "text": "Deep-dish pizza's hometown", "difficulty": 2, "stars": 2 },
-      { "text": "City that reversed its river", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "ORLANDO", "score": 80, "categories": ["geography", "entertainment"], "tags": ["travel", "movies"],
-    "clues": [
-      { "text": "Florida theme-park city", "difficulty": 1, "stars": 1 },
-      { "text": "The mouse's Florida address", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "TORONTO", "score": 82, "categories": ["geography"], "tags": ["travel", "sports"],
-    "clues": [
-      { "text": "Canada's largest city", "difficulty": 1, "stars": 1 },
-      { "text": "Home of the Raptors and the Maple Leafs", "difficulty": 2, "stars": 2 } ] },
-  { "answer": "AUSTRIA", "score": 81, "categories": ["geography"], "tags": ["travel", "music", "history"],
-    "clues": [
-      { "text": "Mozart's homeland", "difficulty": 1, "stars": 1 },
-      { "text": "Alpine country where the hills are famously musical", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "ICELAND", "score": 84, "categories": ["geography"], "tags": ["travel", "nature", "winter"],
-    "clues": [
-      { "text": "Reykjavik's island nation", "difficulty": 1, "stars": 1 },
-      { "text": "Nordic nation that's greener than its frosty name suggests", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "IRELAND", "score": 84, "categories": ["geography"], "tags": ["travel"],
-    "clues": [
-      { "text": "The Emerald Isle", "difficulty": 1, "stars": 1 },
-      { "text": "Country that exports shamrocks and storytellers", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "CROATIA", "score": 78, "categories": ["geography"], "tags": ["travel", "worldcup"],
-    "clues": [
-      { "text": "Adriatic country with a walled city at Dubrovnik", "difficulty": 1, "stars": 1 },
-      { "text": "Where the dalmatian got its name", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "ESTONIA", "score": 74, "categories": ["geography"], "tags": ["travel", "tech"],
-    "clues": [
-      { "text": "Baltic republic north of Latvia", "difficulty": 1, "stars": 1 },
-      { "text": "Tiny Baltic nation that votes online", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "GRANOLA", "score": 79, "categories": ["sports-leisure"], "tags": ["food", "camping"],
-    "clues": [
-      { "text": "Crunchy oat cereal", "difficulty": 1, "stars": 1 },
-      { "text": "Trail mix's baked cousin", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "OATMEAL", "score": 80, "categories": ["science-nature", "arts-literature"], "tags": ["food", "winter", "books"],
-    "clues": [
-      { "text": "Hot breakfast porridge", "difficulty": 1, "stars": 1 },
-      { "text": "Breakfast Goldilocks liked just right", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "LASAGNA", "score": 83, "categories": ["entertainment", "geography"], "tags": ["food", "movies"],
-    "clues": [
-      { "text": "Layered Italian pasta bake", "difficulty": 1, "stars": 1 },
-      { "text": "Garfield's weakness", "difficulty": 2, "stars": 2 },
-      { "text": "Pasta dish built in stories", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "POPCORN", "score": 86, "categories": ["entertainment"], "tags": ["movies", "food"],
-    "clues": [
-      { "text": "Movie-night snack", "difficulty": 1, "stars": 1 },
-      { "text": "Kernels that lose it under pressure", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "CARAMEL", "score": 82, "categories": ["science-nature"], "tags": ["food", "halloween"],
-    "clues": [
-      { "text": "Chewy candy made by browning sugar", "difficulty": 1, "stars": 1 },
-      { "text": "Coating for a fall festival apple", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "VANILLA", "score": 83, "categories": ["science-nature"], "tags": ["food", "nature"],
-    "clues": [
-      { "text": "Classic ice cream flavor", "difficulty": 1, "stars": 1 },
-      { "text": "\"Plain\" flavor that comes from an orchid", "difficulty": 3, "stars": 4 } ] },
-  { "answer": "BURRITO", "score": 82, "categories": ["geography"], "tags": ["food", "travel"],
-    "clues": [
-      { "text": "Wrapped Mexican meal", "difficulty": 1, "stars": 1 },
-      { "text": "\"Little donkey,\" on a Mexican menu", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "CRICKET", "score": 83, "categories": ["sports-leisure", "science-nature"], "tags": ["sports", "animals"],
-    "clues": [
-      { "text": "Bat-and-ball game with wickets", "difficulty": 1, "stars": 1 },
-      { "text": "Chirper in the grass — or a game with tea breaks", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "ATHLETE", "score": 80, "categories": ["sports-leisure"], "tags": ["sports", "olympics"],
-    "clues": [
-      { "text": "Sports competitor", "difficulty": 1, "stars": 1 },
-      { "text": "One paid to play games?", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "REFEREE", "score": 78, "categories": ["sports-leisure"], "tags": ["sports"],
-    "clues": [
-      { "text": "Official with a whistle", "difficulty": 1, "stars": 1 },
-      { "text": "Person everyone at the game disagrees with", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "REGATTA", "score": 70, "categories": ["sports-leisure"], "tags": ["sports", "summer"],
-    "clues": [
-      { "text": "Boat race series", "difficulty": 1, "stars": 1 },
-      { "text": "Race where everyone prays for wind", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "PENALTY", "score": 76, "categories": ["sports-leisure"], "tags": ["sports", "worldcup"],
-    "clues": [
-      { "text": "Rule breaker's punishment", "difficulty": 1, "stars": 1 },
-      { "text": "It puts a team on the spot", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "MATINEE", "score": 75, "categories": ["entertainment"], "tags": ["movies"],
-    "clues": [
-      { "text": "Afternoon showing", "difficulty": 1, "stars": 1 },
-      { "text": "Cheaper seats, earlier curtain", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "OVATION", "score": 79, "categories": ["entertainment"], "tags": ["music", "art"],
-    "clues": [
-      { "text": "Extended applause", "difficulty": 1, "stars": 1 },
-      { "text": "Thunder produced by an audience", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "SOPRANO", "score": 81, "categories": ["entertainment"], "tags": ["music"],
-    "clues": [
-      { "text": "Highest singing voice", "difficulty": 1, "stars": 1 },
-      { "text": "One hitting the ceiling at the opera?", "difficulty": 4, "stars": 4 } ] },
-  { "answer": "MAESTRO", "score": 79, "categories": ["entertainment"], "tags": ["music"],
-    "clues": [
-      { "text": "Orchestra leader", "difficulty": 1, "stars": 1 },
-      { "text": "One who faces the music for a living?", "difficulty": 4, "stars": 5 } ] },
-  { "answer": "OCARINA", "score": 65, "categories": ["entertainment"], "tags": ["music", "tech"],
-    "clues": [
-      { "text": "Small oval wind instrument", "difficulty": 1, "stars": 1 },
-      { "text": "Sweet-potato-shaped flute of video game fame", "difficulty": 3, "stars": 3 } ] },
-  { "answer": "ACROBAT", "score": 80, "categories": ["entertainment"], "tags": ["sports"],
-    "clues": [
-      { "text": "Circus tumbler", "difficulty": 1, "stars": 1 },
-      { "text": "Pro who bends over backward?", "difficulty": 4, "stars": 5 } ] },
-  { "answer": "UNICORN", "score": 84, "categories": ["arts-literature"], "tags": ["books", "tech"],
-    "clues": [
-      { "text": "One-horned mythical horse", "difficulty": 1, "stars": 1 },
-      { "text": "Billion-dollar startup, in Silicon Valley speak", "difficulty": 3, "stars": 3 } ] }
+ {
+  "answer": "VOLCANO",
+  "score": 92,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "science",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Mountain that erupts",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It might blow its top",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "RAINBOW",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "spring"
+  ],
+  "clues": [
+   {
+    "text": "Arc of colors in the sky",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Sky's reward for weathering a storm",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "LIBRARY",
+  "score": 88,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "books",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Book borrower's destination",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Where the volumes stay high and the volume stays low",
+    "difficulty": 4,
+    "stars": 5
+   }
+  ]
+ },
+ {
+  "answer": "DOLPHIN",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Playful marine mammal",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Sea acrobat with a permanent smile",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "PICASSO",
+  "score": 85,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "art",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "\"Guernica\" painter",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Painter who gave portraits extra angles",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "ATLANTA",
+  "score": 84,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "olympics"
+  ],
+  "clues": [
+   {
+    "text": "Georgia's capital",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Host of the 1996 Summer Games",
+    "difficulty": 3,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "JUPITER",
+  "score": 88,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "science",
+   "space"
+  ],
+  "clues": [
+   {
+    "text": "Largest planet in the solar system",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Giant with a stormy red eye",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "LANTERN",
+  "score": 82,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "camping",
+   "halloween"
+  ],
+  "clues": [
+   {
+    "text": "Camping trip light source",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Its job is to make light of the dark",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "TORNADO",
+  "score": 87,
+  "categories": [
+   "science-nature",
+   "entertainment"
+  ],
+  "tags": [
+   "nature",
+   "weather",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Funnel-shaped storm",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It swept Dorothy off her feet",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "OCTOPUS",
+  "score": 86,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Eight-armed sea creature",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Escape artist with three hearts and no bones",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "GLACIER",
+  "score": 85,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "winter",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Slow-moving river of ice",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It carves valleys without ever hurrying",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "AVOCADO",
+  "score": 85,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Guacamole's main ingredient",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Fruit that ripens the moment you stop watching",
+    "difficulty": 3,
+    "stars": 4
+   },
+   {
+    "text": "Green fruit smashed onto toast",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Pit-holding brunch star, extra please?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "CABINET",
+  "score": 78,
+  "categories": [
+   "history",
+   "wordplay"
+  ],
+  "tags": [
+   "household",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Kitchen storage unit",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Group that advises the president",
+    "difficulty": 2,
+    "stars": 1
+   },
+   {
+    "text": "Holder of dishes or secretaries?",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "LOBSTER",
+  "score": 84,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Clawed shellfish served with butter",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Crustacean that goes red under pressure",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "TEACHER",
+  "score": 80,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Homework assigner",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Class act?",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "RECITAL",
+  "score": 76,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "music",
+   "school"
+  ],
+  "clues": [
+   {
+    "text": "Piano student's big night",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Performance where parents applaud every wrong note",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "COMPASS",
+  "score": 83,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "camping"
+  ],
+  "clues": [
+   {
+    "text": "Direction-finding tool",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It has a needle but never sews",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "ECLIPSE",
+  "score": 87,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "science",
+   "nature",
+   "space"
+  ],
+  "clues": [
+   {
+    "text": "Sun-blocking event",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Moment the Moon steals the spotlight",
+    "difficulty": 4,
+    "stars": 5
+   }
+  ]
+ },
+ {
+  "answer": "MONSOON",
+  "score": 80,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "weather",
+   "nature",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Seasonal drenching rain",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Season when umbrellas earn their keep",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PRETZEL",
+  "score": 82,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Twisted, salted snack",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Snack shaped like a yoga pose",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "TOASTER",
+  "score": 81,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "food",
+   "household",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "Bread-browning appliance",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It pops up at breakfast",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "CANTEEN",
+  "score": 74,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "camping",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Hiker's water container",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Camp's watering hole — or what you carry from it",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "LETTUCE",
+  "score": 79,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Salad base",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Head you can shred",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "ORIGAMI",
+  "score": 84,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Japanese paper folding",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Art of turning a square into a crane",
+    "difficulty": 4,
+    "stars": 5
+   }
+  ]
+ },
+ {
+  "answer": "SEAGULL",
+  "score": 78,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "summer",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Beach-scavenging bird",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Boardwalk fry thief",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "RAVIOLI",
+  "score": 83,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "food",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Stuffed Italian pasta squares",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Pillows you're encouraged to eat",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "TSUNAMI",
+  "score": 82,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "science"
+  ],
+  "clues": [
+   {
+    "text": "Giant sea wave caused by a quake",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Harbor wave, literally",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BALLOON",
+  "score": 85,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "party",
+   "birthday"
+  ],
+  "clues": [
+   {
+    "text": "Party inflatable",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It rises to the occasion, then pops",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "PELICAN",
+  "score": 80,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Big-billed coastal bird",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Bird with a built-in fishing net",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "RACCOON",
+  "score": 84,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Ring-tailed nocturnal mammal",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Masked bandit of the backyard",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "OSTRICH",
+  "score": 82,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Largest living bird",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Sprinter that will never get off the ground",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "GORILLA",
+  "score": 85,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Largest of the great apes",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Chest-beating jungle heavyweight",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ANTENNA",
+  "score": 79,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "tech",
+   "science",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Rooftop signal catcher",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Feeler on a bug — or on an old TV",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TRAILER",
+  "score": 77,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Movie preview",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Preview that sometimes spoils the ending",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "COASTER",
+  "score": 78,
+  "categories": [
+   "wordplay",
+   "sports-leisure"
+  ],
+  "tags": [
+   "household"
+  ],
+  "clues": [
+   {
+    "text": "Mat under a mug",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It keeps rings off the table",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "CABOOSE",
+  "score": 72,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "travel",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Train's last car",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It brings up the rear on the rails",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "THEATER",
+  "score": 84,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "movies",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Place to catch a play",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "House that prefers a full house",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "NIAGARA",
+  "score": 83,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Falls between New York and Ontario",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Honeymoon destination with a serious roar",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ARIZONA",
+  "score": 82,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Grand Canyon State",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "State that mostly skips daylight saving time",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CHICAGO",
+  "score": 85,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "The Windy City",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Deep-dish pizza's hometown",
+    "difficulty": 2,
+    "stars": 2
+   },
+   {
+    "text": "City that reversed its river",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "ORLANDO",
+  "score": 80,
+  "categories": [
+   "geography",
+   "entertainment"
+  ],
+  "tags": [
+   "travel",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Florida theme-park city",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "The mouse's Florida address",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TORONTO",
+  "score": 82,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Canada's largest city",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Home of the Raptors and the Maple Leafs",
+    "difficulty": 2,
+    "stars": 2
+   }
+  ]
+ },
+ {
+  "answer": "AUSTRIA",
+  "score": 81,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "music",
+   "history"
+  ],
+  "clues": [
+   {
+    "text": "Mozart's homeland",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Alpine country where the hills are famously musical",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ICELAND",
+  "score": 84,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "nature",
+   "winter"
+  ],
+  "clues": [
+   {
+    "text": "Reykjavik's island nation",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Nordic nation that's greener than its frosty name suggests",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "IRELAND",
+  "score": 84,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "The Emerald Isle",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Country that exports shamrocks and storytellers",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CROATIA",
+  "score": 78,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "worldcup"
+  ],
+  "clues": [
+   {
+    "text": "Adriatic country with a walled city at Dubrovnik",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Where the dalmatian got its name",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "ESTONIA",
+  "score": 74,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "Baltic republic north of Latvia",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Tiny Baltic nation that votes online",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "GRANOLA",
+  "score": 79,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "food",
+   "camping"
+  ],
+  "clues": [
+   {
+    "text": "Crunchy oat cereal",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Trail mix's baked cousin",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "OATMEAL",
+  "score": 80,
+  "categories": [
+   "science-nature",
+   "arts-literature"
+  ],
+  "tags": [
+   "food",
+   "winter",
+   "books"
+  ],
+  "clues": [
+   {
+    "text": "Hot breakfast porridge",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Breakfast Goldilocks liked just right",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "LASAGNA",
+  "score": 83,
+  "categories": [
+   "entertainment",
+   "geography"
+  ],
+  "tags": [
+   "food",
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Layered Italian pasta bake",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Garfield's weakness",
+    "difficulty": 2,
+    "stars": 2
+   },
+   {
+    "text": "Pasta dish built in stories",
+    "difficulty": 4,
+    "stars": 4
+   },
+   {
+    "text": "Garfield's favorite Monday cure",
+    "difficulty": 1,
+    "stars": 3,
+    "category": "entertainment"
+   },
+   {
+    "text": "Layered noodle casserole",
+    "difficulty": 2,
+    "stars": 2,
+    "category": "wordplay"
+   },
+   {
+    "text": "Pasta stacked like brickwork?",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "POPCORN",
+  "score": 86,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "movies",
+   "food"
+  ],
+  "clues": [
+   {
+    "text": "Movie-night snack",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Kernels that lose it under pressure",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "CARAMEL",
+  "score": 82,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "halloween"
+  ],
+  "clues": [
+   {
+    "text": "Chewy candy made by browning sugar",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Coating for a fall festival apple",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "VANILLA",
+  "score": 83,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "nature"
+  ],
+  "clues": [
+   {
+    "text": "Classic ice cream flavor",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "\"Plain\" flavor that comes from an orchid",
+    "difficulty": 3,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "BURRITO",
+  "score": 82,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "food",
+   "travel"
+  ],
+  "clues": [
+   {
+    "text": "Wrapped Mexican meal",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "\"Little donkey,\" on a Mexican menu",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CRICKET",
+  "score": 83,
+  "categories": [
+   "sports-leisure",
+   "science-nature"
+  ],
+  "tags": [
+   "sports",
+   "animals"
+  ],
+  "clues": [
+   {
+    "text": "Bat-and-ball game with wickets",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Chirper in the grass — or a game with tea breaks",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ATHLETE",
+  "score": 80,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports",
+   "olympics"
+  ],
+  "clues": [
+   {
+    "text": "Sports competitor",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "One paid to play games?",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "REFEREE",
+  "score": 78,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Official with a whistle",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Person everyone at the game disagrees with",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "REGATTA",
+  "score": 70,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports",
+   "summer"
+  ],
+  "clues": [
+   {
+    "text": "Boat race series",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Race where everyone prays for wind",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PENALTY",
+  "score": 76,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports",
+   "worldcup"
+  ],
+  "clues": [
+   {
+    "text": "Rule breaker's punishment",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "It puts a team on the spot",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "MATINEE",
+  "score": 75,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "movies"
+  ],
+  "clues": [
+   {
+    "text": "Afternoon showing",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Cheaper seats, earlier curtain",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "OVATION",
+  "score": 79,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "music",
+   "art"
+  ],
+  "clues": [
+   {
+    "text": "Extended applause",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Thunder produced by an audience",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "SOPRANO",
+  "score": 81,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Highest singing voice",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "One hitting the ceiling at the opera?",
+    "difficulty": 4,
+    "stars": 4
+   }
+  ]
+ },
+ {
+  "answer": "MAESTRO",
+  "score": 79,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "music"
+  ],
+  "clues": [
+   {
+    "text": "Orchestra leader",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "One who faces the music for a living?",
+    "difficulty": 4,
+    "stars": 5
+   },
+   {
+    "text": "Baton-waver at the symphony",
+    "difficulty": 1,
+    "stars": 3,
+    "category": "arts-literature"
+   },
+   {
+    "text": "Toscanini, respectfully",
+    "difficulty": 2,
+    "stars": 4,
+    "register": "classic",
+    "category": "arts-literature"
+   },
+   {
+    "text": "Virtuoso addressed with a bow?",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "arts-literature"
+   }
+  ]
+ },
+ {
+  "answer": "OCARINA",
+  "score": 65,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "music",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "Small oval wind instrument",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Sweet-potato-shaped flute of video game fame",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ACROBAT",
+  "score": 80,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "sports"
+  ],
+  "clues": [
+   {
+    "text": "Circus tumbler",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Pro who bends over backward?",
+    "difficulty": 4,
+    "stars": 5
+   }
+  ]
+ },
+ {
+  "answer": "UNICORN",
+  "score": 84,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "books",
+   "tech"
+  ],
+  "clues": [
+   {
+    "text": "One-horned mythical horse",
+    "difficulty": 1,
+    "stars": 1
+   },
+   {
+    "text": "Billion-dollar startup, in Silicon Valley speak",
+    "difficulty": 3,
+    "stars": 3
+   }
+  ]
+ }
 ]

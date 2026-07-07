@@ -23,14 +23,11 @@
   gap: 8px;
 }
 .app-header .brand .brand-mark {
-  width: 26px; height: 26px;
+  width: 28px; height: 28px;
   display: inline-block;
-  border-radius: 6px;
-  background:
-    linear-gradient(to right, var(--header-flair) 0 33%, transparent 33%),
-    conic-gradient(var(--ink) 25%, transparent 25% 50%, var(--ink) 50% 75%, transparent 75%);
-  background-color: var(--surface-2);
-  border: 2px solid var(--ink);
+  border-radius: 7px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 .app-header .spacer { flex: 1; }
 .app-header nav { display: flex; gap: 4px; }

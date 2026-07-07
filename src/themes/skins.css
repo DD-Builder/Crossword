@@ -5,7 +5,10 @@
  * Every skin also defines --sw-a/b/c, the three stripes shown in the
  * Settings skin gallery. */
 
-[data-skin="classic"] { --sw-a: #faf7f0; --sw-b: #3b6ea5; --sw-c: #21201c; }
+[data-skin="classic"] {
+  --page-texture: radial-gradient(circle at 88% -90px, rgba(59, 110, 165, 0.07), transparent 360px);
+  --sw-a: #faf7f0; --sw-b: #3b6ea5; --sw-c: #21201c;
+}
 
 /* --- Midnight: ink, indigo, moonlit paper -------------------------------- */
 [data-skin="midnight"] {
@@ -16,6 +19,7 @@
   --cell-selected: #ffd76e; --cell-word: #d6daf7;
   --font-display: "Avenir Next", "Futura", "Trebuchet MS", sans-serif;
   --header-flair: #4750c8;
+  --page-texture: linear-gradient(180deg, rgba(71, 80, 200, 0.10), transparent 280px);
   --sw-a: #eef0f6; --sw-b: #4750c8; --sw-c: #1b1e2e;
 }
 [data-skin="midnight"][data-mode="dark"] {
@@ -35,6 +39,7 @@
   --cell-selected: #f5d06c; --cell-word: #d9e5c2; --cell-revealed: #a25b8a;
   --good: #4d7a34; --header-flair: #5c7c3f;
   --font-display: "Iowan Old Style", Georgia, serif;
+  --page-texture: radial-gradient(circle at 82% -70px, rgba(92, 124, 63, 0.11), transparent 340px);
   --sw-a: #f2f4ea; --sw-b: #5c7c3f; --sw-c: #33402a;
 }
 [data-skin="botanical"][data-mode="dark"] {
@@ -55,6 +60,7 @@
   --radius: 4px; --radius-cell: 0px;
   --font-display: "Optima", "Copperplate", "Trajan Pro", serif;
   --header-flair: #a8842c;
+  --page-texture: linear-gradient(180deg, rgba(168, 132, 44, 0.12), transparent 220px);
   --sw-a: #f5efdf; --sw-b: #a8842c; --sw-c: #191510;
 }
 [data-skin="art-deco"][data-mode="dark"] {
@@ -73,6 +79,7 @@
   --cell-bg: #fcffff; --cell-ink: #12303a; --cell-border: #9cc3ca; --cell-block: #12303a;
   --cell-selected: #ffd76e; --cell-word: #c4e4e9;
   --header-flair: #0f7c8c;
+  --page-texture: radial-gradient(circle at 82% -70px, rgba(15, 124, 140, 0.13), transparent 340px);
   --sw-a: #e9f3f4; --sw-b: #0f7c8c; --sw-c: #12303a;
 }
 [data-skin="ocean"][data-mode="dark"] {
@@ -91,6 +98,7 @@
   --cell-bg: #fefaf5; --cell-ink: #38251a; --cell-border: #c8a98c; --cell-block: #3c2417;
   --cell-selected: #f2c464; --cell-word: #f0d9c0; --warn: #b8542c;
   --header-flair: #b8542c;
+  --page-texture: radial-gradient(circle at 82% -70px, rgba(184, 84, 44, 0.11), transparent 340px);
   --sw-a: #f7ede4; --sw-b: #b8542c; --sw-c: #3c2417;
 }
 [data-skin="terracotta"][data-mode="dark"] {
@@ -151,6 +159,7 @@
   --cell-bg: #fefaf1; --cell-ink: #33231c; --cell-border: #c9ad82; --cell-block: #2e1e0f;
   --cell-selected: #f2b04e; --cell-word: #f0dcb4; --warn: #c96f1e; --bad: #ab3c2c;
   --header-flair: #c96f1e;
+  --page-texture: radial-gradient(circle at 82% -70px, rgba(201, 111, 30, 0.12), transparent 340px);
   --sw-a: #f8efe2; --sw-b: #c96f1e; --sw-c: #5a3b1e;
 }
 [data-skin="harvest"][data-mode="dark"] {

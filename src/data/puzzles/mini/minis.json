@@ -11,10 +11,10 @@
   },
   "grid": [
    "##ERA",
-   "EASEL",
-   "INTEL",
-   "NEEDY",
-   "EWE##"
+   "ISAAC",
+   "TUTTI",
+   "CREED",
+   "HEN##"
   ],
   "clues": {
    "across": [
@@ -31,18 +31,18 @@
     },
     {
      "num": 4,
-     "answer": "EASEL",
-     "clue": "Painter's three-legged stand",
-     "stars": 1,
-     "category": "arts-literature",
+     "answer": "ISAAC",
+     "clue": "Sir ___ Newton",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "art"
+      "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "INTEL",
-     "clue": "Computer chip maker",
+     "answer": "TUTTI",
+     "clue": "Musical passage performed by all",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -51,8 +51,8 @@
     },
     {
      "num": 7,
-     "answer": "NEEDY",
-     "clue": "Those in want",
+     "answer": "CREED",
+     "clue": "Nicene ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -61,21 +61,21 @@
     },
     {
      "num": 8,
-     "answer": "EWE",
-     "clue": "Flock mother",
-     "stars": 2,
+     "answer": "HEN",
+     "clue": "Rooster's mate",
+     "stars": 1,
      "category": "science-nature",
      "tags": [
       "animals",
-      "nature"
+      "food"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "ESTEE",
-     "clue": "___ Lauder cosmetics",
+     "answer": "EATEN",
+     "clue": "All gone, as dinner",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -84,44 +84,43 @@
     },
     {
      "num": 2,
-     "answer": "REED",
-     "clue": "Marsh stalk",
-     "stars": 2,
-     "category": "arts-literature",
+     "answer": "RATE",
+     "clue": "Price per unit",
+     "stars": 1,
+     "category": "wordplay",
      "tags": [
-      "music",
-      "nature"
+      "science"
      ]
     },
     {
      "num": 3,
-     "answer": "ALLY",
-     "clue": "U.S.S.R. to U.S.A., in W.W. II",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "ACID",
+     "clue": "Lemon juice, chemically",
+     "stars": 1,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "science",
+      "school"
      ]
     },
     {
      "num": 4,
-     "answer": "EINE",
-     "clue": "German \"a\"",
-     "stars": 3,
+     "answer": "ITCH",
+     "clue": "Mosquito bite aftermath",
+     "stars": 1,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
-      "sourced"
+      "travel"
      ]
     },
     {
      "num": 5,
-     "answer": "ANEW",
-     "clue": "From the top",
-     "stars": 2,
+     "answer": "SURE",
+     "clue": "Word with fire or thing",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
-      "newyear"
+      "sourced"
      ]
     }
    ]
@@ -139,41 +138,48 @@
    "cols": 5
   },
   "grid": [
-   "#OLE#",
-   "STAGE",
-   "UTURN",
-   "BERET",
-   "#RAT#"
+   "#REP#",
+   "HENRI",
+   "ONION",
+   "TEAMS",
+   "#ECO#"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "OLE",
-     "clue": "Bullring cheer",
-     "stars": 1,
-     "category": "sports-leisure",
+     "answer": "REP",
+     "clue": "Corded fabric",
+     "stars": 2,
+     "category": "wordplay",
      "tags": [
-      "sports",
-      "music",
-      "worldcup"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "STAGE",
-     "clue": "Phase",
+     "answer": "HENRI",
+     "clue": "Painter Matisse",
      "stars": 2,
-     "category": "entertainment",
+     "category": "arts-literature",
      "tags": [
-      "art",
-      "music"
+      "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "UTURN",
-     "clue": "About-face for a driver",
+     "answer": "ONION",
+     "clue": "Layered kitchen staple",
+     "stars": 1,
+     "category": "science-nature",
+     "tags": [
+      "food"
+     ]
+    },
+    {
+     "num": 7,
+     "answer": "TEAMS",
+     "clue": "Bears and Cubs",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -181,53 +187,21 @@
      ]
     },
     {
-     "num": 7,
-     "answer": "BERET",
-     "clue": "Painter's tilted topper",
+     "num": 8,
+     "answer": "ECO",
+     "clue": "Author Umberto",
      "stars": 2,
      "category": "arts-literature",
      "tags": [
-      "art",
-      "travel"
-     ]
-    },
-    {
-     "num": 8,
-     "answer": "RAT",
-     "clue": "Maze runner in a lab",
-     "stars": 1,
-     "category": "science-nature",
-     "tags": [
-      "animals"
+      "sourced"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "OTTER",
-     "clue": "Playful stream swimmer",
-     "stars": 1,
-     "category": "science-nature",
-     "tags": [
-      "animals",
-      "nature"
-     ]
-    },
-    {
-     "num": 2,
-     "answer": "LAURA",
-     "clue": "First lady after Hillary",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 3,
-     "answer": "EGRET",
-     "clue": "\"Snowy\" bird",
+     "answer": "RENEE",
+     "clue": "Zellweger of \"Jerry Maguire\"",
      "stars": 3,
      "category": "wordplay",
      "register": "modern",
@@ -236,19 +210,40 @@
      ]
     },
     {
-     "num": 4,
-     "answer": "SUB",
-     "clue": "___ rosa",
-     "stars": 2,
+     "num": 2,
+     "answer": "ENIAC",
+     "clue": "Computer that debuted in 1946",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
+     "num": 3,
+     "answer": "PROMO",
+     "clue": "Movie trailer, e.g.",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 4,
+     "answer": "HOT",
+     "clue": "In high demand",
+     "stars": 2,
+     "category": "science-nature",
+     "tags": [
+      "summer",
+      "food"
+     ]
+    },
+    {
      "num": 5,
-     "answer": "ENT",
-     "clue": "A.F.B. in Colorado",
+     "answer": "INS",
+     "clue": "___ and outs",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -271,10 +266,10 @@
   },
   "grid": [
    "HEH##",
-   "OTERI",
-   "STAID",
-   "EARLE",
-   "##TEA"
+   "IDEST",
+   "DIANE",
+   "EERIE",
+   "##TPS"
   ],
   "clues": {
    "across": [
@@ -290,19 +285,18 @@
     },
     {
      "num": 4,
-     "answer": "OTERI",
-     "clue": "Cheri formerly of \"S.N.L.\"",
+     "answer": "IDEST",
+     "clue": "What i.e. stands for",
      "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "STAID",
-     "clue": "Sober as a judge",
+     "answer": "DIANE",
+     "clue": "Steak ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -311,8 +305,40 @@
     },
     {
      "num": 8,
-     "answer": "EARLE",
-     "clue": "\"College Bowl\" host Robert",
+     "answer": "EERIE",
+     "clue": "Like a haunted house",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 9,
+     "answer": "TPS",
+     "clue": "Mil. groups",
+     "stars": 2,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    }
+   ],
+   "down": [
+    {
+     "num": 1,
+     "answer": "HIDE",
+     "clue": "Sweep under the rug",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 2,
+     "answer": "EDIE",
+     "clue": "Falco of \"Nurse Jackie\"",
      "stars": 3,
      "category": "wordplay",
      "register": "modern",
@@ -321,43 +347,10 @@
      ]
     },
     {
-     "num": 9,
-     "answer": "TEA",
-     "clue": "Earl Grey, for one",
-     "stars": 1,
-     "category": "sports-leisure",
-     "tags": [
-      "food"
-     ]
-    }
-   ],
-   "down": [
-    {
-     "num": 1,
-     "answer": "HOSE",
-     "clue": "Garden sprayer",
-     "stars": 1,
-     "category": "wordplay",
-     "tags": [
-      "summer",
-      "nature"
-     ]
-    },
-    {
-     "num": 2,
-     "answer": "ETTA",
-     "clue": "___ Kett",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 3,
      "answer": "HEART",
-     "clue": "Valentine shape",
-     "stars": 1,
+     "clue": "Ticker in your chest",
+     "stars": 3,
      "category": "science-nature",
      "tags": [
       "valentines",
@@ -366,9 +359,9 @@
     },
     {
      "num": 5,
-     "answer": "RILE",
-     "clue": "Get one's dander up",
-     "stars": 3,
+     "answer": "SNIP",
+     "clue": "Salon sound",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -376,12 +369,12 @@
     },
     {
      "num": 6,
-     "answer": "IDEA",
-     "clue": "Notion",
-     "stars": 1,
+     "answer": "TEES",
+     "clue": "Golf ball props",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
-      "school"
+      "sourced"
      ]
     }
    ]
@@ -399,39 +392,39 @@
    "cols": 5
   },
   "grid": [
-   "IRE##",
-   "BASRA",
-   "INTEL",
-   "STEAD",
+   "EYE##",
+   "VESTA",
+   "EATIT",
+   "SHEET",
    "##ERA"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "IRE",
-     "clue": "Fury",
-     "stars": 1,
-     "category": "wordplay",
+     "answer": "EYE",
+     "clue": "Hurricane's calm middle",
+     "stars": 3,
+     "category": "science-nature",
      "tags": [
-      "books"
+      "science",
+      "nature"
      ]
     },
     {
      "num": 4,
-     "answer": "BASRA",
-     "clue": "City whose name can be anagrammed, appropriately, to ARABS",
-     "stars": 3,
-     "category": "geography",
-     "register": "modern",
+     "answer": "VESTA",
+     "clue": "Hearth goddess",
+     "stars": 2,
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "INTEL",
-     "clue": "Computer chip maker",
+     "answer": "EATIT",
+     "clue": "1984 Weird Al Yankovic hit",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -440,8 +433,8 @@
     },
     {
      "num": 8,
-     "answer": "STEAD",
-     "clue": "Stand in good ___",
+     "answer": "SHEET",
+     "clue": "Scandal ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -463,20 +456,24 @@
    "down": [
     {
      "num": 1,
-     "answer": "IBIS",
-     "clue": "Sacred Egyptian bird",
+     "answer": "EVES",
+     "clue": "Dec. 24 and 31",
      "stars": 3,
-     "category": "science-nature",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 2,
-     "answer": "RANT",
-     "clue": "Heated tirade",
-     "stars": 1,
-     "category": "wordplay"
+     "answer": "YEAH",
+     "clue": "\"You bet!\"",
+     "stars": 3,
+     "category": "wordplay",
+     "register": "modern",
+     "tags": [
+      "sourced"
+     ]
     },
     {
      "num": 3,
@@ -490,8 +487,8 @@
     },
     {
      "num": 5,
-     "answer": "REAR",
-     "clue": "Kind of admiral",
+     "answer": "TIER",
+     "clue": "Wedding cake feature",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -500,11 +497,10 @@
     },
     {
      "num": 6,
-     "answer": "ALDA",
-     "clue": "Alan of \"M*A*S*H\"",
+     "answer": "ATTA",
+     "clue": "Lead-in to boy or girl",
      "stars": 3,
-     "category": "entertainment",
-     "register": "modern",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
@@ -524,45 +520,36 @@
    "cols": 5
   },
   "grid": [
-   "#TPS#",
-   "PEALE",
-   "INNER",
-   "ESTER",
-   "#EST#"
+   "#TOP#",
+   "METED",
+   "SNEER",
+   "NERVE",
+   "#TIE#"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "TPS",
-     "clue": "Mil. groups",
+     "answer": "TOP",
+     "clue": "Where every mountain path ends",
      "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
+     "category": "sports-leisure"
     },
     {
      "num": 4,
-     "answer": "PEALE",
-     "clue": "Painter who fought in the Revolution",
+     "answer": "METED",
+     "clue": "Apportioned, with \"out\"",
      "stars": 3,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "INNER",
-     "clue": "___ peace",
-     "stars": 1,
-     "category": "wordplay"
-    },
-    {
-     "num": 7,
-     "answer": "ESTER",
-     "clue": "___ gum, used in varnishes",
+     "answer": "SNEER",
+     "clue": "Look of disdain",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -570,23 +557,32 @@
      ]
     },
     {
-     "num": 8,
-     "answer": "EST",
-     "clue": "Winter hrs. in Boston",
+     "num": 7,
+     "answer": "NERVE",
+     "clue": "Signal carrier in the body",
      "stars": 1,
-     "category": "geography",
+     "category": "science-nature",
      "tags": [
-      "travel",
-      "winter"
+      "science"
+     ]
+    },
+    {
+     "num": 8,
+     "answer": "TIE",
+     "clue": "Reason for overtime",
+     "stars": 2,
+     "category": "sports-leisure",
+     "tags": [
+      "sports"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "TENSE",
-     "clue": "Past, present or future",
-     "stars": 3,
+     "answer": "TENET",
+     "clue": "Basic belief",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -594,18 +590,19 @@
     },
     {
      "num": 2,
-     "answer": "PANTS",
-     "clue": "One-third of a three-piece suit",
+     "answer": "OTERI",
+     "clue": "Cheri formerly of \"S.N.L.\"",
      "stars": 3,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 3,
-     "answer": "SLEET",
-     "clue": "Winter driving hazard",
+     "answer": "PEEVE",
+     "clue": "Pet ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -614,21 +611,23 @@
     },
     {
      "num": 4,
-     "answer": "PIE",
-     "clue": "Dessert served à la mode",
-     "stars": 1,
-     "category": "sports-leisure",
+     "answer": "MSN",
+     "clue": "Online portal since Windows 95 was launched",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "food",
-      "thanksgiving"
+      "sourced"
      ]
     },
     {
      "num": 5,
-     "answer": "ERR",
-     "clue": "\"To ___ is human\"",
-     "stars": 2,
-     "category": "wordplay"
+     "answer": "DRE",
+     "clue": "Dr. ___ formerly of Death Row Records",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
     }
    ]
   },
@@ -645,39 +644,103 @@
    "cols": 5
   },
   "grid": [
-   "CUE##",
-   "OPERA",
-   "CORER",
-   "ANISE",
-   "##ETA"
+   "ROO##",
+   "EMCEE",
+   "NEEDY",
+   "ONAIR",
+   "##NEE"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "CUE",
-     "clue": "Actor's signal to speak",
-     "stars": 2,
-     "category": "entertainment",
+     "answer": "ROO",
+     "clue": "Friend of Pooh",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "movies"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "OPERA",
-     "clue": "Aria's art form",
-     "stars": 1,
-     "category": "entertainment",
+     "answer": "EMCEE",
+     "clue": "Man on the dais",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "music",
-      "art"
+      "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "CORER",
-     "clue": "Implement for an apple",
+     "answer": "NEEDY",
+     "clue": "Those in want",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 8,
+     "answer": "ONAIR",
+     "clue": "Walk ___ (be elated)",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 9,
+     "answer": "NEE",
+     "clue": "Barbara Bush, ___ Pierce",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    }
+   ],
+   "down": [
+    {
+     "num": 1,
+     "answer": "RENO",
+     "clue": "Nevada gambling city",
+     "stars": 1,
+     "category": "geography",
+     "tags": [
+      "travel"
+     ]
+    },
+    {
+     "num": 2,
+     "answer": "OMEN",
+     "clue": "Black cat crossing, maybe",
+     "stars": 4,
+     "category": "arts-literature",
+     "tags": [
+      "halloween",
+      "books"
+     ]
+    },
+    {
+     "num": 3,
+     "answer": "OCEAN",
+     "clue": "Atlantic or Pacific",
+     "stars": 1,
+     "category": "geography",
+     "tags": [
+      "nature",
+      "travel",
+      "summer"
+     ]
+    },
+    {
+     "num": 5,
+     "answer": "EDIE",
+     "clue": "Falco of \"The Sopranos\"",
      "stars": 3,
      "category": "wordplay",
      "register": "modern",
@@ -686,75 +749,13 @@
      ]
     },
     {
-     "num": 8,
-     "answer": "ANISE",
-     "clue": "Aromatic herb",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 9,
-     "answer": "ETA",
-     "clue": "Pilot's projection, for short",
-     "stars": 2,
-     "category": "geography",
-     "tags": [
-      "travel"
-     ]
-    }
-   ],
-   "down": [
-    {
-     "num": 1,
-     "answer": "COCA",
-     "clue": "Source of a narcotic",
-     "stars": 3,
-     "category": "entertainment",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 2,
-     "answer": "UPON",
-     "clue": "Fairy tale's second word",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 3,
-     "answer": "EERIE",
-     "clue": "Like a haunted house",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 5,
-     "answer": "REST",
-     "clue": "Take five",
-     "stars": 1,
-     "category": "arts-literature",
-     "tags": [
-      "music"
-     ]
-    },
-    {
      "num": 6,
-     "answer": "AREA",
-     "clue": "Length times width, for a rectangle",
-     "stars": 2,
+     "answer": "EYRE",
+     "clue": "Jane of literature",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
-      "school"
+      "sourced"
      ]
     }
    ]
@@ -772,29 +773,29 @@
    "cols": 5
   },
   "grid": [
-   "##TED",
-   "CRETE",
-   "RONAN",
-   "IDEST",
-   "BET##"
+   "##EON",
+   "MILLE",
+   "OPEDS",
+   "NONET",
+   "ADA##"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "TED",
-     "clue": "Koppel of \"Nightline\"",
+     "answer": "EON",
+     "clue": "What a wait at the DMV feels like",
      "stars": 3,
-     "category": "wordplay",
-     "register": "modern",
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "time",
+      "science"
      ]
     },
     {
      "num": 4,
-     "answer": "CRETE",
-     "clue": "Where Mt. Ida is",
+     "answer": "MILLE",
+     "clue": "_____ Bornes (classic card game)",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -803,20 +804,19 @@
     },
     {
      "num": 6,
-     "answer": "RONAN",
-     "clue": "\"Brooklyn\" actress Saoirse ___",
+     "answer": "OPEDS",
+     "clue": "Slanted columns?",
      "stars": 4,
-     "category": "history",
-     "register": "modern",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "IDEST",
-     "clue": "What i.e. stands for",
-     "stars": 3,
+     "answer": "NONET",
+     "clue": "Music for a baseball team?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -824,11 +824,10 @@
     },
     {
      "num": 8,
-     "answer": "BET",
-     "clue": "\"You ___!\" (surely)",
-     "stars": 4,
+     "answer": "ADA",
+     "clue": "Critic ___ Louise Huxtable",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -837,18 +836,19 @@
    "down": [
     {
      "num": 1,
-     "answer": "TENET",
-     "clue": "Article of faith",
-     "stars": 3,
+     "answer": "ELENA",
+     "clue": "\"Maria ___,\" 1933 song",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 2,
-     "answer": "ETAS",
-     "clue": "Airport guesses, for short",
+     "answer": "OLDE",
+     "clue": "Ye ___ Curiosity Shoppe",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -857,29 +857,32 @@
     },
     {
      "num": 3,
-     "answer": "DENT",
-     "clue": "Fender blemish",
-     "stars": 1,
-     "category": "wordplay",
+     "answer": "NEST",
+     "clue": "Twiggy construction project",
+     "stars": 3,
+     "category": "science-nature",
      "tags": [
-      "travel"
+      "animals",
+      "nature",
+      "spring"
      ]
     },
     {
      "num": 4,
-     "answer": "CRIB",
-     "clue": "Corn ___",
-     "stars": 3,
+     "answer": "MONA",
+     "clue": "\"___ Lisa,\" 1949 song",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 5,
-     "answer": "RODE",
-     "clue": "Took a taxi",
-     "stars": 3,
+     "answer": "IPOD",
+     "clue": "Music box?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -900,39 +903,39 @@
    "cols": 5
   },
   "grid": [
-   "##TEE",
-   "THEIR",
-   "YANNI",
-   "PREEN",
-   "EMT##"
+   "##EYE",
+   "ONSET",
+   "DITTO",
+   "ICEIN",
+   "EKE##"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "TEE",
-     "clue": "Golfer's cheapest purchase",
+     "answer": "EYE",
+     "clue": "Hurricane's calm middle",
      "stars": 3,
-     "category": "wordplay",
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "science",
+      "nature"
      ]
     },
     {
      "num": 4,
-     "answer": "THEIR",
-     "clue": "\"___ Satanic Majesties Request\" (Rolling Stones album)",
-     "stars": 4,
+     "answer": "ONSET",
+     "clue": "Winter's arrival, e.g.",
+     "stars": 2,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
-      "sourced"
+      "winter"
      ]
     },
     {
      "num": 6,
-     "answer": "YANNI",
-     "clue": "\"___ Voices\" (best-selling New Age album)",
+     "answer": "DITTO",
+     "clue": "\"You can say that again\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -942,30 +945,28 @@
     },
     {
      "num": 7,
-     "answer": "PREEN",
-     "clue": "Do not rush in dressing",
-     "stars": 3,
+     "answer": "ICEIN",
+     "clue": "\"Seek roses in December, ___ June\": Byron",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 8,
-     "answer": "EMT",
-     "clue": "Siren-riding lifesaver, briefly",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
-      "science"
-     ]
+     "answer": "EKE",
+     "clue": "Stretch to the limit, with 'out'?",
+     "stars": 3,
+     "category": "wordplay"
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "TENET",
-     "clue": "Article of faith",
+     "answer": "ESTEE",
+     "clue": "First name in skin care",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -974,31 +975,30 @@
     },
     {
      "num": 2,
-     "answer": "EINE",
-     "clue": "\"___ kleine Nachtmusik\": Mozart",
+     "answer": "YETI",
+     "clue": "Snowy hiker who dodges every camera?",
      "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
+     "category": "entertainment",
      "tags": [
-      "sourced"
+      "winter",
+      "travel"
      ]
     },
     {
      "num": 3,
-     "answer": "ERIN",
-     "clue": "\"Come Back to ___\"",
-     "stars": 4,
+     "answer": "ETON",
+     "clue": "Collar or jacket",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "TYPE",
-     "clue": "\"Not my _____\"",
-     "stars": 4,
+     "answer": "ODIE",
+     "clue": "\"Garfield\" canine",
+     "stars": 3,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1007,11 +1007,10 @@
     },
     {
      "num": 5,
-     "answer": "HARM",
-     "clue": "\"Wouldn't ___ a flea\"",
-     "stars": 4,
+     "answer": "NICK",
+     "clue": "Adams or Nolte",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1031,50 +1030,49 @@
    "cols": 5
   },
   "grid": [
-   "EAT##",
-   "GREER",
-   "AISLE",
-   "DALAI",
-   "##ANN"
+   "EAR##",
+   "TIEUP",
+   "TRESS",
+   "ASSES",
+   "##EST"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "EAT",
-     "clue": "Absorb, as unexpected costs",
-     "stars": 2,
-     "category": "wordplay",
+     "answer": "EAR",
+     "clue": "What a natural musician plays by",
+     "stars": 3,
+     "category": "science-nature",
      "tags": [
-      "food"
+      "food",
+      "music"
      ]
     },
     {
      "num": 4,
-     "answer": "GREER",
-     "clue": "She wrote \"The Female Eunuch\"",
-     "stars": 4,
+     "answer": "TIEUP",
+     "clue": "Traffic jam",
+     "stars": 2,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "AISLE",
-     "clue": "Seat pick for easy exits",
-     "stars": 2,
+     "answer": "TRESS",
+     "clue": "Lock of hair",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
-      "travel",
-      "food"
+      "sourced"
      ]
     },
     {
      "num": 8,
-     "answer": "DALAI",
-     "clue": "___ Lama",
+     "answer": "ASSES",
+     "clue": "Beasts of burden",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1083,22 +1081,42 @@
     },
     {
      "num": 9,
-     "answer": "ANN",
-     "clue": "The Beach Boys' \"Barbara ___\"",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
+     "answer": "EST",
+     "clue": "N.Y.C. clock setting: Abbr.",
+     "stars": 1,
+     "category": "geography",
      "tags": [
-      "sourced"
+      "travel",
+      "winter"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "EGAD",
-     "clue": "\"Holy cow!\"",
+     "answer": "ETTA",
+     "clue": "___ Kett",
      "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 2,
+     "answer": "AIRS",
+     "clue": "They may be put on",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 3,
+     "answer": "REESE",
+     "clue": "Kyle ___, \"The Terminator\" hero",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1106,43 +1124,21 @@
      ]
     },
     {
-     "num": 2,
-     "answer": "ARIA",
-     "clue": "Soprano's showstopper",
-     "stars": 2,
-     "category": "arts-literature",
-     "tags": [
-      "music",
-      "travel"
-     ]
-    },
-    {
-     "num": 3,
-     "answer": "TESLA",
-     "clue": "Coil-building rival of Edison",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
-      "science",
-      "tech",
-      "history"
-     ]
-    },
-    {
      "num": 5,
-     "answer": "ELAN",
-     "clue": "Joie de vivre",
-     "stars": 3,
+     "answer": "USES",
+     "clue": "\"Sweet are the ___ of adversity\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "REIN",
-     "clue": "Slow a horse, with \"in\"",
-     "stars": 4,
+     "answer": "PSST",
+     "clue": "\"Check this out!\"",
+     "stars": 3,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1164,103 +1160,93 @@
    "cols": 5
   },
   "grid": [
-   "#RIB#",
-   "DEBRA",
-   "SNEER",
-   "LEASE",
-   "#EMT#"
+   "#SHE#",
+   "ATONE",
+   "BERRA",
+   "SENOR",
+   "#REN#"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "RIB",
-     "clue": "Tease good-naturedly",
-     "stars": 2,
+     "answer": "SHE",
+     "clue": "\"___ walks in beauty . . . \"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "food"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "DEBRA",
-     "clue": "Raymond's wife on \"Everybody Loves Raymond\"",
-     "stars": 4,
+     "answer": "ATONE",
+     "clue": "Observe Yom Kippur",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "SNEER",
-     "clue": "Curl one's lip",
-     "stars": 3,
+     "answer": "BERRA",
+     "clue": "\"The game ain't over till it's over\" speaker",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "LEASE",
-     "clue": "New ___ on life",
-     "stars": 2,
+     "answer": "SENOR",
+     "clue": "Man of La Mancha",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
-      "household"
+      "sourced"
      ]
     },
     {
      "num": 8,
-     "answer": "EMT",
-     "clue": "Siren-riding lifesaver, briefly",
-     "stars": 2,
-     "category": "science-nature",
+     "answer": "REN",
+     "clue": "Stimpy's cartoon pal",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "science"
+      "sourced"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "RENEE",
-     "clue": "Girl's name meaning \"born again\"",
+     "answer": "STEER",
+     "clue": "Head out on the ranch?",
      "stars": 4,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 2,
-     "answer": "IBEAM",
-     "clue": "Metal structural unit",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 3,
-     "answer": "BREST",
-     "clue": "\"Scent of a Woman\" director",
+     "answer": "HORNE",
+     "clue": "Lena who sang \"Stormy Weather\"",
      "stars": 4,
-     "category": "history",
+     "category": "entertainment",
      "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
-     "num": 4,
-     "answer": "DSL",
-     "clue": "Upgrade from a dial-up connection",
+     "num": 3,
+     "answer": "ENRON",
+     "clue": "Company with a spectacular 2001 bankruptcy",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1268,11 +1254,26 @@
      ]
     },
     {
+     "num": 4,
+     "answer": "ABS",
+     "clue": "Six-pack components, for short",
+     "stars": 3,
+     "category": "sports-leisure",
+     "tags": [
+      "sports",
+      "school"
+     ]
+    },
+    {
      "num": 5,
-     "answer": "ARE",
-     "clue": "Exist, for two or more",
-     "stars": 2,
-     "category": "wordplay"
+     "answer": "EAR",
+     "clue": "What a natural musician plays by",
+     "stars": 3,
+     "category": "science-nature",
+     "tags": [
+      "food",
+      "music"
+     ]
     }
    ]
   },
@@ -1289,29 +1290,29 @@
    "cols": 5
   },
   "grid": [
-   "RAH##",
-   "ELENA",
-   "AVAIL",
-   "DARNS",
-   "##TAO"
+   "ISH##",
+   "DUETO",
+   "EMAIL",
+   "AORTA",
+   "##TOY"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "RAH",
-     "clue": "Rallying cry?",
-     "stars": 4,
-     "category": "sports-leisure",
+     "answer": "ISH",
+     "clue": "Relative of -esque",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "ELENA",
-     "clue": "\"Maria ___,\" 1933 song",
-     "stars": 4,
+     "answer": "DUETO",
+     "clue": "\"_____ circumstances beyond...\"",
+     "stars": 3,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1320,55 +1321,53 @@
     },
     {
      "num": 7,
-     "answer": "AVAIL",
-     "clue": "To no ___ (useless)",
+     "answer": "EMAIL",
+     "clue": "Letter that needs no stamp",
      "stars": 3,
-     "category": "wordplay",
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "tech"
      ]
     },
     {
      "num": 8,
-     "answer": "DARNS",
-     "clue": "Closes the gap?",
-     "stars": 4,
-     "category": "wordplay",
+     "answer": "AORTA",
+     "clue": "Main line from the heart",
+     "stars": 2,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "science"
      ]
     },
     {
      "num": 9,
-     "answer": "TAO",
-     "clue": "\"___ Te Ching\"",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
+     "answer": "TOY",
+     "clue": "Play cruelly, as a cat with a mouse",
+     "stars": 3,
+     "category": "entertainment",
      "tags": [
-      "sourced"
+      "christmas",
+      "movies"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "READ",
-     "clue": "Curl up with a book",
-     "stars": 1,
-     "category": "arts-literature",
+     "answer": "IDEA",
+     "clue": "Bright thing that dawns on you?",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "books",
       "school"
      ]
     },
     {
      "num": 2,
-     "answer": "ALVA",
-     "clue": "The \"A\" in Thomas A. Edison",
-     "stars": 4,
+     "answer": "SUMO",
+     "clue": "Squatter?",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1386,8 +1385,8 @@
     },
     {
      "num": 5,
-     "answer": "NINA",
-     "clue": "One of a 15th-century trio",
+     "answer": "TITO",
+     "clue": "One of the singing Jacksons",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1396,10 +1395,13 @@
     },
     {
      "num": 6,
-     "answer": "ALSO",
-     "clue": "___-ran",
-     "stars": 1,
-     "category": "wordplay"
+     "answer": "OLAY",
+     "clue": "Word on some Procter and Gamble lotions",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
     }
    ]
   },
@@ -1416,18 +1418,28 @@
    "cols": 5
   },
   "grid": [
-   "#ELS#",
-   "ASYET",
-   "STIES",
-   "PENTA",
-   "#EGO#"
+   "#RUT#",
+   "AESOP",
+   "SNARE",
+   "HEIST",
+   "#ENO#"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "ELS",
-     "clue": "Sextet in \"Little Nellie Kelly\"",
+     "answer": "RUT",
+     "clue": "Routine that won't quit you",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "travel"
+     ]
+    },
+    {
+     "num": 4,
+     "answer": "AESOP",
+     "clue": "\"The Boy Who Cried Wolf\" writer",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1436,20 +1448,10 @@
      ]
     },
     {
-     "num": 4,
-     "answer": "ASYET",
-     "clue": "Up until now",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 6,
-     "answer": "STIES",
-     "clue": "Pigs' digs",
-     "stars": 2,
+     "answer": "SNARE",
+     "clue": "Kind of drum",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -1457,8 +1459,8 @@
     },
     {
      "num": 7,
-     "answer": "PENTA",
-     "clue": "Tetra- plus one",
+     "answer": "HEIST",
+     "clue": "Bank ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1467,21 +1469,21 @@
     },
     {
      "num": 8,
-     "answer": "EGO",
-     "clue": "It may be bruised or inflated",
+     "answer": "ENO",
+     "clue": "Brian of ambient music",
      "stars": 3,
      "category": "wordplay",
      "tags": [
-      "science"
+      "sourced"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "ESTEE",
-     "clue": "\"Terminal Bliss\" actress Chandler",
-     "stars": 3,
+     "answer": "RENEE",
+     "clue": "\"Walk Away ___\" (1966 hit)",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -1490,8 +1492,8 @@
     },
     {
      "num": 2,
-     "answer": "LYING",
-     "clue": "Reason for a spanking, maybe",
+     "answer": "USAIN",
+     "clue": "Bolt from Jamaica",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1500,9 +1502,9 @@
     },
     {
      "num": 3,
-     "answer": "SEETO",
-     "clue": "Take care of",
-     "stars": 3,
+     "answer": "TORSO",
+     "clue": "Body of art?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -1510,23 +1512,23 @@
     },
     {
      "num": 4,
-     "answer": "ASP",
-     "clue": "Cleopatra's fatal companion",
+     "answer": "ASH",
+     "clue": "Classic baseball-bat wood",
      "stars": 2,
-     "category": "history",
+     "category": "science-nature",
      "tags": [
-      "animals",
-      "history"
+      "nature",
+      "sports"
      ]
     },
     {
      "num": 5,
-     "answer": "TSA",
-     "clue": "Agcy. behind the shoes-off shuffle",
-     "stars": 3,
-     "category": "geography",
+     "answer": "PET",
+     "clue": "Treat like a dog?",
+     "stars": 4,
+     "category": "wordplay",
      "tags": [
-      "travel"
+      "sourced"
      ]
     }
    ]
@@ -1544,18 +1546,18 @@
    "cols": 5
   },
   "grid": [
-   "##RAE",
-   "ELENA",
-   "DIETS",
-   "ASSET",
-   "MAE##"
+   "##HEE",
+   "THETA",
+   "HEATS",
+   "ARRAY",
+   "TET##"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "RAE",
-     "clue": "\"Norma ___,\" 1979 film",
+     "answer": "HEE",
+     "clue": "TV's \"___ Haw\"",
      "stars": 4,
      "category": "entertainment",
      "register": "modern",
@@ -1565,20 +1567,19 @@
     },
     {
      "num": 4,
-     "answer": "ELENA",
-     "clue": "\"Maria ___,\" 1933 song",
+     "answer": "THETA",
+     "clue": "Head of Thermopylae?",
      "stars": 4,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "DIETS",
-     "clue": "Goes on a losing spree?",
-     "stars": 4,
+     "answer": "HEATS",
+     "clue": "Events at meets",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -1586,8 +1587,8 @@
     },
     {
      "num": 7,
-     "answer": "ASSET",
-     "clue": "Brains or beauty",
+     "answer": "ARRAY",
+     "clue": "Body of troops",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -1596,11 +1597,10 @@
     },
     {
      "num": 8,
-     "answer": "MAE",
-     "clue": "West of \"My Little Chickadee\"",
+     "answer": "TET",
+     "clue": "Offensive time?",
      "stars": 4,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1609,8 +1609,40 @@
    "down": [
     {
      "num": 1,
-     "answer": "REESE",
-     "clue": "Kyle ___, \"The Terminator\" hero",
+     "answer": "HEART",
+     "clue": "It skips a beat, in romances",
+     "stars": 3,
+     "category": "science-nature",
+     "tags": [
+      "valentines",
+      "science"
+     ]
+    },
+    {
+     "num": 2,
+     "answer": "ETTA",
+     "clue": "\"At Last\" singer James",
+     "stars": 3,
+     "category": "wordplay",
+     "register": "modern",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 3,
+     "answer": "EASY",
+     "clue": "Like pie, proverbially",
+     "stars": 2,
+     "category": "wordplay",
+     "tags": [
+      "fill"
+     ]
+    },
+    {
+     "num": 4,
+     "answer": "THAT",
+     "clue": "\"___ Hagen Girl,\" Reagan film",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1619,36 +1651,9 @@
      ]
     },
     {
-     "num": 2,
-     "answer": "ANTE",
-     "clue": "What to up when raising the stakes",
-     "stars": 3,
-     "category": "sports-leisure"
-    },
-    {
-     "num": 3,
-     "answer": "EAST",
-     "clue": "Right on the map?",
-     "stars": 4,
-     "category": "geography",
-     "tags": [
-      "travel"
-     ]
-    },
-    {
-     "num": 4,
-     "answer": "EDAM",
-     "clue": "Cheese made backward?",
-     "stars": 4,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 5,
-     "answer": "LISA",
-     "clue": "Innkeeper in Bellini's \"La Sonnambula\"",
+     "answer": "HERE",
+     "clue": "\"From ___ to Eternity\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1671,117 +1676,118 @@
    "cols": 5
   },
   "grid": [
-   "AVE##",
-   "LIETO",
-   "MARIO",
-   "ALIEN",
-   "##ERA"
+   "ENT##",
+   "GORGE",
+   "GREAT",
+   "SMELT",
+   "##SEA"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "AVE",
-     "clue": "Pennsylvania, in D.C. addresses: Abbr.",
-     "stars": 2,
-     "category": "geography",
+     "answer": "ENT",
+     "clue": "\"The Lord of the Rings\" creature",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "travel"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "LIETO",
-     "clue": "Stop the engines at sea",
+     "answer": "GORGE",
+     "clue": "Royal sight in Colorado",
      "stars": 3,
-     "category": "geography",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "MARIO",
-     "clue": "Andretti, for one",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "GREAT",
+     "clue": "\" ___ Day,\" 1929 song",
+     "stars": 4,
+     "category": "entertainment",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 8,
-     "answer": "ALIEN",
-     "clue": "Completely unfamiliar",
-     "stars": 2,
-     "category": "entertainment",
+     "answer": "SMELT",
+     "clue": "Get the lead out?",
+     "stars": 4,
+     "category": "science-nature",
      "tags": [
-      "movies",
-      "science"
+      "sourced"
      ]
     },
     {
      "num": 9,
-     "answer": "ERA",
-     "clue": "Jazz Age or Space Age, e.g.",
-     "stars": 2,
-     "category": "history",
+     "answer": "SEA",
+     "clue": "The Mediterranean, for one",
+     "stars": 1,
+     "category": "geography",
      "tags": [
-      "time",
-      "history"
+      "nature",
+      "travel",
+      "summer"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "ALMA",
-     "clue": "Heroine of Tennessee Williams's \"Summer and Smoke\"",
-     "stars": 4,
+     "answer": "EGGS",
+     "clue": "Omelet basics",
+     "stars": 1,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
-      "sourced"
+      "fill",
+      "food"
      ]
     },
     {
      "num": 2,
-     "answer": "VIAL",
-     "clue": "Mean or vulgar*",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "NORM",
+     "clue": "Average guy?",
+     "stars": 4,
+     "category": "entertainment",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 3,
-     "answer": "EERIE",
-     "clue": "Like \"The X-Files\"",
+     "answer": "TREES",
+     "clue": "Last of a Hemingway title",
      "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 5,
-     "answer": "TIER",
-     "clue": "Row of seats",
+     "answer": "GALE",
+     "clue": "Burst of laughter, figuratively",
      "stars": 3,
-     "category": "wordplay",
+     "category": "entertainment",
      "tags": [
-      "sourced"
+      "movies",
+      "nature"
      ]
     },
     {
      "num": 6,
-     "answer": "OONA",
-     "clue": "Actress Chaplin of \"Game of Thrones\"",
-     "stars": 4,
+     "answer": "ETTA",
+     "clue": "Kett of comics",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -1801,28 +1807,29 @@
    "cols": 5
   },
   "grid": [
-   "EAT##",
-   "THERE",
-   "TANIA",
-   "ABETS",
-   "##TEE"
+   "THE##",
+   "RESTS",
+   "EATIT",
+   "ELENA",
+   "##EAR"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "EAT",
-     "clue": "Absorb, as unexpected costs",
-     "stars": 2,
+     "answer": "THE",
+     "clue": "\"___ Sun Also Rises\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "food"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "THERE",
-     "clue": "\"___ is a tide . . . \"",
+     "answer": "RESTS",
+     "clue": "\"The defense ___\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -1832,40 +1839,64 @@
     },
     {
      "num": 7,
-     "answer": "TANIA",
-     "clue": "___ Australis, star in Ursa Major",
-     "stars": 3,
+     "answer": "EATIT",
+     "clue": "\"You can't have your cake if you ___\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 8,
-     "answer": "ABETS",
-     "clue": "Aids a felon",
-     "stars": 3,
+     "answer": "ELENA",
+     "clue": "\"Maria ___,\" 1941 #1 hit",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 9,
-     "answer": "TEE",
-     "clue": "Course requirement?",
-     "stars": 4,
-     "category": "wordplay",
+     "answer": "EAR",
+     "clue": "What a natural musician plays by",
+     "stars": 3,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "food",
+      "music"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "ETTA",
-     "clue": "\"At Last\" singer James",
+     "answer": "TREE",
+     "clue": "One with rings it never wears?",
+     "stars": 4,
+     "category": "science-nature",
+     "tags": [
+      "nature",
+      "christmas"
+     ]
+    },
+    {
+     "num": 2,
+     "answer": "HEAL",
+     "clue": "What time does to all wounds, they say",
+     "stars": 2,
+     "category": "science-nature",
+     "tags": [
+      "science"
+     ]
+    },
+    {
+     "num": 3,
+     "answer": "ESTEE",
+     "clue": "\"Terminal Bliss\" actress Chandler",
      "stars": 3,
      "category": "wordplay",
      "register": "modern",
@@ -1874,31 +1905,11 @@
      ]
     },
     {
-     "num": 2,
-     "answer": "AHAB",
-     "clue": "Moby Dick's pursuer",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 3,
-     "answer": "TENET",
-     "clue": "Article of faith",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 5,
-     "answer": "RITE",
-     "clue": "\"The ___ of Spring\"",
+     "answer": "TINA",
+     "clue": "She played Ginger on \"Gilligan's Island\"",
      "stars": 4,
-     "category": "wordplay",
+     "category": "geography",
      "register": "modern",
      "tags": [
       "sourced"
@@ -1906,10 +1917,14 @@
     },
     {
      "num": 6,
-     "answer": "EASE",
-     "clue": "What you're put at by a good host",
-     "stars": 3,
-     "category": "wordplay"
+     "answer": "STAR",
+     "clue": "One may be born, not made?",
+     "stars": 4,
+     "category": "entertainment",
+     "tags": [
+      "movies",
+      "science"
+     ]
     }
    ]
   },
@@ -1926,29 +1941,98 @@
    "cols": 7
   },
   "grid": [
-   "TOT#TEN",
-   "ALE#ROE",
-   "PEASANT",
-   "##SIN##",
-   "COERCED",
-   "ART#ERE",
-   "RES#SAW"
+   "AHA#SNL",
+   "RAT#EYE",
+   "INHASTE",
+   "##LOT##",
+   "WEEKEND",
+   "EAT#TEN",
+   "ERE#SEA"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "TOT",
-     "clue": "Cafeteria potato bite",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "food",
-      "school"
-     ]
+     "answer": "AHA",
+     "clue": "\"So THAT'S how it works!\"",
+     "stars": 3,
+     "category": "wordplay"
     },
     {
      "num": 4,
+     "answer": "SNL",
+     "clue": "\"Weekend Update\" show, for short",
+     "stars": 4,
+     "category": "entertainment",
+     "register": "modern",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 7,
+     "answer": "RAT",
+     "clue": "What you smell when double-crossed?",
+     "stars": 4,
+     "category": "science-nature",
+     "tags": [
+      "animals"
+     ]
+    },
+    {
+     "num": 8,
+     "answer": "EYE",
+     "clue": "Hurricane's calmest spot",
+     "stars": 3,
+     "category": "science-nature",
+     "tags": [
+      "science",
+      "nature"
+     ]
+    },
+    {
+     "num": 9,
+     "answer": "INHASTE",
+     "clue": "Without proper planning",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 11,
+     "answer": "LOT",
+     "clue": "A whole bunch",
+     "stars": 1,
+     "category": "wordplay",
+     "tags": [
+      "travel"
+     ]
+    },
+    {
+     "num": 12,
+     "answer": "WEEKEND",
+     "clue": "TGIF's payoff",
+     "stars": 1,
+     "category": "wordplay",
+     "tags": [
+      "fill",
+      "time"
+     ]
+    },
+    {
+     "num": 16,
+     "answer": "EAT",
+     "clue": "Absorb, as unexpected costs",
+     "stars": 2,
+     "category": "wordplay",
+     "tags": [
+      "food"
+     ]
+    },
+    {
+     "num": 17,
      "answer": "TEN",
      "clue": "Full count of bowling pins",
      "stars": 1,
@@ -1959,70 +2043,7 @@
      ]
     },
     {
-     "num": 7,
-     "answer": "ALE",
-     "clue": "Pub pint",
-     "stars": 1,
-     "category": "sports-leisure",
-     "tags": [
-      "food"
-     ]
-    },
-    {
-     "num": 8,
-     "answer": "ROE",
-     "clue": "Caviar, before the fancy tin",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
-      "food",
-      "animals"
-     ]
-    },
-    {
-     "num": 9,
-     "answer": "PEASANT",
-     "clue": "Kind of blouse",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 11,
-     "answer": "SIN",
-     "clue": "Envy or pride, e.g.",
-     "stars": 2,
-     "category": "arts-literature",
-     "tags": [
-      "books",
-      "history"
-     ]
-    },
-    {
-     "num": 12,
-     "answer": "COERCED",
-     "clue": "Compelled by intimidation",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 16,
-     "answer": "ART",
-     "clue": "It may be fine or martial",
-     "stars": 3,
-     "category": "arts-literature",
-     "tags": [
-      "art",
-      "school"
-     ]
-    },
-    {
-     "num": 17,
+     "num": 18,
      "answer": "ERE",
      "clue": "Poet's 'prior to'",
      "stars": 1,
@@ -2032,65 +2053,57 @@
      ]
     },
     {
-     "num": 18,
-     "answer": "RES",
-     "clue": "Thing, in law",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 19,
-     "answer": "SAW",
-     "clue": "Old adage",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "SEA",
+     "clue": "The Mediterranean, for one",
+     "stars": 1,
+     "category": "geography",
      "tags": [
-      "household",
-      "books"
+      "nature",
+      "travel",
+      "summer"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "TAP",
-     "clue": "Dance style with noisy shoes",
-     "stars": 2,
+     "answer": "ARI",
+     "clue": "___ Ben Canaan of \"Exodus\"",
+     "stars": 4,
      "category": "wordplay",
-     "tags": [
-      "music"
-     ]
-    },
-    {
-     "num": 2,
-     "answer": "OLE",
-     "clue": "Cry at a flamenco show",
-     "stars": 1,
-     "category": "sports-leisure",
-     "tags": [
-      "sports",
-      "music",
-      "worldcup"
-     ]
-    },
-    {
-     "num": 3,
-     "answer": "TEASETS",
-     "clue": "They hold at least two cups each",
-     "stars": 3,
-     "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
+     "num": 2,
+     "answer": "HAN",
+     "clue": "___ Solo of \"Star Wars\"",
+     "stars": 4,
+     "category": "science-nature",
+     "register": "modern",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 3,
+     "answer": "ATHLETE",
+     "clue": "One paid to play games?",
+     "stars": 4,
+     "category": "sports-leisure",
+     "tags": [
+      "sports",
+      "olympics"
+     ]
+    },
+    {
      "num": 4,
-     "answer": "TRANCES",
-     "clue": "Channeling states",
-     "stars": 2,
+     "answer": "SESTETS",
+     "clue": "Segments of sonnets",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -2098,77 +2111,76 @@
     },
     {
      "num": 5,
-     "answer": "EON",
-     "clue": "What a wait at the DMV feels like",
-     "stars": 3,
-     "category": "science-nature",
+     "answer": "NYT",
+     "clue": "Paper featured in the documentary \"Page One,\" for short",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "time",
-      "science"
+      "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "NET",
-     "clue": "Profit after everything's paid",
-     "stars": 2,
-     "category": "sports-leisure",
+     "answer": "LEE",
+     "clue": "Marvel's Stan",
+     "stars": 3,
+     "category": "entertainment",
      "tags": [
-      "sports",
-      "tech"
+      "handcraft"
      ]
     },
     {
      "num": 10,
-     "answer": "SIR",
-     "clue": "Word drilled into recruits",
-     "stars": 2,
-     "category": "history",
+     "answer": "AOK",
+     "clue": "\"All systems go\"",
+     "stars": 3,
+     "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "history"
+      "sourced"
      ]
     },
     {
      "num": 12,
-     "answer": "CAR",
-     "clue": "Dining or sleeper follower, on a train",
-     "stars": 2,
-     "category": "sports-leisure",
+     "answer": "WEE",
+     "clue": "First word of Burns's \"To a Mouse\"",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "travel"
+      "sourced"
      ]
     },
     {
      "num": 13,
-     "answer": "ORE",
-     "clue": "Rock with metal hiding inside",
-     "stars": 2,
+     "answer": "EAR",
+     "clue": "What a natural musician plays by",
+     "stars": 3,
      "category": "science-nature",
      "tags": [
-      "nature",
-      "science"
+      "food",
+      "music"
      ]
     },
     {
      "num": 14,
-     "answer": "ERA",
-     "clue": "Jazz Age or Space Age, e.g.",
-     "stars": 2,
-     "category": "history",
+     "answer": "NEE",
+     "clue": "Dolley Madison, ___ Payne",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "time",
-      "history"
+      "sourced"
      ]
     },
     {
      "num": 15,
-     "answer": "DEW",
-     "clue": "Drops that arrive before breakfast",
-     "stars": 3,
+     "answer": "DNA",
+     "clue": "Crime-lab evidence, for short",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
-      "nature",
-      "spring"
+      "science"
      ]
     }
    ]
@@ -2186,41 +2198,40 @@
    "cols": 7
   },
   "grid": [
-   "ATE#TOT",
-   "HES#AWE",
-   "ANTENNA",
-   "##ATL##",
-   "ASTAIRE",
-   "NEE#NET",
-   "NES#ESC"
+   "ELS#NEO",
+   "YET#ERR",
+   "EXERTED",
+   "##EAT##",
+   "NORELCO",
+   "ONE#EEL",
+   "MOD#DOE"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "ATE",
-     "clue": "Polished off a plate",
-     "stars": 2,
+     "answer": "ELS",
+     "clue": "High ways?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
-      "food"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "TOT",
-     "clue": "Cafeteria potato bite",
-     "stars": 2,
+     "answer": "NEO",
+     "clue": "New beginning?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
-      "food",
-      "school"
+      "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "HES",
-     "clue": "\"For ___ a jolly . . . \"",
+     "answer": "YET",
+     "clue": "\"Are we there ___?\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2230,30 +2241,15 @@
     },
     {
      "num": 8,
-     "answer": "AWE",
-     "clue": "Standard reaction at the Grand Canyon",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "travel"
-     ]
+     "answer": "ERR",
+     "clue": "\"To ___ is human\"",
+     "stars": 2,
+     "category": "wordplay"
     },
     {
      "num": 9,
-     "answer": "ANTENNA",
-     "clue": "Feeler on a bug — or on an old TV",
-     "stars": 3,
-     "category": "science-nature",
-     "tags": [
-      "tech",
-      "science",
-      "animals"
-     ]
-    },
-    {
-     "num": 11,
-     "answer": "ATL",
-     "clue": "Part of NATO",
+     "answer": "EXERTED",
+     "clue": "Like effort and influence",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2261,10 +2257,48 @@
      ]
     },
     {
+     "num": 11,
+     "answer": "EAT",
+     "clue": "Absorb, as unexpected costs",
+     "stars": 2,
+     "category": "wordplay",
+     "tags": [
+      "food"
+     ]
+    },
+    {
      "num": 12,
-     "answer": "ASTAIRE",
-     "clue": "Dancer who \"rates A-1\"?",
-     "stars": 5,
+     "answer": "NORELCO",
+     "clue": "Brand in the grooming aisle",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 16,
+     "answer": "ONE",
+     "clue": "Bill in a tip jar",
+     "stars": 2,
+     "category": "wordplay"
+    },
+    {
+     "num": 17,
+     "answer": "EEL",
+     "clue": "Unagi, at a sushi bar",
+     "stars": 2,
+     "category": "science-nature",
+     "tags": [
+      "animals",
+      "food"
+     ]
+    },
+    {
+     "num": 18,
+     "answer": "MOD",
+     "clue": "TV's \"The ___ Squad\"",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -2272,70 +2306,44 @@
      ]
     },
     {
-     "num": 16,
-     "answer": "NEE",
-     "clue": "Bess Truman, ___ Wallace",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 17,
-     "answer": "NET",
-     "clue": "Profit after everything's paid",
-     "stars": 2,
-     "category": "sports-leisure",
-     "tags": [
-      "sports",
-      "tech"
-     ]
-    },
-    {
-     "num": 18,
-     "answer": "NES",
-     "clue": "Super ___ (video game name)",
-     "stars": 3,
-     "category": "sports-leisure",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 19,
-     "answer": "ESC",
-     "clue": "Helpful PC key",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "DOE",
+     "clue": "A deer, a female deer, in song",
+     "stars": 2,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "animals",
+      "music"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "AHA",
-     "clue": "\"So THAT'S how it works!\"",
+     "answer": "EYE",
+     "clue": "It's kept on the ball?",
      "stars": 3,
-     "category": "wordplay"
+     "category": "science-nature",
+     "tags": [
+      "science",
+      "nature"
+     ]
     },
     {
      "num": 2,
-     "answer": "TEN",
-     "clue": "Full count of bowling pins",
-     "stars": 1,
-     "category": "sports-leisure",
+     "answer": "LEX",
+     "clue": "Big Apple subway, with \"the\"",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "sports",
-      "olympics"
+      "sourced"
      ]
     },
     {
      "num": 3,
-     "answer": "ESTATES",
-     "clue": "Sights at Newport",
+     "answer": "STEERED",
+     "clue": "Handled the helm",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2344,8 +2352,8 @@
     },
     {
      "num": 4,
-     "answer": "TANLINE",
-     "clue": "Something not seen on a nudist, maybe",
+     "answer": "NETTLED",
+     "clue": "Rubbed the wrong way",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2354,50 +2362,49 @@
     },
     {
      "num": 5,
-     "answer": "OWN",
-     "clue": "\"To thine ___ self . . . \"",
-     "stars": 4,
+     "answer": "ERE",
+     "clue": "Poet's 'prior to'",
+     "stars": 1,
+     "category": "arts-literature",
+     "tags": [
+      "books"
+     ]
+    },
+    {
+     "num": 6,
+     "answer": "ORD",
+     "clue": "Fort ___, in California",
+     "stars": 3,
      "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 10,
+     "answer": "RAE",
+     "clue": "\"Norma ___,\" Field film",
+     "stars": 4,
+     "category": "entertainment",
      "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
-     "num": 6,
-     "answer": "TEA",
-     "clue": "Hot gossip, in slang",
-     "stars": 3,
-     "category": "sports-leisure",
-     "tags": [
-      "food"
-     ]
-    },
-    {
-     "num": 10,
-     "answer": "ETA",
-     "clue": "Pilot's projection, for short",
-     "stars": 2,
-     "category": "geography",
-     "tags": [
-      "travel"
-     ]
-    },
-    {
      "num": 12,
-     "answer": "ANN",
-     "clue": "That girl in \"That Girl\"",
-     "stars": 4,
+     "answer": "NOM",
+     "clue": "Jean, for one",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 13,
-     "answer": "SEE",
-     "clue": "\"What did I tell you?\"",
+     "answer": "ONO",
+     "clue": "\"Sail ___ Ship of State!\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2407,22 +2414,24 @@
     },
     {
      "num": 14,
-     "answer": "RES",
-     "clue": "Thing, in law",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "CEO",
+     "clue": "Corner-office occupant: Abbr.",
+     "stars": 2,
+     "category": "entertainment",
      "tags": [
-      "sourced"
+      "tech"
      ]
     },
     {
      "num": 15,
-     "answer": "ETC",
-     "clue": "List trailer, for short",
-     "stars": 2,
-     "category": "wordplay",
+     "answer": "OLE",
+     "clue": "Cry at a flamenco show",
+     "stars": 1,
+     "category": "sports-leisure",
      "tags": [
-      "school"
+      "sports",
+      "music",
+      "worldcup"
      ]
     }
    ]
@@ -2440,83 +2449,84 @@
    "cols": 7
   },
   "grid": [
-   "MET#MUM",
-   "ASH#ONE",
-   "ETERNAL",
-   "##AOK##",
-   "HOTTEST",
-   "ARE#EEL",
-   "HER#SAC"
+   "WET#SPA",
+   "ISH#TET",
+   "ITERATE",
+   "##AIR##",
+   "RETORTS",
+   "ARE#EAT",
+   "EAR#DRY"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "MET",
-     "clue": "Big Apple attraction, with \"the\"",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 4,
-     "answer": "MUM",
-     "clue": "Mother's flower?",
-     "stars": 4,
-     "category": "history",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 7,
-     "answer": "ASH",
-     "clue": "Classic baseball-bat wood",
+     "answer": "WET",
+     "clue": "Like fresh paint, per the sign",
      "stars": 2,
      "category": "science-nature",
      "tags": [
       "nature",
-      "sports"
+      "spring"
+     ]
+    },
+    {
+     "num": 4,
+     "answer": "SPA",
+     "clue": "Resort with robes and cucumber water",
+     "stars": 2,
+     "category": "sports-leisure",
+     "tags": [
+      "travel"
+     ]
+    },
+    {
+     "num": 7,
+     "answer": "ISH",
+     "clue": "Relative of -esque",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
      ]
     },
     {
      "num": 8,
-     "answer": "ONE",
-     "clue": "Bill in a tip jar",
-     "stars": 2,
-     "category": "wordplay"
+     "answer": "TET",
+     "clue": "Offensive time?",
+     "stars": 4,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
     },
     {
      "num": 9,
-     "answer": "ETERNAL",
-     "clue": "Irving Stone's \"Love Is ___\"",
-     "stars": 4,
+     "answer": "ITERATE",
+     "clue": "Say it one more time",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 11,
-     "answer": "AOK",
-     "clue": "\"All systems go\"",
-     "stars": 3,
-     "category": "wordplay",
-     "register": "modern",
+     "answer": "AIR",
+     "clue": "Broadcast, as a show",
+     "stars": 2,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "nature"
      ]
     },
     {
      "num": 12,
-     "answer": "HOTTEST",
-     "clue": "Most peppery",
-     "stars": 2,
+     "answer": "RETORTS",
+     "clue": "\"So's your old man!\" and others",
+     "stars": 3,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -2530,46 +2540,43 @@
     },
     {
      "num": 17,
-     "answer": "EEL",
-     "clue": "Unagi, at a sushi bar",
+     "answer": "EAT",
+     "clue": "Absorb, as unexpected costs",
      "stars": 2,
-     "category": "science-nature",
+     "category": "wordplay",
      "tags": [
-      "animals",
       "food"
      ]
     },
     {
      "num": 18,
-     "answer": "HER",
-     "clue": "\"Rings on ___ fingers . . . \"",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
+     "answer": "EAR",
+     "clue": "What a natural musician plays by",
+     "stars": 3,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "food",
+      "music"
      ]
     },
     {
      "num": 19,
-     "answer": "SAC",
-     "clue": "Air pocket in a lung",
-     "stars": 2,
-     "category": "science-nature",
+     "answer": "DRY",
+     "clue": "Kind of goods or run",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "science",
-      "animals"
+      "sourced"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "MAE",
-     "clue": "West of \"My Little Chickadee\"",
-     "stars": 4,
+     "answer": "WII",
+     "clue": "What to play Super Mario Galaxy on",
+     "stars": 3,
      "category": "wordplay",
-     "register": "modern",
      "tags": [
       "sourced"
      ]
@@ -2598,8 +2605,49 @@
     },
     {
      "num": 4,
-     "answer": "MONKEES",
-     "clue": "#1 album for 13 weeks in 1966-67, with \"The\"",
+     "answer": "STARRED",
+     "clue": "Had the lead",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 5,
+     "answer": "PET",
+     "clue": "Treat like a dog?",
+     "stars": 4,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 6,
+     "answer": "ATE",
+     "clue": "Polished off a plate",
+     "stars": 2,
+     "category": "wordplay",
+     "tags": [
+      "food"
+     ]
+    },
+    {
+     "num": 10,
+     "answer": "RIO",
+     "clue": "Carnival city on Guanabara Bay",
+     "stars": 2,
+     "category": "geography",
+     "tags": [
+      "travel",
+      "olympics"
+     ]
+    },
+    {
+     "num": 12,
+     "answer": "RAE",
+     "clue": "\"Norma ___,\" Field film",
      "stars": 4,
      "category": "entertainment",
      "register": "modern",
@@ -2608,74 +2656,31 @@
      ]
     },
     {
-     "num": 5,
-     "answer": "UNA",
-     "clue": "Women's rights periodical of 1853",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 6,
-     "answer": "MEL",
-     "clue": "Blanc or Brooks",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 10,
-     "answer": "ROT",
-     "clue": "Nonsense, to a Brit",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
-      "nature"
-     ]
-    },
-    {
-     "num": 12,
-     "answer": "HAH",
-     "clue": "\"I told you so!\"",
-     "stars": 3,
-     "category": "wordplay",
-     "register": "modern",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 13,
-     "answer": "ORE",
-     "clue": "Rock with metal hiding inside",
+     "answer": "ERA",
+     "clue": "Jazz Age or Space Age, e.g.",
      "stars": 2,
-     "category": "science-nature",
+     "category": "history",
      "tags": [
-      "nature",
-      "science"
+      "time",
+      "history"
      ]
     },
     {
      "num": 14,
-     "answer": "SEA",
-     "clue": "The Mediterranean, for one",
-     "stars": 1,
-     "category": "geography",
+     "answer": "TAR",
+     "clue": "Old salt of the high seas",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "nature",
-      "travel",
-      "summer"
+      "history"
      ]
     },
     {
      "num": 15,
-     "answer": "TLC",
-     "clue": "What an R.N. gives",
-     "stars": 3,
+     "answer": "STY",
+     "clue": "Pork place?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -2696,31 +2701,42 @@
    "cols": 7
   },
   "grid": [
-   "ETA#RHO",
-   "LET#OAR",
-   "INHASTE",
-   "##LIE##",
-   "AVERTED",
-   "SET#TAO",
-   "ATE#ETC"
+   "NEE#PEN",
+   "OWN#RYE",
+   "SETTEES",
+   "##ENT##",
+   "CANTEEN",
+   "ART#SKA",
+   "TEE#TET"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "ETA",
-     "clue": "Pilot's projection, for short",
-     "stars": 2,
-     "category": "geography",
+     "answer": "NEE",
+     "clue": "Bess Truman, ___ Wallace",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "travel"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "RHO",
-     "clue": "Fraternity \"P\"",
-     "stars": 3,
+     "answer": "PEN",
+     "clue": "Pig's quarters",
+     "stars": 2,
+     "category": "arts-literature",
+     "tags": [
+      "school",
+      "animals"
+     ]
+    },
+    {
+     "num": 7,
+     "answer": "OWN",
+     "clue": "\"To thine ___ self . . . \"",
+     "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
@@ -2728,30 +2744,20 @@
      ]
     },
     {
-     "num": 7,
-     "answer": "LET",
-     "clue": "Serve that clips the net cord",
-     "stars": 3,
-     "category": "sports-leisure",
-     "tags": [
-      "sports"
-     ]
-    },
-    {
      "num": 8,
-     "answer": "OAR",
-     "clue": "Crew member's blade",
-     "stars": 2,
-     "category": "sports-leisure",
+     "answer": "RYE",
+     "clue": "Salinger's catcher was in it",
+     "stars": 3,
+     "category": "science-nature",
      "tags": [
-      "sports",
-      "olympics"
+      "food",
+      "books"
      ]
     },
     {
      "num": 9,
-     "answer": "INHASTE",
-     "clue": "Without proper planning",
+     "answer": "SETTEES",
+     "clue": "Spots for lounge lizards",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -2760,39 +2766,8 @@
     },
     {
      "num": 11,
-     "answer": "LIE",
-     "clue": "Golf ball's resting position",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "sports"
-     ]
-    },
-    {
-     "num": 12,
-     "answer": "AVERTED",
-     "clue": "Like some eyes and disasters",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 16,
-     "answer": "SET",
-     "clue": "Where a film crew works",
-     "stars": 2,
-     "category": "entertainment",
-     "tags": [
-      "movies",
-      "sports"
-     ]
-    },
-    {
-     "num": 17,
-     "answer": "TAO",
-     "clue": "\"___ Te Ching\"",
+     "answer": "ENT",
+     "clue": "\"The Lord of the Rings\" creature",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2801,134 +2776,162 @@
      ]
     },
     {
-     "num": 18,
-     "answer": "ATE",
-     "clue": "Polished off a plate",
-     "stars": 2,
+     "num": 12,
+     "answer": "CANTEEN",
+     "clue": "Camp's watering hole — or what you carry from it",
+     "stars": 3,
+     "category": "sports-leisure",
+     "tags": [
+      "camping",
+      "travel"
+     ]
+    },
+    {
+     "num": 16,
+     "answer": "ART",
+     "clue": "It may be fine or martial",
+     "stars": 3,
+     "category": "arts-literature",
+     "tags": [
+      "art",
+      "school"
+     ]
+    },
+    {
+     "num": 17,
+     "answer": "SKA",
+     "clue": "Cousin of reggae",
+     "stars": 3,
      "category": "wordplay",
      "tags": [
-      "food"
+      "sourced"
+     ]
+    },
+    {
+     "num": 18,
+     "answer": "TEE",
+     "clue": "Course requirement?",
+     "stars": 4,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
      ]
     },
     {
      "num": 19,
-     "answer": "ETC",
-     "clue": "List trailer, for short",
-     "stars": 2,
+     "answer": "TET",
+     "clue": "Offensive time?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
-      "school"
+      "sourced"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "ELI",
-     "clue": "Whitney or Wallach",
-     "stars": 3,
+     "answer": "NOS",
+     "clue": "Beckett's \"___ Knife\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 2,
-     "answer": "TEN",
-     "clue": "Full count of bowling pins",
-     "stars": 1,
-     "category": "sports-leisure",
+     "answer": "EWE",
+     "clue": "Flock mother",
+     "stars": 2,
+     "category": "science-nature",
      "tags": [
-      "sports",
-      "olympics"
+      "animals",
+      "nature"
      ]
     },
     {
      "num": 3,
-     "answer": "ATHLETE",
-     "clue": "One paid to play games?",
-     "stars": 4,
-     "category": "sports-leisure",
+     "answer": "ENTENTE",
+     "clue": "Understanding between nations",
+     "stars": 3,
+     "category": "wordplay",
      "tags": [
-      "sports",
-      "olympics"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "ROSETTE",
-     "clue": "Circular architectural ornament",
+     "answer": "PRETEST",
+     "clue": "Course requisite, at times",
      "stars": 3,
-     "category": "science-nature",
+     "category": "wordplay",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 5,
-     "answer": "HAT",
-     "clue": "Magician's rabbit hideout",
+     "answer": "EYE",
+     "clue": "It's kept on the ball?",
      "stars": 3,
-     "category": "sports-leisure",
-     "tags": [
-      "winter"
-     ]
-    },
-    {
-     "num": 6,
-     "answer": "ORE",
-     "clue": "Rock with metal hiding inside",
-     "stars": 2,
      "category": "science-nature",
      "tags": [
-      "nature",
-      "science"
-     ]
-    },
-    {
-     "num": 10,
-     "answer": "AIR",
-     "clue": "Broadcast, as a show",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
+      "science",
       "nature"
      ]
     },
     {
-     "num": 12,
-     "answer": "ASA",
-     "clue": "Sly ___ fox",
+     "num": 6,
+     "answer": "NES",
+     "clue": "Super ___ (old game console)",
      "stars": 3,
-     "category": "wordplay",
+     "category": "sports-leisure",
      "tags": [
       "sourced"
      ]
     },
     {
-     "num": 13,
-     "answer": "VET",
-     "clue": "Screen, as job candidates",
-     "stars": 2,
+     "num": 10,
+     "answer": "TNT",
+     "clue": "Crate letters in classic cartoons",
+     "stars": 3,
+     "category": "entertainment",
+     "tags": [
+      "movies",
+      "science"
+     ]
+    },
+    {
+     "num": 12,
+     "answer": "CAT",
+     "clue": "Curiosity's famous victim",
+     "stars": 3,
      "category": "science-nature",
      "tags": [
-      "animals"
+      "animals",
+      "halloween"
      ]
+    },
+    {
+     "num": 13,
+     "answer": "ARE",
+     "clue": "Exist, for two or more",
+     "stars": 2,
+     "category": "wordplay"
     },
     {
      "num": 14,
-     "answer": "EAT",
-     "clue": "Absorb, as unexpected costs",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "food"
-     ]
+     "answer": "EKE",
+     "clue": "Stretch to the limit, with 'out'?",
+     "stars": 3,
+     "category": "wordplay"
     },
     {
      "num": 15,
-     "answer": "DOC",
-     "clue": "\"What's up, ___?\"",
+     "answer": "NAT",
+     "clue": "\"The Confessions of ___ Turner\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -2951,21 +2954,70 @@
    "cols": 7
   },
   "grid": [
-   "OAR#ERR",
-   "THE#NYE",
-   "CASTLES",
-   "##TEA##",
-   "EGOTRIP",
-   "EAR#GRO",
-   "LYE#EAT"
+   "ENT#SAW",
+   "AYE#ONE",
+   "RESENTS",
+   "##TEN##",
+   "STALEST",
+   "TET#THE",
+   "UAE#SEE"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "OAR",
-     "clue": "Crew member's blade",
+     "answer": "ENT",
+     "clue": "\"The Lord of the Rings\" creature",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 4,
+     "answer": "SAW",
+     "clue": "Old adage",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "household",
+      "books"
+     ]
+    },
+    {
+     "num": 7,
+     "answer": "AYE",
+     "clue": "Vote in favor",
+     "stars": 1,
+     "category": "history",
+     "tags": [
+      "travel"
+     ]
+    },
+    {
+     "num": 8,
+     "answer": "ONE",
+     "clue": "Bill in a tip jar",
      "stars": 2,
+     "category": "wordplay"
+    },
+    {
+     "num": 9,
+     "answer": "RESENTS",
+     "clue": "Feels indignant about",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 11,
+     "answer": "TEN",
+     "clue": "Full count of bowling pins",
+     "stars": 1,
      "category": "sports-leisure",
      "tags": [
       "sports",
@@ -2973,14 +3025,27 @@
      ]
     },
     {
-     "num": 4,
-     "answer": "ERR",
-     "clue": "\"To ___ is human\"",
-     "stars": 2,
-     "category": "wordplay"
+     "num": 12,
+     "answer": "STALEST",
+     "clue": "Oldest, as jokes",
+     "stars": 3,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
     },
     {
-     "num": 7,
+     "num": 16,
+     "answer": "TET",
+     "clue": "Offensive time?",
+     "stars": 4,
+     "category": "wordplay",
+     "tags": [
+      "sourced"
+     ]
+    },
+    {
+     "num": 17,
      "answer": "THE",
      "clue": "\"___ Sun Also Rises\"",
      "stars": 4,
@@ -2991,20 +3056,9 @@
      ]
     },
     {
-     "num": 8,
-     "answer": "NYE",
-     "clue": "\"Bill ___ and Boomerang\"",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 9,
-     "answer": "CASTLES",
-     "clue": "Moves rook and king",
+     "num": 18,
+     "answer": "UAE",
+     "clue": "Mideast land, for short",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3012,28 +3066,20 @@
      ]
     },
     {
-     "num": 11,
-     "answer": "TEA",
-     "clue": "Hot gossip, in slang",
-     "stars": 3,
-     "category": "sports-leisure",
-     "tags": [
-      "food"
-     ]
-    },
-    {
-     "num": 12,
-     "answer": "EGOTRIP",
-     "clue": "\"I\"-opening experience?",
+     "num": 19,
+     "answer": "SEE",
+     "clue": "\"What did I tell you?\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
      "tags": [
       "sourced"
      ]
-    },
+    }
+   ],
+   "down": [
     {
-     "num": 16,
+     "num": 1,
      "answer": "EAR",
      "clue": "What a natural musician plays by",
      "stars": 3,
@@ -3044,59 +3090,21 @@
      ]
     },
     {
-     "num": 17,
-     "answer": "GRO",
-     "clue": "_____ Harlem Brudtland (Norwegian leader)",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 18,
-     "answer": "LYE",
-     "clue": "Drain cleaner ingredient",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 19,
-     "answer": "EAT",
-     "clue": "Absorb, as unexpected costs",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "food"
-     ]
-    }
-   ],
-   "down": [
-    {
-     "num": 1,
-     "answer": "OTC",
-     "clue": "Where lts. at made",
-     "stars": 3,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
      "num": 2,
-     "answer": "AHA",
-     "clue": "\"So THAT'S how it works!\"",
-     "stars": 3,
-     "category": "wordplay"
+     "answer": "NYE",
+     "clue": "\"Bill ___ and Boomerang\"",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
+     "tags": [
+      "sourced"
+     ]
     },
     {
      "num": 3,
-     "answer": "RESTORE",
-     "clue": "Modernize, in a way",
-     "stars": 3,
+     "answer": "TESTATE",
+     "clue": "Not unwilling?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -3104,29 +3112,30 @@
     },
     {
      "num": 4,
-     "answer": "ENLARGE",
-     "clue": "Turn into something big",
-     "stars": 3,
+     "answer": "SONNETS",
+     "clue": "\"The New Colossus\" and the like",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 5,
-     "answer": "RYE",
-     "clue": "Salinger's catcher was in it",
+     "answer": "ANT",
+     "clue": "Aesop's industrious worker",
      "stars": 3,
      "category": "science-nature",
      "tags": [
-      "food",
-      "books"
+      "animals",
+      "summer"
      ]
     },
     {
      "num": 6,
-     "answer": "RES",
-     "clue": "Thing, in law",
+     "answer": "WES",
+     "clue": "Unseld of the N.B.A.",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3135,16 +3144,6 @@
     },
     {
      "num": 10,
-     "answer": "TET",
-     "clue": "Offensive time?",
-     "stars": 4,
-     "category": "wordplay",
-     "tags": [
-      "sourced"
-     ]
-    },
-    {
-     "num": 12,
      "answer": "EEL",
      "clue": "Unagi, at a sushi bar",
      "stars": 2,
@@ -3155,9 +3154,9 @@
      ]
     },
     {
-     "num": 13,
-     "answer": "GAY",
-     "clue": "\"The ___ Divorcee\"",
+     "num": 12,
+     "answer": "STU",
+     "clue": "Disco ___ of \"The Simpsons\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -3166,9 +3165,19 @@
      ]
     },
     {
+     "num": 13,
+     "answer": "TEA",
+     "clue": "Hot gossip, in slang",
+     "stars": 3,
+     "category": "sports-leisure",
+     "tags": [
+      "food"
+     ]
+    },
+    {
      "num": 14,
-     "answer": "IRA",
-     "clue": "Org. in \"Odd Man Out\"",
+     "answer": "SHE",
+     "clue": "\"That's all ___ wrote\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -3178,9 +3187,9 @@
     },
     {
      "num": 15,
-     "answer": "POT",
-     "clue": "Cambodian leader Pol ___",
-     "stars": 3,
+     "answer": "TEE",
+     "clue": "Course requirement?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -3201,64 +3210,65 @@
    "cols": 7
   },
   "grid": [
-   "TAR#MAW",
-   "EVE#ERA",
-   "DEFEATS",
-   "##EEL##",
-   "PARKING",
-   "EWE#EYE",
-   "NEE#RTE"
+   "ARI#MIT",
+   "SAT#AMI",
+   "STEREOS",
+   "##RES##",
+   "FRANTIC",
+   "EAT#ROE",
+   "DYE#ONO"
   ],
   "clues": {
    "across": [
     {
      "num": 1,
-     "answer": "TAR",
-     "clue": "Old salt of the high seas",
-     "stars": 3,
+     "answer": "ARI",
+     "clue": "___ Ben Canaan of \"Exodus\"",
+     "stars": 4,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "history"
+      "sourced"
      ]
     },
     {
      "num": 4,
-     "answer": "MAW",
-     "clue": "Symbol of voracity",
+     "answer": "MIT",
+     "clue": "Weimar \"with\"",
      "stars": 3,
      "category": "wordplay",
+     "register": "modern",
      "tags": [
       "sourced"
      ]
     },
     {
      "num": 7,
-     "answer": "EVE",
-     "clue": "First lady of Eden",
-     "stars": 3,
-     "category": "history",
+     "answer": "SAT",
+     "clue": "Posed for a portrait",
+     "stars": 2,
+     "category": "arts-literature",
      "tags": [
-      "christmas",
-      "newyear",
-      "books"
+      "art",
+      "school"
      ]
     },
     {
      "num": 8,
-     "answer": "ERA",
-     "clue": "Jazz Age or Space Age, e.g.",
-     "stars": 2,
-     "category": "history",
+     "answer": "AMI",
+     "clue": "\"___ Blue?\": 1929 song",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
      "tags": [
-      "time",
-      "history"
+      "sourced"
      ]
     },
     {
      "num": 9,
-     "answer": "DEFEATS",
-     "clue": "Gets the better of",
-     "stars": 3,
+     "answer": "STEREOS",
+     "clue": "Record holders?",
+     "stars": 4,
      "category": "wordplay",
      "tags": [
       "sourced"
@@ -3266,52 +3276,8 @@
     },
     {
      "num": 11,
-     "answer": "EEL",
-     "clue": "Unagi, at a sushi bar",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
-      "animals",
-      "food"
-     ]
-    },
-    {
-     "num": 12,
-     "answer": "PARKING",
-     "clue": "Downtown headache",
-     "stars": 2,
-     "category": "wordplay",
-     "tags": [
-      "fill",
-      "travel"
-     ]
-    },
-    {
-     "num": 16,
-     "answer": "EWE",
-     "clue": "Flock mother",
-     "stars": 2,
-     "category": "science-nature",
-     "tags": [
-      "animals",
-      "nature"
-     ]
-    },
-    {
-     "num": 17,
-     "answer": "EYE",
-     "clue": "Hurricane's calmest spot",
-     "stars": 3,
-     "category": "science-nature",
-     "tags": [
-      "science",
-      "nature"
-     ]
-    },
-    {
-     "num": 18,
-     "answer": "NEE",
-     "clue": "Bess Truman, ___ Wallace",
+     "answer": "RES",
+     "clue": "In medias ___",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3319,21 +3285,64 @@
      ]
     },
     {
-     "num": 19,
-     "answer": "RTE",
-     "clue": "Hwy. kin",
-     "stars": 1,
-     "category": "geography",
+     "num": 12,
+     "answer": "FRANTIC",
+     "clue": "Wildly excited",
+     "stars": 2,
+     "category": "wordplay",
      "tags": [
-      "travel"
+      "sourced"
+     ]
+    },
+    {
+     "num": 16,
+     "answer": "EAT",
+     "clue": "Absorb, as unexpected costs",
+     "stars": 2,
+     "category": "wordplay",
+     "tags": [
+      "food"
+     ]
+    },
+    {
+     "num": 17,
+     "answer": "ROE",
+     "clue": "Caviar, before the fancy tin",
+     "stars": 2,
+     "category": "science-nature",
+     "tags": [
+      "food",
+      "animals"
+     ]
+    },
+    {
+     "num": 18,
+     "answer": "DYE",
+     "clue": "Salon bottle's transformer",
+     "stars": 2,
+     "category": "science-nature",
+     "tags": [
+      "art",
+      "household"
+     ]
+    },
+    {
+     "num": 19,
+     "answer": "ONO",
+     "clue": "\"Sail ___ Union . . . \": Longfellow",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
+     "tags": [
+      "sourced"
      ]
     }
    ],
    "down": [
     {
      "num": 1,
-     "answer": "TED",
-     "clue": "Knight of TV",
+     "answer": "ASS",
+     "clue": "Beast of burden",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3342,28 +3351,18 @@
     },
     {
      "num": 2,
-     "answer": "AVE",
-     "clue": "Pennsylvania, in D.C. addresses: Abbr.",
-     "stars": 2,
-     "category": "geography",
+     "answer": "RAT",
+     "clue": "What you smell when double-crossed?",
+     "stars": 4,
+     "category": "science-nature",
      "tags": [
-      "travel"
+      "animals"
      ]
     },
     {
      "num": 3,
-     "answer": "REFEREE",
-     "clue": "Person everyone at the game disagrees with",
-     "stars": 4,
-     "category": "sports-leisure",
-     "tags": [
-      "sports"
-     ]
-    },
-    {
-     "num": 4,
-     "answer": "MEALIER",
-     "clue": "Not so smooth, maybe",
+     "answer": "ITERATE",
+     "clue": "Remind, in a way",
      "stars": 3,
      "category": "wordplay",
      "tags": [
@@ -3371,20 +3370,30 @@
      ]
     },
     {
-     "num": 5,
-     "answer": "ART",
-     "clue": "It may be fine or martial",
-     "stars": 3,
-     "category": "arts-literature",
+     "num": 4,
+     "answer": "MAESTRO",
+     "clue": "One who faces the music for a living?",
+     "stars": 5,
+     "category": "entertainment",
      "tags": [
-      "art",
-      "school"
+      "music"
+     ]
+    },
+    {
+     "num": 5,
+     "answer": "IMO",
+     "clue": "\"Well, I'd say ...,\" in a text",
+     "stars": 4,
+     "category": "wordplay",
+     "register": "modern",
+     "tags": [
+      "sourced"
      ]
     },
     {
      "num": 6,
-     "answer": "WAS",
-     "clue": "Kipling's \"The Man Who ___\"",
+     "answer": "TIS",
+     "clue": "\"___ folly to be wise\": Gray",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -3394,8 +3403,8 @@
     },
     {
      "num": 10,
-     "answer": "EEK",
-     "clue": "\"___ and Meek,\" comic strip",
+     "answer": "REN",
+     "clue": "Nickelodeon's \"___ and Stimpy\"",
      "stars": 4,
      "category": "wordplay",
      "register": "modern",
@@ -3405,45 +3414,44 @@
     },
     {
      "num": 12,
-     "answer": "PEN",
-     "clue": "Pig's quarters",
-     "stars": 2,
-     "category": "arts-literature",
+     "answer": "FED",
+     "clue": "Disobeyed a zoo sign?",
+     "stars": 4,
+     "category": "wordplay",
      "tags": [
-      "school",
-      "animals"
+      "sourced"
      ]
     },
     {
      "num": 13,
-     "answer": "AWE",
-     "clue": "Standard reaction at the Grand Canyon",
-     "stars": 3,
-     "category": "wordplay",
+     "answer": "RAY",
+     "clue": "Manta, for one",
+     "stars": 2,
+     "category": "science-nature",
      "tags": [
-      "travel"
+      "nature",
+      "animals",
+      "summer"
      ]
     },
     {
      "num": 14,
-     "answer": "NYT",
-     "clue": "Paper featured in the documentary \"Page One,\" for short",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
+     "answer": "ION",
+     "clue": "Atom that lost or found an electron",
+     "stars": 2,
+     "category": "science-nature",
      "tags": [
-      "sourced"
+      "science"
      ]
     },
     {
      "num": 15,
-     "answer": "GEE",
-     "clue": "\"You don't say!\"",
-     "stars": 4,
-     "category": "wordplay",
-     "register": "modern",
+     "answer": "CEO",
+     "clue": "Corner-office occupant: Abbr.",
+     "stars": 2,
+     "category": "entertainment",
      "tags": [
-      "sourced"
+      "tech"
      ]
     }
    ]

@@ -3,6 +3,11 @@
 export interface DifficultyKnobs {
   /** Preferred clue difficulty tier (1–5); nearest available is used. */
   clueTier: number;
+  /** Hard ceiling on clue difficulty for the day — no clue above this tier is
+   * ever shown. This is where we sit *slightly easier than the NYT ramp*:
+   * Monday is a firm gimme, and the ceiling tops out at 4 (never the most
+   * devious tier-5), so Saturday/Sunday run ~a level friendlier than the Times. */
+  clueCap: number;
   /** Minimum entry score allowed in generated fill. */
   scoreFloor: number;
   /** Max template openness to select. */
@@ -11,14 +16,17 @@ export interface DifficultyKnobs {
   miniSize: 5 | 7;
 }
 
+// Calibrated to run a touch easier than the New York Times' Mon→Sun ramp:
+// the ease-off is small on Monday (~half a step) and grows toward the end of
+// the week (~a full level by Sat/Sun), which is the requested feel.
 export const WEEKDAY_KNOBS: Record<number, DifficultyKnobs> = {
-  1: { clueTier: 1, scoreFloor: 55, maxOpenness: 3, miniSize: 5 }, // Mon
-  2: { clueTier: 2, scoreFloor: 50, maxOpenness: 3, miniSize: 5 }, // Tue
-  3: { clueTier: 3, scoreFloor: 45, maxOpenness: 4, miniSize: 5 }, // Wed
-  4: { clueTier: 3, scoreFloor: 40, maxOpenness: 4, miniSize: 5 }, // Thu
-  5: { clueTier: 4, scoreFloor: 35, maxOpenness: 4, miniSize: 5 }, // Fri
-  6: { clueTier: 5, scoreFloor: 30, maxOpenness: 5, miniSize: 7 }, // Sat
-  7: { clueTier: 4, scoreFloor: 35, maxOpenness: 5, miniSize: 7 }, // Sun (themed, a notch friendlier than Sat)
+  1: { clueTier: 1, clueCap: 2, scoreFloor: 55, maxOpenness: 3, miniSize: 5 }, // Mon
+  2: { clueTier: 2, clueCap: 2, scoreFloor: 50, maxOpenness: 3, miniSize: 5 }, // Tue
+  3: { clueTier: 2, clueCap: 3, scoreFloor: 45, maxOpenness: 4, miniSize: 5 }, // Wed
+  4: { clueTier: 3, clueCap: 3, scoreFloor: 40, maxOpenness: 4, miniSize: 5 }, // Thu
+  5: { clueTier: 3, clueCap: 4, scoreFloor: 35, maxOpenness: 4, miniSize: 5 }, // Fri
+  6: { clueTier: 4, clueCap: 4, scoreFloor: 30, maxOpenness: 5, miniSize: 7 }, // Sat
+  7: { clueTier: 3, clueCap: 4, scoreFloor: 35, maxOpenness: 5, miniSize: 7 }, // Sun (big but friendly)
 };
 
 /** ISO date string → weekday 1 (Mon) … 7 (Sun), in local time. */

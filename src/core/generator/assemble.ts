@@ -11,6 +11,9 @@ export interface PickClueOptions {
   register?: Register;
   /** Clue texts used recently — demoted so gems rotate instead of repeating. */
   recent?: Set<string>;
+  /** Hard ceiling on clue difficulty (the day's `clueCap`). Defaults to a
+   * gentle `tier + 1` when unset (Free Play / themes that pass a tier only). */
+  cap?: number;
 }
 
 /** Choose an entry's clue, **craft first**: pick the wittiest (highest-star)
@@ -31,7 +34,7 @@ export function pickClue(
   if (entry.clues.length === 0) {
     return { text: `${entry.answer.length} letters`, difficulty: 3, stars: 1 };
   }
-  const cap = tier <= 3 ? tier + 1 : 5;
+  const cap = opts.cap ?? (tier <= 3 ? tier + 1 : 5);
   const pool = entry.clues.filter((c) => c.difficulty <= cap);
   const from = pool.length > 0 ? pool : entry.clues;
 
@@ -58,6 +61,8 @@ export interface AssembleMeta {
   date?: string;
   difficulty: number;
   clueTier: number;
+  /** Hard ceiling on clue difficulty (the day's `clueCap`). */
+  clueCap?: number;
   /** Preferred cluing register (player knob); soft preference in pickClue. */
   register?: Register;
   theme?: { name: string; entries: string[] };
@@ -92,7 +97,7 @@ export function assemble(
         ...(override.register ? { register: override.register } : {}),
       };
     } else if (entry && entry.clues.length > 0) {
-      const c = pickClue(entry, meta.clueTier, rng, { register: meta.register, recent: usedClues });
+      const c = pickClue(entry, meta.clueTier, rng, { register: meta.register, recent: usedClues, cap: meta.clueCap });
       usedClues.add(c.text);
       clue = {
         num: slot.num,

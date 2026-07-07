@@ -56,6 +56,7 @@ export function generatePuzzle(spec: GenerateSpec, bank: BankIndex): Puzzle | nu
       ...(spec.date ? { date: spec.date } : {}),
       difficulty: spec.difficulty,
       clueTier: spec.clueTier ?? knobs.clueTier,
+      clueCap: knobs.clueCap,
       ...(spec.register ? { register: spec.register } : {}),
       ...(spec.theme ? { theme: spec.theme } : {}),
     };

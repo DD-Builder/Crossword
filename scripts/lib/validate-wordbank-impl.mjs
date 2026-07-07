@@ -54,17 +54,27 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
       files.push({ name: join('fill', f), fillTier: true });
     }
   }
+  // The authored tier (clues transformed from the established-clue corpus) is
+  // curated-quality but large; it is validated for shape/leak/tiers + dedup,
+  // yet excluded from the curated bank's fill-health distribution checks.
+  const authoredDir = join(dir, 'authored');
+  if (existsSync(authoredDir)) {
+    for (const f of readdirSync(authoredDir).filter((f) => f.endsWith('.json'))) {
+      files.push({ name: join('authored', f), authoredTier: true });
+    }
+  }
   let errors = 0;
   let clueCount = 0;
   const byLen = new Map();
   const seen = new Map(); // answer -> file (dupes across files are errors)
+  const authoredAnswers = new Set(); // excluded from fill-health distribution
 
   const fail = (where, msg) => {
     console.error(`  ✗ ${where}: ${msg}`);
     errors++;
   };
 
-  for (const { name: file, fillTier } of files) {
+  for (const { name: file, fillTier, authoredTier } of files) {
     let entries;
     try {
       entries = JSON.parse(readFileSync(join(dir, file), 'utf8'));
@@ -97,7 +107,8 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
       const prev = seen.get(e.answer);
       if (prev) fail(where, `duplicate answer (also in ${prev})`);
       seen.set(e.answer, file);
-      byLen.set(e.answer.length, (byLen.get(e.answer.length) ?? 0) + 1);
+      if (authoredTier) authoredAnswers.add(e.answer);
+      else byLen.set(e.answer.length, (byLen.get(e.answer.length) ?? 0) + 1);
 
       if (!Number.isInteger(e.score) || e.score < 1 || e.score > 100) fail(where, `score must be 1–100`);
       if (!Array.isArray(e.categories) || e.categories.length === 0) {
@@ -120,6 +131,9 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
           fail(where, 'clue difficulty must be 1–5');
         } else difficulties.add(c.difficulty);
         if (!Number.isInteger(c.stars) || c.stars < 1 || c.stars > 5) fail(where, 'clue stars must be 1–5');
+        if (c.register !== undefined && c.register !== 'classic' && c.register !== 'modern') {
+          fail(where, `clue register must be 'classic' or 'modern', got "${c.register}"`);
+        }
       }
       // Entries 4+ letters need at least two difficulty tiers so the weekday
       // knobs have something to select between. Exception: pure fill-coverage
@@ -144,7 +158,7 @@ export function validateWordbank(dir, { seedPass = process.env.WORDBANK_SEED ===
     if (count < 8) continue; // tiny buckets aren't statistically meaningful
     let commonLetters = 0;
     let total = 0;
-    for (const [answer] of [...seen.entries()].filter(([a]) => a.length === len)) {
+    for (const [answer] of [...seen.entries()].filter(([a]) => a.length === len && !authoredAnswers.has(a))) {
       for (const ch of answer) {
         total++;
         if (COMMON.has(ch)) commonLetters++;

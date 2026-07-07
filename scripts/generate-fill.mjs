@@ -10,7 +10,7 @@ import { fill } from '../src/core/generator/filler.ts';
 import { buildIndex } from '../src/core/generator/index.ts';
 import { deriveSlots, slotAnswer, templateToGrid } from '../src/core/grid.ts';
 import { rngFrom } from '../src/core/rng.ts';
-import { loadBankEntries, loadTemplates } from './lib/bank-node.mjs';
+import { loadBankEntries, loadFillWordlist, loadTemplates } from './lib/bank-node.mjs';
 
 const { values: args } = parseArgs({
   options: {
@@ -22,10 +22,14 @@ const { values: args } = parseArgs({
     json: { type: 'boolean', default: false },
     smoke: { type: 'boolean', default: false },
     seeds: { type: 'string', default: '50' },
+    // Curated bank only (measure the bank in isolation). Default includes the
+    // large MIT fill wordlist — the production reality for daily authoring.
+    'no-fill-list': { type: 'boolean', default: false },
   },
 });
 
-const bank = buildIndex(loadBankEntries());
+const fillList = args['no-fill-list'] ? [] : loadFillWordlist();
+const bank = buildIndex([...loadBankEntries(), ...fillList]);
 const templates = loadTemplates();
 
 function runOne(template, seedKey, opts = {}) {
@@ -42,13 +46,12 @@ if (args.smoke) {
   // Success-rate targets per (size, lattice) family — the true wordbank
   // health metric. Families gate separately: mixing American + lattice
   // templates in one number would let the always-fillable lattice hide an
-  // American 0%. American 15 ratchets upward as the fill tier grows
-  // (see docs/fill-curve.md for the measured curve behind each bump).
-  // Honest baselines as of the family split: American 11/13/15 sit at 0%
-  // with the curated bank alone (the old mixed-family smoke was passing via
-  // the lattice templates). These ratchet upward with each fill-tier wave.
+  // American 0%. With the large MIT fill wordlist loaded (the production
+  // reality — see data/fill-wordlist/), fully-checked American grids fill
+  // reliably at every size, so the lattice grids are retired for dailies.
+  // Run with --no-fill-list to measure the curated bank in isolation.
   const targets = {
-    am5: 1.0, am7: 1.0, am11: 0.0, am13: 0.0, am15: 0.0,
+    am5: 1.0, am7: 1.0, am11: 0.95, am13: 0.95, am15: 0.95,
     lat9: 1.0, lat11: 1.0, lat13: 1.0, lat15: 1.0,
   };
   const seedCount = Number(args.seeds);

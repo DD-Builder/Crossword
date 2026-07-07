@@ -75,6 +75,21 @@ export function renderSettings(root: HTMLElement, _ctx: RouteCtx): void {
   };
   renderModes();
 
+  const registerRow = el('div', { className: 'picker-row' });
+  const renderRegister = (): void => {
+    const current = getSettings().clueRegister;
+    registerRow.replaceChildren(
+      ...([['modern', 'Modern'], ['classic', 'Classic']] as ['classic' | 'modern', string][]).map(
+        ([value, label]) => {
+          const chip = el('button', { className: `chip ${value === current ? 'active' : ''}` }, label);
+          chip.addEventListener('click', () => { saveSettings({ clueRegister: value }); renderRegister(); });
+          return chip;
+        },
+      ),
+    );
+  };
+  renderRegister();
+
   // --- Solving toggles ------------------------------------------------------
   const toggle = (key: 'autocheck' | 'smartSkip' | 'adaptive' | 'sound' | 'victoryAnimations', title: string, sub: string): HTMLElement => {
     const input = el('input', { type: 'checkbox' }) as HTMLInputElement;
@@ -197,6 +212,13 @@ export function renderSettings(root: HTMLElement, _ctx: RouteCtx): void {
         toggle('adaptive', 'Adapt puzzles to me', 'Generated puzzles lean gently toward the categories you enjoy. Dailies are never changed.'),
         toggle('sound', 'Sounds', 'Little dings for milestones.'),
         toggle('victoryAnimations', 'Victory animations', 'A little spectacle when you solve — each skin celebrates in its own style.'),
+        el('div', { className: 'settings-row' },
+          el('div', { className: 'grow' },
+            el('div', { className: 'row-title' }, 'Clue style'),
+            el('div', { className: 'row-sub' }, 'Modern leans contemporary and colloquial; classic leans traditional wordplay. Applies to generated puzzles.'),
+          ),
+          registerRow,
+        ),
       ),
 
       el('div', { className: 'settings-group' },

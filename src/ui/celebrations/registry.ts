@@ -12,6 +12,9 @@ import { artDecoScenes } from './scenes/art-deco.ts';
 import { terracottaScenes } from './scenes/terracotta.ts';
 import { monoScenes } from './scenes/mono.ts';
 import { hearthScenes } from './scenes/hearth.ts';
+import { beachScenes } from './scenes/beach.ts';
+import { harvestScenes } from './scenes/harvest.ts';
+import { lisaFrankScenes } from './scenes/lisa-frank.ts';
 
 const REGISTRY: Record<string, Scene[]> = {
   classic: classicScenes,
@@ -22,6 +25,9 @@ const REGISTRY: Record<string, Scene[]> = {
   terracotta: terracottaScenes,
   mono: monoScenes,
   hearth: hearthScenes,
+  beach: beachScenes,
+  harvest: harvestScenes,
+  'lisa-frank': lisaFrankScenes,
 };
 
 export const SCENE_SKINS = Object.keys(REGISTRY);

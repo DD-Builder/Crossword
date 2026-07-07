@@ -26,8 +26,14 @@ iOS later (same path as Math-Warriors).
   plus a custom soft keyboard handle all typing.
 - Theming: components use semantic CSS custom properties from
   `themes/tokens.css` only. Skins override tokens under `[data-skin="…"]`.
-- Original content only: every clue and puzzle in `src/data/` is authored
-  for this project — never copy clues from published crosswords.
+- Clue sourcing: clues may be **adapted and transformed** from the
+  established-clue corpus (`data/clue-corpus/`, build-time only, git-ignored,
+  never shipped) via `scripts/author-clues.mjs` — a keep/improve/rewrite pass
+  that screens for craft and edits into this project's voice. Nothing is
+  emitted verbatim without that transform. This is a **personal-use**
+  learn-from-the-base posture; if the game is ever monetized beyond personal
+  use, the authored bank is rebuilt as fully original content and the corpus is
+  dropped. See `data/clue-corpus/PROVENANCE.md`.
 
 ## Content style
 

@@ -1,8 +1,13 @@
 # Clue Style Guide
 
-Every clue in this repo is an **original composition written for this
-project**. Never copy a clue from a published crossword. Read this before
-writing or editing any bank entry or puzzle.
+Clues in this repo are either **original compositions** or **adapted and
+transformed** from the established-clue corpus (`data/clue-corpus/`, build-time
+only, never shipped) through `scripts/author-clues.mjs` — a keep/improve/rewrite
+pass that screens for craft and edits into the voice below. Nothing ships
+verbatim without that transform (personal-use posture; see
+`data/clue-corpus/PROVENANCE.md`). Read this before writing or editing any bank
+entry or puzzle: the same craft bar applies whether a clue is written fresh or
+transformed.
 
 ## Voice
 
@@ -80,6 +85,27 @@ solvable; only the wording's slyness changes. Keep this ladder in mind:
 Monday earns its smile through freshness and specificity; Saturday earns it
 through misdirection the surface hides. Never reach for obscurity to make a
 clue "hard" — reach for a cleverer angle on a thing people already know.
+
+## Register: classic vs modern (optional per clue)
+
+Each clue may carry `"register": "classic"` or `"modern"` (omit = fits either).
+This powers a player knob.
+
+- **modern** — contemporary vocab, pop culture, colloquial/spoken phrasing;
+  minimal crosswordese. "What breaks at parties" (ICE), "Main character energy".
+- **classic** — traditional wordplay and references; tolerates a little
+  crosswordese and older culture. "Frozen water" (ICE), "Poet's contraction".
+
+Tag register only when a clue genuinely leans one way; a neutral clue needs no
+tag. The selector treats it as a soft preference, never a hard filter.
+
+## Aim for depth: 3–5 clues per common word
+
+The selector is craft-first and rotates among gems, so **the richer the clue
+pool, the better every puzzle reads**. For common answers, aim for **3–5 clues**
+spanning tiers (Mon→Sat) and both registers — a Monday gimme, a Wednesday wink,
+a Saturday stinger, in classic and modern flavors. Great clues are meant to
+recur; give the engine a deep bench to rotate.
 
 ## Entry shape
 

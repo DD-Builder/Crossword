@@ -42,6 +42,13 @@ export interface Slot {
   id: string;
 }
 
+/**
+ * Cluing register: `modern` = contemporary vocab, pop culture, colloquial
+ * phrasing, minimal crosswordese; `classic` = traditional wordplay that
+ * tolerates crosswordese and older references. Player-selectable knob.
+ */
+export type Register = 'classic' | 'modern';
+
 export interface Clue {
   num: number;
   answer: string;
@@ -49,6 +56,7 @@ export interface Clue {
   /** Combined difficulty + cleverness, 1 (gimme) … 5 (devious gem). */
   stars: 1 | 2 | 3 | 4 | 5;
   category: Category;
+  register?: Register;
   tags?: string[];
 }
 
@@ -106,6 +114,8 @@ export interface BankClue {
   /** 1 (Monday) … 5 (Saturday) clue-writing tier. */
   difficulty: 1 | 2 | 3 | 4 | 5;
   stars: 1 | 2 | 3 | 4 | 5;
+  /** Cluing register; omitted = register-neutral (fits either preference). */
+  register?: Register;
 }
 
 export interface BankEntry {

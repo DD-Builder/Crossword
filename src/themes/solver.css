@@ -398,9 +398,11 @@
   .grid-pane { width: 100%; flex: 1; min-height: 0; justify-content: center; }
 }
 
-/* Wide screens: cap grid so clues get their share. */
+/* Wide screens: let the grid use the available height, capped so the two
+   clue columns still get their share. The cap scales large enough for 12–13″
+   tablets and desktops instead of stranding half the screen. */
 @media (min-width: 900px) and (orientation: landscape) {
-  .xw-grid { --grid-edge: min(56vw, calc(100dvh - 190px), 720px); }
+  .xw-grid { --grid-edge: min(58vw, calc(100dvh - 150px), 960px); }
   .soft-kbd { display: none; }
 }
 

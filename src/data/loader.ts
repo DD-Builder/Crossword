@@ -13,6 +13,12 @@ const bankModules = import.meta.glob<BankEntry[]>('./wordbank/*.json', {
 const fillModules = import.meta.glob<BankEntry[]>('./wordbank/fill/*.json', {
   import: 'default',
 });
+// Clues transformed from the established-clue corpus (build-time; see
+// data/clue-corpus/PROVENANCE.md). A deep bench for American/large grids —
+// large, so it also loads lazily in its own chunk, only for 11×11+.
+const authoredModules = import.meta.glob<BankEntry[]>('./wordbank/authored/*.json', {
+  import: 'default',
+});
 const kidsModules = import.meta.glob<BankEntry[]>('./kids/*.json', {
   eager: true,
   import: 'default',
@@ -44,7 +50,9 @@ export function mainBank(): BankIndex {
 /** Curated bank + the lazily-loaded fill tier — for generating large grids. */
 export async function fullBank(): Promise<BankIndex> {
   if (!fullIndex) {
-    const chunks = await Promise.all(Object.values(fillModules).map((load) => load()));
+    const chunks = await Promise.all(
+      [...Object.values(fillModules), ...Object.values(authoredModules)].map((load) => load()),
+    );
     fullIndex = buildIndex([...bankEntries(), ...chunks.flat()]);
   }
   return fullIndex;

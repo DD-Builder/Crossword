@@ -1,8 +1,13 @@
 # Clue Style Guide
 
-Every clue in this repo is an **original composition written for this
-project**. Never copy a clue from a published crossword. Read this before
-writing or editing any bank entry or puzzle.
+Clues in this repo are either **original compositions** or **adapted and
+transformed** from the established-clue corpus (`data/clue-corpus/`, build-time
+only, never shipped) through `scripts/author-clues.mjs` — a keep/improve/rewrite
+pass that screens for craft and edits into the voice below. Nothing ships
+verbatim without that transform (personal-use posture; see
+`data/clue-corpus/PROVENANCE.md`). Read this before writing or editing any bank
+entry or puzzle: the same craft bar applies whether a clue is written fresh or
+transformed.
 
 ## Voice
 

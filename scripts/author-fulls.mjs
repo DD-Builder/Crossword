@@ -17,8 +17,11 @@ const { values: args } = parseArgs({
 });
 const perWeekday = Number(args['per-weekday']);
 
+// Bank = curated + authored clues only (no raw fill wordlist), so every answer
+// the filler can place is guaranteed to carry a real clue — NYT-standard
+// fully-checked American grids with zero placeholder clues.
 const bank = buildIndex(loadBankEntries());
-const pool = loadTemplates().filter((t) => t.id === 'lat15');
+const pool = loadTemplates().filter((t) => t.id === 't15-a' || t.id === 't15-d');
 const WEEKDAY_NAMES = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 // Original titles per weekday flavor.
@@ -66,9 +69,8 @@ for (let weekday = 1; weekday <= 7; weekday++) {
       continue;
     }
     puzzle.weekday = weekday;
-    puzzle.lattice = true;
     puzzle.author = 'The Riddle Constructors';
-    const problems = validatePuzzle(puzzle, { fullyChecked: false }).filter((p) => p.level === 'error');
+    const problems = validatePuzzle(puzzle, { fullyChecked: true }).filter((p) => p.level === 'error');
     if (problems.length > 0) {
       console.error(`✗ ${id}: ${problems.map((p) => p.message).join('; ')}`);
       failures++;

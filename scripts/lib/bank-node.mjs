@@ -4,9 +4,10 @@ import { join } from 'node:path';
 
 const ROOT = new URL('../..', import.meta.url).pathname;
 
-export function loadBankEntries({ includeKids = false, includeFill = true } = {}) {
+export function loadBankEntries({ includeKids = false, includeFill = true, includeAuthored = true } = {}) {
   const dirs = [join(ROOT, 'src/data/wordbank')];
   if (includeFill) dirs.push(join(ROOT, 'src/data/wordbank/fill'));
+  if (includeAuthored) dirs.push(join(ROOT, 'src/data/wordbank/authored'));
   if (includeKids) dirs.push(join(ROOT, 'src/data/kids'));
   const entries = [];
   for (const dir of dirs) {

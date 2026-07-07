@@ -30,11 +30,14 @@ export function loadTemplates() {
  * Supplies ANSWERS + fill scores so the filler can complete fully-checked
  * American grids; clues are authored separately (never taken from any list).
  *
- * Scores are scaled into 30–58 so curated entries (mostly 60+) win the
- * candidate sort, and the `fill` tag lets callers demote them via tagWeights.
- * Returns [] if the list isn't present (keeps scripts working without it).
+ * `minScore` is a quality floor on the SOURCE score (0–100): in this list,
+ * junk (variant spellings, partials, roll-your-own phrases, EEEEE…) all scores
+ * ≤ ~46, genuine clean fill is 60+. Default 60 gives NYT-grade fill and still
+ * leaves ~150k answers. Source scores are rescaled into 40–58 so curated
+ * entries (mostly 60+) win the candidate sort; the `fill` tag lets callers
+ * demote them further via tagWeights. Returns [] if the list isn't present.
  */
-export function loadFillWordlist() {
+export function loadFillWordlist({ minScore = 60 } = {}) {
   const file = join(ROOT, 'data/fill-wordlist/collaborative.dict');
   if (!existsSync(file)) return [];
   const entries = [];
@@ -43,8 +46,9 @@ export function loadFillWordlist() {
     if (i < 0) continue;
     const answer = line.slice(0, i);
     const raw = Number(line.slice(i + 1));
-    if (!answer) continue;
-    const score = Math.max(30, Math.min(58, Math.round((raw || 40) * 0.7)));
+    if (!answer || !(raw >= minScore)) continue;
+    // Map source [minScore..100] → [40..58], preserving relative order.
+    const score = Math.round(40 + ((raw - minScore) / (100 - minScore)) * 18);
     entries.push({ answer, score, categories: ['wordplay'], tags: ['fill'], clues: [] });
   }
   return entries;

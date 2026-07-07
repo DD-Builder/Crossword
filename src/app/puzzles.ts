@@ -156,6 +156,11 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
   const settings = getSettings();
 
   if (mode === 'free') {
+    const registerParam = query.get('register');
+    const register: 'classic' | 'modern' =
+      registerParam === 'classic' || registerParam === 'modern' ? registerParam : settings.clueRegister;
+    const clueTierParam = Number(query.get('cluetier'));
+    const clueTier = clueTierParam >= 1 && clueTierParam <= 5 ? clueTierParam : undefined;
     return generateAsync({
       id: `gen-free-${seed}`,
       kind: 'generated',
@@ -163,6 +168,8 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
       difficulty,
       templates: pickTemplates(size, difficulty),
       seedKey: `free|${size}|${difficulty}|${seed}`,
+      register,
+      ...(clueTier ? { clueTier } : {}),
       categoryWeights: settings.adaptive ? adaptiveWeights() : {},
     });
   }

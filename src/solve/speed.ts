@@ -3,6 +3,7 @@
 
 import type { SolveSession, FillEvent } from './session.ts';
 import { loadJson, saveJson } from '../storage/settings.ts';
+import { SEC_PER_CELL } from '../core/generator/difficulty.ts';
 import type { Puzzle } from '../core/types.ts';
 
 export interface SpeedRecord {
@@ -19,7 +20,7 @@ function pbKey(puzzle: Puzzle): string {
 /** Par: calibrated seconds/cell by difficulty, on the traditional ramp. */
 export function parMsFor(puzzle: Puzzle): number {
   const whiteCells = puzzle.grid.join('').replace(/#/g, '').length;
-  const secPerCell = [0, 4.5, 5, 5.5, 6, 7, 8, 7][puzzle.difficulty] ?? 6;
+  const secPerCell = SEC_PER_CELL[puzzle.difficulty] ?? 6;
   return Math.round(whiteCells * secPerCell) * 1000;
 }
 

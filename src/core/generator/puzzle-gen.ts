@@ -22,6 +22,8 @@ export interface GenerateSpec {
   seedKey: string;
   /** Preferred cluing register (player knob); threaded to clue selection. */
   register?: import('../types.ts').Register;
+  /** Override the clue-difficulty tier (1–5) independent of fill difficulty. */
+  clueTier?: number;
   theme?: { name: string; entries: string[] };
   categoryWeights?: Record<string, number>;
   restarts?: number;
@@ -53,7 +55,7 @@ export function generatePuzzle(spec: GenerateSpec, bank: BankIndex): Puzzle | nu
       title: spec.title,
       ...(spec.date ? { date: spec.date } : {}),
       difficulty: spec.difficulty,
-      clueTier: knobs.clueTier,
+      clueTier: spec.clueTier ?? knobs.clueTier,
       ...(spec.register ? { register: spec.register } : {}),
       ...(spec.theme ? { theme: spec.theme } : {}),
     };

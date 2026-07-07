@@ -43,7 +43,11 @@ function buildShell(): HTMLElement {
       className: 'brand',
       onclick: () => navigate(''),
       'aria-label': 'Riddle Crossword — home',
-    }, el('span', { className: 'brand-mark', 'aria-hidden': 'true' }), 'Riddle Crossword'),
+    }, el('img', {
+      className: 'brand-mark',
+      src: `${import.meta.env.BASE_URL}icons/favicon.svg`,
+      alt: '', 'aria-hidden': 'true',
+    }), 'Riddle Crossword'),
     el('div', { className: 'spacer' }),
     nav,
   );

@@ -56,11 +56,13 @@ export interface ModalHandle { close(): void; body: HTMLElement; }
 
 export function openModal(
   build: (body: HTMLElement, close: () => void) => void,
-  opts: { dismissable?: boolean } = {},
+  opts: { dismissable?: boolean; backdropClass?: string } = {},
 ): ModalHandle {
   const dismissable = opts.dismissable !== false;
   const body = el('div', { className: 'modal card' });
-  const backdrop = el('div', { className: 'modal-backdrop' }, body);
+  const backdrop = el('div', {
+    className: `modal-backdrop${opts.backdropClass ? ` ${opts.backdropClass}` : ''}`,
+  }, body);
   const close = () => backdrop.remove();
   if (dismissable) {
     backdrop.addEventListener('click', (e) => {

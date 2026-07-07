@@ -39,13 +39,11 @@ export function dailyFor(dateIso: string, kind: 'daily' | 'mini'): Puzzle | null
 function pickTemplates(size: number, difficulty: number): GridTemplate[] {
   const knobs = knobsFor(difficulty);
   const pool = templatesBySize(size, knobs.maxOpenness).filter((t) => !t.themeSlotMin);
-  // Fully-checked American templates at 9×9+ can't yet be filled by the
-  // curated bank (see docs/fill-curve.md), so live generation would fail on
-  // them. Prefer the British-lattice templates, which fill reliably at every
-  // size. Small grids (5, 7) have no lattice variant and fill fine as
-  // American. Once the bank supports American large grids, drop this filter.
-  const lattice = pool.filter((t) => t.lattice);
-  return lattice.length > 0 ? lattice : pool;
+  // Prefer fully-checked NYT-standard American grids (~16% black) — the shipped
+  // curated+authored bank now fills them at every size. Lattice grids (34%
+  // black) are kept only as a fallback if no American template exists.
+  const american = pool.filter((t) => !t.lattice);
+  return american.length > 0 ? american : pool;
 }
 
 /** Slot lengths that actually exist in a template pool. A theme entry can

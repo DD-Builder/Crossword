@@ -21,8 +21,8 @@
     {
      "num": 1,
      "answer": "WET",
-     "clue": "Soaked",
-     "stars": 1,
+     "clue": "Like fresh paint",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "nature",
@@ -32,8 +32,8 @@
     {
      "num": 4,
      "answer": "TRADE",
-     "clue": "Swap",
-     "stars": 1,
+     "clue": "Ballplayer’s deadline deal",
+     "stars": 2,
      "category": "history",
      "tags": [
       "sports"
@@ -49,8 +49,8 @@
     {
      "num": 7,
      "answer": "ONSET",
-     "clue": "Beginning",
-     "stars": 1,
+     "clue": "First sign, as of a cold",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "winter"
@@ -59,8 +59,8 @@
     {
      "num": 8,
      "answer": "TOT",
-     "clue": "Tyke",
-     "stars": 1,
+     "clue": "Playground pip-squeak",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "food",
@@ -113,8 +113,8 @@
     {
      "num": 5,
      "answer": "RENO",
-     "clue": "Nevada gambling city",
-     "stars": 1,
+     "clue": "“The Biggest Little City in the World”",
+     "stars": 3,
      "category": "geography",
      "tags": [
       "travel"
@@ -146,8 +146,8 @@
     {
      "num": 1,
      "answer": "EAR",
-     "clue": "Hearing organ",
-     "stars": 1,
+     "clue": "What corn comes on",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "food",
@@ -168,8 +168,8 @@
     {
      "num": 6,
      "answer": "ASIDE",
-     "clue": "Set ___ (reserve)",
-     "stars": 1,
+     "clue": "Whisper to the audience",
+     "stars": 2,
      "category": "arts-literature",
      "tags": [
       "books"
@@ -212,8 +212,8 @@
     {
      "num": 2,
      "answer": "ARISE",
-     "clue": "Get up",
-     "stars": 1,
+     "clue": "Roll out of bed",
+     "stars": 2,
      "category": "wordplay"
     },
     {
@@ -240,8 +240,8 @@
     {
      "num": 5,
      "answer": "LET",
-     "clue": "Allow",
-     "stars": 1,
+     "clue": "“___ It Be” (Beatles hit)",
+     "stars": 2,
      "category": "sports-leisure",
      "tags": [
       "sports"
@@ -284,8 +284,8 @@
     {
      "num": 4,
      "answer": "REEDS",
-     "clue": "Marsh grasses",
-     "stars": 1,
+     "clue": "Woodwind vibrators",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "nature",
@@ -306,8 +306,8 @@
     {
      "num": 8,
      "answer": "STORE",
-     "clue": "Shop",
-     "stars": 1,
+     "clue": "Mall tenant",
+     "stars": 2,
      "category": "wordplay"
     },
     {
@@ -326,8 +326,8 @@
     {
      "num": 1,
      "answer": "ARCS",
-     "clue": "Curved paths",
-     "stars": 1,
+     "clue": "Rainbow shapes",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "movies"
@@ -336,8 +336,8 @@
     {
      "num": 2,
      "answer": "NEAT",
-     "clue": "Tidy",
-     "stars": 1,
+     "clue": "Without ice, at a bar",
+     "stars": 3,
      "category": "sports-leisure",
      "tags": [
       "household"
@@ -356,8 +356,8 @@
     {
      "num": 5,
      "answer": "DARE",
-     "clue": "Bold challenge",
-     "stars": 1,
+     "clue": "Truth’s playground partner",
+     "stars": 2,
      "category": "sports-leisure",
      "tags": [
       "school"

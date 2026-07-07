@@ -50,8 +50,8 @@
     {
      "num": 6,
      "answer": "LATTE",
-     "clue": "Steamed-milk espresso drink",
-     "stars": 1,
+     "clue": "Barista’s foam canvas?",
+     "stars": 3,
      "category": "sports-leisure",
      "tags": [
       "food"
@@ -60,8 +60,8 @@
     {
      "num": 9,
      "answer": "EWE",
-     "clue": "Wool provider",
-     "stars": 1,
+     "clue": "Lamb’s mama",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "animals",
@@ -144,8 +144,8 @@
     {
      "num": 20,
      "answer": "TOT",
-     "clue": "Tyke",
-     "stars": 1,
+     "clue": "Tater ___ (fried side)",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "food",
@@ -165,8 +165,8 @@
     {
      "num": 22,
      "answer": "SWEATER",
-     "clue": "Wool pullover",
-     "stars": 1,
+     "clue": "Cozy knit for a cold snap",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "winter",
@@ -186,8 +186,8 @@
     {
      "num": 26,
      "answer": "RHYME",
-     "clue": "Nursery ___",
-     "stars": 1,
+     "clue": "What “moon” and “June” do",
+     "stars": 3,
      "category": "arts-literature",
      "tags": [
       "books",
@@ -208,8 +208,8 @@
     {
      "num": 28,
      "answer": "CLASS",
-     "clue": "Period at school",
-     "stars": 1,
+     "clue": "Elegance, or a school session",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "fill",
@@ -226,8 +226,8 @@
     {
      "num": 31,
      "answer": "CONCERT",
-     "clue": "Live music event",
-     "stars": 1,
+     "clue": "Where fans wave phone flashlights",
+     "stars": 2,
      "category": "entertainment",
      "tags": [
       "music"
@@ -236,8 +236,8 @@
     {
      "num": 34,
      "answer": "ERR",
-     "clue": "Slip up",
-     "stars": 1,
+     "clue": "To ___ is human",
+     "stars": 2,
      "category": "wordplay"
     },
     {
@@ -253,8 +253,8 @@
     {
      "num": 36,
      "answer": "TON",
-     "clue": "2,000 pounds",
-     "stars": 1,
+     "clue": "A whole bunch",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "science"
@@ -327,8 +327,8 @@
     {
      "num": 6,
      "answer": "LASAGNA",
-     "clue": "Layered Italian pasta bake",
-     "stars": 1,
+     "clue": "Garfield’s favorite dish",
+     "stars": 3,
      "category": "entertainment",
      "tags": [
       "food",
@@ -368,8 +368,8 @@
     {
      "num": 14,
      "answer": "NEAREST",
-     "clue": "Closest",
-     "stars": 1,
+     "clue": "Like the ___ exit, on a safety card",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "fill"
@@ -378,8 +378,8 @@
     {
      "num": 15,
      "answer": "TOASTER",
-     "clue": "Bread-browning appliance",
-     "stars": 1,
+     "clue": "Countertop pop-up maker",
+     "stars": 2,
      "category": "wordplay",
      "tags": [
       "food",
@@ -465,8 +465,8 @@
     {
      "num": 33,
      "answer": "EON",
-     "clue": "Immensely long time",
-     "stars": 1,
+     "clue": "Forever, seemingly",
+     "stars": 2,
      "category": "science-nature",
      "tags": [
       "time",
@@ -476,8 +476,8 @@
     {
      "num": 34,
      "answer": "ERA",
-     "clue": "Notable stretch of time",
-     "stars": 1,
+     "clue": "Disco ___, e.g.",
+     "stars": 2,
      "category": "history",
      "tags": [
       "time",

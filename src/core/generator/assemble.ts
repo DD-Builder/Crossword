@@ -6,19 +6,32 @@ import type { BankClue, BankEntry, Category, Clue, Puzzle, PuzzleKind } from '..
 import type { Rng } from '../rng.ts';
 import type { BankIndex } from './index.ts';
 
-/** Pick the clue nearest the target tier; ties prefer higher stars, then a
- * seeded coin flip so repeat plays of a date shuffle among equals. */
+/** Choose an entry's clue, **craft first**: pick the wittiest (highest-star)
+ * clue the day allows, not the flattest tier-match. Great clues are meant to
+ * recur — reusing a gem now and then is a feature, not a bug.
+ *
+ * Easy/mid days (tier ≤ 3) cap difficulty at tier+1 so the clue stays
+ * gettable; harder days lean toward higher difficulty *and* craft. A small
+ * seeded jitter shuffles among near-equals so repeat plays of a date vary. */
 export function pickClue(entry: BankEntry, tier: number, rng: Rng): BankClue {
-  let best: BankClue | null = null;
-  let bestKey = Infinity;
-  for (const clue of entry.clues) {
-    const key = Math.abs(clue.difficulty - tier) * 10 - clue.stars - rng.next();
-    if (key < bestKey) {
-      bestKey = key;
+  if (entry.clues.length === 0) {
+    return { text: `${entry.answer.length} letters`, difficulty: 3, stars: 1 };
+  }
+  const cap = tier <= 3 ? tier + 1 : 5;
+  const pool = entry.clues.filter((c) => c.difficulty <= cap);
+  const from = pool.length > 0 ? pool : entry.clues;
+
+  let best = from[0]!;
+  let bestScore = -Infinity;
+  for (const clue of from) {
+    // Craft dominates; a gentle pull keeps difficulty near the day's tier.
+    const score = clue.stars * 2 - Math.abs(clue.difficulty - tier) + rng.next() * 0.8;
+    if (score > bestScore) {
+      bestScore = score;
       best = clue;
     }
   }
-  return best ?? { text: `${entry.answer.length} letters`, difficulty: 3, stars: 1 };
+  return best;
 }
 
 export interface AssembleMeta {

@@ -160,10 +160,14 @@
 .stat-tile .num { font-size: 1.6rem; font-weight: 800; font-family: var(--font-display); }
 .stat-tile .lbl { font-size: 0.78rem; color: var(--ink-muted); font-weight: 600; }
 
-.bar-row { display: grid; grid-template-columns: 130px 1fr 52px; align-items: center; gap: 10px; margin: 7px 0; font-size: 0.88rem; }
-.bar-row .bar-track { height: 10px; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
+/* Flexible columns: the label may shrink and wrap, the track absorbs the slack
+   (min-width:0 lets the 1fr shrink below content), and the value takes exactly
+   the width it needs so longer strings never overflow the row. */
+.bar-row { display: grid; grid-template-columns: minmax(68px, 128px) minmax(0, 1fr) max-content; align-items: center; gap: 10px; margin: 7px 0; font-size: 0.88rem; }
+.bar-row > span:first-child { overflow-wrap: anywhere; line-height: 1.15; }
+.bar-row .bar-track { height: 10px; min-width: 0; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
 .bar-row .bar-fill { height: 100%; background: var(--accent); border-radius: 5px; transition: width 0.4s ease; }
-.bar-row .bar-val { text-align: right; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.bar-row .bar-val { text-align: right; white-space: nowrap; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 
 /* --- Settings ------------------------------------------------------------ */
 

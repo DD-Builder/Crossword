@@ -242,7 +242,9 @@ function celebrate(
             el('button', { className: 'btn primary', onclick: () => { close(); navigate(''); } }, 'Done'),
           ),
         );
-      });
+        // When the canvas spectacle is playing, keep the backdrop see-through
+        // so the animation shows behind the card instead of being veiled.
+      }, animated ? { backdropClass: 'celebrate-backdrop' } : {});
     },
   });
 }

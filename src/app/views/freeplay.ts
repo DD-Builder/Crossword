@@ -18,8 +18,10 @@ const LEVELS: [number, string][] = [
   [1, 'Monday · gentle'],
   [2, 'Tuesday · easygoing'],
   [3, 'Wednesday · crafty'],
+  [4, 'Thursday · tricky'],
   [5, 'Friday · devious'],
   [6, 'Saturday · diabolical'],
+  [7, 'Sunday · grand'],
 ];
 
 // Clue difficulty independent of the fill. '' = match the day's difficulty.

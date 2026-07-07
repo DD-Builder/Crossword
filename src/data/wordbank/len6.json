@@ -662,6 +662,27 @@
     "text": "Consciousness flow, in lit class",
     "difficulty": 3,
     "stars": 2
+   },
+   {
+    "text": "Binge on Netflix, in a way",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Play a song without downloading it",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Babbling brook, or a Spotify verb?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },

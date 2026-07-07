@@ -1233,6 +1233,20 @@
     "text": "Smallest piece of the picture",
     "difficulty": 2,
     "stars": 2
+   },
+   {
+    "text": "Tiny dot on your screen",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Google's answer to the iPhone",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
    }
   ]
  },

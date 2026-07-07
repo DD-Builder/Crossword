@@ -435,6 +435,27 @@
     "text": "Meat that's canned — and mail that should be?",
     "difficulty": 4,
     "stars": 4
+   },
+   {
+    "text": "Junk clogging your inbox",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "What the filter dumps to trash",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Canned mystery meat, or your inbox's plague?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },
@@ -2649,6 +2670,27 @@
     "text": "Like the Odyssey",
     "difficulty": 3,
     "stars": 2
+   },
+   {
+    "text": "Totally awesome, in gamer-speak",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "'That fail was ___,' i.e. legendary",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Grand as an Odyssey, or a win?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "arts-literature"
    }
   ]
  },
@@ -3866,6 +3908,27 @@
     "text": "Money, in old slang",
     "difficulty": 4,
     "stars": 3
+   },
+   {
+    "text": "Trendy leafy green",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Superfood in your smoothie",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Chip base for the health-obsessed?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },

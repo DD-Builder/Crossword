@@ -90,6 +90,39 @@
   ]
  },
  {
+  "answer": "ADULTING",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Paying bills and doing taxes, jokingly",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "'Ugh, I'm so bad at ___'",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Behaving like a grown-up, allegedly?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "AGREETO",
   "score": 64,
   "categories": [
@@ -428,6 +461,39 @@
   ]
  },
  {
+  "answer": "AVATAR",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Little profile picture online",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Cameron's blockbuster with blue aliens",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Your digital stand-in?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "AVER",
   "score": 64,
   "categories": [
@@ -519,6 +585,72 @@
   ]
  },
  {
+  "answer": "BINGE",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Marathon a whole Netflix series",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Watch every episode in one sitting",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Go all-in on snacks or shows?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "BINGER",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "One who devours a whole season overnight",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Netflix marathon type",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Couch dweller powering through episodes?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "BLOAT",
   "score": 64,
   "categories": [
@@ -546,6 +678,72 @@
     "text": "What too many features cause?",
     "difficulty": 3,
     "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "BLOG",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Personal site with dated posts",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Where a foodie rambles online",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Web log, trimmed down?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "BOBA",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Chewy pearls in bubble tea",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Tapioca balls you slurp through a fat straw",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Milk-tea add-in you can't sip fast?",
+    "difficulty": 3,
+    "stars": 4,
     "register": "modern",
     "category": "wordplay"
    }
@@ -704,6 +902,39 @@
   ]
  },
  {
+  "answer": "CRINGE",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "So awkward, in slang",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "'That's so ___,' says a teen",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Reaction to your old posts?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "DETECT",
   "score": 64,
   "categories": [
@@ -734,6 +965,72 @@
   ]
  },
  {
+  "answer": "DOWNLOAD",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Grab an app from the store",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Save a file to your phone",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "'Give me the ___' (the info)?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "DRONE",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Camera that flies overhead",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Buzzing gadget filming the wedding",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Male bee, or a monotone speaker?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "DUPES",
   "score": 64,
   "categories": [
@@ -759,6 +1056,39 @@
     "text": "Drugstore look-alikes of luxury goods?",
     "difficulty": 3,
     "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "EBOOK",
+  "score": 64,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Novel loaded on a Kindle",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "arts-literature"
+   },
+   {
+    "text": "Paperless page-turner",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "arts-literature"
+   },
+   {
+    "text": "Bestseller with no shelf space needed?",
+    "difficulty": 3,
+    "stars": 4,
     "register": "modern",
     "category": "wordplay"
    }
@@ -1010,6 +1340,105 @@
   ]
  },
  {
+  "answer": "EMMY",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Top TV award",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Trophy a hit streaming show chases",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Small-screen statuette, gold and winged?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "EMOJI",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Winky face or heart icon",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Yellow face with no body?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Little symbol in a text",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   }
+  ]
+ },
+ {
+  "answer": "EMOJIS",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Little smileys in your texts",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Crying-laughing icons and pals",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Keyboard faces that say it all?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "ENRAGES",
   "score": 64,
   "categories": [
@@ -1136,6 +1565,39 @@
   ]
  },
  {
+  "answer": "FLEX",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Show off your new kicks",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Humble-brag on Instagram",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Bend a muscle, or brag about it?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "FLYER",
   "score": 64,
   "categories": [
@@ -1159,6 +1621,39 @@
    },
    {
     "text": "One taking a wild gamble?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "FOMO",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Dread of missing the party, briefly",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Anxiety fueled by others' Stories",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Reason you say yes to everything?",
     "difficulty": 3,
     "stars": 4,
     "register": "modern",
@@ -1230,6 +1725,72 @@
   ]
  },
  {
+  "answer": "GHOSTED",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Vanished from the chat entirely",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Stopped replying without a word",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Dropped a date cold, spookily?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "GLUTEN",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Wheat protein some diets ditch",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "What a 'free' loaf leaves out",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Bready stuff the menu swears it lacks?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "GOONS",
   "score": 64,
   "categories": [
@@ -1256,6 +1817,39 @@
     "difficulty": 3,
     "stars": 3,
     "category": "entertainment"
+   }
+  ]
+ },
+ {
+  "answer": "HANGRY",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Cranky from an empty stomach",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Snickers-ad state of mind",
+    "difficulty": 2,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Mad that lunch is late?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },
@@ -1288,6 +1882,39 @@
     "difficulty": 3,
     "stars": 3,
     "register": "classic",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "HASHTAG",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "#blessed opener",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Pound-sign label on a tweet",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "It might make something trend?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -1384,6 +2011,72 @@
   ]
  },
  {
+  "answer": "ICONIC",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Unforgettable, legendary-level",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "'That red-carpet look was ___'",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Instantly recognizable, like a logo?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "INFLUENCER",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Instagram promoter with a following",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Sponsored-post pro on TikTok",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "One paid to sway your cart?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "ITCHES",
   "score": 64,
   "categories": [
@@ -1444,6 +2137,39 @@
   ]
  },
  {
+  "answer": "KOMBUCHA",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Fizzy fermented tea",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Gut-friendly drink with a SCOBY",
+    "difficulty": 2,
+    "stars": 4,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Tangy brew the wellness crowd loves?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "LEE",
   "score": 64,
   "categories": [
@@ -1499,6 +2225,39 @@
     "text": "Less inclined to trust",
     "difficulty": 3,
     "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "LEGIT",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Totally real and for-sure",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "'That deal is straight-up ___'",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Above-board, no cap?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -1564,6 +2323,72 @@
   ]
  },
  {
+  "answer": "LOWKEY",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Secretly, in slang",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "'I'm ___ obsessed with this'",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "On the down-low, hashtagged?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "MALWARE",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Nasty software you don't want",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "What antivirus tools hunt down",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Sketchy download's harmful cargo?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "MARTINI",
   "score": 64,
   "categories": [
@@ -1590,6 +2415,39 @@
     "difficulty": 3,
     "stars": 4,
     "category": "sports-leisure"
+   }
+  ]
+ },
+ {
+  "answer": "MATCHA",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Bright green powdered tea",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Whisked latte flavor of the moment",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Cafe's trendy grassy green?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },
@@ -1649,6 +2507,72 @@
     "text": "Tangled scrum with no rules?",
     "difficulty": 3,
     "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "MEME",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Viral internet joke",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Distracted Boyfriend, famously",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Reposted gag that just won't die?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "MEMOIR",
+  "score": 64,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Personal life-story book",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "arts-literature"
+   },
+   {
+    "text": "Celeb tell-all on the shelf",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "arts-literature"
+   },
+   {
+    "text": "Bestseller about oneself?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -1777,6 +2701,39 @@
   ]
  },
  {
+  "answer": "PALEO",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Caveman-style diet",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Grain-free eating trend",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Way to eat like it's the Stone Age?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "PARTII",
   "score": 64,
   "categories": [
@@ -1833,6 +2790,72 @@
     "difficulty": 3,
     "stars": 4,
     "register": "classic",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "PLAYLIST",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Spotify song collection",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Your gym pump-up queue",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Lineup that sets the mood?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "PODCAST",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Show you stream through earbuds",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Joe Rogan's long-form format",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Two mics and endless opinions?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -1904,6 +2927,72 @@
   ]
  },
  {
+  "answer": "QUINOA",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Trendy protein-packed grain",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Buddha-bowl staple, hard to spell",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Andean seed on every health menu?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "RAMEN",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Slurpable noodle bowl",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Broke-student dinner staple",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Steamy Japanese soup worth the wait?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "REASONS",
   "score": 64,
   "categories": [
@@ -1960,6 +3049,39 @@
     "text": "Homophone for a monarch's turn?",
     "difficulty": 3,
     "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "RETWEET",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Amplify a post to followers",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "'RT if you agree' action",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Share a bird's message again?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -2026,6 +3148,39 @@
   ]
  },
  {
+  "answer": "ROUTER",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Wi-Fi box you unplug and replug",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Blinking gadget the internet lives in",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "It shapes wood, or your signal?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "SAGAS",
   "score": 64,
   "categories": [
@@ -2051,6 +3206,39 @@
     "text": "Long-running dramas?",
     "difficulty": 3,
     "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "SALTY",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Bitter after losing, in slang",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Petty and sour, in gamer talk",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Like the ocean, or a sore loser?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -2236,6 +3424,105 @@
   ]
  },
  {
+  "answer": "SELFCARE",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Bubble baths and me-time",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "'Treat yourself' wellness routine",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Face masks as personal maintenance?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "SELFIE",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Front-camera portrait for the 'gram",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Duck-face phone snap",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Arm's-length shot, often?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "SEQUEL",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Movie's 'Part 2'",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Follow-up film nobody asked for",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "What comes after the original hit?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "SHIATSU",
   "score": 64,
   "categories": [
@@ -2291,6 +3578,39 @@
     "text": "What you tilt to dim the room?",
     "difficulty": 3,
     "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "SMOOTHIE",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Blended fruit drink",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Gym-bro's post-workout sip",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Berries and kale, whirled together?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
     "category": "wordplay"
    }
   ]
@@ -2390,6 +3710,39 @@
   ]
  },
  {
+  "answer": "SPINOFF",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Show branched from another",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "'Better Call Saul,' to 'Breaking Bad'",
+    "difficulty": 2,
+    "stars": 4,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Sequel series that broke away?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "SPOUT",
   "score": 64,
   "categories": [
@@ -2416,6 +3769,72 @@
     "difficulty": 3,
     "stars": 3,
     "category": "science-nature"
+   }
+  ]
+ },
+ {
+  "answer": "SRIRACHA",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Rooster-bottle hot sauce",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Spicy squeeze with a green cap",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Fiery drizzle for your pho?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "STAN",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Superfan of a pop star",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "'I totally ___ her,' says a devotee",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Obsessive booster named for an Eminem track?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "arts-literature"
    }
   ]
  },
@@ -2507,6 +3926,39 @@
     "difficulty": 3,
     "stars": 3,
     "category": "science-nature"
+   }
+  ]
+ },
+ {
+  "answer": "STREAMER",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Twitch personality who goes live",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Gamer broadcasting to a chat",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Party decoration, or a live broadcaster?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },
@@ -2974,6 +4426,72 @@
   ]
  },
  {
+  "answer": "TROLL",
+  "score": 64,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Comment-section instigator",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "One posting to provoke, online",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Bridge dweller of old, or a hater?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "VEGAN",
+  "score": 64,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Eater who skips all animal products",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Oat-milk-latte ordering type",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Plant-only diner who'll tell you about it?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "VEIN",
   "score": 64,
   "categories": [
@@ -3000,6 +4518,39 @@
     "difficulty": 3,
     "stars": 4,
     "category": "science-nature"
+   }
+  ]
+ },
+ {
+  "answer": "VIBE",
+  "score": 64,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "General mood of a place",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "'I'm getting a chill ___'",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "wordplay"
+   },
+   {
+    "text": "Atmosphere you either match or don't?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },
@@ -3060,6 +4611,39 @@
     "difficulty": 3,
     "stars": 3,
     "category": "science-nature"
+   }
+  ]
+ },
+ {
+  "answer": "WOKE",
+  "score": 64,
+  "categories": [
+   "history"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Alert to social injustice",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "history"
+   },
+   {
+    "text": "Politically switched-on, in slang",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "history"
+   },
+   {
+    "text": "No longer asleep to the issues?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },

@@ -276,6 +276,20 @@
     "text": "Fruit that ripens the moment you stop watching",
     "difficulty": 3,
     "stars": 4
+   },
+   {
+    "text": "Green fruit smashed onto toast",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Pit-holding brunch star, extra please?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },

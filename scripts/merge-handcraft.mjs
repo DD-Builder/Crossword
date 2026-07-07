@@ -136,4 +136,20 @@ const combined = [...byAnswer.values()].sort((a, b) => a.answer.localeCompare(b.
 writeFileSync(handcraftPath, JSON.stringify(combined, null, 1));
 console.log(`  handcraft.json now holds ${combined.length} answers`);
 
+// Reconcile fill-tier collisions: a richer handcraft entry supersedes a bare
+// fill/ stub, so drop any fill answer that now lives in handcraft.
+const handAnswers = new Set(combined.map((e) => e.answer));
+const fillDir = join(curatedDir, 'fill');
+if (existsSync(fillDir)) {
+  for (const f of readdirSync(fillDir).filter((f) => f.endsWith('.json'))) {
+    const path = join(fillDir, f);
+    const entries = JSON.parse(readFileSync(path, 'utf8'));
+    const kept = entries.filter((e) => !handAnswers.has(e.answer));
+    if (kept.length !== entries.length) {
+      writeFileSync(path, JSON.stringify(kept, null, 1));
+      console.log(`  removed ${entries.length - kept.length} superseded stub(s) from fill/${f}`);
+    }
+  }
+}
+
 console.log(`\nHand-craft merge: ${created} new → handcraft.json, ${merged} merged into curated, ${skipped} skipped.`);

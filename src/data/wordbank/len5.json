@@ -892,6 +892,20 @@
     "text": "Foam artist's canvas",
     "difficulty": 3,
     "stars": 3
+   },
+   {
+    "text": "Pumpkin spice ___",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Drink with fern art on top?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "wordplay"
    }
   ]
  },
@@ -3763,6 +3777,27 @@
     "text": "Letter that needs no stamp",
     "difficulty": 3,
     "stars": 3
+   },
+   {
+    "text": "'Reply all' medium",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "Where the spam piles up",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "science-nature"
+   },
+   {
+    "text": "'You've got ___!' (old AOL cry)",
+    "difficulty": 3,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
    }
   ]
  },

@@ -20,6 +20,7 @@ import { onSolveComplete, restoreProgress, persistProgress, clearProgress } from
 import { getSpeedPb, makeGhost, maybeSaveSpeedPb, parMsFor } from '../../solve/speed.ts';
 import { shareSolve } from '../../ui/share.ts';
 import { playVictory } from '../../ui/celebrations/index.ts';
+import { playGridMorphIn } from '../../ui/celebrations/gridWave.ts';
 import type { Puzzle } from '../../core/types.ts';
 
 export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | void {
@@ -29,14 +30,44 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
 
   let cleanup: (() => void) | null = null;
   let cancelled = false;
+  let retuning = false;
 
   const speedMode = ctx.query.get('speed') === '1';
+  // Only generated puzzles are retunable — dailies/library are fixed for everyone.
+  const isGen = ctx.params[0] === 'gen' && !speedMode;
+  const query = new URLSearchParams(ctx.query.toString());
+
+  function mount(puzzle: Puzzle, morph: boolean): void {
+    container.replaceChildren();
+    cleanup = mountSolver(container, puzzle, {
+      speedMode, morph,
+      ...(isGen ? { params: query, retune: (patch) => void retune(patch) } : {}),
+    });
+  }
+
+  async function retune(patch: Record<string, string>): Promise<void> {
+    if (retuning) return;
+    retuning = true;
+    for (const [k, v] of Object.entries(patch)) query.set(k, v);
+    query.set('seed', Math.random().toString(36).slice(2)); // a fresh grid each time
+    container.classList.add('retuning');
+    try {
+      const next = await resolvePuzzle({ ...ctx, params: ['gen'], query });
+      if (cancelled) return;
+      cleanup?.();
+      mount(next, true);
+    } catch {
+      toast('Could not build that combo — try another.');
+    } finally {
+      container.classList.remove('retuning');
+      retuning = false;
+    }
+  }
 
   resolvePuzzle(ctx)
     .then((puzzle) => {
       if (cancelled) return;
-      container.replaceChildren();
-      cleanup = mountSolver(container, puzzle, speedMode);
+      mount(puzzle, false);
     })
     .catch((err: unknown) => {
       if (cancelled) return;
@@ -55,7 +86,48 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   };
 }
 
-function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false): () => void {
+const RETUNE_SIZES = [5, 7, 9, 11, 13, 15];
+const RETUNE_DAYS = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+/** The in-puzzle "Tune" panel: size + difficulty chips that regenerate in place. */
+function buildRetuneBar(
+  params: URLSearchParams,
+  retune: (patch: Record<string, string>) => void,
+): HTMLElement {
+  const curSize = Number(params.get('size') ?? 9);
+  const curDiff = Number(params.get('difficulty') ?? 3);
+  const chip = (label: string, active: boolean, onClick: () => void): HTMLElement => {
+    const b = el('button', { className: `chip ${active ? 'active' : ''}` }, label);
+    b.addEventListener('click', onClick);
+    return b;
+  };
+  const panel = el('div', { className: 'retune-panel' },
+    el('div', { className: 'retune-group' },
+      el('span', { className: 'retune-label' }, 'Size'),
+      ...RETUNE_SIZES.map((s) => chip(`${s}×${s}`, s === curSize, () => retune({ size: String(s) }))),
+    ),
+    el('div', { className: 'retune-group' },
+      el('span', { className: 'retune-label' }, 'Level'),
+      ...[1, 2, 3, 4, 5, 6, 7].map((d) => chip(RETUNE_DAYS[d]!, d === curDiff, () => retune({ difficulty: String(d) }))),
+    ),
+  );
+  const toggle = el('button', { className: 'btn quiet retune-toggle' }, '⚙ Tune this grid');
+  toggle.addEventListener('click', () => panel.classList.toggle('open'));
+  return el('div', { className: 'retune-bar' }, toggle, panel);
+}
+
+interface MountOpts {
+  speedMode?: boolean;
+  /** Play a cascade-in when this mount is a retune (not the first load). */
+  morph?: boolean;
+  /** Current generation query — seeds the tune panel's active chips. */
+  params?: URLSearchParams;
+  /** Regenerate the puzzle in place with a patch of query params. */
+  retune?: (patch: Record<string, string>) => void;
+}
+
+function mountSolver(container: HTMLElement, puzzle: Puzzle, opts: MountOpts = {}): () => void {
+  const speedMode = opts.speedMode ?? false;
   const settings = getSettings();
   const session = new SolveSession(puzzle, { autocheck: settings.autocheck });
   if (!speedMode) restoreProgress(session); // speed runs always start clean
@@ -110,10 +182,17 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false):
       )
     : null;
 
+  // In-puzzle "Tune" panel (generated puzzles only): change size/difficulty and
+  // the grid regenerates in place with a morph. Dailies/library stay fixed.
+  const retuneBar = opts.retune ? buildRetuneBar(opts.params!, opts.retune) : null;
+
   const gridWrap = el('div', { className: 'grid-pane' },
+    ...(retuneBar ? [retuneBar] : []),
     ...(speedHud ? [speedHud] : []), clueBar.root, grid.root);
   const main = el('div', { className: 'solver-main' }, gridWrap, clueLists.root);
   container.append(toolbar.root, main, softKbd.root);
+
+  if (opts.morph) requestAnimationFrame(() => playGridMorphIn(grid.root));
 
   const keyboard = attachKeyboard(session, {
     onPauseToggle: togglePause,

@@ -422,6 +422,26 @@
   100% { transform: scaleY(1) scaleX(1) rotate(-3deg) translateY(0); opacity: 0.8; }
 }
 
+/* In-puzzle "Tune" panel — change size/difficulty and the grid regenerates. */
+.retune-bar { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.retune-toggle { align-self: flex-start; font-size: 0.85rem; padding: 4px 10px; }
+.retune-panel { display: none; flex-wrap: wrap; gap: 8px 18px; padding: 8px 2px 4px; }
+.retune-panel.open { display: flex; }
+.retune-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.retune-label {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--ink-muted); font-weight: 700;
+}
+.solver.retuning { opacity: 0.55; pointer-events: none; transition: opacity 0.15s ease; }
+
+/* Retune morph: the fresh grid cascades in cell by cell along the diagonal. */
+.grid-morph-in .xw-cell { animation: morph-in 0.5s ease-out var(--wd, 0ms) both; }
+@keyframes morph-in {
+  0% { opacity: 0; transform: scale(0.4) rotate(-10deg); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
 /* Win wave: diagonal flash rippling across the solved grid, cell by cell. */
 .win-wave .xw-cell:not(.block) {
   animation: win-wave-flash 0.9s ease-out var(--wd, 0ms) 1;

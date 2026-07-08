@@ -40,7 +40,18 @@ export interface SessionState {
   activeMs: number;
   pencilMode: boolean;
   autocheck: boolean;
+  /** "On fire": the player solved a burst of clues fast (see FIRE_* below).
+   * Purely cosmetic — drives a subtle flame on the active word's cells. */
+  onFire: boolean;
 }
+
+// Streak thresholds (tunable; overridable per-session for tests). Enter "on
+// fire" at FIRE_ON correct clues within FIRE_WINDOW_MS; stay lit until the
+// trailing count drops below FIRE_SUSTAIN, so it lingers through a hot streak
+// and fades as the pace cools.
+const FIRE_WINDOW_MS = 60_000;
+const FIRE_ON = 10;
+const FIRE_SUSTAIN = 8;
 
 export interface ClueTiming {
   firstFocusMs: number | null;
@@ -66,11 +77,30 @@ export class SolveSession {
   private completedFlag = false;
   private everWrong = false;
 
-  constructor(puzzle: Puzzle, opts: { autocheck?: boolean; now?: () => number } = {}) {
+  // "On fire" streak tracking (activeMs timestamps of each first-solved clue).
+  private readonly fireStamps: number[] = [];
+  private fireFlag = false;
+  private readonly fireOn: number;
+  private readonly fireSustain: number;
+  private readonly fireWindowMs: number;
+
+  constructor(
+    puzzle: Puzzle,
+    opts: {
+      autocheck?: boolean;
+      now?: () => number;
+      fireOn?: number;
+      fireSustain?: number;
+      fireWindowMs?: number;
+    } = {},
+  ) {
     this.puzzle = puzzle;
     this.info = deriveSlots(puzzle.grid, 3);
     this.now = opts.now ?? (() => performance.now());
     this.startWall = this.now();
+    this.fireOn = opts.fireOn ?? FIRE_ON;
+    this.fireSustain = opts.fireSustain ?? FIRE_SUSTAIN;
+    this.fireWindowMs = opts.fireWindowMs ?? FIRE_WINDOW_MS;
 
     const { rows, cols } = this.info;
     this.cells = Array.from({ length: rows * cols }, () => ({
@@ -100,6 +130,7 @@ export class SolveSession {
       activeMs: 0,
       pencilMode: false,
       autocheck: opts.autocheck ?? false,
+      onFire: false,
     });
     this.touchFocus();
   }
@@ -485,8 +516,30 @@ export class SolveSession {
     const t = this.activeMs();
     for (const slot of this.info.slots) {
       const timing = this.clueTimings.get(slot.id)!;
-      if (timing.solvedMs === null && this.slotCorrect(slot)) timing.solvedMs = t;
+      if (timing.solvedMs === null && this.slotCorrect(slot)) {
+        timing.solvedMs = t;
+        this.fireStamps.push(t); // a clue just became correct — feed the streak
+      }
     }
+    this.updateFire();
+  }
+
+  /** Recompute the "on fire" streak and publish only when it flips. Enters at
+   * fireOn correct clues within the window; stays lit until the trailing count
+   * falls below fireSustain, so it fades as the pace cools. */
+  private updateFire(): void {
+    const t = this.activeMs();
+    const recent = this.fireStamps.filter((s) => t - s <= this.fireWindowMs).length;
+    const next = this.fireFlag ? recent >= this.fireSustain : recent >= this.fireOn;
+    if (next === this.fireFlag) return;
+    this.fireFlag = next;
+    const state = this.store.get();
+    this.store.set({ ...state, version: state.version + 1, onFire: next });
+  }
+
+  /** Let the UI's 1 s tick decay the streak even when no keys are pressed. */
+  pollFire(): void {
+    if (!this.completedFlag && !this.pausedFlag) this.updateFire();
   }
 
   private checkCompletion(): void {

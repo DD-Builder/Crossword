@@ -238,3 +238,31 @@ describe('completion', () => {
     expect(timing.firstFocusMs).toBe(0); // focused at t=0 on session start
   });
 });
+
+describe('"on fire" streak', () => {
+  it('lights on a fast burst of correct clues and cools after the window', () => {
+    let t = 0;
+    const session = new SolveSession(MINI_FIXTURE, {
+      now: () => t, fireOn: 3, fireSustain: 2, fireWindowMs: 60_000,
+    });
+    const grid = MINI_FIXTURE.grid;
+    const typeRow = (r: number): void => {
+      for (let c = 0; c < 5; c++) {
+        const ch = grid[r]![c]!;
+        if (ch === '#') continue;
+        session.clickCell(r, c);
+        if (session.store.get().direction !== 'across') session.toggleDirection();
+        session.typeLetter(ch, { smartSkip: false });
+        t += 500;
+      }
+    };
+
+    expect(session.store.get().onFire).toBe(false);
+    typeRow(1); typeRow(2); typeRow(3); // 3 across clues solved in ~7.5s
+    expect(session.store.get().onFire).toBe(true);
+
+    t += 61_000;        // the whole burst ages out of the 60s window
+    session.pollFire();
+    expect(session.store.get().onFire).toBe(false);
+  });
+});

@@ -58,7 +58,7 @@ function makeBeachBalls(): Scene {
         y: -60 - c.rng.next() * 300,
         vy: 0,
         vx: (c.rng.next() - 0.5) * 40,
-        r: 26 + c.rng.next() * 22,
+        r: (36 + c.rng.next() * 30) * c.unit,
         spin: c.rng.next() * TAU,
         hue: c.rng.next(),
         landed: 0,
@@ -164,7 +164,7 @@ function makeKiteAndGulls(): Scene {
       ctx.save();
       ctx.translate(kx, ky);
       ctx.rotate(ang + Math.PI / 2 + (c.t > 5.5 ? Math.sin((c.t - 5.5) * 6) * 0.3 : 0));
-      const k = 26;
+      const k = 40 * c.unit;
       ctx.fillStyle = p.accent;
       ctx.beginPath(); ctx.moveTo(0, -k); ctx.lineTo(k * 0.7, 0); ctx.lineTo(0, k); ctx.lineTo(-k * 0.7, 0); ctx.closePath(); ctx.fill();
       ctx.strokeStyle = withAlpha(p.ink, 0.5); ctx.lineWidth = 1.5;
@@ -207,11 +207,12 @@ function makeSandcastle(): Scene {
       const sand = mixColor(p.warn, p.surface, 0.35);
       const sandDk = mixColor(p.warn, p.ink, 0.2);
 
-      // three tiers rise in sequence
+      // three tiers rise in sequence (scaled to fill larger screens)
+      const u = c.unit;
       const tiers = [
-        { w: 260, h: 70, at: 0.2 },
-        { w: 190, h: 64, at: 1.1 },
-        { w: 120, h: 58, at: 2.0 },
+        { w: 260 * u, h: 70 * u, at: 0.2 },
+        { w: 190 * u, h: 64 * u, at: 1.1 },
+        { w: 120 * u, h: 58 * u, at: 2.0 },
       ];
       let topY = baseY;
       tiers.forEach((tr, i) => {

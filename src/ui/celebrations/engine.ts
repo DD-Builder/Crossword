@@ -81,6 +81,7 @@ export function playScene(scene: Scene, opts: PlaySceneOptions): PlayHandle {
     t: 0,
     dt: 0,
     quality: 1,
+    unit: Math.min(w, h) / 720,
     palette: opts.palette ?? samplePalette(),
     rng: rngFrom(opts.seedKey),
     gridRect: opts.gridRect ?? null,
@@ -129,6 +130,7 @@ export function playScene(scene: Scene, opts: PlaySceneOptions): PlayHandle {
 
     context.w = w;
     context.h = h;
+    context.unit = Math.min(w, h) / 720;
     context.t = elapsed;
     context.dt = dt;
 

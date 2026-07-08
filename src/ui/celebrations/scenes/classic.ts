@@ -31,7 +31,7 @@ function makeHeadlinePress(): Scene {
     init(c) {
       ink = new ParticleSystem(240);
       word = 'SOLVED!';
-      fontPx = Math.min(140, (c.w * 0.82) / (word.length * 0.62));
+      fontPx = Math.min(220, (c.w * 0.82) / (word.length * 0.62));
       const totalW = word.length * fontPx * 0.62;
       slugs = [...word].map((ch, i) => ({
         ch,
@@ -147,7 +147,7 @@ function makeTypewriter(): Scene {
     },
     frame(c) {
       const { ctx, palette: p } = c;
-      const fontPx = Math.min(64, (c.w * 0.86) / (text.length * 0.62));
+      const fontPx = Math.min(104, (c.w * 0.86) / (text.length * 0.62));
       const cw = fontPx * 0.62;
       const x0 = c.w / 2 - (text.length * cw) / 2 + cw / 2;
       const y = c.h * 0.44;

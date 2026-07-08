@@ -12,7 +12,7 @@ import { fnv1a } from '../core/rng.ts';
 import {
   bankEntries, fullBank, kidsBank, kidsEntries, libraryPuzzles, mainBank, templatesBySize,
 } from '../data/loader.ts';
-import { adaptiveWeights } from '../stats/adaptive.ts';
+import { adaptiveTierNudge, adaptiveWeights } from '../stats/adaptive.ts';
 import { generateThemedViaLlm } from '../llm/themegen.ts';
 import { getSettings } from '../storage/settings.ts';
 
@@ -201,7 +201,14 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
     const register: 'classic' | 'modern' =
       registerParam === 'classic' || registerParam === 'modern' ? registerParam : settings.clueRegister;
     const clueTierParam = Number(query.get('cluetier'));
-    const clueTier = clueTierParam >= 1 && clueTierParam <= 5 ? clueTierParam : undefined;
+    const explicitTier = clueTierParam >= 1 && clueTierParam <= 5 ? clueTierParam : undefined;
+    // With no explicit clue-tier knob, let the adaptive layer nudge clue
+    // difficulty from the player's recent pace — breeze → a touch harder,
+    // struggle → gentler. Free Play only; dailies stay deterministic.
+    const adaptiveTier = settings.adaptive
+      ? Math.min(5, Math.max(1, Math.round(knobsFor(difficulty).clueTier + adaptiveTierNudge())))
+      : undefined;
+    const clueTier = explicitTier ?? adaptiveTier;
     return generateAsync({
       id: `gen-free-${seed}`,
       kind: 'generated',

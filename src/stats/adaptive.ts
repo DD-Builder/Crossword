@@ -39,16 +39,22 @@ export async function getProfile(): Promise<Profile> {
   return cached;
 }
 
-/** Synchronous weights for generation call-sites; safe empty default until
- * the profile loads (first generation after boot may be unweighted — fine). */
+/** Synchronous snapshots for generation call-sites; safe defaults until the
+ * profile loads (first generation after boot may be unadapted — fine). */
 let weightsSync: Record<string, number> = {};
+let tierNudgeSync = 0;
 export function adaptiveWeights(): Record<string, number> {
   return weightsSync;
+}
+/** Recent-pace clue-difficulty nudge in −0.5…+0.5 (breeze → +, struggle → −). */
+export function adaptiveTierNudge(): number {
+  return tierNudgeSync;
 }
 
 export async function primeAdaptive(): Promise<void> {
   const profile = await getProfile();
   weightsSync = profile.weights;
+  tierNudgeSync = profile.tierNudge;
 }
 
 function median(values: number[]): number {
@@ -57,27 +63,40 @@ function median(values: number[]): number {
   return sorted[Math.floor(sorted.length / 2)]!;
 }
 
-export async function refreshProfile(): Promise<Profile> {
-  const clues = await getAll<ClueRow>('clues');
-  const byCat = new Map<Category, ClueRow[]>();
+/** Recency weight for the clue at index `i` of `n` (rows are chronological, so
+ * the newest is `n-1`). Halves every RECENCY_HALF_LIFE clues, so the profile
+ * tracks the player's *current* skill instead of their all-time average. */
+const RECENCY_HALF_LIFE = 80;
+function recencyWeight(i: number, n: number): number {
+  return 2 ** (-(n - 1 - i) / RECENCY_HALF_LIFE);
+}
+
+/** Pure profile computation from the raw clue history — the whole adaptive model
+ * with no IO, so it's unit-testable. `refreshProfile` wraps it with storage. */
+export type ProfileData = Omit<Profile, 'id' | 'updatedAt'>;
+export function computeProfile(clues: ClueRow[]): ProfileData {
+  const n = clues.length;
+  const byCat = new Map<Category, { row: ClueRow; w: number }[]>();
   for (const cat of CATEGORIES) byCat.set(cat, []);
-  for (const row of clues) byCat.get(row.category)?.push(row);
+  clues.forEach((row, i) => byCat.get(row.category)?.push({ row, w: recencyWeight(i, n) }));
 
   const categories: Profile['categories'] = {};
   const affinity = new Map<Category, number>();
 
-  for (const [cat, rows] of byCat) {
-    if (rows.length === 0) continue;
-    const solvedRows = rows.filter((r) => r.msToSolve !== null);
-    const accuracy = rows.length > 0
-      ? rows.filter((r) => !r.revealed && r.wrongLetters === 0).length / rows.length
-      : 0;
+  for (const [cat, entries] of byCat) {
+    if (entries.length === 0) continue;
+    const solvedRows = entries.map((e) => e.row).filter((r) => r.msToSolve !== null);
+    // Recency-weighted accuracy: recent wins/losses dominate the estimate.
+    const wTotal = entries.reduce((a, e) => a + e.w, 0);
+    const wWins = entries.reduce(
+      (a, e) => a + (!e.row.revealed && e.row.wrongLetters === 0 ? e.w : 0), 0);
+    const accuracy = wTotal > 0 ? wWins / wTotal : 0;
     const medianMs = median(solvedRows.map((r) => r.msToSolve!));
     categories[cat] = { solved: solvedRows.length, accuracy, medianMs };
 
     // Affinity blends competence (accuracy) and engagement (share of clues
     // seen). Enjoyment is inferred gently — never punished.
-    affinity.set(cat, accuracy * 0.7 + Math.min(1, rows.length / 60) * 0.3);
+    affinity.set(cat, accuracy * 0.7 + Math.min(1, entries.length / 60) * 0.3);
   }
 
   // Convert affinities to clamped multipliers around 1.0.
@@ -91,7 +110,7 @@ export async function refreshProfile(): Promise<Profile> {
     }
   }
 
-  // Tier nudge: recent 10 solves' hint+error pressure vs. none.
+  // Tier nudge: recent solves' hint+error pressure vs. none.
   const recent = clues.slice(-120);
   const pressure = recent.length > 0
     ? recent.reduce((a, r) => a + (r.revealed ? 1 : 0) + Math.min(1, r.hintTiers.length * 0.5) + Math.min(1, r.wrongLetters * 0.34), 0) / recent.length
@@ -102,17 +121,15 @@ export async function refreshProfile(): Promise<Profile> {
     ? clues.reduce((a, r) => a + r.hintTiers.length, 0) / clues.length
     : 0;
 
-  const profile: Profile = {
-    id: 'main',
-    updatedAt: Date.now(),
-    totalClues: clues.length,
-    categories,
-    weights,
-    tierNudge,
-    hintReliance,
-  };
+  return { totalClues: n, categories, weights, tierNudge, hintReliance };
+}
+
+export async function refreshProfile(): Promise<Profile> {
+  const clues = await getAll<ClueRow>('clues');
+  const profile: Profile = { id: 'main', updatedAt: Date.now(), ...computeProfile(clues) };
   await put('profile', profile);
   cached = profile;
-  weightsSync = weights;
+  weightsSync = profile.weights;
+  tierNudgeSync = profile.tierNudge;
   return profile;
 }

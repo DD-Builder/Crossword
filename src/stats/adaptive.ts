@@ -8,6 +8,53 @@ import { CATEGORIES } from '../core/types.ts';
 import { get, getAll, put } from './db.ts';
 import type { ClueRow } from './events.ts';
 
+// --- Player-ability rating (Elo) --------------------------------------------
+// Each solved clue is an "item" rated by its difficulty tier; a clean unaided
+// solve is a win, a reveal/error a loss. The rating drifts toward the level at
+// which the player wins ~half their clues; we then generate a shade easier so
+// the *felt* success sits in a comfortable flow band (TARGET_SUCCESS). All
+// constants are deliberately simple and tunable — the Stats view surfaces the
+// realized success rate so they can be calibrated against real play.
+const ELO_START = 1000;
+const ELO_K = 24;
+const TARGET_SUCCESS = 0.7;
+const ELO_MIN_CLUES = 40; // below this, fall back to the base tier + pace nudge
+
+/** Difficulty tier 1–5 → item rating (tier 3 == the starting player rating). */
+function itemRating(difficulty: number): number {
+  return ELO_START + (difficulty - 3) * 120;
+}
+
+/** Fold the clue history into a rating + a recent success rate. Pure. */
+function computeAbility(clues: ClueRow[]): { ability: number; recentSuccess: number } {
+  let r = ELO_START;
+  for (const row of clues) {
+    if (!row.difficulty) continue; // no item rating available (old/placeholder clue)
+    const expected = 1 / (1 + 10 ** ((itemRating(row.difficulty) - r) / 400));
+    const win = !row.revealed && row.wrongLetters === 0 ? 1 : 0;
+    r += ELO_K * (win - expected);
+  }
+  const recent = clues.filter((c) => c.difficulty).slice(-40);
+  const recentSuccess = recent.length
+    ? recent.filter((c) => !c.revealed && c.wrongLetters === 0).length / recent.length
+    : 0;
+  return { ability: r, recentSuccess };
+}
+
+/** Map an ability rating to the clue tier (1–5) that should land near
+ * TARGET_SUCCESS — a touch below the player's even-money level. */
+export function abilityToTier(ability: number): number {
+  const targetItem = ability + 400 * Math.log10((1 - TARGET_SUCCESS) / TARGET_SUCCESS);
+  return Math.min(5, Math.max(1, Math.round((targetItem - ELO_START) / 120 + 3)));
+}
+
+/** Fill score floor paired with a tier (higher tier ↔ looser fill, mirroring
+ * WEEKDAY_KNOBS' inverse coupling). Index by tier 1–5. */
+const TIER_SCORE_FLOOR = [0, 55, 50, 45, 38, 32];
+export function tierScoreFloor(tier: number): number {
+  return TIER_SCORE_FLOOR[Math.min(5, Math.max(1, tier))]!;
+}
+
 export interface Profile {
   id: 'main';
   updatedAt: number;
@@ -19,6 +66,10 @@ export interface Profile {
   /** -0.5 … +0.5 clue-tier nudge from recent pace vs. expectations. */
   tierNudge: number;
   hintReliance: number; // hints per solved clue, 0..
+  /** Elo player-ability rating (see the rating block below). */
+  ability: number;
+  /** Recent unaided-solve rate over rated clues (observability). */
+  recentSuccess: number;
 }
 
 const EMPTY: Profile = {
@@ -29,6 +80,8 @@ const EMPTY: Profile = {
   weights: {},
   tierNudge: 0,
   hintReliance: 0,
+  ability: ELO_START,
+  recentSuccess: 0,
 };
 
 let cached: Profile | null = null;
@@ -43,6 +96,10 @@ export async function getProfile(): Promise<Profile> {
  * profile loads (first generation after boot may be unadapted — fine). */
 let weightsSync: Record<string, number> = {};
 let tierNudgeSync = 0;
+let abilitySync = ELO_START;
+let recentSuccessSync = 0;
+let totalCluesSync = 0;
+
 export function adaptiveWeights(): Record<string, number> {
   return weightsSync;
 }
@@ -50,11 +107,37 @@ export function adaptiveWeights(): Record<string, number> {
 export function adaptiveTierNudge(): number {
   return tierNudgeSync;
 }
+/** The clue tier Free Play should use, given the mode's base tier. Once there's
+ * enough history it's the Elo target tier; before that it's the base tier
+ * shifted by the recent-pace nudge (Phase 1 behavior). */
+export function adaptiveClueTier(baseTier: number): number {
+  if (totalCluesSync >= ELO_MIN_CLUES) return abilityToTier(abilitySync);
+  return Math.min(5, Math.max(1, Math.round(baseTier + tierNudgeSync)));
+}
+/** The fill score floor to pair with the adaptive tier (base floor pre-data). */
+export function adaptiveScoreFloor(baseFloor: number): number {
+  if (totalCluesSync >= ELO_MIN_CLUES) return tierScoreFloor(abilityToTier(abilitySync));
+  return baseFloor;
+}
+/** For the Stats view: the player's ability tier and realized recent success. */
+export function adaptiveSnapshot(): { tier: number; recentSuccess: number; rated: boolean } {
+  return {
+    tier: abilityToTier(abilitySync),
+    recentSuccess: recentSuccessSync,
+    rated: totalCluesSync >= ELO_MIN_CLUES,
+  };
+}
 
-export async function primeAdaptive(): Promise<void> {
-  const profile = await getProfile();
+function syncFrom(profile: Profile): void {
   weightsSync = profile.weights;
   tierNudgeSync = profile.tierNudge;
+  abilitySync = profile.ability;
+  recentSuccessSync = profile.recentSuccess;
+  totalCluesSync = profile.totalClues;
+}
+
+export async function primeAdaptive(): Promise<void> {
+  syncFrom(await getProfile());
 }
 
 function median(values: number[]): number {
@@ -121,7 +204,9 @@ export function computeProfile(clues: ClueRow[]): ProfileData {
     ? clues.reduce((a, r) => a + r.hintTiers.length, 0) / clues.length
     : 0;
 
-  return { totalClues: n, categories, weights, tierNudge, hintReliance };
+  const { ability, recentSuccess } = computeAbility(clues);
+
+  return { totalClues: n, categories, weights, tierNudge, hintReliance, ability, recentSuccess };
 }
 
 export async function refreshProfile(): Promise<Profile> {
@@ -129,7 +214,6 @@ export async function refreshProfile(): Promise<Profile> {
   const profile: Profile = { id: 'main', updatedAt: Date.now(), ...computeProfile(clues) };
   await put('profile', profile);
   cached = profile;
-  weightsSync = profile.weights;
-  tierNudgeSync = profile.tierNudge;
+  syncFrom(profile);
   return profile;
 }

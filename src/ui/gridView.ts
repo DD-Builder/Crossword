@@ -66,8 +66,11 @@ export function createGridView(session: SolveSession): GridView {
     const slot = session.currentSlot();
     const inWord = new Set(slot.cells.map((c) => `${c.row},${c.col}`));
     // The streak flame rides the active word — cosmetic, and only when the
-    // player hasn't opted out of animations.
+    // player hasn't opted out of animations. The ember outline lights every
+    // box, but a single lick of flame sits at just one corner of the word (the
+    // first cell) so it stays subtle, not a bonfire on every square.
     const flaming = onFire && getSettings().victoryAnimations;
+    const tipKey = flaming ? `${slot.cells[0]!.row},${slot.cells[0]!.col}` : '';
 
     for (const ref of refs) {
       const cell = session.cellAt(ref.row, ref.col);
@@ -80,6 +83,7 @@ export function createGridView(session: SolveSession): GridView {
       if (isCursor) classes.push('selected');
       else if (inWord.has(key)) classes.push('in-word');
       if (flaming && inWord.has(key)) classes.push('on-fire');
+      if (key === tipKey) classes.push('fire-tip');
       if (cell.pencil) classes.push('pencil');
       if (cell.flag === 'checked-wrong') classes.push('wrong');
       if (cell.flag === 'revealed') classes.push('revealed');

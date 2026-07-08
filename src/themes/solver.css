@@ -393,24 +393,33 @@
                 inset 0 0 10px color-mix(in srgb, var(--warn) 62%, transparent);
   }
 }
-.xw-cell.on-fire::before {
+/* A single realistic lick of flame at one corner of the word (the first cell).
+   Layered fire gradient (bright yellow core → orange → red) in a flame
+   silhouette, with an organic flicker — kept small and semi-transparent. */
+.xw-cell.fire-tip::before {
   content: "";
   position: absolute;
-  top: -9%;
-  right: 7%;
-  width: 20cqh;
-  height: 30cqh;
-  background: radial-gradient(ellipse at 50% 100%,
-    var(--warn) 0%, color-mix(in srgb, var(--bad) 82%, transparent) 55%, transparent 72%);
-  border-radius: 50% 50% 48% 52% / 62% 60% 40% 40%;
+  top: -24%;
+  right: -7%;
+  width: 30cqh;
+  height: 54cqh;
+  background:
+    radial-gradient(ellipse 52% 42% at 50% 74%, #fff3b8 0%, #ffd24d 34%, rgba(255, 210, 77, 0) 64%),
+    radial-gradient(ellipse 72% 88% at 50% 100%, #ffb43a 0%, #ff7a1f 40%, #e8462a 68%, rgba(232, 70, 42, 0) 84%);
+  clip-path: polygon(50% 0%, 60% 22%, 70% 50%, 65% 72%, 73% 90%, 55% 100%, 45% 100%, 27% 90%, 35% 72%, 30% 50%, 40% 22%);
   transform-origin: 50% 100%;
-  opacity: 0.6;
+  filter: drop-shadow(0 0 4px rgba(255, 120, 30, 0.55));
+  opacity: 0.92;
   pointer-events: none;
-  animation: flame-dance 1.15s ease-in-out infinite;
+  animation: flame-flicker 0.85s ease-in-out infinite;
 }
-@keyframes flame-dance {
-  0%, 100% { transform: translateY(0) scaleY(1) rotate(-5deg); opacity: 0.5; }
-  50% { transform: translateY(-14%) scaleY(1.2) rotate(5deg); opacity: 0.78; }
+@keyframes flame-flicker {
+  0%   { transform: scaleY(1) scaleX(1) rotate(-3deg) translateY(0); opacity: 0.8; }
+  20%  { transform: scaleY(1.14) scaleX(0.9) rotate(3deg) translateY(-6%); opacity: 0.94; }
+  40%  { transform: scaleY(0.96) scaleX(1.06) rotate(-2deg) translateY(-2%); opacity: 0.72; }
+  60%  { transform: scaleY(1.1) scaleX(0.94) rotate(2deg) translateY(-7%); opacity: 0.9; }
+  80%  { transform: scaleY(1.02) scaleX(1) rotate(-3deg) translateY(-3%); opacity: 0.82; }
+  100% { transform: scaleY(1) scaleX(1) rotate(-3deg) translateY(0); opacity: 0.8; }
 }
 
 /* Win wave: diagonal flash rippling across the solved grid, cell by cell. */

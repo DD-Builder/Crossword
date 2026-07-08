@@ -110,3 +110,25 @@ test('solves the daily mini via keyboard and records the result', async ({ page 
   await page.getByRole('button', { name: 'Done' }).click();
   await expect(page.getByText('✓ Solved').first()).toBeVisible();
 });
+
+test('tapping during the victory animation skips straight to the card', async ({ page }) => {
+  await openMini(page);
+  const hook = await page.evaluate(() => window.__xw);
+  const { solution, rows, cols } = hook!;
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const ch = solution[r]![c]!;
+      if (ch === '#') continue;
+      await page.locator(`.xw-cell[data-rc="${r},${c}"]`).click();
+      const dir = await page.locator('.xw-grid').getAttribute('data-direction');
+      if (dir !== 'across') await page.keyboard.press('Space');
+      await page.keyboard.press(ch);
+    }
+  }
+  // The scene starts ~150ms after the solve; a tap should bring the card up well
+  // before the scene's full ~6–8s run would.
+  await page.waitForTimeout(400);
+  await expect(page.locator('.celebrate')).toHaveCount(0); // still animating
+  await page.mouse.click(5, 5); // tap away from any control
+  await expect(page.locator('.celebrate')).toBeVisible({ timeout: 2_000 });
+});

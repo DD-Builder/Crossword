@@ -64,21 +64,42 @@ export async function fullBank(): Promise<BankIndex> {
   return fullIndex;
 }
 
-let kidsIndex: BankIndex | null = null;
+const kidsIndexByGrade: (BankIndex | null)[] = [];
 
-/** The kids bank: themed kid words (tagged `kid`) plus the Dale–Chall-screened
- * glue tier (tagged `glue`). A PROPER fully-checked kid grid can't fill from the
- * themed words alone, so the glue completes the crossings — but every glue word
- * is a word a young child reads. The filler weights `kid` far above `glue` (see
- * puzzles.ts), so themed words win wherever they fit; grade differences are
- * carried by the clue tier, not the vocabulary. */
-export function kidsBank(): BankIndex {
-  if (!kidsIndex) {
-    const kids = kidsEntries().map((e) => ({ ...e, tags: [...(e.tags ?? []), 'kid'] }));
-    const glue = Object.values(kidsGlueModules).flat();
-    kidsIndex = buildIndex([...kids, ...glue]);
+/** Keep only clues at or below the target grade (a 5-year-old never sees a
+ * fifth-grade clue). Falls back to the single easiest clue so a word always has
+ * one — used for themed words, which stay available at every grade. */
+function cluesForGrade(clues: BankEntry['clues'], grade: number, keepEasiest: boolean): BankEntry['clues'] {
+  const ok = clues.filter((c) => (c.grade ?? 0) <= grade);
+  if (ok.length > 0) return ok;
+  if (!keepEasiest || clues.length === 0) return [];
+  return [[...clues].sort((a, b) => (a.grade ?? 0) - (b.grade ?? 0))[0]!];
+}
+
+/** The kids bank for a grade (0 = Kindergarten … 5). Themed kid words (tag
+ * `kid`) stay available at every grade — they're pre-vetted kid vocabulary — but
+ * only their grade-appropriate clues show. The Dale–Chall-screened glue tier
+ * (tag `glue`) that completes a PROPER fully-checked grid's crossings is gated
+ * by both answer grade and clue grade, so a kindergarten puzzle fills entirely
+ * from kindergarten-level words and clues. */
+export function kidsBank(grade = 5): BankIndex {
+  const g = Math.min(5, Math.max(0, Math.round(grade)));
+  if (!kidsIndexByGrade[g]) {
+    const kids = kidsEntries()
+      .map((e) => ({ ...e, tags: [...(e.tags ?? []), 'kid'], clues: cluesForGrade(e.clues, g, true) }))
+      .filter((e) => e.clues.length > 0);
+    // Answer-vocabulary headroom of +1 grade: a fully-checked 5×5 is full of
+    // five-letter slots, and familiar five-letter words (HOUSE, APPLE) grade to
+    // 1, so a strict K answer gate would starve the grid. We let the glue answer
+    // run one grade ahead while its CLUES stay strictly at-grade (cluesForGrade
+    // below), so a kindergartner still only ever reads a kindergarten clue.
+    const glue = (Object.values(kidsGlueModules).flat() as BankEntry[])
+      .filter((e) => (e.grade ?? 0) <= g + 1)
+      .map((e) => ({ ...e, clues: cluesForGrade(e.clues, g, false) }))
+      .filter((e) => e.clues.length > 0);
+    kidsIndexByGrade[g] = buildIndex([...kids, ...glue]);
   }
-  return kidsIndex;
+  return kidsIndexByGrade[g]!;
 }
 
 export function templates(): GridTemplate[] {

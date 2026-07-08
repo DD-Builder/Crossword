@@ -125,6 +125,9 @@ export interface BankClue {
   stars: 1 | 2 | 3 | 4 | 5;
   /** Cluing register; omitted = register-neutral (fits either preference). */
   register?: Register;
+  /** Kids only: youngest grade this clue suits, 0 (K) … 5. Set by the
+   * grade-labeling build step; absent on the grown-up bank. */
+  grade?: number;
 }
 
 export interface BankEntry {
@@ -134,6 +137,8 @@ export interface BankEntry {
   categories: Category[];
   tags: string[];
   clues: BankClue[];
+  /** Kids only: youngest grade this answer's vocabulary suits, 0 (K) … 5. */
+  grade?: number;
 }
 
 export const BLOCK = '#';

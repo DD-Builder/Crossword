@@ -4,12 +4,13 @@
  * only exercise the hand-authored library. */
 import { expect, test } from '@playwright/test';
 
-const SIZES = [5, 7, 9, 11, 13, 15];
+const SIZES = [5, 7, 9, 11, 13, 15, 17, 19, 21];
 
 for (const size of SIZES) {
   test(`free play ${size}x${size} builds a grid`, async ({ page }) => {
     await page.goto(`/#/puzzle/gen?mode=free&size=${size}&difficulty=1&seed=7`);
-    await page.waitForSelector('.xw-grid', { timeout: 20_000 });
+    // Large grids run more fill restarts; give them headroom on slow CI.
+    await page.waitForSelector('.xw-grid', { timeout: size >= 17 ? 40_000 : 20_000 });
     await expect(page.locator('.solver-loading')).toHaveCount(0);
     await expect(page.getByText('Could not build')).toHaveCount(0);
     await expect(page.locator('.xw-cell').first()).toBeVisible();

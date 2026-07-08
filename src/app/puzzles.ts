@@ -38,7 +38,14 @@ export function dailyFor(dateIso: string, kind: 'daily' | 'mini'): Puzzle | null
 
 function pickTemplates(size: number, difficulty: number): GridTemplate[] {
   const knobs = knobsFor(difficulty);
-  const pool = templatesBySize(size, knobs.maxOpenness).filter((t) => !t.themeSlotMin);
+  let pool = templatesBySize(size, knobs.maxOpenness).filter((t) => !t.themeSlotMin);
+  // Large American grids are necessarily more open (openness 5) than an easy
+  // day's cap allows. Grid openness is a fill/aesthetic property, not a clue
+  // difficulty — so when the openness cap excludes every template at this size,
+  // relax it. The clue tier (knobs.clueTier) still carries the difficulty.
+  if (pool.length === 0) {
+    pool = templatesBySize(size, 5).filter((t) => !t.themeSlotMin);
+  }
   // Prefer fully-checked NYT-standard American grids (~16% black) — the shipped
   // curated+authored bank now fills them at every size. Lattice grids (34%
   // black) are kept only as a fallback if no American template exists.
@@ -95,7 +102,14 @@ async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], useKids
   // use, and curated entries still win the candidate sort via tagWeights.
   const bank = useKidsBank ? kidsBank() : size >= 9 ? await fullBank() : mainBank();
   const spec_ = size >= 9 && !useKidsBank
-    ? { ...spec, fillOptions: { tagWeights: { fill: 0.6 }, ...spec.fillOptions } }
+    ? {
+        ...spec,
+        // Fully-checked American grids have a lower per-attempt fill rate as
+        // they grow (and demanding score floors on easy days tighten it), so
+        // scale restarts with size — each attempt picks a fresh template + seed.
+        ...(spec.restarts == null ? { restarts: size >= 17 ? 16 : size >= 11 ? 10 : 6 } : {}),
+        fillOptions: { tagWeights: { fill: 0.6 }, ...spec.fillOptions },
+      }
     : spec;
   const puzzle = generatePuzzle(spec_, bank);
   if (!puzzle) throw new Error('The engine could not fill this grid — try another size or theme.');
@@ -113,31 +127,45 @@ export async function resolvePuzzle(ctx: RouteCtx): Promise<Puzzle> {
   // Date-keyed dailies: daily-2026-07-06 / mini-2026-07-06
   const dailyMatch = id.match(/^(daily|mini)-(\d{4}-\d{2}-\d{2})$/);
   if (dailyMatch) {
-    const puzzle = dailyFor(dailyMatch[2]!, dailyMatch[1] as 'daily' | 'mini');
-    if (puzzle) return puzzle;
-    // Library gap → deterministic generated fallback so the daily never
-    // 404s; walks down through sizes until a grid lands.
+    const kind = dailyMatch[1] as 'daily' | 'mini';
     const dateIso = dailyMatch[2]!;
     const weekday = weekdayOf(dateIso);
+    // Sunday's Daily is the grand 21×21 — generated deterministically (same grid
+    // for everyone via the date seed) rather than pulled from the 15×15 library.
+    const sundayGrand = kind === 'daily' && weekday === 7;
+    if (!sundayGrand) {
+      const puzzle = dailyFor(dateIso, kind);
+      if (puzzle) return puzzle;
+    }
+    // Generation ladder: Sunday reaches for the big grids first; other days fall
+    // through library-sized American grids. Walks down until one lands so the
+    // daily never 404s.
     const knobs = knobsFor(weekday);
-    const sizes = dailyMatch[1] === 'daily' ? [15, 13, 11, 9, 7] : [knobs.miniSize];
+    const sizes = kind === 'mini'
+      ? [knobs.miniSize]
+      : sundayGrand ? [21, 19, 17, 15] : [15, 13, 11, 9, 7];
     let lastError: unknown = null;
     for (const size of sizes) {
       try {
         return await generateAsync({
           id,
-          kind: dailyMatch[1] === 'daily' ? 'daily' : 'mini',
-          title: dailyMatch[1] === 'daily' ? 'The Daily' : 'The Mini',
+          kind: kind === 'daily' ? 'daily' : 'mini',
+          title: kind === 'daily' ? 'The Daily' : 'The Mini',
           date: dateIso,
           difficulty: weekday,
           templates: pickTemplates(size, weekday),
-          seedKey: `${dailyMatch[1]}|${dateIso}|s${size}`,
-          restarts: 8,
+          seedKey: `${kind}|${dateIso}|s${size}`,
+          restarts: size >= 17 ? 16 : 8,
           categoryWeights: {}, // dailies are the same for everyone — no adaptive nudge
         });
       } catch (err) {
         lastError = err;
       }
+    }
+    // Sunday grand grid couldn't fill at any size → fall back to the library 15.
+    if (sundayGrand) {
+      const lib = dailyFor(dateIso, kind);
+      if (lib) return lib;
     }
     throw lastError instanceof Error ? lastError : new Error('Daily generation failed');
   }

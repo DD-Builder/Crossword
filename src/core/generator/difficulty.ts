@@ -47,6 +47,7 @@ export const SEC_PER_CELL = [0, 4.5, 5, 5.5, 6, 7, 8, 7];
 /** Approximate white-cell count per offered Free Play size (American grids). */
 const SIZE_WHITE: [number, number][] = [
   [5, 21], [7, 41], [9, 67], [11, 103], [13, 133], [15, 187],
+  [17, 226], [19, 285], [21, 340],
 ];
 
 /** Estimated minutes to finish a size at a difficulty — the target-time knob's

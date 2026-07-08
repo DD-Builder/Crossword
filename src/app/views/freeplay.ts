@@ -12,6 +12,9 @@ const SIZES: [number, string][] = [
   [11, 'Big 11×11'],
   [13, 'Bigger 13×13'],
   [15, 'Full 15×15'],
+  [17, 'Grand 17×17'],
+  [19, 'Epic 19×19'],
+  [21, 'Sunday 21×21'],
 ];
 
 const LEVELS: [number, string][] = [

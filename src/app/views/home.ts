@@ -32,7 +32,9 @@ export function renderHome(root: HTMLElement, _ctx: RouteCtx): (() => void) | vo
         isDone
           ? el('span', { className: 'done-badge' }, '✓ Solved')
           : el('span', { className: 'chip' }, inProgress ? 'Continue' : 'Play'),
-        kind === 'daily' ? el('span', { className: 'chip' }, '15×15') : el('span', { className: 'chip' }, weekday >= 6 ? '7×7' : '5×5'),
+        kind === 'daily'
+          ? el('span', { className: 'chip' }, weekday === 7 ? '21×21' : '15×15')
+          : el('span', { className: 'chip' }, weekday >= 6 ? '7×7' : '5×5'),
       ),
     );
     card.addEventListener('click', () => navigate(`puzzle/${id}`));

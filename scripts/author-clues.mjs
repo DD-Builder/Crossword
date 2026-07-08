@@ -33,6 +33,20 @@ const MIN_N = Number(args['min-n']);
 const MAX_CLUES = Number(args['max-clues']);
 const SHARDS = Number(args.shards);
 
+// How many corpus attestations an answer needs to earn a clue, by length. The
+// default (6) suits short answers, where a low count usually means a typo or a
+// one-off. Long answers legitimately recur only a handful of times across the
+// corpus, yet they're exactly what large American grids (17/19/21) need — so
+// the floor eases with length. Every survivor still passes the craft screen and
+// the 2-tier validator, so quality holds; this only widens the candidate pool.
+function minNFor(answer) {
+  const L = answer.length;
+  if (L >= 12) return 2;
+  if (L >= 10) return 3;
+  if (L >= 8) return 4;
+  return MIN_N;
+}
+
 // ---- inputs ---------------------------------------------------------------
 const idxPath = join(ROOT, 'data/clue-corpus/index.json');
 if (!existsSync(idxPath)) {
@@ -46,7 +60,13 @@ const existing = new Set(loadBankEntries({ includeAuthored: false }).map((e) => 
 // Fill quality: only author answers we'd actually place in a grid.
 const fillScore = new Map();
 for (const e of loadFillWordlist({ minScore: 60 })) fillScore.set(e.answer, e.score);
-const placeable = (a) => existing.has(a) || fillScore.has(a);
+// An answer is placeable if the MIT fill list scores it well OR it's a long,
+// well-attested corpus answer. That frequency-scored list underweights long
+// words (they're rare in running text), so it drops legitimate 9+ letter grid
+// answers; but an entry the NYT itself has used repeatedly is placeable by
+// definition. This is the supply that lets large grids fill from clued words.
+const placeable = (a, rec) =>
+  existing.has(a) || fillScore.has(a) || (a.length >= 9 && (rec?.n ?? 0) >= minNFor(a));
 
 // ---- leak check (mirrors validate-wordbank-impl.mjs / validator.ts) -------
 function stems(w) {
@@ -200,8 +220,8 @@ let scanned = 0, skippedExisting = 0, skippedRare = 0, skippedUnplaceable = 0, n
 for (const [answer, rec] of Object.entries(idx)) {
   scanned++;
   if (existing.has(answer)) { skippedExisting++; continue; }
-  if (rec.n < MIN_N) { skippedRare++; continue; }
-  if (!placeable(answer)) { skippedUnplaceable++; continue; }
+  if (rec.n < minNFor(answer)) { skippedRare++; continue; }
+  if (!placeable(answer, rec)) { skippedUnplaceable++; continue; }
   const clues = buildClues(answer, rec);
   if (!clues) { noClue++; continue; }
   // Dominant category across chosen clues.

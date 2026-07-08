@@ -225,7 +225,12 @@ export function fill(
     }
 
     // Collect + order candidates: crossing bonus dominates, then score,
-    // adaptive weights, and seeded jitter.
+    // adaptive weights, and seeded jitter. `candidates()` yields in score-desc
+    // order, so we only need the highest-scoring prefix — the crossing bonus
+    // reshuffles within it, and the beam keeps just `beamWidth`. Capping the
+    // prefix keeps per-visit cost bounded no matter how deep the bank grows
+    // (a rich bank must not slow the fill on wide-open early slots).
+    const candCap = Math.max(beamWidth * 8, 256);
     const opts_: { entry: BankEntry; sort: number }[] = [];
     for (const entry of candidates(idx, pattern)) {
       if (entry.score < scoreFloor) continue;
@@ -242,6 +247,7 @@ export function fill(
         entry,
         sort: (crossBonus * 100 + entry.score) * w * (1 - jitter * rng.next()),
       });
+      if (opts_.length >= candCap) break;
     }
     opts_.sort((a, b) => b.sort - a.sort);
     const beam = opts_.slice(0, beamWidth);

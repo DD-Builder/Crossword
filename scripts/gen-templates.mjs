@@ -10,7 +10,7 @@
 import { parseArgs } from 'node:util';
 import { fill } from '../src/core/generator/filler.ts';
 import { buildIndex } from '../src/core/generator/index.ts';
-import { isConnected, isFullyChecked, isSymmetric, templateToGrid } from '../src/core/grid.ts';
+import { deriveSlots, isConnected, isFullyChecked, isSymmetric, templateToGrid } from '../src/core/grid.ts';
 import { rngFrom } from '../src/core/rng.ts';
 import { loadBankEntries, loadFillWordlist } from './lib/bank-node.mjs';
 
@@ -21,9 +21,13 @@ const { values: a } = parseArgs({ options: {
 const N = Number(a.size);
 const MAXWORD = Number(a.maxword);
 const MINDENS = 0.15, MAXDENS = 0.25;
-// Build-time only: the dense 509k list makes fills fast + reliable so the gate
-// measures the *pattern*, not bank coverage. Runtime fill uses the shipped bank.
-const bank = buildIndex([...loadBankEntries(), ...loadFillWordlist({ minScore: 55 })]);
+// Gate against the EXACT runtime bank the app fills from (curated + fill-tier +
+// authored — every entry clued), NOT the raw 509k wordlist. An earlier version
+// gated on the dense list, so templates passed here but couldn't fill at runtime
+// from clued words. Gating on the real bank guarantees every emitted template
+// fills for a real player. (loadFillWordlist stays imported for other tools.)
+void loadFillWordlist;
+const bank = buildIndex(loadBankEntries({ includeFill: true, includeAuthored: true }));
 
 const key = (r, c) => r * N + c;
 const inb = (r, c) => r >= 0 && r < N && c >= 0 && c < N;
@@ -123,8 +127,15 @@ for (let t = 0; t < Number(a.tries); t++) {
   }
   if (filled >= 1) {
     const pct = (100 * blocks.length / (N * N)).toFixed(0);
-    console.error(`✓ ${a.id}: ${blocks.length} blocks (${pct}%), fills ${filled}/3 after ${t} tries`);
-    console.log(JSON.stringify({ id: a.id, size: N, blocks, openness: N >= 15 ? 5 : 4 }));
+    // Count slots >8 so the template can declare them: the validator's
+    // long-fill guard needs this, and these slots are proven fillable from the
+    // shipped bank (the gate above just filled them). Not "theme" slots per se
+    // for a themeless grid, but the same declared-long-fill contract.
+    const grid = templateToGrid(N, blocks);
+    const { slots } = deriveSlots(grid, 3);
+    const longSlots = slots.filter((s) => s.cells.length > 8).length;
+    console.error(`✓ ${a.id}: ${blocks.length} blocks (${pct}%), ${longSlots} long slots, fills ${filled}/3 after ${t} tries`);
+    console.log(JSON.stringify({ id: a.id, size: N, blocks, openness: N >= 15 ? 5 : 4, ...(longSlots ? { themeLongSlots: longSlots } : {}) }));
     process.exit(0);
   }
 }

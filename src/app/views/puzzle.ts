@@ -86,7 +86,7 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   };
 }
 
-const RETUNE_SIZES = [5, 7, 9, 11, 13, 15];
+const RETUNE_SIZES = [5, 7, 9, 11, 13, 15, 17, 19, 21];
 const RETUNE_DAYS = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 /** The in-puzzle "Tune" panel: size + difficulty chips that regenerate in place. */

@@ -67,6 +67,16 @@ function placeableLengths(pool: GridTemplate[]): Set<number> {
   return lens;
 }
 
+/** Kids difficulty bands. K–2 gets a gentle lattice filled purely from kid
+ * vocabulary; 3–5 and 6–8 progressively layer in easy grown-up words. */
+export type KidsBand = 'K2' | '35' | '68';
+
+export function bandForGrade(grade: string): KidsBand {
+  if (grade === 'K' || grade === '1' || grade === '2') return 'K2';
+  if (grade === '3' || grade === '4' || grade === '5') return '35';
+  return '68';
+}
+
 /** Generate a themed puzzle: seed the theme words that can actually fit, and
  * if that fill can't be completed, fall back to a puzzle whose *fill* is still
  * biased toward the theme's categories (via categoryWeights) but carries no
@@ -75,33 +85,37 @@ async function generateThemed(
   base: Parameters<typeof generatePuzzle>[0],
   themeName: string,
   candidateSeeds: string[],
-  useKidsBank = false,
+  kidsBand: KidsBand | null = null,
 ): Promise<Puzzle> {
   const size = base.templates[0]?.size ?? 5;
   const lens = placeableLengths(base.templates);
   const seeds = candidateSeeds.filter((s) => lens.has(s.length)).slice(0, size >= 11 ? 4 : 2);
   if (seeds.length > 0) {
     try {
-      return await generateAsync({ ...base, theme: { name: themeName, entries: seeds } }, useKidsBank);
+      return await generateAsync({ ...base, theme: { name: themeName, entries: seeds } }, kidsBand);
     } catch {
       // exact seeding couldn't fill — degrade to category-biased fill below
     }
   }
-  return generateAsync(base, useKidsBank);
+  return generateAsync(base, kidsBand);
 }
 
-async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], useKidsBank = false): Promise<Puzzle> {
+async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], kidsBand: KidsBand | null = null): Promise<Puzzle> {
   // Minis fill in <100ms — run sync. Bigger grids get one macrotask yield
   // so the "constructing…" frame paints; the fill itself is still fast
   // thanks to heavy-block templates. (A worker handle exists for future
   // heavier generation; today's grids don't need it.)
   const size = spec.templates[0]?.size ?? 5;
   if (size > 7) await new Promise((r) => setTimeout(r, 30));
+  // Kids draw from a grade-banded bank; K–2 is kid-words-only on a lattice,
+  // older bands layer in easy grown-up words but keep kid words weighted up.
   // Fully-checked American grids at 9×9+ need the authored+fill tier's density
   // to fill reliably (the curated-only bank can't); it loads lazily on first
   // use, and curated entries still win the candidate sort via tagWeights.
-  const bank = useKidsBank ? kidsBank() : size >= 9 ? await fullBank() : mainBank();
-  const spec_ = size >= 9 && !useKidsBank
+  const bank = kidsBand ? kidsBank(kidsBand) : size >= 9 ? await fullBank() : mainBank();
+  const spec_ = kidsBand
+    ? { ...spec, fillOptions: { tagWeights: { kid: 8 }, ...spec.fillOptions } }
+    : size >= 9
     ? {
         ...spec,
         // Fully-checked American grids have a lower per-attempt fill rate as
@@ -204,17 +218,26 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
   if (mode === 'kids') {
     const grade = query.get('grade') ?? 'K';
     const theme = query.get('theme') ?? 'animals';
+    const band = bandForGrade(grade);
     const match = matchTheme(theme, kidsEntries(), { maxSeeds: 4, minLen: 3 });
+    // Younger kids solve a gentle 7×7 lattice — short words, sparse crossings,
+    // so the fill stays kid vocabulary (a fully-checked 5×5 needs grown-up words
+    // to complete its crossings, which is exactly what made it too hard). K–2
+    // draws from kid words only; 3–5 mixes in a few easy grown-up words (~80%
+    // kid). Grades 6–8 graduate to the interlocking 5×5, a real little mini.
+    const templates = band === '68'
+      ? templatesBySize(5, 5)
+      : templatesBySize(7, 5).filter((t) => t.lattice);
     return generateThemed({
       id: `gen-kids-${seed}`,
       kind: 'kids',
       title: `${theme[0]?.toUpperCase()}${theme.slice(1)} (Grade ${grade})`,
-      difficulty: 1,
-      templates: templatesBySize(5, 5),
+      difficulty: band === '68' ? 2 : 1,
+      templates,
       seedKey: `kids|${grade}|${theme}|${seed}`,
       categoryWeights: match.weights,
-      fillOptions: { scoreFloor: 45 },
-    }, theme, match.seeds, true);
+      fillOptions: { scoreFloor: band === '68' ? 45 : 0 },
+    }, theme, match.seeds, band);
   }
 
   if (mode === 'themed') {

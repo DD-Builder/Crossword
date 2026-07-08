@@ -1,0 +1,2144 @@
+[
+ {
+  "answer": "ABC",
+  "score": 90,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "school",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "The start of the alphabet",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CAR",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You drive it on the road",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "DAD",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Your male parent",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "HUG",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A warm squeeze from someone",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "JET",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A fast airplane",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "KEY",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "It opens a locked door",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "KID",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A young boy or girl",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MAT",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Flat pad by the front door",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MOM",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Your female parent",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MUD",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Wet dirt you can squish",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PAL",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Another word for a friend",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "POT",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You cook soup in this",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "RUG",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Soft mat on the floor",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SKI",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Slide down a snowy hill",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TAN",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Light brown color",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "VAN",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Bigger than a car, carries more people",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "AUNT",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Your mom or dad’s sister",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BABY",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A very little child",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BEAN",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Little veggie in a pod",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BIKE",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Two-wheeler you pedal",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BOAT",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "It floats you across the water",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BOWL",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Round dish for cereal or soup",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CLAP",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Bang your hands together happily",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "DISH",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A plate you put food on",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "DOLL",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Toy that looks like a little person",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "DOOR",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You open it to go in a room",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "DRAW",
+  "score": 90,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "school",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Make a picture with a crayon",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "FORK",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You eat with this pointy tool",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "GOLD",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Shiny yellow color of a trophy",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "GRAY",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of a rain cloud",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "HAIL",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "weather",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Little balls of ice that fall",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "HAIR",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "body",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Stuff that grows on your head",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "HARE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Fast animal like a big rabbit",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "KICK",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "sports",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "What your foot does to a ball",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "KNEE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "body",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "The bendy middle of your leg",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "LAMB",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Baby sheep",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "LAMP",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "It gives light in a room",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MEAT",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Food that comes from animals",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MOLE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Animal that digs tunnels underground",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "NOSE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "body",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Face part you smell with",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PEAR",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Sweet fruit shaped like a bell",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PINK",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Light red color of bubble gum",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PLUM",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Small purple fruit",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ROAD",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Where cars drive",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ROCK",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A hard stone on the ground",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SALT",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "White stuff that makes food tasty",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SHOE",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You wear this to go outside",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SING",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Make music with your voice",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SOAP",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You wash your hands with it",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SOCK",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You wear this on your foot",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TOAD",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Bumpy cousin of the frog",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "WORM",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Wiggly critter in the dirt",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ALIEN",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "space",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A make-believe being from space",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BLACK",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of the night sky",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BLOCK",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Toy cube you stack up",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BROOM",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You sweep the floor with this",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BROWN",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of chocolate and dirt",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BUNNY",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A soft rabbit with long ears",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CAMEL",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Desert animal with a hump",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CANDY",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Sweet treat you get on Halloween",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CHAIR",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You sit on this",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CHICK",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A fluffy baby hen",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CLASS",
+  "score": 90,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "school",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Group of kids who learn together",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CLOCK",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "It tells you what time it is",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CROWN",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A king or queen wears it",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "DONUT",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Sweet ring you dunk in milk",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "EAGLE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Big bird with a sharp beak",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "GRASS",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Green stuff that covers a yard",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "GREEN",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of grass and leaves",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "JUICE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Sweet drink squeezed from fruit",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "LAUGH",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "What you do at something funny",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MAGIC",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Tricks that seem impossible",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MANGO",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Sweet orange tropical fruit",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "MOOSE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Big forest animal with huge antlers",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PARTY",
+  "score": 90,
+  "categories": [
+   "entertainment"
+  ],
+  "tags": [
+   "fun",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A fun get-together with cake",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PEACH",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Fuzzy sweet fruit",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PLANE",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "It flies you through the sky",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PLANT",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Green thing that grows in a garden",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PLATE",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Flat dish for your dinner",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PUPPY",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A baby dog",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ROBOT",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A toy machine that looks like a person",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SKUNK",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Black-and-white animal with a stinky smell",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SLIDE",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Playground toy you zoom down",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SMILE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "body",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Happy shape your mouth makes",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SNAKE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Long animal with no legs",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SPOON",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You eat soup with this",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "STONE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Another word for a rock",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SUGAR",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Sweet white stuff in cookies",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SWING",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Playground seat that goes back and forth",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TABLE",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You eat your dinner on this",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TEDDY",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A soft stuffed bear",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TEETH",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "body",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "White parts you chew with",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "THUMB",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "body",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "The short fat finger",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TOAST",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Bread that has been warmed and browned",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TOWEL",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "You dry off with this",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "TRUCK",
+  "score": 90,
+  "categories": [
+   "geography"
+  ],
+  "tags": [
+   "travel",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Big vehicle that hauls things",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "WAGON",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Little cart you pull along",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "WHITE",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of fresh snow",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BANANA",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Long yellow fruit a monkey loves",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "BUBBLE",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Round soapy ball of air you blow",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CARROT",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Orange veggie a bunny loves",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CHEESE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Yellow food a mouse loves",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CHERRY",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Little red fruit with a pit",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "CLOUDY",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "weather",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "When the sky is full of gray",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "COOKIE",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "food",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Round sweet treat with chips",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ERASER",
+  "score": 90,
+  "categories": [
+   "arts-literature"
+  ],
+  "tags": [
+   "school",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Rubber that rubs out mistakes",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "FAMILY",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "The people you live with and love",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "FLOWER",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Pretty part of a plant that blooms",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "FOREST",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "nature",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A place with lots of trees",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "FRIEND",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Someone you like to play with",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "KITTEN",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A baby cat",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "ORANGE",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of a pumpkin",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PARROT",
+  "score": 90,
+  "categories": [
+   "science-nature"
+  ],
+  "tags": [
+   "animals",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Colorful bird that can talk",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PILLOW",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Soft thing you rest your head on",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PURPLE",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color you get mixing red and blue",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "PUZZLE",
+  "score": 90,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "toys",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Pieces you fit together to make a picture",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "SISTER",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "family",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "A girl in your family",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "WINDOW",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "home",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Glass you look out of",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ },
+ {
+  "answer": "YELLOW",
+  "score": 90,
+  "categories": [
+   "wordplay"
+  ],
+  "tags": [
+   "colors",
+   "kidcore"
+  ],
+  "clues": [
+   {
+    "text": "Color of the sun and bananas",
+    "difficulty": 1,
+    "stars": 3
+   }
+  ]
+ }
+]

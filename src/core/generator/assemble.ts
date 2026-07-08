@@ -66,6 +66,8 @@ export interface AssembleMeta {
   /** Preferred cluing register (player knob); soft preference in pickClue. */
   register?: Register;
   theme?: { name: string; entries: string[] };
+  /** British-style lattice grid (alternate cells legitimately unchecked). */
+  lattice?: boolean;
   /** Overrides bank clues for specific answers (LLM-generated themes). */
   clueOverrides?: Map<string, { text: string; stars: Clue['stars']; category: Category; register?: Register }>;
 }
@@ -128,6 +130,7 @@ export function assemble(
     ...(meta.date ? { date: meta.date } : {}),
     difficulty: meta.difficulty,
     size: { rows: grid.length, cols: grid[0]?.length ?? 0 },
+    ...(meta.lattice ? { lattice: true } : {}),
     ...(meta.theme ? { theme: meta.theme } : {}),
     grid,
     clues: { across, down },

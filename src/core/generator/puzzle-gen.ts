@@ -59,6 +59,7 @@ export function generatePuzzle(spec: GenerateSpec, bank: BankIndex): Puzzle | nu
       clueCap: knobs.clueCap,
       ...(spec.register ? { register: spec.register } : {}),
       ...(spec.theme ? { theme: spec.theme } : {}),
+      ...(template.lattice ? { lattice: true } : {}),
     };
     return assemble(result.grid!, result.placed!, meta, rngFrom(`${spec.seedKey}|clues`));
   }

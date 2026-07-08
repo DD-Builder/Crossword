@@ -28,3 +28,26 @@ test('kids puzzle builds a grid', async ({ page }) => {
   await page.waitForSelector('.xw-grid', { timeout: 20_000 });
   await expect(page.getByText('Could not build')).toHaveCount(0);
 });
+
+// A K-2 kids puzzle is a lattice grid (alternate cells unchecked) — a grid type
+// the solver hadn't exercised before. Solve one fully to prove lattice grids
+// number, navigate, and detect completion correctly, not just render.
+test('kindergarten lattice puzzle solves to completion', async ({ page }) => {
+  await page.goto('/#/puzzle/gen?mode=kids&grade=K&theme=animals&seed=7');
+  await page.waitForSelector('.xw-grid', { timeout: 20_000 });
+  const hook = await page.evaluate(() => (window as unknown as {
+    __xw?: { solution: string[]; rows: number; cols: number };
+  }).__xw);
+  expect(hook, 'window.__xw test hook must exist').toBeTruthy();
+  const { solution, rows, cols } = hook!;
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const ch = solution[r]![c]!;
+      if (ch === '#') continue;
+      await page.locator(`.xw-cell[data-rc="${r},${c}"]`).click();
+      await page.keyboard.press(ch);
+    }
+  }
+  // Completion → the celebration card (after the victory scene, ~6–8s).
+  await expect(page.locator('.celebrate')).toBeVisible({ timeout: 15_000 });
+});

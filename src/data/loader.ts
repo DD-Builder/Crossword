@@ -32,7 +32,6 @@ import templatesJson from './templates/templates.json';
 
 let mainIndex: BankIndex | null = null;
 let fullIndex: BankIndex | null = null;
-let kidsIndex: BankIndex | null = null;
 
 export function bankEntries(): BankEntry[] {
   return Object.values(bankModules).flat();
@@ -58,15 +57,27 @@ export async function fullBank(): Promise<BankIndex> {
   return fullIndex;
 }
 
-export function kidsBank(): BankIndex {
-  // Kids puzzles draw from the kids bank plus easy, kid-safe main entries.
-  if (!kidsIndex) {
-    const easyMain = bankEntries().filter(
-      (e) => e.score >= 60 && e.clues.some((c) => c.difficulty <= 2),
-    );
-    kidsIndex = buildIndex([...kidsEntries(), ...easyMain]);
+const kidsIndexByBand: Partial<Record<'K2' | '35' | '68', BankIndex>> = {};
+
+/** Grade-banded kids bank. K–2 is kid words ONLY (a lattice fills from these
+ * alone); 3–5 and 6–8 layer in progressively longer easy grown-up words. Kid
+ * words carry a `kid` tag so the filler can weight them above the grown-up
+ * fillers (see puzzles.ts). */
+export function kidsBank(band: 'K2' | '35' | '68' = '35'): BankIndex {
+  if (!kidsIndexByBand[band]) {
+    // Tag every kid entry so it can be boosted in the candidate sort.
+    const kids = kidsEntries().map((e) => ({ ...e, tags: [...(e.tags ?? []), 'kid'] }));
+    if (band === 'K2') {
+      kidsIndexByBand[band] = buildIndex(kids);
+    } else {
+      const maxLen = band === '35' ? 6 : 8;
+      const easyMain = bankEntries().filter(
+        (e) => e.score >= 60 && e.answer.length <= maxLen && e.clues.some((c) => c.difficulty <= 2),
+      );
+      kidsIndexByBand[band] = buildIndex([...kids, ...easyMain]);
+    }
   }
-  return kidsIndex;
+  return kidsIndexByBand[band]!;
 }
 
 export function templates(): GridTemplate[] {

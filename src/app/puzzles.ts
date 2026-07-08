@@ -67,8 +67,8 @@ function placeableLengths(pool: GridTemplate[]): Set<number> {
   return lens;
 }
 
-/** Kids difficulty bands. K–2 gets a gentle lattice filled purely from kid
- * vocabulary; 3–5 and 6–8 progressively layer in easy grown-up words. */
+/** Kids grade bands. All bands solve the same proper (fully-checked) 5×5 from
+ * the kid-safe bank; the band sets the clue tier (gentler for the youngest). */
 export type KidsBand = 'K2' | '35' | '68';
 
 export function bandForGrade(grade: string): KidsBand {
@@ -107,14 +107,20 @@ async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], kidsBan
   // heavier generation; today's grids don't need it.)
   const size = spec.templates[0]?.size ?? 5;
   if (size > 7) await new Promise((r) => setTimeout(r, 30));
-  // Kids draw from a grade-banded bank; K–2 is kid-words-only on a lattice,
-  // older bands layer in easy grown-up words but keep kid words weighted up.
+  // Kids draw from the kid-safe bank (themed kid words + Dale–Chall glue), with
+  // themed words weighted far above the glue so the grid reads as kid vocabulary.
   // Fully-checked American grids at 9×9+ need the authored+fill tier's density
   // to fill reliably (the curated-only bank can't); it loads lazily on first
   // use, and curated entries still win the candidate sort via tagWeights.
-  const bank = kidsBand ? kidsBank(kidsBand) : size >= 9 ? await fullBank() : mainBank();
+  const bank = kidsBand ? kidsBank() : size >= 9 ? await fullBank() : mainBank();
   const spec_ = kidsBand
-    ? { ...spec, fillOptions: { tagWeights: { kid: 8 }, ...spec.fillOptions } }
+    ? {
+        ...spec,
+        // A proper (fully-checked) 5×5 is a demanding fill from the kid-safe
+        // bank — give the engine plenty of restarts to land one.
+        ...(spec.restarts == null ? { restarts: 14 } : {}),
+        fillOptions: { tagWeights: { kid: 10, glue: 0.5 }, ...spec.fillOptions },
+      }
     : size >= 9
     ? {
         ...spec,
@@ -228,14 +234,11 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
     const theme = query.get('theme') ?? 'animals';
     const band = bandForGrade(grade);
     const match = matchTheme(theme, kidsEntries(), { maxSeeds: 4, minLen: 3 });
-    // Younger kids solve a gentle 7×7 lattice — short words, sparse crossings,
-    // so the fill stays kid vocabulary (a fully-checked 5×5 needs grown-up words
-    // to complete its crossings, which is exactly what made it too hard). K–2
-    // draws from kid words only; 3–5 mixes in a few easy grown-up words (~80%
-    // kid). Grades 6–8 graduate to the interlocking 5×5, a real little mini.
-    const templates = band === '68'
-      ? templatesBySize(5, 5)
-      : templatesBySize(7, 5).filter((t) => t.lattice);
+    // Every kids puzzle is a PROPER fully-checked crossword (the friendly stair
+    // 5×5s — fewer 5-letter slots than the corners grid). Themed kid words are
+    // weighted far above the Dale–Chall glue, so the grid reads as kid
+    // vocabulary; grade is carried by the clue tier, not by breaking the grid.
+    const templates = templatesBySize(5, 5).filter((t) => t.id.startsWith('t5-stair'));
     return generateThemed({
       id: `gen-kids-${seed}`,
       kind: 'kids',
@@ -244,7 +247,7 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
       templates,
       seedKey: `kids|${grade}|${theme}|${seed}`,
       categoryWeights: match.weights,
-      fillOptions: { scoreFloor: band === '68' ? 45 : 0 },
+      fillOptions: { scoreFloor: 40 },
     }, theme, match.seeds, band);
   }
 

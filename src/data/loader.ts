@@ -23,6 +23,13 @@ const kidsModules = import.meta.glob<BankEntry[]>('./kids/*.json', {
   eager: true,
   import: 'default',
 });
+// Kid-safe "glue": common 4th-grade-familiar words (Dale–Chall screened) that
+// let a PROPER fully-checked kid grid fill without adult vocabulary. Kept out of
+// `kids/` so it's never used as a theme seed — it's fill, not theme content.
+const kidsGlueModules = import.meta.glob<BankEntry[]>('./kids-glue/*.json', {
+  eager: true,
+  import: 'default',
+});
 const puzzleModules = import.meta.glob<Puzzle[]>('./puzzles/**/*.json', {
   eager: true,
   import: 'default',
@@ -57,27 +64,21 @@ export async function fullBank(): Promise<BankIndex> {
   return fullIndex;
 }
 
-const kidsIndexByBand: Partial<Record<'K2' | '35' | '68', BankIndex>> = {};
+let kidsIndex: BankIndex | null = null;
 
-/** Grade-banded kids bank. K–2 is kid words ONLY (a lattice fills from these
- * alone); 3–5 and 6–8 layer in progressively longer easy grown-up words. Kid
- * words carry a `kid` tag so the filler can weight them above the grown-up
- * fillers (see puzzles.ts). */
-export function kidsBank(band: 'K2' | '35' | '68' = '35'): BankIndex {
-  if (!kidsIndexByBand[band]) {
-    // Tag every kid entry so it can be boosted in the candidate sort.
+/** The kids bank: themed kid words (tagged `kid`) plus the Dale–Chall-screened
+ * glue tier (tagged `glue`). A PROPER fully-checked kid grid can't fill from the
+ * themed words alone, so the glue completes the crossings — but every glue word
+ * is a word a young child reads. The filler weights `kid` far above `glue` (see
+ * puzzles.ts), so themed words win wherever they fit; grade differences are
+ * carried by the clue tier, not the vocabulary. */
+export function kidsBank(): BankIndex {
+  if (!kidsIndex) {
     const kids = kidsEntries().map((e) => ({ ...e, tags: [...(e.tags ?? []), 'kid'] }));
-    if (band === 'K2') {
-      kidsIndexByBand[band] = buildIndex(kids);
-    } else {
-      const maxLen = band === '35' ? 6 : 8;
-      const easyMain = bankEntries().filter(
-        (e) => e.score >= 60 && e.answer.length <= maxLen && e.clues.some((c) => c.difficulty <= 2),
-      );
-      kidsIndexByBand[band] = buildIndex([...kids, ...easyMain]);
-    }
+    const glue = Object.values(kidsGlueModules).flat();
+    kidsIndex = buildIndex([...kids, ...glue]);
   }
-  return kidsIndexByBand[band]!;
+  return kidsIndex;
 }
 
 export function templates(): GridTemplate[] {

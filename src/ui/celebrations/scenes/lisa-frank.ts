@@ -82,7 +82,7 @@ function makeRainbowDolphins(): Scene {
           trails[d]!.unshift({ x, y });
           if (trails[d]!.length > 22) trails[d]!.pop();
           rainbowRibbon(ctx, trails[d]!, 22, 0.5);
-          dolphin(ctx, x, y, 34, ang, col);
+          dolphin(ctx, x, y, 52 * c.unit, ang, col);
           if (c.rng.next() < 0.4) glitter.spawn({ x, y, vx: (c.rng.next() - 0.5) * 80, vy: (c.rng.next() - 0.5) * 80, life: 1, size: 4 + c.rng.next() * 5, seed: c.rng.next() });
         }
       }
@@ -129,7 +129,7 @@ function makeStickerSlap(): Scene {
         y: c.h * (0.2 + 0.6 * c.rng.next()),
         at: 0.2 + i * 0.5,
         kind: i,
-        size: 26 + i * 4 + c.rng.next() * 10,
+        size: (34 + i * 5 + c.rng.next() * 12) * c.unit,
         rot: (c.rng.next() - 0.5) * 0.6,
         col: RAINBOW[i % RAINBOW.length]!,
       }));
@@ -187,11 +187,35 @@ function makeUnicornDash(): Scene {
     ctx.fillStyle = '#fff';
     // body
     ctx.beginPath(); ctx.ellipse(0, 0, s, s * 0.6, 0, 0, TAU); ctx.fill();
-    // neck + head
-    ctx.beginPath(); ctx.moveTo(s * 0.5, -s * 0.2); ctx.lineTo(s * 1.1, -s * 0.9); ctx.lineTo(s * 1.4, -s * 0.7); ctx.lineTo(s * 0.9, s * 0.1); ctx.closePath(); ctx.fill();
-    // horn
+    // neck — a wedge sweeping up from the shoulder to the head
+    ctx.beginPath();
+    ctx.moveTo(s * 0.45, -s * 0.25);
+    ctx.lineTo(s * 0.98, -s * 0.98);
+    ctx.lineTo(s * 1.22, -s * 0.82);
+    ctx.lineTo(s * 0.85, s * 0.05);
+    ctx.closePath(); ctx.fill();
+    // head — a rounded muzzle sitting on the neck (this is what was missing:
+    // before, the horn attached straight to the bare neck top).
+    ctx.beginPath();
+    ctx.ellipse(s * 1.32, -s * 0.9, s * 0.44, s * 0.28, -0.45, 0, TAU);
+    ctx.fill();
+    // ear
+    ctx.beginPath();
+    ctx.moveTo(s * 1.04, -s * 1.04);
+    ctx.lineTo(s * 1.14, -s * 1.34);
+    ctx.lineTo(s * 1.26, -s * 1.02);
+    ctx.closePath(); ctx.fill();
+    // eye + nostril
+    ctx.fillStyle = '#5b3a70';
+    ctx.beginPath(); ctx.arc(s * 1.34, -s * 0.98, s * 0.07, 0, TAU); ctx.fill();
+    ctx.beginPath(); ctx.arc(s * 1.66, -s * 0.74, s * 0.04, 0, TAU); ctx.fill();
+    // horn — rises from the forehead, above the eye
     ctx.fillStyle = '#ffe14d';
-    ctx.beginPath(); ctx.moveTo(s * 1.3, -s * 0.85); ctx.lineTo(s * 1.6, -s * 1.5); ctx.lineTo(s * 1.45, -s * 0.75); ctx.closePath(); ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(s * 1.26, -s * 1.12);
+    ctx.lineTo(s * 1.46, -s * 1.72);
+    ctx.lineTo(s * 1.44, -s * 1.06);
+    ctx.closePath(); ctx.fill();
     // mane (rainbow strips)
     RAINBOW.forEach((col, i) => {
       ctx.strokeStyle = col; ctx.lineWidth = 4;
@@ -226,12 +250,13 @@ function makeUnicornDash(): Scene {
       const y = c.h * 0.68 - jump * c.h * 0.28 + Math.sin(c.t * 12) * 4;
       const gallop = c.t * 14;
 
+      const s = 58 * c.unit;
       trail.unshift({ x: x - 40, y: y + 10 });
       if (trail.length > 26) trail.pop();
-      rainbowRibbon(ctx, trail, 30, 0.55 * (1 - prog * 0.3));
+      rainbowRibbon(ctx, trail, s * 1.1, 0.55 * (1 - prog * 0.3));
 
       if (x > -80 && x < c.w + 80) {
-        unicorn(ctx, x, y, 30, gallop);
+        unicorn(ctx, x, y, s, gallop);
         // hoof sparks
         if (jump < 0.1 && c.rng.next() < 0.5) sparks.spawn({ x: x - 20, y: y + 34, vx: -60 - c.rng.next() * 60, vy: -c.rng.next() * 60, life: 0.8, size: 5 + c.rng.next() * 4, seed: c.rng.next() });
       }

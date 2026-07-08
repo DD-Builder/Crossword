@@ -42,6 +42,7 @@ function makeContext(): SceneContext {
   return {
     ctx: stubCtx(),
     w: 1024, h: 768, t: 0, dt: 1 / 60, quality: 1,
+    unit: 768 / 720,
     palette: PALETTE,
     rng: rngFrom('test'),
     gridRect: { x: 200, y: 150, w: 500, h: 400 },

@@ -453,7 +453,7 @@ function makeButterflies(): Scene {
       ctx.globalAlpha = 1;
 
       for (const f of flies) {
-        const sc = f.size * easeOutBack(clamp01((c.t - f.t0) / 0.5));
+        const sc = f.size * 2.2 * c.unit * easeOutBack(clamp01((c.t - f.t0) / 0.5));
         if (sc <= 0) continue;
         const pos = flyPos(f, c);
         if (c.rng.next() < 0.4 * c.quality) {

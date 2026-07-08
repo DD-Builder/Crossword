@@ -98,7 +98,7 @@ function makeLanternGlow(): Scene {
         const x = c.w * (0.16 + 0.68 * (i / (n - 1)));
         const on = c.t > lit[i]!;
         const flick = on ? 0.7 + Math.sin(c.t * 12 + i) * 0.12 + wobble(i, c.t * 2) * 0.15 : 0;
-        const r = 42;
+        const r = 58 * c.unit;
         // glow through the face
         if (on) c.drawGlow(x, baseY - r * 0.3, r * 1.4, p.warn, flick * 0.6);
         // pumpkin body

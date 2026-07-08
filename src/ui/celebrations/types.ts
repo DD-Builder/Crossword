@@ -79,6 +79,10 @@ export interface SceneContext {
   dt: number;
   /** 1 = full particle budgets; the perf watchdog may halve it. */
   quality: number;
+  /** Viewport-relative scale unit: `min(w,h) / 720`. Multiply fixed hero sizes
+   * by this so figures fill the screen instead of sitting tiny on large displays
+   * (1 at a 720px baseline, ~1.5 on a tall desktop). */
+  unit: number;
   palette: Palette;
   rng: Rng;
   /** Where the solved grid sits on screen, if known. */

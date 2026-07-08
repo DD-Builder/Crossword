@@ -54,13 +54,17 @@
 
 .home-hero {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin: 8px 0 18px;
+  margin: 10px 0 22px;
 }
+.home-hero .view-title { font-size: 2rem; margin: 0; }
 .home-date { color: var(--ink-muted); font-size: 1rem; font-weight: 600; }
-.streak-flame { font-weight: 700; color: var(--warn); font-size: 0.95rem; }
+.streak-flame {
+  font-weight: 700; color: var(--warn); font-size: 0.9rem;
+  background: var(--accent-soft); padding: 3px 11px; border-radius: 999px;
+}
 
 .card-grid {
   display: grid;
@@ -74,11 +78,24 @@
   flex-direction: column;
   gap: 8px;
   text-align: left;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
   position: relative;
   overflow: hidden;
 }
-.mode-card:hover { transform: translateY(-2px); }
+/* An accent stripe crowns each card on hover — persistent on the two dailies,
+   marking them as the main event. */
+.mode-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent);
+  opacity: 0; transition: opacity 0.15s ease;
+}
+.mode-card:hover::before { opacity: 1; }
+.daily-card::before { opacity: 0.55; }
+.mode-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--ink) 14%, transparent);
+}
 .mode-card .mode-kicker {
   font-size: 0.72rem;
   text-transform: uppercase;

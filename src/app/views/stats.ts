@@ -4,8 +4,10 @@ import { dashboardData, type DashboardData } from '../../stats/metrics.ts';
 import { getStreak } from '../../solve/progress.ts';
 import { formatMs } from '../../ui/toolbar.ts';
 import { HINT_TIERS } from '../../solve/hints.ts';
+import { adaptiveSnapshot } from '../../stats/adaptive.ts';
 
 const WEEKDAY_SHORT = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const TIER_NAMES = ['', 'gentle', 'easygoing', 'crafty', 'tricky', 'devious'];
 
 export function renderStats(root: HTMLElement, _ctx: RouteCtx): void {
   const pad = el('div', { className: 'view-pad' },
@@ -49,6 +51,8 @@ function renderDashboard(data: DashboardData): HTMLElement {
   const catMax = Math.max(...data.categories.map((c) => c.seen), 1);
   const hintMax = Math.max(...data.hintTierUsage, 1);
 
+  const snap = adaptiveSnapshot();
+
   return el('div', {},
     el('div', { className: 'stat-tiles' },
       tile(String(data.totalSolves), 'puzzles solved'),
@@ -58,6 +62,15 @@ function renderDashboard(data: DashboardData): HTMLElement {
       tile(formatMs(data.totalTimeMs), 'time puzzling'),
       tile(data.avgStars.toFixed(1) + '★', 'avg puzzle craft'),
     ),
+
+    // The adaptive engine's current read on you — Free Play tunes to this.
+    snap.rated
+      ? el('div', { className: 'stat-tiles' },
+          tile(`${TIER_NAMES[snap.tier]} · ${snap.tier}/5`, 'your Free Play level'),
+          tile(`${Math.round(snap.recentSuccess * 100)}%`, 'recent clean rate'),
+        )
+      : el('p', { className: 'muted', style: 'font-size:0.85rem; margin:4px 0 0' },
+          'Solve a few more Free Play puzzles and your adaptive level appears here.'),
 
     el('h2', { className: 'section-label' }, 'By weekday difficulty'),
     ...data.byWeekday

@@ -12,7 +12,7 @@ import { fnv1a } from '../core/rng.ts';
 import {
   bankEntries, fullBank, kidsBank, kidsEntries, libraryPuzzles, mainBank, templatesBySize,
 } from '../data/loader.ts';
-import { adaptiveTierNudge, adaptiveWeights } from '../stats/adaptive.ts';
+import { adaptiveClueTier, adaptiveScoreFloor, adaptiveWeights } from '../stats/adaptive.ts';
 import { generateThemedViaLlm } from '../llm/themegen.ts';
 import { getSettings } from '../storage/settings.ts';
 
@@ -200,15 +200,15 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
     const registerParam = query.get('register');
     const register: 'classic' | 'modern' =
       registerParam === 'classic' || registerParam === 'modern' ? registerParam : settings.clueRegister;
+    const knobs = knobsFor(difficulty);
     const clueTierParam = Number(query.get('cluetier'));
     const explicitTier = clueTierParam >= 1 && clueTierParam <= 5 ? clueTierParam : undefined;
-    // With no explicit clue-tier knob, let the adaptive layer nudge clue
-    // difficulty from the player's recent pace — breeze → a touch harder,
-    // struggle → gentler. Free Play only; dailies stay deterministic.
-    const adaptiveTier = settings.adaptive
-      ? Math.min(5, Math.max(1, Math.round(knobsFor(difficulty).clueTier + adaptiveTierNudge())))
-      : undefined;
-    const clueTier = explicitTier ?? adaptiveTier;
+    // With no explicit clue-tier knob, let the adaptive layer set clue difficulty
+    // from the player's ability (Elo, once there's enough history) or recent pace.
+    // It also loosens/tightens the fill floor to match. Free Play only; dailies
+    // stay deterministic.
+    const clueTier = explicitTier ?? (settings.adaptive ? adaptiveClueTier(knobs.clueTier) : undefined);
+    const scoreFloor = settings.adaptive && !explicitTier ? adaptiveScoreFloor(knobs.scoreFloor) : undefined;
     return generateAsync({
       id: `gen-free-${seed}`,
       kind: 'generated',
@@ -218,6 +218,7 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
       seedKey: `free|${size}|${difficulty}|${seed}`,
       register,
       ...(clueTier ? { clueTier } : {}),
+      ...(scoreFloor !== undefined ? { fillOptions: { scoreFloor } } : {}),
       categoryWeights: settings.adaptive ? adaptiveWeights() : {},
     });
   }

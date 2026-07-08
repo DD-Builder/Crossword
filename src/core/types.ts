@@ -55,6 +55,9 @@ export interface Clue {
   clue: string;
   /** Combined difficulty + cleverness, 1 (gimme) … 5 (devious gem). */
   stars: 1 | 2 | 3 | 4 | 5;
+  /** Pure solve-difficulty tier of the chosen clue, 1 … 5 (Mon…Sat). Carried
+   * through so the stats layer can rate the player against item difficulty. */
+  difficulty?: 1 | 2 | 3 | 4 | 5;
   category: Category;
   register?: Register;
   tags?: string[];

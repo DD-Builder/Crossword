@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { computeProfile } from './adaptive.ts';
+import { abilityToTier, computeProfile, tierScoreFloor } from './adaptive.ts';
 import type { ClueRow } from './events.ts';
 import type { Category } from '../core/types.ts';
 
@@ -55,6 +55,51 @@ describe('computeProfile — category weights', () => {
       expect(w).toBeGreaterThanOrEqual(0.9);
       expect(w).toBeLessThanOrEqual(1.15);
     }
+  });
+});
+
+describe('Elo ability rating', () => {
+  const cleanAt = (d: 1 | 2 | 3 | 4 | 5): ClueRow => row({ category: 'wordplay', difficulty: d });
+  const missAt = (d: 1 | 2 | 3 | 4 | 5): ClueRow =>
+    row({ category: 'wordplay', difficulty: d, revealed: true, wrongLetters: 2, msToSolve: null });
+
+  it('rises when the player cleanly solves hard clues', () => {
+    const clues = Array.from({ length: 60 }, () => cleanAt(5));
+    expect(computeProfile(clues).ability).toBeGreaterThan(1000);
+  });
+
+  it('falls when the player misses easy clues', () => {
+    const clues = Array.from({ length: 60 }, () => missAt(1));
+    expect(computeProfile(clues).ability).toBeLessThan(1000);
+  });
+
+  it('a strong player targets a higher tier than a weak one', () => {
+    const strong = computeProfile(Array.from({ length: 80 }, () => cleanAt(5))).ability;
+    const weak = computeProfile(Array.from({ length: 80 }, () => missAt(1))).ability;
+    expect(abilityToTier(strong)).toBeGreaterThan(abilityToTier(weak));
+  });
+
+  it('abilityToTier is clamped to 1–5', () => {
+    expect(abilityToTier(5000)).toBe(5);
+    expect(abilityToTier(-5000)).toBe(1);
+  });
+
+  it('score floor loosens as the tier rises (inverse coupling)', () => {
+    expect(tierScoreFloor(1)).toBeGreaterThan(tierScoreFloor(5));
+  });
+
+  it('recentSuccess reflects the recent clean rate', () => {
+    const clues = [
+      ...Array.from({ length: 20 }, () => missAt(2)),
+      ...Array.from({ length: 20 }, () => cleanAt(2)),
+    ];
+    // Last 40 rated → 20 clean of 40 = 50%.
+    expect(computeProfile(clues).recentSuccess).toBeCloseTo(0.5, 1);
+  });
+
+  it('ignores clues with no recorded difficulty', () => {
+    const clues = Array.from({ length: 30 }, () => row({ category: 'wordplay' })); // no difficulty
+    expect(computeProfile(clues).ability).toBe(1000); // unchanged from start
   });
 });
 

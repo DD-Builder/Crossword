@@ -34,6 +34,9 @@ export interface ClueRow {
   clue: string;
   category: Category;
   stars: number;
+  /** Pure solve-difficulty tier 1–5 of the clue shown (item rating for Elo).
+   * Optional: older rows and placeholder/LLM clues may lack it. */
+  difficulty?: number;
   lengthChars: number;
   msToSolve: number | null;   // firstFocus → solved, null if never solved unaided
   wrongLetters: number;
@@ -87,6 +90,7 @@ export async function recordSolve(
         clue: clue.clue,
         category: clue.category,
         stars: clue.stars,
+        ...(clue.difficulty ? { difficulty: clue.difficulty } : {}),
         lengthChars: clue.answer.length,
         msToSolve:
           timing.solvedMs !== null && timing.firstFocusMs !== null && !timing.revealed

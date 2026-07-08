@@ -106,6 +106,7 @@ export function assemble(
         answer,
         clue: c.text,
         stars: c.stars,
+        difficulty: c.difficulty,
         category: entry.categories[0] ?? 'wordplay',
         ...(c.register ? { register: c.register } : {}),
         ...(entry.tags.length > 0 ? { tags: entry.tags } : {}),

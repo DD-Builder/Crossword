@@ -29,10 +29,10 @@ test('kids puzzle builds a grid', async ({ page }) => {
   await expect(page.getByText('Could not build')).toHaveCount(0);
 });
 
-// A K-2 kids puzzle is a lattice grid (alternate cells unchecked) — a grid type
-// the solver hadn't exercised before. Solve one fully to prove lattice grids
-// number, navigate, and detect completion correctly, not just render.
-test('kindergarten lattice puzzle solves to completion', async ({ page }) => {
+// Kids puzzles must be PROPER crosswords: every white cell belongs to both an
+// across and a down word ≥3 (no orphan touching pairs, no unchecked cells).
+// Verify that on the real grid, then solve it fully to confirm it completes.
+test('kindergarten puzzle is a proper crossword and solves to completion', async ({ page }) => {
   await page.goto('/#/puzzle/gen?mode=kids&grade=K&theme=animals&seed=7');
   await page.waitForSelector('.xw-grid', { timeout: 20_000 });
   const hook = await page.evaluate(() => (window as unknown as {
@@ -40,6 +40,26 @@ test('kindergarten lattice puzzle solves to completion', async ({ page }) => {
   }).__xw);
   expect(hook, 'window.__xw test hook must exist').toBeTruthy();
   const { solution, rows, cols } = hook!;
+
+  // Fully-checked check: no maximal run of white cells has length 1 or 2 in
+  // either direction (a length-1/2 run means an orphan / unchecked cell).
+  const runsOk = (line: string[]): boolean => {
+    let run = 0;
+    for (let i = 0; i <= line.length; i++) {
+      if (i < line.length && line[i] !== '#') { run++; continue; }
+      if (run === 1 || run === 2) return false;
+      run = 0;
+    }
+    return true;
+  };
+  for (let r = 0; r < rows; r++) {
+    expect(runsOk(solution[r]!.split('')), `row ${r} has an orphan run`).toBe(true);
+  }
+  for (let c = 0; c < cols; c++) {
+    const col = solution.map((row) => row[c]!);
+    expect(runsOk(col), `col ${c} has an orphan run`).toBe(true);
+  }
+
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       const ch = solution[r]![c]!;

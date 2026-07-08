@@ -1410,6 +1410,24 @@
     "text": "It puts a team on the spot",
     "difficulty": 4,
     "stars": 4
+   },
+   {
+    "text": "Spot kick for a foul in the box",
+    "difficulty": 1,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "12-yard chance to score",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Shootout unit that decides finals",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
    }
   ]
  },

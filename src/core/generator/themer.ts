@@ -90,6 +90,9 @@ export interface ThemeMatch {
   seeds: string[];
   /** Category multipliers to bias the rest of the fill toward the theme. */
   weights: Record<string, number>;
+  /** Tag multipliers — the precise theme bias (a soccer theme boosts
+   * soccer-tagged answers, not the whole sports-leisure category). */
+  tagWeights: Record<string, number>;
   /** 0–1 confidence that the local bank actually covers this theme. */
   confidence: number;
 }
@@ -113,15 +116,28 @@ export function matchTheme(
     .slice(0, maxSeeds)
     .map((x) => x.e.answer);
 
-  // Which categories dominate the matches? Bias fill toward them (lightly).
+  // Bias the fill toward the theme's actual TAGS, not its broad category —
+  // boosting a whole category floods the grid with that category's crosswordese
+  // (a soccer theme would pull tennis's ACE/LET from sports-leisure). Only tags
+  // that are themselves theme tokens count, so the bias stays on-topic.
+  const tagScores = new Map<string, number>();
+  for (const { e, s } of scored.slice(0, 40)) {
+    for (const t of e.tags) if (tokens.has(t)) tagScores.set(t, (tagScores.get(t) ?? 0) + s);
+  }
+  const tagWeights: Record<string, number> = {};
+  for (const [tag] of [...tagScores.entries()].sort((a, b) => b[1] - a[1]).slice(0, 4)) {
+    tagWeights[tag] = 2.2;
+  }
+
+  // Keep only a very light category nudge (not enough to flood).
   const catScores = new Map<string, number>();
   for (const { e, s } of scored.slice(0, 40)) {
     for (const c of e.categories) catScores.set(c, (catScores.get(c) ?? 0) + s);
   }
   const weights: Record<string, number> = {};
-  const top = [...catScores.entries()].sort((a, b) => b[1] - a[1]).slice(0, 2);
-  for (const [cat] of top) weights[cat] = 1.15;
+  const topCat = [...catScores.entries()].sort((a, b) => b[1] - a[1]).slice(0, 1);
+  for (const [cat] of topCat) weights[cat] = 1.05;
 
   const confidence = Math.min(1, scored.length / 25);
-  return { seeds, weights, confidence };
+  return { seeds, weights, tagWeights, confidence };
 }

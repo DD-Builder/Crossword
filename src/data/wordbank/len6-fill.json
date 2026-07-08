@@ -3589,6 +3589,24 @@
     "text": "Soccer's last line of defense",
     "difficulty": 1,
     "stars": 1
+   },
+   {
+    "text": "The one guarding the net",
+    "difficulty": 1,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Goalie, more formally",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Only player allowed to use hands",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
    }
   ]
  },

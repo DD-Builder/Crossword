@@ -216,6 +216,8 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
       templates: pickTemplates(size, difficulty),
       seedKey: `themed|${themeText}|${seed}`,
       categoryWeights: match.weights,
+      // Boost the theme's specific tags (keeping the fill-tier demotion).
+      fillOptions: { tagWeights: { fill: 0.6, ...match.tagWeights } },
     }, themeText, match.seeds);
   }
 

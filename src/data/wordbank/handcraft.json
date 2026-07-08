@@ -1472,6 +1472,37 @@
   ]
  },
  {
+  "answer": "EQUALIZER",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "The goal that levels the score",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Tying tally late in the match",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Denzel's avenging character, or a soccer strike",
+    "difficulty": 3,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   }
+  ]
+ },
+ {
   "answer": "ERECTED",
   "score": 64,
   "categories": [
@@ -1561,6 +1592,37 @@
     "difficulty": 3,
     "stars": 3,
     "category": "entertainment"
+   }
+  ]
+ },
+ {
+  "answer": "FIFA",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Soccer's global governing body",
+    "difficulty": 1,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Long-running EA video-game series",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "entertainment"
+   },
+   {
+    "text": "Zurich-based sport org",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
    }
   ]
  },
@@ -1791,6 +1853,38 @@
   ]
  },
  {
+  "answer": "GOALIE",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Net-minder, informally",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "One who dives to make saves",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Keeper, casually",
+    "difficulty": 3,
+    "stars": 2,
+    "register": "modern",
+    "category": "sports-leisure"
+   }
+  ]
+ },
+ {
   "answer": "GOONS",
   "score": 64,
   "categories": [
@@ -1915,6 +2009,68 @@
     "difficulty": 3,
     "stars": 4,
     "register": "modern",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "HATTRICK",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Three scores by one player",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "A trio of tallies in one match",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Magic-sounding scoring feat",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "sports-leisure"
+   }
+  ]
+ },
+ {
+  "answer": "HEADER",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Scoring off your noggin",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Ball met with the forehead",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Top of a memo, or a soccer play",
+    "difficulty": 3,
+    "stars": 3,
     "category": "wordplay"
    }
   ]
@@ -2102,6 +2258,36 @@
     "text": "Yearns, with 'to'?",
     "difficulty": 3,
     "stars": 4,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "KICKOFF",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "How each half begins",
+    "difficulty": 1,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "The very start of the match",
+    "difficulty": 2,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Launch event, or a soccer start",
+    "difficulty": 3,
+    "stars": 3,
     "category": "wordplay"
    }
   ]
@@ -2578,6 +2764,69 @@
   ]
  },
  {
+  "answer": "MESSI",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Argentine soccer superstar Lionel",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Barcelona great for many years",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "2022 World Cup winner, to fans",
+    "difficulty": 3,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   }
+  ]
+ },
+ {
+  "answer": "MIDFIELD",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Where the playmakers roam",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Central zone of the pitch",
+    "difficulty": 2,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "The engine room of a soccer side",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   }
+  ]
+ },
+ {
   "answer": "MISSTEP",
   "score": 64,
   "categories": [
@@ -2634,6 +2883,37 @@
     "difficulty": 3,
     "stars": 4,
     "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "OFFSIDE",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Flag-raising infraction in soccer",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Ahead of the last defender, illegally",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "What VAR often reviews",
+    "difficulty": 3,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
    }
   ]
  },
@@ -2764,6 +3044,36 @@
   ]
  },
  {
+  "answer": "PELE",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Brazilian soccer legend",
+    "difficulty": 1,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Three-time World Cup winner from Brazil",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Edson Arantes do Nascimento, familiarly",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   }
+  ]
+ },
+ {
   "answer": "PENCHANT",
   "score": 64,
   "categories": [
@@ -2790,6 +3100,36 @@
     "difficulty": 3,
     "stars": 4,
     "register": "classic",
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "PITCH",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "The field of play, to a Brit",
+    "difficulty": 1,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Where the match is contested",
+    "difficulty": 2,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Sales talk, or a soccer field",
+    "difficulty": 3,
+    "stars": 4,
     "category": "wordplay"
    }
   ]
@@ -3113,6 +3453,39 @@
     "difficulty": 3,
     "stars": 3,
     "category": "science-nature"
+   }
+  ]
+ },
+ {
+  "answer": "RONALDO",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Cristiano of soccer fame",
+    "difficulty": 1,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Portuguese superstar, to fans",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "'CR7' on the pitch",
+    "difficulty": 3,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
    }
   ]
  },
@@ -4555,6 +4928,36 @@
   ]
  },
  {
+  "answer": "VOLLEY",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Strike a ball before it bounces",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Mid-air kick, or a tennis shot",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Burst of gunfire, or a soccer strike",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "wordplay"
+   }
+  ]
+ },
+ {
   "answer": "WASTES",
   "score": 64,
   "categories": [
@@ -4615,6 +5018,36 @@
   ]
  },
  {
+  "answer": "WINGER",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Wide attacker who sends in crosses",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Flank player in football",
+    "difficulty": 2,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "One hugging the touchline",
+    "difficulty": 3,
+    "stars": 3,
+    "category": "sports-leisure"
+   }
+  ]
+ },
+ {
   "answer": "WOKE",
   "score": 64,
   "categories": [
@@ -4644,6 +5077,37 @@
     "stars": 4,
     "register": "modern",
     "category": "wordplay"
+   }
+  ]
+ },
+ {
+  "answer": "WORLDCUP",
+  "score": 64,
+  "categories": [
+   "sports-leisure"
+  ],
+  "tags": [
+   "handcraft"
+  ],
+  "clues": [
+   {
+    "text": "Quadrennial soccer tournament",
+    "difficulty": 1,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "FIFA's biggest prize",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Trophy hosted across North America in 2026",
+    "difficulty": 3,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
    }
   ]
  },

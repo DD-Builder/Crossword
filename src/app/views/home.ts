@@ -24,7 +24,7 @@ export function renderHome(root: HTMLElement, _ctx: RouteCtx): (() => void) | vo
     const id = `${kind}-${date}`;
     const isDone = doneToday.has(kind);
     const inProgress = !isDone && hasProgress(id);
-    const card = el('button', { className: 'mode-card card' },
+    const card = el('button', { className: 'mode-card daily-card card' },
       el('span', { className: 'mode-kicker' }, `${WEEKDAY_NAMES[weekday]} · ${DIFFICULTY_TAGS[weekday]}`),
       el('h3', {}, title),
       el('p', {}, blurb),

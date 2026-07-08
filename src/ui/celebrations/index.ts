@@ -1,7 +1,8 @@
-/** Victory choreography: grid ripple at t=0, canvas scene at ~150ms, the
- * celebration modal cued at 1.4s so the scene gets a beat to shine first.
- * Honors prefers-reduced-motion and the "Victory animations" setting by
- * skipping straight to the modal. */
+/** Victory choreography: grid ripple at t=0, canvas scene at ~150ms, and the
+ * celebration modal held back until the scene has run its full course — the
+ * animation gets the stage to itself, then the time card rises as it fades
+ * (no more card veiling a still-playing scene). Honors prefers-reduced-motion
+ * and the "Victory animations" setting by skipping straight to the modal. */
 
 import { getSettings } from '../../storage/settings.ts';
 import { playScene, type PlayHandle } from './engine.ts';
@@ -21,7 +22,6 @@ export interface VictoryOptions {
   onModalCue: (animated: boolean) => void;
 }
 
-const MODAL_CUE_MS = 1400;
 const SCENE_START_MS = 150;
 
 export function playVictory(opts: VictoryOptions): PlayHandle {
@@ -47,14 +47,21 @@ export function playVictory(opts: VictoryOptions): PlayHandle {
     opts.onModalCue(true);
   };
   const sceneTimer = window.setTimeout(() => {
+    // onDone is the early-exit backstop: a self-terminating scene (e.g. an init
+    // error tears down immediately) cues the card at once instead of stranding
+    // it behind a blank screen for the full duration.
     inner = playScene(scene, {
       seedKey: opts.seedKey,
       gridRect,
       title: opts.title,
       timeText: opts.timeText,
+      onDone: cue,
     });
   }, SCENE_START_MS);
-  const cueTimer = window.setTimeout(cue, MODAL_CUE_MS);
+  // Primary cue: the card rises exactly as the scene reaches the end of its run
+  // and begins to fade, so the animation gets the full stage first and the card
+  // crossfades in over the tail — never veiling a live scene.
+  const cueTimer = window.setTimeout(cue, SCENE_START_MS + scene.duration * 1000);
 
   return {
     stop() {

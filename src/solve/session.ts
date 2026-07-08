@@ -48,10 +48,12 @@ export interface SessionState {
 // Streak thresholds (tunable; overridable per-session for tests). Enter "on
 // fire" at FIRE_ON correct clues within FIRE_WINDOW_MS; stay lit until the
 // trailing count drops below FIRE_SUSTAIN, so it lingers through a hot streak
-// and fades as the pace cools.
+// and fades as the pace cools. Tuned to actually be reachable in normal play —
+// a brisk burst of a handful of answers lights it, rather than an expert-only
+// ten-a-minute sprint that almost never triggered.
 const FIRE_WINDOW_MS = 60_000;
-const FIRE_ON = 10;
-const FIRE_SUSTAIN = 8;
+const FIRE_ON = 5;
+const FIRE_SUSTAIN = 3;
 
 export interface ClueTiming {
   firstFocusMs: number | null;

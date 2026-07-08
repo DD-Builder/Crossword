@@ -133,6 +133,7 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, speedMode = false):
     const state = session.store.get();
     if (state.paused || state.completed) return;
     toolbar.refresh();
+    session.pollFire(); // let the streak fade even when no keys are pressed
     if (speedHud) {
       const t = session.activeMs();
       const you = speedHud.querySelector<HTMLElement>('.speed-fill.you');

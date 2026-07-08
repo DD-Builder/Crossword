@@ -4,6 +4,7 @@
 
 import type { SolveSession } from '../solve/session.ts';
 import { el } from './dom.ts';
+import { getSettings } from '../storage/settings.ts';
 
 export interface GridView {
   root: HTMLElement;
@@ -61,9 +62,12 @@ export function createGridView(session: SolveSession): GridView {
   }
 
   function refresh(): void {
-    const { cursor, direction } = session.store.get();
+    const { cursor, direction, onFire } = session.store.get();
     const slot = session.currentSlot();
     const inWord = new Set(slot.cells.map((c) => `${c.row},${c.col}`));
+    // The streak flame rides the active word — cosmetic, and only when the
+    // player hasn't opted out of animations.
+    const flaming = onFire && getSettings().victoryAnimations;
 
     for (const ref of refs) {
       const cell = session.cellAt(ref.row, ref.col);
@@ -75,6 +79,7 @@ export function createGridView(session: SolveSession): GridView {
       const classes = ['xw-cell'];
       if (isCursor) classes.push('selected');
       else if (inWord.has(key)) classes.push('in-word');
+      if (flaming && inWord.has(key)) classes.push('on-fire');
       if (cell.pencil) classes.push('pencil');
       if (cell.flag === 'checked-wrong') classes.push('wrong');
       if (cell.flag === 'revealed') classes.push('revealed');

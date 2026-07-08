@@ -374,6 +374,45 @@
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
+/* "On fire" streak: when the player solves a fast burst, the active word's
+   cells swap the normal highlight for a subtle shimmering flame — a thickened
+   ember outline plus a small lick of flame dancing up from a corner. Kept
+   deliberately low-key so it delights without distracting. */
+.xw-cell.on-fire {
+  background: color-mix(in srgb, var(--warn) 12%, var(--cell-bg));
+  z-index: 1;
+  animation: ember-shimmer 2.4s ease-in-out infinite;
+}
+@keyframes ember-shimmer {
+  0%, 100% {
+    box-shadow: inset 0 0 0 2px var(--warn),
+                inset 0 0 6px color-mix(in srgb, var(--bad) 38%, transparent);
+  }
+  50% {
+    box-shadow: inset 0 0 0 2.5px var(--bad),
+                inset 0 0 10px color-mix(in srgb, var(--warn) 62%, transparent);
+  }
+}
+.xw-cell.on-fire::before {
+  content: "";
+  position: absolute;
+  top: -9%;
+  right: 7%;
+  width: 20cqh;
+  height: 30cqh;
+  background: radial-gradient(ellipse at 50% 100%,
+    var(--warn) 0%, color-mix(in srgb, var(--bad) 82%, transparent) 55%, transparent 72%);
+  border-radius: 50% 50% 48% 52% / 62% 60% 40% 40%;
+  transform-origin: 50% 100%;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: flame-dance 1.15s ease-in-out infinite;
+}
+@keyframes flame-dance {
+  0%, 100% { transform: translateY(0) scaleY(1) rotate(-5deg); opacity: 0.5; }
+  50% { transform: translateY(-14%) scaleY(1.2) rotate(5deg); opacity: 0.78; }
+}
+
 /* Win wave: diagonal flash rippling across the solved grid, cell by cell. */
 .win-wave .xw-cell:not(.block) {
   animation: win-wave-flash 0.9s ease-out var(--wd, 0ms) 1;

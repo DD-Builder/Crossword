@@ -17,3 +17,18 @@ export function playGridWave(gridEl: HTMLElement | null): void {
   const total = (2 * Math.ceil(cells.length / cols)) * 36 + 900;
   window.setTimeout(() => gridEl.classList.remove('win-wave'), total);
 }
+
+/** Retune morph: the fresh grid cascades in cell by cell along the diagonal —
+ * the player watches the puzzle rebuild when they change a knob. */
+export function playGridMorphIn(gridEl: HTMLElement | null): void {
+  if (!gridEl) return;
+  const cells = gridEl.querySelectorAll<HTMLElement>('.xw-cell');
+  const cols = Number(gridEl.style.getPropertyValue('--grid-cols')) ||
+    getComputedStyle(gridEl).gridTemplateColumns.split(' ').length || 1;
+  cells.forEach((cell, i) => {
+    cell.style.setProperty('--wd', `${(Math.floor(i / cols) + (i % cols)) * 26}ms`);
+  });
+  gridEl.classList.add('grid-morph-in');
+  const total = (2 * Math.ceil(cells.length / cols)) * 26 + 520;
+  window.setTimeout(() => gridEl.classList.remove('grid-morph-in'), total);
+}

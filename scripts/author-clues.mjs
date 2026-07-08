@@ -137,11 +137,23 @@ function rate(text, corpusDiff) {
 const norm = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 /** Turn a corpus record into a selected, tiered, validated clue set. */
+/** Strip HTML tags + decode entities the corpus carries (e.g. "<em>", "&amp;"),
+ * so nothing renders as literal markup in a clue. */
+function normalizeText(s) {
+  return String(s)
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/&#0*39;|&apos;|&rsquo;|&lsquo;/g, "'").replace(/&ldquo;|&rdquo;/g, '"')
+    .replace(/&nbsp;/g, ' ').replace(/&mdash;/g, '—').replace(/&ndash;/g, '–')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
+    .replace(/\s+/g, ' ').trim();
+}
+
 function buildClues(answer, rec) {
   const rated = [];
   const seenText = new Set();
   for (const c of rec.clues) {
-    const text = c.text.trim();
+    const text = normalizeText(c.text);
     if (text.length < 3 || text.length > 120) continue;
     if (leaks(answer, text)) continue;
     const key = norm(text);

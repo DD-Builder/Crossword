@@ -90,10 +90,11 @@ async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], useKids
   // heavier generation; today's grids don't need it.)
   const size = spec.templates[0]?.size ?? 5;
   if (size > 7) await new Promise((r) => setTimeout(r, 30));
-  // Big grids need the fill tier's density; it loads lazily on first use.
-  // Curated entries still win the candidate sort via tagWeights.
-  const bank = useKidsBank ? kidsBank() : size >= 11 ? await fullBank() : mainBank();
-  const spec_ = size >= 11 && !useKidsBank
+  // Fully-checked American grids at 9×9+ need the authored+fill tier's density
+  // to fill reliably (the curated-only bank can't); it loads lazily on first
+  // use, and curated entries still win the candidate sort via tagWeights.
+  const bank = useKidsBank ? kidsBank() : size >= 9 ? await fullBank() : mainBank();
+  const spec_ = size >= 9 && !useKidsBank
     ? { ...spec, fillOptions: { tagWeights: { fill: 0.6 }, ...spec.fillOptions } }
     : spec;
   const puzzle = generatePuzzle(spec_, bank);

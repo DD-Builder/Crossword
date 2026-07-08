@@ -3254,6 +3254,27 @@
     "text": "Net result?",
     "difficulty": 5,
     "stars": 5
+   },
+   {
+    "text": "It's worth a point in soccer",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "What a striker is paid to score",
+    "difficulty": 2,
+    "stars": 3,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "The net result of a great strike?",
+    "difficulty": 3,
+    "stars": 4,
+    "register": "modern",
+    "category": "sports-leisure"
    }
   ]
  },

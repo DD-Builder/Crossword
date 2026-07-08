@@ -618,6 +618,24 @@
     "text": "Market takeover?",
     "difficulty": 4,
     "stars": 4
+   },
+   {
+    "text": "Kick from the edge of the pitch",
+    "difficulty": 1,
+    "stars": 2,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Set piece swung into the box",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Boxer's rest spot, or a soccer kick",
+    "difficulty": 3,
+    "stars": 4,
+    "category": "wordplay"
    }
   ]
  },

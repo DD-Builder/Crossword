@@ -2631,6 +2631,25 @@
     "text": "Forward with finishing duties",
     "difficulty": 3,
     "stars": 2
+   },
+   {
+    "text": "Forward expected to score",
+    "difficulty": 1,
+    "stars": 2,
+    "register": "modern",
+    "category": "sports-leisure"
+   },
+   {
+    "text": "Front-line attacker in football",
+    "difficulty": 2,
+    "stars": 3,
+    "category": "sports-leisure"
+   },
+   {
+    "text": "One leading the line, or on a picket?",
+    "difficulty": 3,
+    "stars": 4,
+    "category": "wordplay"
    }
   ]
  },

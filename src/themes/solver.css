@@ -375,51 +375,47 @@
 }
 
 /* "On fire" streak: when the player solves a fast burst, the active word's
-   cells swap the normal highlight for a subtle shimmering flame — a thickened
-   ember outline plus a small lick of flame dancing up from a corner. Kept
-   deliberately low-key so it delights without distracting. */
+   cells swap the normal highlight for real flames licking up off the boxes — a
+   warm ember tint plus a baked, physically-simulated fire sprite (see
+   scripts/bake-flame.mjs) composited with `mix-blend-mode: screen` so the
+   sprite's black backdrop drops out and only the flame glows and dances. */
 .xw-cell.on-fire {
-  background: color-mix(in srgb, var(--warn) 12%, var(--cell-bg));
+  background: color-mix(in srgb, var(--warn) 14%, var(--cell-bg));
   z-index: 1;
   animation: ember-shimmer 2.4s ease-in-out infinite;
 }
 @keyframes ember-shimmer {
   0%, 100% {
-    box-shadow: inset 0 0 0 2px var(--warn),
-                inset 0 0 6px color-mix(in srgb, var(--bad) 38%, transparent);
+    box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--warn) 80%, transparent),
+                inset 0 0 6px color-mix(in srgb, var(--bad) 32%, transparent);
   }
   50% {
-    box-shadow: inset 0 0 0 2.5px var(--bad),
-                inset 0 0 10px color-mix(in srgb, var(--warn) 62%, transparent);
+    box-shadow: inset 0 0 0 2px var(--bad),
+                inset 0 0 10px color-mix(in srgb, var(--warn) 55%, transparent);
   }
 }
-/* A single realistic lick of flame at one corner of the word (the first cell).
-   Layered fire gradient (bright yellow core → orange → red) in a flame
-   silhouette, with an organic flicker — kept small and semi-transparent. */
-.xw-cell.fire-tip::before {
+/* The flame itself: a bottom-anchored transparent sprite that licks up above
+   each cell of the burning word. The strip is 30 frames wide (bake-flame.mjs);
+   stepping the background across it plays the fire. Sized in cqh so it scales
+   with the grid. Swap src/themes/flame.png for a real fire strip (transparent,
+   same frame count) and this keeps working. */
+.xw-cell.on-fire::after {
   content: "";
   position: absolute;
-  top: -24%;
-  right: -7%;
-  width: 30cqh;
-  height: 54cqh;
-  background:
-    radial-gradient(ellipse 52% 42% at 50% 74%, #fff3b8 0%, #ffd24d 34%, rgba(255, 210, 77, 0) 64%),
-    radial-gradient(ellipse 72% 88% at 50% 100%, #ffb43a 0%, #ff7a1f 40%, #e8462a 68%, rgba(232, 70, 42, 0) 84%);
-  clip-path: polygon(50% 0%, 60% 22%, 70% 50%, 65% 72%, 73% 90%, 55% 100%, 45% 100%, 27% 90%, 35% 72%, 30% 50%, 40% 22%);
-  transform-origin: 50% 100%;
-  filter: drop-shadow(0 0 4px rgba(255, 120, 30, 0.55));
-  opacity: 0.92;
+  left: 50%;
+  bottom: -6%;
+  width: 108cqh;
+  height: 162cqh;              /* 2:3 frame, taller than the cell → licks up */
+  transform: translateX(-50%);
+  background: url(./flame.png) 0 0 / calc(30 * 100%) 100% no-repeat;
+  opacity: 0.95;
   pointer-events: none;
-  animation: flame-flicker 0.85s ease-in-out infinite;
+  z-index: 2;
+  animation: flame-play 1s steps(30) infinite;
 }
-@keyframes flame-flicker {
-  0%   { transform: scaleY(1) scaleX(1) rotate(-3deg) translateY(0); opacity: 0.8; }
-  20%  { transform: scaleY(1.14) scaleX(0.9) rotate(3deg) translateY(-6%); opacity: 0.94; }
-  40%  { transform: scaleY(0.96) scaleX(1.06) rotate(-2deg) translateY(-2%); opacity: 0.72; }
-  60%  { transform: scaleY(1.1) scaleX(0.94) rotate(2deg) translateY(-7%); opacity: 0.9; }
-  80%  { transform: scaleY(1.02) scaleX(1) rotate(-3deg) translateY(-3%); opacity: 0.82; }
-  100% { transform: scaleY(1) scaleX(1) rotate(-3deg) translateY(0); opacity: 0.8; }
+@keyframes flame-play {
+  from { background-position-x: 0; }
+  to   { background-position-x: 100%; }
 }
 
 /* In-puzzle "Tune" panel — change size/difficulty and the grid regenerates. */

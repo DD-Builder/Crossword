@@ -83,7 +83,9 @@ test('solves the daily mini via keyboard and records the result', async ({ page 
     }
   }
 
-  await expect(page.locator('.celebrate')).toBeVisible({ timeout: 10_000 });
+  // The completion card now waits for the victory scene to finish (~6–8s) so it
+  // never overlaps a live animation — allow headroom over the longest scene.
+  await expect(page.locator('.celebrate')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('.celebrate h3')).toContainText(/Solved|Flawless/);
 
   // Timer froze and stats got written (solves store has our row).

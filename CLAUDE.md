@@ -2,7 +2,7 @@
 
 A local-first crossword puzzle game. Vite + TypeScript, **zero runtime
 dependencies** — no framework, no state library. Web first, Capacitor for
-iOS later (same path as Math-Warriors).
+iOS later.
 
 ## Commands
 

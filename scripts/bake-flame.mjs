@@ -15,7 +15,8 @@ import { writeFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const FRAMES = 30;      // animation frames in the strip (~1s loop at 30fps)
-const FW = 64, FH = 96;  // per-frame size (tall — flames lick upward; upscaled in CSS)
+const FW = 80, FH = 52;  // per-frame size — low & wide, a little flame that licks
+                         // along the bottom of the box rather than a tall jet.
 
 // Use the sandbox's pre-installed Chromium (mirrors playwright.config.ts).
 const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
@@ -53,26 +54,26 @@ const dataUrl = await page.evaluate(async ({ FRAMES, FW, FH }) => {
 
   const parts = [];
   const spawn = () => {
-    // Narrow, slightly randomized base so the flame tapers like a real tongue.
-    const x = FW / 2 + (rnd() - 0.5) * FW * 0.22;
+    // Gently spread base so a few small tongues lick along the box's bottom edge.
+    const x = FW / 2 + (rnd() - 0.5) * FW * 0.42;
     parts.push({
-      x, y: FH - 4,
-      vx: (rnd() - 0.5) * 5,
-      vy: -(58 + rnd() * 40),               // strong upward launch
-      life: 1, decay: 0.007 + rnd() * 0.012, // slow decay → tall flames
-      r: 7 + rnd() * 9,
+      x, y: FH - 3,
+      vx: (rnd() - 0.5) * 4,
+      vy: -(20 + rnd() * 16),                 // gentle rise → short, low flame
+      life: 1, decay: 0.022 + rnd() * 0.02,   // quick decay → dies low, never towers
+      r: 4 + rnd() * 5,
       wob: rnd() * Math.PI * 2,
-      wobAmp: 22 + rnd() * 26,
+      wobAmp: 16 + rnd() * 18,                 // sway so the little tongues dance
     });
   };
 
   const step = (dt) => {
-    for (let i = 0; i < 13; i++) spawn();  // denser column → fuller flame
+    for (let i = 0; i < 7; i++) spawn();  // sparse → a light, airy flame, not a wall
     for (const p of parts) {
       p.wob += dt * 8;
       // Sway grows as the particle rises & cools (flames waver more up top).
       p.vx += Math.sin(p.wob) * p.wobAmp * (1.4 - p.life) * dt * 3;
-      p.vy -= 46 * dt;                       // buoyancy accelerates upward
+      p.vy -= 22 * dt;                       // mild buoyancy — keeps it low
       p.x += p.vx * dt;
       p.y += p.vy * dt;
       p.life -= p.decay;
@@ -100,9 +101,9 @@ const dataUrl = await page.evaluate(async ({ FRAMES, FW, FH }) => {
     ctx.globalCompositeOperation = 'source-over';
   };
 
-  // Warm up so the column is fully alight before capture.
+  // Warm up so the flame is fully alight before capture.
   const dt = 1 / 30;
-  for (let i = 0; i < 90; i++) step(dt);
+  for (let i = 0; i < 50; i++) step(dt);
 
   for (let f = 0; f < FRAMES; f++) {
     step(dt); draw();

@@ -83,5 +83,4 @@ npm run ios:init && npm run ios:sync && npm run ios:open
 ```
 
 The app is a PWA (offline-capable service worker, icons, manifest) and the
-same build wraps in Capacitor for the App Store — the path proven by this
-repo's sibling, Math-Warriors.
+same build wraps in Capacitor for the App Store.

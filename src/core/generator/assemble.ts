@@ -38,19 +38,28 @@ export function pickClue(
   const pool = entry.clues.filter((c) => c.difficulty <= cap);
   const from = pool.length > 0 ? pool : entry.clues;
 
-  let best = from[0]!;
-  let bestScore = -Infinity;
-  for (const clue of from) {
-    // Craft dominates; a gentle pull keeps difficulty near the day's tier.
-    let score = clue.stars * 2 - Math.abs(clue.difficulty - tier) + rng.next() * 0.8;
-    if (opts.register && clue.register === opts.register) score += 1.5;
-    if (opts.recent?.has(clue.text)) score -= 5; // rotate away from a repeat
-    if (score > bestScore) {
-      bestScore = score;
-      best = clue;
-    }
+  // Craft-weighted RANDOM pick (softmax) rather than always taking the single
+  // top-scoring clue — so the same answer doesn't surface the same clue every
+  // time, while wittier/on-tier clues stay far likelier. Craft dominates, a
+  // gentle pull keeps difficulty near the day's tier, the preferred register
+  // nudges, and a just-shown clue is damped (~2 stars' worth) so it rarely
+  // repeats within a puzzle but a genuine standout can still appear.
+  const scored = from.map((clue) => {
+    let s = clue.stars * 1.1 - Math.abs(clue.difficulty - tier) * 0.9;
+    if (opts.register && clue.register === opts.register) s += 1.2;
+    if (opts.recent?.has(clue.text)) s -= 2.2;
+    return s;
+  });
+  const T = 0.7; // temperature: higher = more variety, lower = craft-greedier
+  const max = Math.max(...scored);
+  const weights = scored.map((s) => Math.exp((s - max) / T));
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = rng.next() * total;
+  for (let i = 0; i < from.length; i++) {
+    r -= weights[i]!;
+    if (r <= 0) return from[i]!;
   }
-  return best;
+  return from[from.length - 1]!;
 }
 
 export interface AssembleMeta {

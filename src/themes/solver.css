@@ -395,13 +395,13 @@
   }
 }
 /* The flame itself: a bottom-anchored transparent sprite that licks up off the
-   ACTIVE cell only (`.selected`), so it's a single little flame that follows the
-   cursor along the burning word rather than a wall of fire on every box — the
-   rest of the word just carries the warm ember glow above. The strip is 30
-   frames wide (bake-flame.mjs); stepping the background across it plays the fire.
-   Sized in cqh so it scales with the grid. Swap src/themes/flame.png for a real
-   fire strip (transparent, same frame count) and this keeps working. */
-.xw-cell.on-fire.selected::after {
+   clue's NUMBERED (first) box only (`.fire-head`) — one little flame marking the
+   clue you're on, not a wall of fire on every box. The rest of the word just
+   carries the warm ember glow above. The strip is 30 frames wide (bake-flame.mjs);
+   stepping the background across it plays the fire. Sized in cqh (relative to the
+   cell) so it scales with the puzzle — bigger on a roomy 5×5, smaller on a dense
+   15×15. Swap src/themes/flame.png for a real fire strip and this keeps working. */
+.xw-cell.fire-head::after {
   content: "";
   position: absolute;
   left: 50%;

@@ -52,65 +52,110 @@
 
 /* --- Home -------------------------------------------------------------- */
 
+/* Home content sits a touch narrower than the 1080px shell so the cards stay
+   substantial instead of stranding a sea of empty background. */
+.view-pad.home { max-width: 940px; }
+
 .home-hero {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin: 10px 0 22px;
+  margin: 6px 0 24px;
 }
-.home-hero .view-title { font-size: 2rem; margin: 0; }
-.home-date { color: var(--ink-muted); font-size: 1rem; font-weight: 600; }
+.home-logo {
+  width: 52px; height: 52px; flex: none;
+  border-radius: 12px;
+  filter: drop-shadow(0 4px 10px color-mix(in srgb, var(--ink) 22%, transparent));
+}
+.home-hero-text { display: flex; flex-direction: column; gap: 1px; }
+.home-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.22em; font-weight: 800;
+  color: var(--accent); text-transform: uppercase;
+}
+.home-hero .view-title { font-size: 2.1rem; margin: 0; line-height: 1.05; }
+.home-date { color: var(--ink-muted); font-size: 0.95rem; font-weight: 600; }
 .streak-flame {
-  font-weight: 700; color: var(--warn); font-size: 0.9rem;
-  background: var(--accent-soft); padding: 3px 11px; border-radius: 999px;
+  margin-left: auto; align-self: center;
+  font-weight: 800; color: var(--warn); font-size: 0.9rem;
+  background: color-mix(in srgb, var(--warn) 15%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);
+  padding: 6px 13px; border-radius: 999px; white-space: nowrap;
 }
 
-.card-grid {
+/* Two balanced hero tiles for the dailies; the modes flow in an auto-fit grid
+   that grows the cards to fill the row rather than leaving empty tracks. */
+.daily-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+@media (max-width: 560px) {
+  .daily-grid { grid-template-columns: 1fr; }
 }
 
 .mode-card {
-  padding: 20px;
+  --card-accent: var(--accent);
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
   text-align: left;
-  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
   position: relative;
   overflow: hidden;
+  /* A whisper of the card's own hue washes up from the surface for warmth. */
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--card-accent) 7%, var(--surface)), var(--surface) 62%);
+  border: 1px solid var(--border);
 }
-/* An accent stripe crowns each card on hover — persistent on the two dailies,
-   marking them as the main event. */
+/* An accent ribbon crowns each card — always lit on the dailies (the main
+   event), brightening on hover for the rest. */
 .mode-card::before {
   content: "";
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--accent);
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--card-accent), color-mix(in srgb, var(--card-accent) 45%, transparent));
   opacity: 0; transition: opacity 0.15s ease;
 }
 .mode-card:hover::before { opacity: 1; }
-.daily-card::before { opacity: 0.55; }
+.daily-card::before { opacity: 0.85; }
 .mode-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px color-mix(in srgb, var(--ink) 14%, transparent);
+  border-color: color-mix(in srgb, var(--card-accent) 45%, var(--border));
+  box-shadow: 0 14px 32px color-mix(in srgb, var(--card-accent) 26%, transparent);
 }
+.card-head { display: flex; align-items: center; gap: 10px; }
+.card-icon {
+  flex: none; width: 38px; height: 38px; border-radius: 11px;
+  display: grid; place-items: center; font-size: 1.25rem; line-height: 1;
+  background: color-mix(in srgb, var(--card-accent) 16%, var(--surface));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-accent) 30%, transparent);
+}
+.daily-card .card-icon { width: 42px; height: 42px; font-size: 1.4rem; }
 .mode-card .mode-kicker {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 700;
-  color: var(--accent);
-  /* Reserve two lines so cards whose kicker wraps keep their titles aligned. */
-  min-height: 2.1em;
-  display: flex;
-  align-items: flex-end;
+  letter-spacing: 0.11em;
+  font-weight: 800;
+  color: color-mix(in srgb, var(--card-accent) 80%, var(--ink));
 }
-.mode-card h3 { font-size: 1.25rem; margin: 4px 0 0; }
-.mode-card p { margin: 0; color: var(--ink-muted); font-size: 0.9rem; line-height: 1.45; }
-.mode-card .mode-meta { margin-top: auto; padding-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.mode-card .done-badge { color: var(--good); font-weight: 700; font-size: 0.85rem; }
+.mode-card h3 { font-size: 1.2rem; margin: 6px 0 0; }
+.daily-card h3 { font-size: 1.35rem; }
+.mode-card p { margin: 0; color: var(--ink-muted); font-size: 0.88rem; line-height: 1.45; }
+.mode-card .mode-meta { margin-top: auto; padding-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.mode-card .done-badge { color: var(--good); font-weight: 800; font-size: 0.85rem; }
+/* The primary "go" chip wears the card's accent so the call-to-action pops. */
+.chip-go {
+  background: var(--card-accent);
+  color: #fff;
+  border-color: transparent;
+  font-weight: 700;
+}
 
 .section-label {
   font-size: 0.78rem;

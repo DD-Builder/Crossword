@@ -266,3 +266,24 @@ describe('"on fire" streak', () => {
     expect(session.store.get().onFire).toBe(false);
   });
 });
+
+describe('elapsed-time restore (resume, not restart)', () => {
+  it('seedElapsed resumes the clock where it left off and keeps counting', () => {
+    const { session, clock } = makeSession();
+    clock.tick(5_000);
+    expect(session.activeMs()).toBe(5_000);
+
+    // Re-entry: a fresh session for the same puzzle, seeded from persisted activeMs.
+    const { session: reopened, clock: clock2 } = makeSession();
+    reopened.seedElapsed(5_000);
+    expect(reopened.activeMs()).toBe(5_000); // not 0
+    clock2.tick(3_000);
+    expect(reopened.activeMs()).toBe(8_000); // continues, no double-count
+  });
+
+  it('seedElapsed clamps junk to zero', () => {
+    const { session } = makeSession();
+    session.seedElapsed(Number.NaN);
+    expect(session.activeMs()).toBe(0);
+  });
+});

@@ -264,7 +264,9 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, opts: MountOpts = {
               : '👻 First speed record set — your ghost awaits.');
           }
         }
-        victory = celebrate(session, milestones, grid.root);
+        // Blur the whole puzzle behind the celebration so it reads cleanly.
+        container.classList.add('solved-blur');
+        victory = celebrate(session, milestones, grid.root, container);
       });
     }
   });
@@ -296,9 +298,11 @@ function celebrate(
   session: SolveSession,
   milestones: string[],
   gridEl: HTMLElement | null,
+  container: HTMLElement,
 ): { stop(): void } {
   const ms = session.activeMs();
   const puzzle = session.puzzle;
+  const unblur = () => container.classList.remove('solved-blur');
   return playVictory({
     seedKey: `${puzzle.id}|${puzzle.date ?? ''}`,
     gridEl,
@@ -318,13 +322,14 @@ function celebrate(
           el('ul', { className: 'milestones' }, ...milestones.map((m) => el('li', {}, m))),
           el('div', { className: 'modal-actions' },
             el('button', { className: 'btn', onclick: () => void shareSolve(session) }, 'Share'),
-            el('button', { className: 'btn', onclick: () => { close(); navigate('stats'); } }, 'See stats'),
-            el('button', { className: 'btn primary', onclick: () => { close(); navigate(''); } }, 'Done'),
+            el('button', { className: 'btn', onclick: () => { unblur(); close(); navigate('stats'); } }, 'See stats'),
+            el('button', { className: 'btn primary', onclick: () => { unblur(); close(); navigate(''); } }, 'Done'),
           ),
         );
-        // When the canvas spectacle is playing, keep the backdrop see-through
-        // so the animation shows behind the card instead of being veiled.
-      }, animated ? { backdropClass: 'celebrate-backdrop' } : {});
+        // Button-only: dismissing by tapping the backdrop would strand a blurred
+        // puzzle with no card. The puzzle stays blurred behind the see-through
+        // card until an action is taken.
+      }, { dismissable: false, ...(animated ? { backdropClass: 'celebrate-backdrop' } : {}) });
     },
   });
 }

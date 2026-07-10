@@ -65,10 +65,13 @@ export function createGridView(session: SolveSession): GridView {
     const { cursor, direction, onFire } = session.store.get();
     const slot = session.currentSlot();
     const inWord = new Set(slot.cells.map((c) => `${c.row},${c.col}`));
-    // The streak flame rides the active word — cosmetic, and only when the
-    // player hasn't opted out of animations. Each box of the burning word gets a
-    // flame licking up off it (the `on-fire` class; the sprite is drawn in CSS).
+    // The streak flame marks the active clue — cosmetic, and only when the player
+    // hasn't opted out of animations. A single flame licks up off the clue's
+    // numbered (first) box (`fire-head`); the rest of the word carries only the
+    // warm ember glow (`on-fire`). The sprite, sized in cqh, scales with the cell.
     const flaming = onFire && getSettings().victoryAnimations;
+    const head = slot.cells[0];
+    const headKey = head ? `${head.row},${head.col}` : '';
 
     for (const ref of refs) {
       const cell = session.cellAt(ref.row, ref.col);
@@ -81,6 +84,7 @@ export function createGridView(session: SolveSession): GridView {
       if (isCursor) classes.push('selected');
       else if (inWord.has(key)) classes.push('in-word');
       if (flaming && inWord.has(key)) classes.push('on-fire');
+      if (flaming && key === headKey) classes.push('fire-head');
       if (cell.pencil) classes.push('pencil');
       if (cell.flag === 'checked-wrong') classes.push('wrong');
       if (cell.flag === 'revealed') classes.push('revealed');

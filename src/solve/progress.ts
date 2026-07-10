@@ -39,6 +39,9 @@ export function restoreProgress(session: SolveSession): boolean {
   });
   for (const i of saved.pencils) session.cells[i]!.pencil = true;
   Object.assign(session.counts, saved.counts);
+  // Resume the clock where it left off instead of restarting from zero (which
+  // also kept recorded solve-times from undercounting multi-sitting solves).
+  session.seedElapsed(saved.activeMs);
   // Progress state predates this session object; nudge subscribers once.
   session.store.update((s) => ({ ...s, version: s.version + 1 }));
   return true;

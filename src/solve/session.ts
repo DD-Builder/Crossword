@@ -143,6 +143,14 @@ export class SolveSession {
     return this.accumulated + (this.pausedFlag || this.completedFlag ? 0 : this.now() - this.startWall);
   }
 
+  /** Seed previously-elapsed active time (from persisted progress) so re-opening
+   * a puzzle resumes the clock where it left off instead of restarting from
+   * zero. Rebases the wall clock to now so no time is double-counted. */
+  seedElapsed(ms: number): void {
+    this.accumulated = Math.max(0, ms || 0);
+    this.startWall = this.now();
+  }
+
   pause(): void {
     if (this.pausedFlag || this.completedFlag) return;
     this.accumulated += this.now() - this.startWall;

@@ -394,12 +394,14 @@
                 inset 0 0 10px color-mix(in srgb, var(--warn) 55%, transparent);
   }
 }
-/* The flame itself: a bottom-anchored transparent sprite that licks up above
-   each cell of the burning word. The strip is 30 frames wide (bake-flame.mjs);
-   stepping the background across it plays the fire. Sized in cqh so it scales
-   with the grid. Swap src/themes/flame.png for a real fire strip (transparent,
-   same frame count) and this keeps working. */
-.xw-cell.on-fire::after {
+/* The flame itself: a bottom-anchored transparent sprite that licks up off the
+   ACTIVE cell only (`.selected`), so it's a single little flame that follows the
+   cursor along the burning word rather than a wall of fire on every box — the
+   rest of the word just carries the warm ember glow above. The strip is 30
+   frames wide (bake-flame.mjs); stepping the background across it plays the fire.
+   Sized in cqh so it scales with the grid. Swap src/themes/flame.png for a real
+   fire strip (transparent, same frame count) and this keeps working. */
+.xw-cell.on-fire.selected::after {
   content: "";
   position: absolute;
   left: 50%;

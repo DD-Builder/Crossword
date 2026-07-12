@@ -67,14 +67,6 @@ function placeableLengths(pool: GridTemplate[]): Set<number> {
   return lens;
 }
 
-/** Kids grade (from the picker) → a numeric level 0 (Kindergarten) … 5. Grades
- * 6–8 in the picker reuse the fifth-grade pool (the deepest kid-safe tier). */
-export function gradeToNum(grade: string): number {
-  if (grade === 'K') return 0;
-  const n = Number(grade);
-  return Number.isFinite(n) ? Math.min(5, Math.max(0, n)) : 0;
-}
-
 /** Generate a themed puzzle: seed the theme words that can actually fit, and
  * if that fill can't be completed, fall back to a puzzle whose *fill* is still
  * biased toward the theme's categories (via categoryWeights) but carries no
@@ -83,34 +75,33 @@ async function generateThemed(
   base: Parameters<typeof generatePuzzle>[0],
   themeName: string,
   candidateSeeds: string[],
-  kidsGrade: number | null = null,
+  isKids = false,
 ): Promise<Puzzle> {
   const size = base.templates[0]?.size ?? 5;
   const lens = placeableLengths(base.templates);
   const seeds = candidateSeeds.filter((s) => lens.has(s.length)).slice(0, size >= 11 ? 4 : 2);
   if (seeds.length > 0) {
     try {
-      return await generateAsync({ ...base, theme: { name: themeName, entries: seeds } }, kidsGrade);
+      return await generateAsync({ ...base, theme: { name: themeName, entries: seeds } }, isKids);
     } catch {
       // exact seeding couldn't fill — degrade to category-biased fill below
     }
   }
-  return generateAsync(base, kidsGrade);
+  return generateAsync(base, isKids);
 }
 
-async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], kidsGrade: number | null = null): Promise<Puzzle> {
+async function generateAsync(spec: Parameters<typeof generatePuzzle>[0], isKids = false): Promise<Puzzle> {
   // Minis fill in <100ms — run sync. Bigger grids get one macrotask yield
   // so the "constructing…" frame paints; the fill itself is still fast
   // thanks to heavy-block templates. (A worker handle exists for future
   // heavier generation; today's grids don't need it.)
   const size = spec.templates[0]?.size ?? 5;
   if (size > 7) await new Promise((r) => setTimeout(r, 30));
-  // Kids draw from the grade-filtered kid-safe bank (themed kid words + graded
+  // Kids draw from the one merged kid-safe bank (themed kid words + rated
   // Dale–Chall glue), with themed words weighted far above the glue so the grid
   // reads as kid vocabulary. Fully-checked American grids at 9×9+ need the
   // authored+fill tier's density to fill reliably (the curated-only bank can't).
-  const isKids = kidsGrade !== null;
-  const bank = kidsGrade !== null ? kidsBank(kidsGrade) : size >= 9 ? await fullBank() : mainBank();
+  const bank = isKids ? kidsBank() : size >= 9 ? await fullBank() : mainBank();
   const spec_ = isKids
     ? {
         ...spec,
@@ -228,35 +219,27 @@ async function resolveGenerated(query: URLSearchParams): Promise<Puzzle> {
   }
 
   if (mode === 'kids') {
-    const grade = query.get('grade') ?? 'K';
     const theme = query.get('theme') ?? 'animals';
-    const g = gradeToNum(grade);
     const match = matchTheme(theme, kidsEntries(), { maxSeeds: 4, minLen: 3 });
     // Every kids puzzle is a PROPER fully-checked crossword built from short,
-    // concrete words. The bank is filtered to the player's grade, so a
-    // kindergartner only ever sees kindergarten words and clues; themed kid words
-    // are weighted far above the glue. Kindergarten gets the block-heavier
-    // `t5-kinder` grid (almost all 3-letter words) because the pool of plainly
-    // clued longer words a five-year-old can read is thin; older grades get the
-    // `t5-kids` pair (3/4/5-letter mix), which fills reliably from the grade-
-    // limited bank and leaves room for a hard-seeded theme word.
-    const templates = g <= 0
-      ? templatesBySize(5, 5).filter((t) => t.id === 't5-kinder')
-      : templatesBySize(5, 5).filter((t) => t.id.startsWith('t5-kids'));
-    // A single hard seed: two would over-constrain the small grade-limited bank
-    // and force the theme-less fallback every time. One places cleanly (grade 2+)
-    // and still centers the puzzle on the theme; if even that can't complete, the
-    // category-biased fallback keeps the flavor.
+    // concrete words, drawn from the one merged kid-safe pool — no grade ladder;
+    // the Kids tier's low clueCap (difficulty 0, see WEEKDAY_KNOBS) keeps clues
+    // plain, the same mechanism that keeps Monday gettable. All three kid grids
+    // (mostly-3-letter `t5-kinder`, and the 3/4/5-letter `t5-kids` pair) draw
+    // from the same rich pool now, so mixing all three just adds variety.
+    const templates = templatesBySize(5, 5).filter((t) => t.id === 't5-kinder' || t.id.startsWith('t5-kids'));
+    // A single hard seed: two would over-constrain the fill. One places cleanly
+    // and still centers the puzzle on the theme; if even that can't complete,
+    // the category-biased fallback keeps the flavor.
     return generateThemed({
       id: `gen-kids-${seed}`,
       kind: 'kids',
-      title: `${theme[0]?.toUpperCase()}${theme.slice(1)} (Grade ${grade})`,
-      difficulty: g <= 1 ? 1 : g <= 3 ? 2 : 3,
+      title: `${theme[0]?.toUpperCase()}${theme.slice(1)}`,
+      difficulty: 0,
       templates,
-      seedKey: `kids|${grade}|${theme}|${seed}`,
+      seedKey: `kids|${theme}|${seed}`,
       categoryWeights: match.weights,
-      fillOptions: { scoreFloor: 40 },
-    }, theme, match.seeds.slice(0, 1), g);
+    }, theme, match.seeds.slice(0, 1), true);
   }
 
   if (mode === 'themed') {

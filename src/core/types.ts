@@ -120,14 +120,14 @@ export interface GridTemplate {
 /** Wordbank entry: one answer, several clues at different difficulty tiers. */
 export interface BankClue {
   text: string;
-  /** 1 (Monday) … 5 (Saturday) clue-writing tier. */
+  /** 1 (Monday) … 5 (Saturday) clue-writing tier. Kids clues sit at 1–2; a
+   * clue with an obscure reference is bumped up so the Kids tier's low
+   * `clueCap` naturally excludes it — the same mechanism that keeps Monday
+   * gettable, no separate grade system needed. */
   difficulty: 1 | 2 | 3 | 4 | 5;
   stars: 1 | 2 | 3 | 4 | 5;
   /** Cluing register; omitted = register-neutral (fits either preference). */
   register?: Register;
-  /** Kids only: youngest grade this clue suits, 0 (K) … 5. Set by the
-   * grade-labeling build step; absent on the grown-up bank. */
-  grade?: number;
 }
 
 export interface BankEntry {
@@ -137,8 +137,6 @@ export interface BankEntry {
   categories: Category[];
   tags: string[];
   clues: BankClue[];
-  /** Kids only: youngest grade this answer's vocabulary suits, 0 (K) … 5. */
-  grade?: number;
 }
 
 export const BLOCK = '#';

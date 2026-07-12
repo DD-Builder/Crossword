@@ -437,17 +437,77 @@
   to   { background-position-x: 100%; }
 }
 
-/* In-puzzle "Tune" panel — change size/difficulty and the grid regenerates. */
+/* In-puzzle "Tune" panel — amplifier-style knobs that regenerate the puzzle
+   live. Available on generated AND daily/mini puzzles alike; touching a knob
+   on a daily detaches into Free Play at the adjusted settings (the shared
+   daily itself is never mutated) — see puzzle.ts `retune()`. */
 .retune-bar { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
-.retune-toggle { align-self: flex-start; font-size: 0.85rem; padding: 4px 10px; }
-.retune-panel { display: none; flex-wrap: wrap; gap: 8px 18px; padding: 8px 2px 4px; }
+.retune-toggle { align-self: flex-start; font-size: 0.85rem; padding: 4px 10px; font-weight: 700; }
+.retune-panel { display: none; flex-wrap: wrap; gap: 18px 26px; padding: 12px 4px 8px; align-items: flex-start; }
 .retune-panel.open { display: flex; }
-.retune-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.retune-label {
-  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
-  color: var(--ink-muted); font-weight: 700;
-}
+.retune-hint { flex-basis: 100%; margin: 0 0 4px; font-size: 0.82rem; color: var(--ink-muted); }
 .solver.retuning { opacity: 0.55; pointer-events: none; transition: opacity 0.15s ease; }
+
+/* --- Knob: a rotary, click-a-side / arrow-key control ------------------- */
+.knob {
+  --knob-d: 52px;
+  --knob-r: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 4px 6px;
+  transition: opacity 0.15s ease;
+}
+.knob:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+.knob.disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+.knob-caption {
+  font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 800; color: var(--ink-faint);
+}
+.knob-body {
+  position: relative;
+  width: var(--knob-d);
+  height: var(--knob-d);
+}
+.knob-ticks { position: absolute; inset: 0; }
+.knob-tick {
+  /* Placed by rotate()+translateY() set inline per-tick (createKnob) — the
+     standard "clock hands" technique: translate first, then rotate the whole
+     translated point around the element's own center (the default origin). */
+  position: absolute; left: 50%; top: 50%;
+  width: 2px; height: 5px; margin-left: -1px;
+  background: var(--ink-faint);
+  border-radius: 1px;
+}
+.knob-dial {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--accent) 18%, var(--surface)), var(--surface) 55%, color-mix(in srgb, var(--ink) 12%, var(--surface)) 100%);
+  box-shadow:
+    inset 0 2px 3px color-mix(in srgb, #fff 40%, transparent),
+    inset 0 -3px 5px color-mix(in srgb, var(--ink) 22%, transparent),
+    0 2px 4px color-mix(in srgb, var(--ink) 20%, transparent);
+  transition: transform 0.18s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+.knob-pointer {
+  position: absolute;
+  left: 50%; top: 8%;
+  width: 3px; height: 38%;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.knob-value {
+  font-size: 0.74rem; font-weight: 800; color: var(--ink);
+  min-height: 1.1em; text-align: center; white-space: nowrap;
+}
 
 /* Retune morph: the fresh grid cascades in cell by cell along the diagonal. */
 .grid-morph-in .xw-cell { animation: morph-in 0.5s ease-out var(--wd, 0ms) both; }

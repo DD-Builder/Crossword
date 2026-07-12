@@ -21,7 +21,41 @@ import { getSpeedPb, makeGhost, maybeSaveSpeedPb, parMsFor } from '../../solve/s
 import { shareSolve } from '../../ui/share.ts';
 import { playVictory } from '../../ui/celebrations/index.ts';
 import { playGridMorphIn } from '../../ui/celebrations/gridWave.ts';
+import { createKnob } from '../../ui/knob.ts';
 import type { Puzzle } from '../../core/types.ts';
+
+/** The knob-rack "baseline" — the values shown/adjusted, derived either from
+ * a generated puzzle's own query string or (for a daily/mini/library puzzle,
+ * which carries no such query) from the loaded Puzzle's own settings. */
+interface TuneBaseline {
+  mode: string;
+  size: number;
+  difficulty: number;
+  register: string;
+  theme?: string;
+}
+
+function tuneBaselineFor(puzzle: Puzzle, query: URLSearchParams | null): TuneBaseline {
+  if (query) {
+    const mode = query.get('mode') ?? 'free';
+    return {
+      mode,
+      size: Number(query.get('size') ?? puzzle.size.rows),
+      difficulty: mode === 'kids' ? 0 : Number(query.get('difficulty') ?? puzzle.difficulty),
+      register: query.get('register') ?? getSettings().clueRegister,
+      theme: query.get('theme') ?? undefined,
+    };
+  }
+  // Daily / mini / library puzzle: it has no generation query at all — derive
+  // starting knob positions from the puzzle itself. It is never mutated;
+  // touching a knob detaches into a fresh Free Play puzzle (see retune()).
+  return {
+    mode: 'free',
+    size: puzzle.size.rows,
+    difficulty: puzzle.kind === 'kids' ? 0 : Math.min(7, Math.max(1, Math.round(puzzle.difficulty))),
+    register: getSettings().clueRegister,
+  };
+}
 
 export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | void {
   const container = el('div', { className: 'solver' });
@@ -31,31 +65,64 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   let cleanup: (() => void) | null = null;
   let cancelled = false;
   let retuning = false;
+  let currentPuzzle: Puzzle | null = null;
+  // Persisted across in-place retunes (which fully remount the tune rack) so
+  // fiddling with several knobs in a row doesn't re-close the panel each time.
+  let tuneOpen = false;
 
   const speedMode = ctx.query.get('speed') === '1';
-  // Only generated puzzles are retunable — dailies/library are fixed for everyone.
+  // Generated puzzles retune in place; daily/mini/library ones detach into a
+  // fresh generated puzzle the moment a knob is touched (see retune()) — both
+  // paths share the same knob rack, just wired differently underneath.
   const isGen = ctx.params[0] === 'gen' && !speedMode;
   const query = new URLSearchParams(ctx.query.toString());
+  // A puzzle just detached from a daily carries this marker for one mount, so
+  // it gets the nice cell-cascade morph-in instead of appearing flat.
+  const cameFromDaily = query.get('fromDaily') === '1';
+  if (cameFromDaily) query.delete('fromDaily');
 
   function mount(puzzle: Puzzle, morph: boolean): void {
+    currentPuzzle = puzzle;
     container.replaceChildren();
     cleanup = mountSolver(container, puzzle, {
       speedMode, morph,
-      ...(isGen ? { params: query, retune: (patch) => void retune(patch) } : {}),
+      ...(speedMode ? {} : {
+        tuneBaseline: tuneBaselineFor(puzzle, isGen ? query : null),
+        tuneAttached: isGen,
+        tuneOpen,
+        onTuneToggle: (open: boolean) => { tuneOpen = open; },
+        retune: (patch) => void retune(patch),
+      }),
     });
   }
 
   async function retune(patch: Record<string, string>): Promise<void> {
-    if (retuning) return;
+    if (retuning || !currentPuzzle) return;
     retuning = true;
-    for (const [k, v] of Object.entries(patch)) query.set(k, v);
-    query.set('seed', Math.random().toString(36).slice(2)); // a fresh grid each time
     container.classList.add('retuning');
     try {
-      const next = await resolvePuzzle({ ...ctx, params: ['gen'], query });
-      if (cancelled) return;
-      cleanup?.();
-      mount(next, true);
+      if (isGen) {
+        for (const [k, v] of Object.entries(patch)) query.set(k, v);
+        query.set('seed', Math.random().toString(36).slice(2)); // a fresh grid each time
+        const next = await resolvePuzzle({ ...ctx, params: ['gen'], query });
+        if (cancelled) return;
+        cleanup?.();
+        mount(next, true);
+      } else {
+        // Build a fresh generated-puzzle query from the daily's own baseline,
+        // apply the knob change, and navigate — a full route change, so the
+        // puzzle's kind/title genuinely switches to Free Play (or Kids) and
+        // the original daily is left completely untouched for everyone else.
+        const base = tuneBaselineFor(currentPuzzle, null);
+        const params = new URLSearchParams({
+          mode: base.mode, size: String(base.size), difficulty: String(base.difficulty),
+          register: base.register, ...(base.theme ? { theme: base.theme } : {}),
+        });
+        for (const [k, v] of Object.entries(patch)) params.set(k, v);
+        params.set('seed', Math.random().toString(36).slice(2));
+        params.set('fromDaily', '1');
+        navigate(`puzzle/gen?${params.toString()}`);
+      }
     } catch {
       toast('Could not build that combo — try another.');
     } finally {
@@ -67,7 +134,7 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   resolvePuzzle(ctx)
     .then((puzzle) => {
       if (cancelled) return;
-      mount(puzzle, false);
+      mount(puzzle, cameFromDaily);
     })
     .catch((err: unknown) => {
       if (cancelled) return;
@@ -86,33 +153,63 @@ export function renderPuzzle(root: HTMLElement, ctx: RouteCtx): (() => void) | v
   };
 }
 
-const RETUNE_SIZES = [5, 7, 9, 11, 13, 15, 17, 19, 21];
-const RETUNE_DAYS = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const DIFFICULTY_KNOB_LABELS = ['Kids', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const SIZE_KNOB_VALUES = [5, 7, 9, 11, 13, 15, 17, 19, 21];
+const REGISTER_KNOB_VALUES = ['classic', 'modern'];
 
-/** The in-puzzle "Tune" panel: size + difficulty chips that regenerate in place. */
-function buildRetuneBar(
-  params: URLSearchParams,
+/** The in-puzzle "Tune" panel: amplifier-style knobs that regenerate the
+ * puzzle live. Shown for every non-speed puzzle — generated or daily/mini/
+ * library alike (see tuneBaselineFor / retune() for how the two differ). */
+function buildTuneRack(
+  baseline: TuneBaseline,
   retune: (patch: Record<string, string>) => void,
+  attached: boolean,
+  open: boolean,
+  onToggle: (open: boolean) => void,
 ): HTMLElement {
-  const curSize = Number(params.get('size') ?? 9);
-  const curDiff = Number(params.get('difficulty') ?? 3);
-  const chip = (label: string, active: boolean, onClick: () => void): HTMLElement => {
-    const b = el('button', { className: `chip ${active ? 'active' : ''}` }, label);
-    b.addEventListener('click', onClick);
-    return b;
-  };
-  const panel = el('div', { className: 'retune-panel' },
-    el('div', { className: 'retune-group' },
-      el('span', { className: 'retune-label' }, 'Size'),
-      ...RETUNE_SIZES.map((s) => chip(`${s}×${s}`, s === curSize, () => retune({ size: String(s) }))),
-    ),
-    el('div', { className: 'retune-group' },
-      el('span', { className: 'retune-label' }, 'Level'),
-      ...[1, 2, 3, 4, 5, 6, 7].map((d) => chip(RETUNE_DAYS[d]!, d === curDiff, () => retune({ difficulty: String(d) }))),
-    ),
+  const isKids = baseline.difficulty === 0;
+
+  const diffKnob = createKnob({
+    label: 'Difficulty',
+    positions: DIFFICULTY_KNOB_LABELS,
+    index: baseline.difficulty,
+    onChange: (i) => {
+      if (i === 0) retune({ mode: 'kids', theme: baseline.theme ?? 'animals' });
+      else retune({ mode: baseline.mode === 'kids' ? 'free' : baseline.mode, difficulty: String(i) });
+    },
+  });
+
+  const sizeIdx = Math.max(0, SIZE_KNOB_VALUES.indexOf(baseline.size));
+  const sizeKnob = createKnob({
+    label: 'Size',
+    positions: SIZE_KNOB_VALUES.map((s) => `${s}×${s}`),
+    index: sizeIdx,
+    disabled: isKids,
+    onChange: (i) => retune({ size: String(SIZE_KNOB_VALUES[i]) }),
+  });
+
+  const registerIdx = Math.max(0, REGISTER_KNOB_VALUES.indexOf(baseline.register));
+  const registerKnob = createKnob({
+    label: 'Clue style',
+    positions: ['Classic', 'Modern'],
+    index: registerIdx,
+    disabled: isKids,
+    onChange: (i) => retune({ register: REGISTER_KNOB_VALUES[i]! }),
+  });
+
+  const hint = attached
+    ? 'Adjust and the puzzle rebuilds live.'
+    : 'Adjust and the puzzle rebuilds live — this switches from Daily to Free Play (today\'s Daily stays untouched).';
+  const panel = el('div', { className: `retune-panel${open ? ' open' : ''}` },
+    el('p', { className: 'retune-hint' }, hint),
+    diffKnob.root, sizeKnob.root, registerKnob.root,
   );
-  const toggle = el('button', { className: 'btn quiet retune-toggle' }, '⚙ Tune this grid');
-  toggle.addEventListener('click', () => panel.classList.toggle('open'));
+  const toggle = el('button', { className: 'btn quiet retune-toggle' }, '🎛️ Tune this puzzle');
+  toggle.addEventListener('click', () => {
+    const next = !panel.classList.contains('open');
+    panel.classList.toggle('open', next);
+    onToggle(next);
+  });
   return el('div', { className: 'retune-bar' }, toggle, panel);
 }
 
@@ -120,9 +217,16 @@ interface MountOpts {
   speedMode?: boolean;
   /** Play a cascade-in when this mount is a retune (not the first load). */
   morph?: boolean;
-  /** Current generation query — seeds the tune panel's active chips. */
-  params?: URLSearchParams;
-  /** Regenerate the puzzle in place with a patch of query params. */
+  /** Starting knob positions for the tune rack. */
+  tuneBaseline?: TuneBaseline;
+  /** Whether we're already in a generated puzzle (in-place retune) vs. a
+   * daily/mini/library one (a knob touch detaches into Free Play). */
+  tuneAttached?: boolean;
+  /** Whether the tune panel should render already open (persisted across an
+   * in-place retune's full remount, so it doesn't re-close on every turn). */
+  tuneOpen?: boolean;
+  onTuneToggle?: (open: boolean) => void;
+  /** Regenerate/detach the puzzle with a patch of knob values. */
   retune?: (patch: Record<string, string>) => void;
 }
 
@@ -182,9 +286,16 @@ function mountSolver(container: HTMLElement, puzzle: Puzzle, opts: MountOpts = {
       )
     : null;
 
-  // In-puzzle "Tune" panel (generated puzzles only): change size/difficulty and
-  // the grid regenerates in place with a morph. Dailies/library stay fixed.
-  const retuneBar = opts.retune ? buildRetuneBar(opts.params!, opts.retune) : null;
+  // In-puzzle "Tune" panel: knobs for size/difficulty/clue style. On a
+  // generated puzzle they regenerate in place; on a daily/mini/library one,
+  // touching a knob detaches into a fresh Free Play puzzle (see puzzle.ts
+  // retune()) — the shared daily itself is never mutated.
+  const retuneBar = opts.retune && opts.tuneBaseline
+    ? buildTuneRack(
+        opts.tuneBaseline, opts.retune, opts.tuneAttached ?? false,
+        opts.tuneOpen ?? false, opts.onTuneToggle ?? (() => {}),
+      )
+    : null;
 
   const gridWrap = el('div', { className: 'grid-pane' },
     ...(retuneBar ? [retuneBar] : []),

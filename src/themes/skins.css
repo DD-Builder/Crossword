@@ -190,6 +190,80 @@
   --page-texture: radial-gradient(circle at 85% -60px, rgba(208, 90, 82, 0.12), transparent 320px);
 }
 
+/* --- Nova Command: a full-transform sci-fi bridge console ----------------------------
+ * The flagship of the "whole app becomes a different machine" skin family. Every
+ * surface reads as a lit panel on a starship console: angular cut-corner chrome,
+ * a glowing cyan systems color, a hex-grid deck texture, monospace HUD type on
+ * headings/buttons/knobs. Everything below still rides the SAME semantic tokens
+ * and component DOM as every other skin — no new markup, no new components —
+ * which is the whole point: this is the pattern for the next full-transform skin
+ * (aviation cockpit, botanical, nautical, …), not a one-off hack. Two layers:
+ *   1. Token overrides (colors/fonts/shape) — most of the transform.
+ *   2. A short block of scoped element overrides for the handful of surfaces
+ *      that need actual SHAPE, not just color — buttons and knobs get angular
+ *      chrome here. Copy this two-layer shape for the next skin. */
+[data-skin="nova"] {
+  --bg: #dfe4ea; --surface: #eef1f5; --surface-2: #dbe1e8; --border: #aebbc8;
+  --ink: #10161c; --ink-muted: #3f4c58; --ink-faint: #7c8794;
+  --accent: #0091a8; --accent-ink: #ffffff; --accent-soft: #c7ecf2;
+  --cell-bg: #ffffff; --cell-ink: #10161c; --cell-border: #a6b4c2; --cell-block: #10161c;
+  --cell-selected: #ffb238; --cell-word: #bfe9f0;
+  --cell-wrong: #d1373f; --cell-revealed: #b8479e; --good: #1f9e6e; --warn: #d98c1f; --bad: #d1373f;
+  --radius: 3px; --radius-cell: 0px;
+  --shadow-card: 0 1px 0 rgba(0, 145, 168, 0.4), 0 10px 24px rgba(16, 22, 28, 0.14);
+  --font-display: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", "Roboto Mono", monospace;
+  --header-flair: #0091a8;
+  --page-texture:
+    repeating-linear-gradient(120deg, rgba(0, 145, 168, 0.05) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(60deg, rgba(0, 145, 168, 0.05) 0 2px, transparent 2px 46px);
+  --panel-texture: linear-gradient(180deg, rgba(0, 145, 168, 0.08), transparent 60px);
+  --sw-a: #10161c; --sw-b: #0091a8; --sw-c: #ffb238;
+}
+[data-skin="nova"][data-mode="dark"] {
+  --bg: #05070a; --surface: #0c1218; --surface-2: #121a22; --border: #1f2f3a;
+  --ink: #d8f4fa; --ink-muted: #6f96a3; --ink-faint: #3d5764;
+  --accent: #3ee6ff; --accent-ink: #05070a; --accent-soft: #0e2f38;
+  --cell-bg: #0c1218; --cell-ink: #d8f4fa; --cell-border: #23414d; --cell-block: #010203;
+  --cell-selected: #ffb238; --cell-word: #123642;
+  --cell-wrong: #ff5b63; --cell-revealed: #ff7ae0; --good: #34d399; --warn: #ffb238; --bad: #ff5b63;
+  --shadow-card: 0 0 0 1px rgba(62, 230, 255, 0.15), 0 0 28px rgba(62, 230, 255, 0.08);
+  --page-texture:
+    repeating-linear-gradient(120deg, rgba(62, 230, 255, 0.045) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(60deg, rgba(62, 230, 255, 0.045) 0 2px, transparent 2px 46px),
+    radial-gradient(circle at 50% -10%, rgba(62, 230, 255, 0.09), transparent 55%);
+  --panel-texture: linear-gradient(180deg, rgba(62, 230, 255, 0.06), transparent 60px);
+}
+/* Layer 2 — shape, not just color: angular cut-corner chrome + HUD type on the
+   controls that most read as "the machine" (buttons, knobs, the grid frame). */
+[data-skin="nova"] .btn {
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.06em;
+  font-size: 0.82rem; font-weight: 700;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+[data-skin="nova"] .btn.primary { box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 55%, transparent); }
+[data-skin="nova"] .mode-card, [data-skin="nova"] .card {
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+[data-skin="nova"] .xw-grid {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 22px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+[data-skin="nova"] h1, [data-skin="nova"] h2, [data-skin="nova"] h3, [data-skin="nova"] .tb-title {
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+[data-skin="nova"] .knob-dial {
+  background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--accent) 20%, var(--surface)), var(--surface-2) 70%, #000 130%);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 50%, transparent),
+    0 0 10px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+[data-skin="nova"] .knob-pointer { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+[data-skin="nova"] .knob-value {
+  font-family: var(--font-display); color: var(--accent);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+[data-skin="nova"] .knob-caption { color: var(--accent); }
+
 /* --- Lisa Frank (kids only — auto-applied in Kids mode) --------------------------------
  * Neon rainbows, chrome dolphins, 90s school-folder maximalism. */
 [data-skin="lisa-frank"] {

@@ -21,6 +21,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 .app-header .brand .brand-mark {
   width: 28px; height: 28px;
@@ -28,11 +30,36 @@
   border-radius: 7px;
   object-fit: cover;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  flex: 0 0 auto;
 }
-.app-header .spacer { flex: 1; }
-.app-header nav { display: flex; gap: 4px; }
-.app-header nav .btn { font-size: 0.88rem; }
+.app-header .spacer { flex: 1 1 auto; min-width: 0; }
+/* The nav can outgrow narrow phones even after the brand/button shrink below —
+   let it scroll horizontally within itself (never the whole page) as a
+   backstop, scrollbar hidden since the row is short enough to swipe blind. */
+.app-header nav {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.app-header nav::-webkit-scrollbar { display: none; }
+.app-header nav .btn { font-size: 0.88rem; flex: 0 0 auto; }
 .app-header nav .btn.active { background: var(--accent-soft); color: var(--ink); }
+
+/* Narrow phones: the full wordmark + all four nav labels don't fit at full
+   size (this was overflowing the whole page sideways, not just the header —
+   see html/body overflow-x:hidden above as the backstop). Drop the wordmark
+   to just the icon and tighten the nav buttons so everything fits without
+   scrolling on a standard ~390px-wide phone. */
+@media (max-width: 600px) {
+  .app-header { gap: 6px; padding: 8px 10px; padding-top: calc(8px + env(safe-area-inset-top)); }
+  .app-header .brand { font-size: 0; gap: 0; }
+  .app-header .brand .brand-mark { width: 32px; height: 32px; }
+  .app-header nav { gap: 2px; }
+  .app-header nav .btn { padding: 0.55em 0.65em; font-size: 0.8rem; }
+}
 
 .view {
   flex: 1 1 auto;

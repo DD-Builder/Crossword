@@ -36,7 +36,13 @@ export function pickClue(
   }
   const cap = opts.cap ?? (tier <= 3 ? tier + 1 : 5);
   const pool = entry.clues.filter((c) => c.difficulty <= cap);
-  const from = pool.length > 0 ? pool : entry.clues;
+  // If nothing meets the cap, fall back to the EASIEST clue(s) this answer has
+  // — never the full unfiltered list, which could hand a Monday (or a Kids
+  // puzzle) the single most devious clue available as a last resort.
+  const from = pool.length > 0 ? pool : (() => {
+    const min = Math.min(...entry.clues.map((c) => c.difficulty));
+    return entry.clues.filter((c) => c.difficulty === min);
+  })();
 
   // Craft-weighted RANDOM pick (softmax) rather than always taking the single
   // top-scoring clue — so the same answer doesn't surface the same clue every

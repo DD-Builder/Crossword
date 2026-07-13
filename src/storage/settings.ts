@@ -19,7 +19,6 @@ export interface Settings {
   victoryAnimations: boolean; // per-skin canvas spectacle on solve
   clueRegister: 'classic' | 'modern'; // default cluing style for generated puzzles
   playerName: string;
-  kidsGrade: string;        // '', 'K', '1'..'8'
   llm: LlmConfig | null;
 }
 
@@ -33,7 +32,6 @@ const DEFAULTS: Settings = {
   victoryAnimations: true,
   clueRegister: 'modern',
   playerName: '',
-  kidsGrade: '',
   llm: null,
 };
 

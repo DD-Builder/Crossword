@@ -1,11 +1,20 @@
-/* Minimal cache-first service worker for offline play. Cache name is bumped
- * by hand when shipping breaking asset changes; Vite hashes bundles, so
- * stale entries expire naturally as URLs change. */
-const CACHE = 'xw-v1';
+/* Cache strategy for offline play, tuned so a new deploy is always picked up:
+ *  - Navigation requests (the HTML shell) are NETWORK-FIRST — a fresh deploy
+ *    is visible on the very next load, with the cached shell as an offline
+ *    fallback only.
+ *  - Everything else (Vite's content-hashed JS/CSS/assets) is CACHE-FIRST —
+ *    safe and fast, since a new deploy ships new hashed URLs rather than
+ *    mutating an old one.
+ * Bump CACHE when this file's strategy changes, so `activate` purges old
+ * entries cached under the previous (buggier) logic. */
+const CACHE = 'xw-v2';
+const SHELL_URL = self.registration.scope; // e.g. https://…/Crossword/
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE));
+  event.waitUntil(
+    caches.open(CACHE).then((cache) => cache.add(SHELL_URL).catch(() => {})),
+  );
 });
 
 self.addEventListener('activate', (event) => {
@@ -17,15 +26,32 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
-  if (event.request.method !== 'GET' || url.origin !== location.origin) return;
+  const req = event.request;
+  const url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== location.origin) return;
+
+  if (req.mode === 'navigate') {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          if (res.ok) {
+            const clone = res.clone();
+            caches.open(CACHE).then((c) => c.put(SHELL_URL, clone));
+          }
+          return res;
+        })
+        .catch(() => caches.match(SHELL_URL).then((hit) => hit || caches.match(req))),
+    );
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then((hit) => {
+    caches.match(req).then((hit) => {
       if (hit) return hit;
-      return fetch(event.request).then((res) => {
+      return fetch(req).then((res) => {
         if (res.ok) {
           const clone = res.clone();
-          caches.open(CACHE).then((c) => c.put(event.request, clone));
+          caches.open(CACHE).then((c) => c.put(req, clone));
         }
         return res;
       });

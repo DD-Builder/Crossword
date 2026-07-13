@@ -24,7 +24,7 @@ test('themed puzzle builds a grid (local fallback, no key)', async ({ page }) =>
 });
 
 test('kids puzzle builds a grid', async ({ page }) => {
-  await page.goto('/#/puzzle/gen?mode=kids&grade=2&theme=animals&seed=4');
+  await page.goto('/#/puzzle/gen?mode=kids&theme=animals&seed=4');
   await page.waitForSelector('.xw-grid', { timeout: 20_000 });
   await expect(page.getByText('Could not build')).toHaveCount(0);
 });
@@ -32,8 +32,8 @@ test('kids puzzle builds a grid', async ({ page }) => {
 // Kids puzzles must be PROPER crosswords: every white cell belongs to both an
 // across and a down word ≥3 (no orphan touching pairs, no unchecked cells).
 // Verify that on the real grid, then solve it fully to confirm it completes.
-test('kindergarten puzzle is a proper crossword and solves to completion', async ({ page }) => {
-  await page.goto('/#/puzzle/gen?mode=kids&grade=K&theme=animals&seed=7');
+test('kids puzzle is a proper crossword and solves to completion', async ({ page }) => {
+  await page.goto('/#/puzzle/gen?mode=kids&theme=animals&seed=7');
   await page.waitForSelector('.xw-grid', { timeout: 20_000 });
   const hook = await page.evaluate(() => (window as unknown as {
     __xw?: { solution: string[]; rows: number; cols: number };

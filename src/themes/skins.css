@@ -190,6 +190,285 @@
   --page-texture: radial-gradient(circle at 85% -60px, rgba(208, 90, 82, 0.12), transparent 320px);
 }
 
+/* --- Nova Command: a full-transform sci-fi bridge console ----------------------------
+ * The flagship of the "whole app becomes a different machine" skin family. Every
+ * surface reads as a lit panel on a starship console: angular cut-corner chrome,
+ * a glowing cyan systems color, a hex-grid deck texture, monospace HUD type on
+ * headings/buttons/knobs. Everything below still rides the SAME semantic tokens
+ * and component DOM as every other skin — no new markup, no new components —
+ * which is the whole point: this is the pattern for the next full-transform skin
+ * (aviation cockpit, botanical, nautical, …), not a one-off hack. Two layers:
+ *   1. Token overrides (colors/fonts/shape) — most of the transform.
+ *   2. A short block of scoped element overrides for the handful of surfaces
+ *      that need actual SHAPE, not just color — buttons and knobs get angular
+ *      chrome here. Copy this two-layer shape for the next skin. */
+[data-skin="nova"] {
+  --bg: #dfe4ea; --surface: #eef1f5; --surface-2: #dbe1e8; --border: #aebbc8;
+  --ink: #10161c; --ink-muted: #3f4c58; --ink-faint: #7c8794;
+  --accent: #0091a8; --accent-ink: #ffffff; --accent-soft: #c7ecf2;
+  --cell-bg: #ffffff; --cell-ink: #10161c; --cell-border: #a6b4c2; --cell-block: #10161c;
+  --cell-selected: #ffb238; --cell-word: #bfe9f0;
+  --cell-wrong: #d1373f; --cell-revealed: #b8479e; --good: #1f9e6e; --warn: #d98c1f; --bad: #d1373f;
+  --radius: 3px; --radius-cell: 0px;
+  --shadow-card: 0 1px 0 rgba(0, 145, 168, 0.4), 0 10px 24px rgba(16, 22, 28, 0.14);
+  --font-display: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", "Roboto Mono", monospace;
+  --header-flair: #0091a8;
+  --page-texture:
+    repeating-linear-gradient(120deg, rgba(0, 145, 168, 0.05) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(60deg, rgba(0, 145, 168, 0.05) 0 2px, transparent 2px 46px);
+  --panel-texture: linear-gradient(180deg, rgba(0, 145, 168, 0.08), transparent 60px);
+  --sw-a: #10161c; --sw-b: #0091a8; --sw-c: #ffb238;
+}
+[data-skin="nova"][data-mode="dark"] {
+  --bg: #05070a; --surface: #0c1218; --surface-2: #121a22; --border: #1f2f3a;
+  --ink: #d8f4fa; --ink-muted: #6f96a3; --ink-faint: #3d5764;
+  --accent: #3ee6ff; --accent-ink: #05070a; --accent-soft: #0e2f38;
+  --cell-bg: #0c1218; --cell-ink: #d8f4fa; --cell-border: #23414d; --cell-block: #010203;
+  --cell-selected: #ffb238; --cell-word: #123642;
+  --cell-wrong: #ff5b63; --cell-revealed: #ff7ae0; --good: #34d399; --warn: #ffb238; --bad: #ff5b63;
+  --shadow-card: 0 0 0 1px rgba(62, 230, 255, 0.15), 0 0 28px rgba(62, 230, 255, 0.08);
+  --page-texture:
+    repeating-linear-gradient(120deg, rgba(62, 230, 255, 0.045) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(60deg, rgba(62, 230, 255, 0.045) 0 2px, transparent 2px 46px),
+    radial-gradient(circle at 50% -10%, rgba(62, 230, 255, 0.09), transparent 55%);
+  --panel-texture: linear-gradient(180deg, rgba(62, 230, 255, 0.06), transparent 60px);
+}
+/* Layer 2 — shape, not just color: angular cut-corner chrome + HUD type on the
+   controls that most read as "the machine" (buttons, knobs, the grid frame). */
+[data-skin="nova"] .btn {
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.06em;
+  font-size: 0.82rem; font-weight: 700;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+[data-skin="nova"] .btn {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+[data-skin="nova"] .btn.primary { box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 55%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.25); }
+[data-skin="nova"] .mode-card, [data-skin="nova"] .card {
+  position: relative;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+/* Rivets on the two square (uncut) corners — the diagonal-cut corners have no
+   flat spot for one. Two tiny glowing dots read as panel hardware. */
+[data-skin="nova"] .mode-card::after, [data-skin="nova"] .card::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(circle, var(--accent) 1.3px, transparent 1.6px),
+    radial-gradient(circle, var(--accent) 1.3px, transparent 1.6px);
+  background-size: 4px 4px;
+  background-position: 8px 8px, calc(100% - 8px) calc(100% - 8px);
+  opacity: 0.7;
+}
+[data-skin="nova"] .xw-grid {
+  position: relative;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 22px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+/* HUD targeting brackets at the four corners of the grid — an overlay layer
+   (not the grid's own background, which sits under the opaque cells) so it
+   reads above everything, extending a touch past the border. */
+[data-skin="nova"] .xw-grid::after {
+  content: ""; position: absolute; inset: -4px; z-index: 6; pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(var(--accent), var(--accent)), linear-gradient(var(--accent), var(--accent)),
+    linear-gradient(var(--accent), var(--accent)), linear-gradient(var(--accent), var(--accent)),
+    linear-gradient(var(--accent), var(--accent)), linear-gradient(var(--accent), var(--accent)),
+    linear-gradient(var(--accent), var(--accent)), linear-gradient(var(--accent), var(--accent));
+  background-size: 26px 3px, 3px 26px, 26px 3px, 3px 26px, 26px 3px, 3px 26px, 26px 3px, 3px 26px;
+  background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
+  filter: drop-shadow(0 0 5px var(--accent));
+}
+[data-skin="nova"] h1, [data-skin="nova"] h2, [data-skin="nova"] h3, [data-skin="nova"] .tb-title {
+  text-transform: uppercase; letter-spacing: 0.04em;
+  text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+[data-skin="nova"] .knob-dial {
+  background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--accent) 20%, var(--surface)), var(--surface-2) 70%, #000 130%);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 50%, transparent),
+    0 0 10px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+[data-skin="nova"] .knob-pointer { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+[data-skin="nova"] .knob-value {
+  font-family: var(--font-display); color: var(--accent);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+[data-skin="nova"] .knob-caption { color: var(--accent); }
+
+/* A small pulsing "system online" LED after the wordmark. */
+[data-skin="nova"] .app-header .brand::after {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; margin-left: 2px;
+  background: var(--good); box-shadow: 0 0 6px var(--good);
+  animation: nova-pulse 2.2s ease-in-out infinite;
+}
+@keyframes nova-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Illuminated rocker switches in place of the default pill toggle. */
+[data-skin="nova"] .switch .track { border-radius: 3px; }
+[data-skin="nova"] .switch .track::after { border-radius: 2px; background: var(--ink-faint); box-shadow: none; }
+[data-skin="nova"] .switch input:checked + .track {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface-2));
+  border-color: var(--accent);
+  box-shadow: inset 0 0 8px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+[data-skin="nova"] .switch input:checked + .track::after { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+
+/* Boot-console loading state with a blinking cursor. */
+[data-skin="nova"] .solver-loading {
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);
+}
+[data-skin="nova"] .solver-loading::after {
+  content: "_"; display: inline-block; animation: nova-blink 1s step-end infinite;
+}
+@keyframes nova-blink { 50% { opacity: 0; } }
+
+/* A very slow drift on the deck-plate texture — ambient life, not distraction. */
+[data-skin="nova"][data-mode="dark"] body { animation: nova-drift 50s linear infinite; }
+@keyframes nova-drift { from { background-position: 0 0; } to { background-position: 184px 184px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-skin="nova"] .app-header .brand::after,
+  [data-skin="nova"] .solver-loading::after,
+  [data-skin="nova"] body { animation: none; }
+}
+
+/* --- Greenhouse: a living, blooming garden under glass --------------------------------
+ * Second full-transform skin, deliberately built to NOT feel like Nova Command
+ * again: organic and soft where Nova is angular and synthetic. Every card is an
+ * irregular hand-drawn blob instead of a cut rectangle; the knobs are actual
+ * flowers (petals fanned from the tick marks, a pollen-textured center in place
+ * of a dial); the grid sits behind a leafy vine frame instead of a hard border;
+ * the whole page breathes — foliage drifts, petals and (after dark) fireflies
+ * cross the screen on slow independent loops. Day = pink blossoms in daylight;
+ * night = amber fireflies in a twilight greenhouse — same skin, different mood. */
+[data-skin="greenhouse"] {
+  --bg: #f4f1e2; --surface: #fbfaf1; --surface-2: #e9e8d3; --border: #cdd6ad;
+  --ink: #2c3620; --ink-muted: #61705a; --ink-faint: #99a68f;
+  --accent: #d84f75; --accent-ink: #ffffff; --accent-soft: #fbdde7;
+  --cell-bg: #fffef8; --cell-ink: #2c3620; --cell-border: #c9cfa9; --cell-block: #3a4a2c;
+  --cell-selected: #ffcf5c; --cell-word: #d7e6c3;
+  --cell-wrong: #c94f4f; --cell-revealed: #b0559a; --good: #4a8a4f; --warn: #d18a2e;
+  --radius: 26px; --radius-cell: 4px;
+  --shadow-card: 0 10px 26px rgba(60, 80, 40, 0.14), 0 2px 6px rgba(60, 80, 40, 0.1);
+  --font-display: ui-rounded, "SF Pro Rounded", "Segoe UI", Georgia, serif;
+  --header-flair: #d84f75;
+  --page-texture:
+    radial-gradient(ellipse 60% 40% at 8% 0%, rgba(79, 138, 61, 0.16), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 95% 4%, rgba(216, 79, 117, 0.12), transparent 60%),
+    radial-gradient(ellipse 70% 30% at 50% 100%, rgba(79, 138, 61, 0.14), transparent 65%);
+  --panel-texture: linear-gradient(160deg, rgba(255, 255, 255, 0.55), transparent 55%);
+  --sw-a: #fbdde7; --sw-b: #d84f75; --sw-c: #4a8a4f;
+}
+[data-skin="greenhouse"][data-mode="dark"] {
+  --bg: #0f1a12; --surface: #16241a; --surface-2: #1c2e20; --border: #2c4530;
+  --ink: #e4f0e0; --ink-muted: #9db392; --ink-faint: #557059;
+  --accent: #ffd166; --accent-ink: #16240f; --accent-soft: #3a3320;
+  --cell-bg: #182a1c; --cell-ink: #e9f5e6; --cell-border: #2f4d35; --cell-block: #060d07;
+  --cell-selected: #ffd166; --cell-word: #274a2c;
+  --cell-wrong: #e0716f; --cell-revealed: #d98fc9; --good: #78c47d; --warn: #ffd166;
+  --shadow-card: 0 0 0 1px rgba(255, 209, 102, 0.1), 0 14px 30px rgba(0, 0, 0, 0.4);
+  --page-texture:
+    radial-gradient(ellipse 60% 40% at 8% 0%, rgba(255, 209, 102, 0.06), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 95% 4%, rgba(255, 209, 102, 0.05), transparent 60%),
+    radial-gradient(circle at 20% 30%, rgba(255, 209, 102, 0.9) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 78% 62%, rgba(255, 209, 102, 0.85) 0 1.3px, transparent 2px),
+    radial-gradient(circle at 55% 22%, rgba(255, 209, 102, 0.8) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 88% 85%, rgba(255, 209, 102, 0.85) 0 1.3px, transparent 2px),
+    radial-gradient(circle at 35% 78%, rgba(255, 209, 102, 0.8) 0 1.4px, transparent 2px);
+  --panel-texture: linear-gradient(160deg, rgba(255, 209, 102, 0.05), transparent 55%);
+}
+/* Layer 2 — shape, not just color: organic blobs instead of rectangles, and
+   the knobs become literal flowers. */
+[data-skin="greenhouse"] .mode-card, [data-skin="greenhouse"] .card {
+  border-radius: 34px 20px 30px 22px / 22px 30px 18px 34px;
+  position: relative; overflow: hidden;
+}
+[data-skin="greenhouse"] .mode-card::before, [data-skin="greenhouse"] .card::before {
+  /* the "glass roof" sheen every greenhouse pane catches */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.35) 0%, transparent 34%);
+}
+[data-skin="greenhouse"] .btn {
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 3px rgba(60, 80, 40, 0.12);
+}
+[data-skin="greenhouse"] .btn:active { transform: scale(0.94) rotate(-1deg); }
+[data-skin="greenhouse"] h1, [data-skin="greenhouse"] h2, [data-skin="greenhouse"] h3 { font-style: italic; }
+[data-skin="greenhouse"] .xw-grid { border-radius: 18px; border-color: var(--border); }
+/* Vine-and-leaf corners on the grid, in place of Nova's angular brackets —
+   same "overlay above the cells" technique, organic shapes instead. */
+[data-skin="greenhouse"] .xw-grid { position: relative; }
+[data-skin="greenhouse"] .xw-grid::after {
+  content: ""; position: absolute; inset: -6px; z-index: 6; pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(circle, var(--good) 60%, transparent 62%),
+    radial-gradient(circle, var(--accent) 60%, transparent 62%),
+    radial-gradient(circle, var(--accent) 60%, transparent 62%),
+    radial-gradient(circle, var(--good) 60%, transparent 62%);
+  background-size: 16px 16px;
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  opacity: 0.85;
+}
+/* The knob becomes a flower: ticks (petals) fan from a pollen-textured center.
+   The base dial is inset:0 at the same radius the ticks orbit at (--knob-r),
+   which fully hides them behind its solid fill — shrink the dial here so it
+   reads as a center disc with the petals visible in the ring outside it. */
+[data-skin="greenhouse"] .knob { --knob-d: 58px; --knob-r: 27px; }
+[data-skin="greenhouse"] .knob-tick {
+  width: 10px; height: 17px; margin-left: -5px;
+  border-radius: 60% 60% 60% 60% / 75% 75% 25% 25%;
+  background: linear-gradient(var(--accent), color-mix(in srgb, var(--accent) 60%, var(--surface)));
+  opacity: 0.92;
+}
+[data-skin="greenhouse"] .knob-dial {
+  inset: 17px;
+  background: radial-gradient(circle at 40% 35%, #ffe89a, #d18a2e 75%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(60, 80, 40, 0.25);
+}
+[data-skin="greenhouse"] .knob-pointer { display: none; } /* the flower center needs no pointer needle */
+[data-skin="greenhouse"] .knob-value { font-family: var(--font-display); font-style: italic; color: var(--accent); }
+[data-skin="greenhouse"] .knob-caption { color: var(--good); }
+[data-skin="greenhouse"] .knob-body { animation: greenhouse-breathe 5s ease-in-out infinite; }
+
+/* --- Motion: the page breathes — swaying light, and petals/fireflies drifting
+   slowly across the screen on independent loops (day: petals; night: fireflies
+   already sit in the fixed --page-texture dots above, these two add float). */
+@keyframes greenhouse-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+@keyframes greenhouse-sway {
+  0%, 100% { background-position: 0 0, 0 0, 0 0; }
+  50% { background-position: 14px 8px, -10px 6px, 6px -10px; }
+}
+[data-skin="greenhouse"] body { animation: greenhouse-sway 22s ease-in-out infinite; }
+[data-skin="greenhouse"] body::before, [data-skin="greenhouse"] body::after {
+  content: ""; position: fixed; pointer-events: none; z-index: 1;
+  width: 10px; height: 10px; border-radius: 50% 50% 50% 0;
+  background: var(--accent); opacity: 0.55;
+}
+[data-skin="greenhouse"] body::before { top: 16%; left: -5%; animation: greenhouse-drift-1 26s linear infinite; }
+[data-skin="greenhouse"] body::after {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 6px var(--accent);
+  top: 70%; left: -4%; animation: greenhouse-drift-2 33s linear infinite 4s;
+}
+@keyframes greenhouse-drift-1 {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  8%, 92% { opacity: 0.55; }
+  100% { transform: translate(112vw, -8vh) rotate(340deg); opacity: 0; }
+}
+@keyframes greenhouse-drift-2 {
+  0% { transform: translate(0, 0); opacity: 0; }
+  8%, 92% { opacity: 0.8; }
+  100% { transform: translate(110vw, -18vh); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-skin="greenhouse"] body,
+  [data-skin="greenhouse"] body::before,
+  [data-skin="greenhouse"] body::after,
+  [data-skin="greenhouse"] .knob-body { animation: none; }
+}
+
 /* --- Lisa Frank (kids only — auto-applied in Kids mode) --------------------------------
  * Neon rainbows, chrome dolphins, 90s school-folder maximalism. */
 [data-skin="lisa-frank"] {

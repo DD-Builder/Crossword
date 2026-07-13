@@ -17,6 +17,7 @@ const SKINS: [string, string][] = [
   ['harvest', 'Harvest'],
   ['hearth', 'Hearth'],
   ['nova', 'Nova Command'],
+  ['greenhouse', 'Greenhouse'],
 ];
 
 const PROVIDERS: [LlmConfig['provider'], string][] = [

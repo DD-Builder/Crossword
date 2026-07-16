@@ -16,6 +16,7 @@ import { renderFreePlay } from './app/views/freeplay';
 import { renderThemed } from './app/views/themed';
 import { renderKids } from './app/views/kids';
 import { renderStats } from './app/views/stats';
+import { renderInsights } from './app/views/insights';
 import { renderSettings } from './app/views/settings';
 
 function buildShell(): HTMLElement {
@@ -79,6 +80,10 @@ function main(): void {
   registerView('themed', renderThemed);
   registerView('kids', renderKids);
   registerView('stats', renderStats);
+  // Not in navItems/the header nav — reachable via a link from Stats. The
+  // header nav was recently tuned to just fit 4 tabs on ~390px phones; a 5th
+  // permanent tab would risk re-breaking that.
+  registerView('insights', renderInsights);
   registerView('settings', renderSettings);
   if (import.meta.env.DEV) {
     // Scene-review gallery — stripped from production builds.

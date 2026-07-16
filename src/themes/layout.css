@@ -259,6 +259,25 @@
 .bar-row .bar-fill { height: 100%; background: var(--accent); border-radius: 5px; transition: width 0.4s ease; }
 .bar-row .bar-val { text-align: right; white-space: nowrap; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 
+/* --- Player Insights ------------------------------------------------------ */
+
+.sparkline { width: 100%; height: 64px; display: block; }
+.sparkline-line { stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.sparkline-baseline { stroke: var(--border); stroke-width: 1; stroke-dasharray: 3 3; }
+.sparkline-dot { fill: var(--accent); }
+
+.insight-card { padding: 18px; margin-bottom: 16px; }
+.insight-card .row-title { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.insight-score { font-size: 1.9rem; font-weight: 800; font-family: var(--font-display); }
+.insight-movement { font-size: 0.85rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.insight-movement.up { color: var(--good); }
+.insight-movement.down { color: var(--bad); }
+.insight-movement.flat { color: var(--ink-muted); }
+
+.miss-row { display: flex; justify-content: space-between; gap: 10px; margin: 5px 0; font-size: 0.86rem; }
+.miss-row .miss-clue { overflow-wrap: anywhere; }
+.miss-row .miss-stat { color: var(--ink-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
 /* --- Settings ------------------------------------------------------------ */
 
 .settings-group { margin-bottom: 28px; }

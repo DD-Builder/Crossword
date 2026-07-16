@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { abilityToTier, computeProfile, tierScoreFloor } from './adaptive.ts';
+import { abilityToTier, computeProfile, displayScore, tierScoreFloor } from './adaptive.ts';
 import type { ClueRow } from './events.ts';
 import type { Category } from '../core/types.ts';
 
@@ -100,6 +100,24 @@ describe('Elo ability rating', () => {
   it('ignores clues with no recorded difficulty', () => {
     const clues = Array.from({ length: 30 }, () => row({ category: 'wordplay' })); // no difficulty
     expect(computeProfile(clues).ability).toBe(1000); // unchanged from start
+  });
+
+  it('ratedClues counts only difficulty-tagged clues, not the whole history', () => {
+    const clues = [
+      ...Array.from({ length: 5 }, () => row({ category: 'wordplay' })), // no difficulty
+      ...Array.from({ length: 7 }, () => cleanAt(3)),
+    ];
+    expect(computeProfile(clues).ratedClues).toBe(7);
+    expect(computeProfile(clues).totalClues).toBe(12);
+  });
+
+  it('displayScore anchors the starting rating at 50 and stays monotonic', () => {
+    expect(displayScore(1000)).toBe(50);
+    const strong = computeProfile(Array.from({ length: 80 }, () => cleanAt(5))).ability;
+    const weak = computeProfile(Array.from({ length: 80 }, () => missAt(1))).ability;
+    expect(displayScore(strong)).toBeGreaterThan(50);
+    expect(displayScore(weak)).toBeLessThan(50);
+    expect(displayScore(strong)).toBeGreaterThan(displayScore(weak));
   });
 });
 

@@ -7,6 +7,7 @@ import './themes/skins.css';
 import { startRouter, registerView, navigate, currentRoute } from './app/router';
 import { applyTheme, watchSystemTheme } from './storage/settings';
 import { primeAdaptive } from './stats/adaptive';
+import { checkForUpdate } from './app/versionGate';
 import { el } from './ui/dom';
 
 import { renderHome } from './app/views/home';
@@ -68,10 +69,20 @@ function buildShell(): HTMLElement {
   return viewRoot;
 }
 
-function main(): void {
+async function main(): Promise<void> {
   applyTheme();
   watchSystemTheme();
   void primeAdaptive().catch(() => {}); // adaptive weights warm up in the background
+
+  // Register the service worker (if any) and confirm this tab is running the
+  // build that's actually live before anything renders — the whole point
+  // being to never hand a player a stale cached copy without a way out. Fails
+  // open (renders normally) on any error, timeout, or offline state; see
+  // versionGate.ts. Dev mode has no SW/caching to be stale from, so skip it.
+  if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+    await navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
+    if ((await checkForUpdate()) === 'updating') return; // overlay owns the screen; page will reload itself
+  }
 
   registerView('home', renderHome);
   registerView('puzzle', renderPuzzle);
@@ -95,10 +106,6 @@ function main(): void {
   }
 
   startRouter(buildShell());
-
-  if ('serviceWorker' in navigator && import.meta.env.PROD) {
-    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
-  }
 }
 
-main();
+void main();

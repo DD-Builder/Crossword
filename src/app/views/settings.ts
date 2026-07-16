@@ -4,6 +4,7 @@ import {
   applyTheme, getSettings, saveSettings, type LlmConfig, type Mode,
 } from '../../storage/settings.ts';
 import { defaultModel, testConnection } from '../../llm/provider.ts';
+import { CURRENT_VERSION } from '../versionGate.ts';
 
 const SKINS: [string, string][] = [
   ['classic', 'Classic'],
@@ -234,6 +235,9 @@ export function renderSettings(root: HTMLElement, _ctx: RouteCtx): void {
           el('div', { style: 'display:flex; gap:10px' }, saveBtn, testBtn),
         ),
       ),
+
+      el('p', { className: 'faint', style: 'font-size:0.78rem; text-align:center; margin: 20px 0 0' },
+        `Version ${CURRENT_VERSION}`),
     ),
   );
 }

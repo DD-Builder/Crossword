@@ -7,7 +7,7 @@
  *    mutating an old one.
  * Bump CACHE when this file's strategy changes, so `activate` purges old
  * entries cached under the previous (buggier) logic. */
-const CACHE = 'xw-v2';
+const CACHE = 'xw-v3';
 const SHELL_URL = self.registration.scope; // e.g. https://…/Crossword/
 
 self.addEventListener('install', (event) => {
@@ -29,6 +29,13 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   const url = new URL(req.url);
   if (req.method !== 'GET' || url.origin !== location.origin) return;
+
+  // version.json is how a running tab checks whether it's stale — it must
+  // always reflect what's actually deployed, never a cached snapshot.
+  if (url.pathname.endsWith('/version.json')) {
+    event.respondWith(fetch(req, { cache: 'no-store' }));
+    return;
+  }
 
   if (req.mode === 'navigate') {
     event.respondWith(

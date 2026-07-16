@@ -1,13 +1,15 @@
 import type { RouteCtx } from '../router.ts';
 import { el } from '../../ui/dom.ts';
+import { tile, bar } from '../../ui/statBits.ts';
 import { dashboardData, type DashboardData } from '../../stats/metrics.ts';
 import { getStreak } from '../../solve/progress.ts';
 import { formatMs } from '../../ui/toolbar.ts';
 import { HINT_TIERS } from '../../solve/hints.ts';
-import { adaptiveSnapshot } from '../../stats/adaptive.ts';
+import { adaptiveSnapshot, ELO_MIN_CLUES } from '../../stats/adaptive.ts';
+import { navigate } from '../router.ts';
 
 const WEEKDAY_SHORT = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-const TIER_NAMES = ['', 'gentle', 'easygoing', 'crafty', 'tricky', 'devious'];
+export const TIER_NAMES = ['', 'gentle', 'easygoing', 'crafty', 'tricky', 'devious'];
 
 export function renderStats(root: HTMLElement, _ctx: RouteCtx): void {
   const pad = el('div', { className: 'view-pad' },
@@ -24,24 +26,6 @@ export function renderStats(root: HTMLElement, _ctx: RouteCtx): void {
         : renderDashboard(data),
     );
   });
-}
-
-function tile(num: string, label: string): HTMLElement {
-  return el('div', { className: 'stat-tile card' },
-    el('span', { className: 'num' }, num),
-    el('span', { className: 'lbl' }, label),
-  );
-}
-
-function bar(label: string, value: number, max: number, display: string): HTMLElement {
-  const pct = max > 0 ? Math.round((value / max) * 100) : 0;
-  return el('div', { className: 'bar-row' },
-    el('span', {}, label),
-    el('span', { className: 'bar-track' },
-      el('span', { className: 'bar-fill', style: `width: ${pct}%` }),
-    ),
-    el('span', { className: 'bar-val' }, display),
-  );
 }
 
 function renderDashboard(data: DashboardData): HTMLElement {
@@ -69,8 +53,12 @@ function renderDashboard(data: DashboardData): HTMLElement {
           tile(`${TIER_NAMES[snap.tier]} · ${snap.tier}/5`, 'your Free Play level'),
           tile(`${Math.round(snap.recentSuccess * 100)}%`, 'recent clean rate'),
         )
-      : el('p', { className: 'muted', style: 'font-size:0.85rem; margin:4px 0 0' },
-          'Solve a few more Free Play puzzles and your adaptive level appears here.'),
+      : bar('Rating progress', snap.ratedClues, ELO_MIN_CLUES, `${snap.ratedClues}/${ELO_MIN_CLUES} clues rated`),
+
+    el('button', {
+      className: 'btn quiet', style: 'padding-left:0; margin: 2px 0 4px',
+      onclick: () => navigate('insights'),
+    }, 'View full insights →'),
 
     el('h2', { className: 'section-label' }, 'By weekday difficulty'),
     ...data.byWeekday

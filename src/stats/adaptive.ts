@@ -18,27 +18,55 @@ import type { ClueRow } from './events.ts';
 const ELO_START = 1000;
 const ELO_K = 24;
 const TARGET_SUCCESS = 0.7;
-const ELO_MIN_CLUES = 40; // below this, fall back to the base tier + pace nudge
+/** Below this many rated (difficulty-tagged) clues, fall back to the base tier
+ * + pace nudge instead of the Elo tier. Exported so the UI never hardcodes 40. */
+export const ELO_MIN_CLUES = 40;
+
+/** Map an unbounded internal ability rating to a bounded 0–100 "Solver Score"
+ * for display. Reuses the exact logistic transform already used for
+ * expected-score above (same K/400 spread, no new tuning constant), anchored
+ * so the starting rating (1000) reads as 50 — the raw internal number has no
+ * external reference point and drifts unboundedly over a long history, so it
+ * is never shown directly. */
+export function displayScore(ability: number): number {
+  return Math.round(100 / (1 + 10 ** ((ELO_START - ability) / 400)));
+}
 
 /** Difficulty tier 1–5 → item rating (tier 3 == the starting player rating). */
 function itemRating(difficulty: number): number {
   return ELO_START + (difficulty - 3) * 120;
 }
 
-/** Fold the clue history into a rating + a recent success rate. Pure. */
-function computeAbility(clues: ClueRow[]): { ability: number; recentSuccess: number } {
+export interface AbilityPoint { index: number; date: string; ability: number }
+
+/** The Elo fold, keeping a snapshot after every rated clue instead of
+ * discarding intermediate values — since `clues` (the IndexedDB `clues` store)
+ * is append-only, this reconstructs the player's whole rating history with no
+ * separate snapshot storage. `computeAbility` below is defined in terms of
+ * this so the "current rating" and "rating over time" views can never drift
+ * apart — there is exactly one Elo update implementation. */
+export function computeAbilityTrajectory(clues: ClueRow[]): AbilityPoint[] {
   let r = ELO_START;
-  for (const row of clues) {
-    if (!row.difficulty) continue; // no item rating available (old/placeholder clue)
+  const points: AbilityPoint[] = [];
+  clues.forEach((row, index) => {
+    if (!row.difficulty) return; // no item rating available (old/placeholder clue)
     const expected = 1 / (1 + 10 ** ((itemRating(row.difficulty) - r) / 400));
     const win = !row.revealed && row.wrongLetters === 0 ? 1 : 0;
     r += ELO_K * (win - expected);
-  }
+    points.push({ index, date: row.date, ability: r });
+  });
+  return points;
+}
+
+/** Fold the clue history into a rating + a recent success rate. Pure. */
+function computeAbility(clues: ClueRow[]): { ability: number; recentSuccess: number; ratedClues: number } {
+  const trajectory = computeAbilityTrajectory(clues);
+  const ability = trajectory.length ? trajectory[trajectory.length - 1]!.ability : ELO_START;
   const recent = clues.filter((c) => c.difficulty).slice(-40);
   const recentSuccess = recent.length
     ? recent.filter((c) => !c.revealed && c.wrongLetters === 0).length / recent.length
     : 0;
-  return { ability: r, recentSuccess };
+  return { ability, recentSuccess, ratedClues: trajectory.length };
 }
 
 /** Map an ability rating to the clue tier (1–5) that should land near
@@ -70,6 +98,10 @@ export interface Profile {
   ability: number;
   /** Recent unaided-solve rate over rated clues (observability). */
   recentSuccess: number;
+  /** Count of clues with a recorded difficulty — the ones that actually move
+   * `ability`. Distinct from `totalClues`, which also counts undifferentiated
+   * clues; the Elo threshold below is defined in terms of *this* count. */
+  ratedClues: number;
 }
 
 const EMPTY: Profile = {
@@ -82,6 +114,7 @@ const EMPTY: Profile = {
   hintReliance: 0,
   ability: ELO_START,
   recentSuccess: 0,
+  ratedClues: 0,
 };
 
 let cached: Profile | null = null;
@@ -99,6 +132,7 @@ let tierNudgeSync = 0;
 let abilitySync = ELO_START;
 let recentSuccessSync = 0;
 let totalCluesSync = 0;
+let ratedCluesSync = 0;
 
 export function adaptiveWeights(): Record<string, number> {
   return weightsSync;
@@ -111,20 +145,24 @@ export function adaptiveTierNudge(): number {
  * enough history it's the Elo target tier; before that it's the base tier
  * shifted by the recent-pace nudge (Phase 1 behavior). */
 export function adaptiveClueTier(baseTier: number): number {
-  if (totalCluesSync >= ELO_MIN_CLUES) return abilityToTier(abilitySync);
+  if (ratedCluesSync >= ELO_MIN_CLUES) return abilityToTier(abilitySync);
   return Math.min(5, Math.max(1, Math.round(baseTier + tierNudgeSync)));
 }
 /** The fill score floor to pair with the adaptive tier (base floor pre-data). */
 export function adaptiveScoreFloor(baseFloor: number): number {
-  if (totalCluesSync >= ELO_MIN_CLUES) return tierScoreFloor(abilityToTier(abilitySync));
+  if (ratedCluesSync >= ELO_MIN_CLUES) return tierScoreFloor(abilityToTier(abilitySync));
   return baseFloor;
 }
-/** For the Stats view: the player's ability tier and realized recent success. */
-export function adaptiveSnapshot(): { tier: number; recentSuccess: number; rated: boolean } {
+/** For the Stats/Insights views: the player's ability tier, realized recent
+ * success, and rating progress toward the Elo threshold. */
+export function adaptiveSnapshot(): {
+  tier: number; recentSuccess: number; rated: boolean; ratedClues: number;
+} {
   return {
     tier: abilityToTier(abilitySync),
     recentSuccess: recentSuccessSync,
-    rated: totalCluesSync >= ELO_MIN_CLUES,
+    rated: ratedCluesSync >= ELO_MIN_CLUES,
+    ratedClues: ratedCluesSync,
   };
 }
 
@@ -134,6 +172,7 @@ function syncFrom(profile: Profile): void {
   abilitySync = profile.ability;
   recentSuccessSync = profile.recentSuccess;
   totalCluesSync = profile.totalClues;
+  ratedCluesSync = profile.ratedClues;
 }
 
 export async function primeAdaptive(): Promise<void> {
@@ -204,9 +243,9 @@ export function computeProfile(clues: ClueRow[]): ProfileData {
     ? clues.reduce((a, r) => a + r.hintTiers.length, 0) / clues.length
     : 0;
 
-  const { ability, recentSuccess } = computeAbility(clues);
+  const { ability, recentSuccess, ratedClues } = computeAbility(clues);
 
-  return { totalClues: n, categories, weights, tierNudge, hintReliance, ability, recentSuccess };
+  return { totalClues: n, categories, weights, tierNudge, hintReliance, ability, recentSuccess, ratedClues };
 }
 
 export async function refreshProfile(): Promise<Profile> {
